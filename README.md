@@ -1,10 +1,6 @@
 <p align="center">
-  <img src="assets/logo.svg" width="140" alt="TapSwitch">
+  <img src="assets/social-preview.png" width="760" alt="TapSwitch - your door card, until you open Wallet.">
 </p>
-
-<h1 align="center">TapSwitch</h1>
-
-<p align="center"><em>Your door card, until you open Wallet.</em></p>
 
 <p align="center">
   <img src="https://img.shields.io/github/v/release/jugal1990/tapswitch-releases?style=flat-square&color=2ECC71" alt="Release">
