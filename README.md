@@ -107,6 +107,9 @@ repository and it will track releases for you.
   is open, so doors need the screen on and that app in front.
 - **Something not working?** **About**, then **Report a problem**, writes a diagnostic log
   into the message for you, so a bug report does not have to start with twenty questions.
+- **Main profile only.** TapSwitch does not run in a cloned app, Second Space or a work
+  profile. Android keeps NFC settings separate per profile, so a copy running there could
+  not change the card your phone actually presents.
 - **Built for ColorOS.** Oppo phones on Android 12 or newer. Other Android
   phones may work but are untested.
 
