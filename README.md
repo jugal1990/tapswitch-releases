@@ -111,7 +111,7 @@ repository and it will track releases for you.
   profile. Android keeps NFC settings separate per profile, so a copy running there could
   not change the card your phone actually presents.
 - **Built for ColorOS.** Oppo phones on Android 12 or newer. Other Android
-  phones may work but are untested.
+  phones may work but are untested. You are welcome to try it and send feedback!
 
 ***
 
