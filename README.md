@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/github/v/release/jugal1990/tapswitch-releases?style=flat-square&color=2ECC71" alt="Release">
   <img src="https://img.shields.io/github/downloads/jugal1990/tapswitch-releases/total?style=flat-square&color=4C8DFF" alt="Downloads">
   <img src="https://img.shields.io/badge/Android-12%2B-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android 12+">
-  <img src="https://img.shields.io/badge/built%20for-Oppo%20%C2%B7%20OnePlus%20%C2%B7%20ColorOS-262626?style=flat-square" alt="Built for ColorOS">
+  <img src="https://img.shields.io/badge/built%20for-Oppo%20%C2%B7%20ColorOS-262626?style=flat-square" alt="Built for ColorOS">
   <img src="https://img.shields.io/badge/trial-14%20days%2C%20free-4C8DFF?style=flat-square" alt="14-day trial">
 </p>
 
@@ -111,7 +111,7 @@ repository and it will track releases for you.
   is open, so doors need the screen on and that app in front.
 - **Something not working?** **About**, then **Report a problem**, writes a diagnostic log
   into the message for you, so a bug report does not have to start with twenty questions.
-- **Built for ColorOS.** Oppo and OnePlus phones on Android 12 or newer. Other Android
+- **Built for ColorOS.** Oppo phones on Android 12 or newer. Other Android
   phones may work but are untested.
 
 ***
