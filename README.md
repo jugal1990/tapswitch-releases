@@ -74,7 +74,8 @@ switching. Nothing breaks: your doors work exactly as they did before you instal
 only thing that stops is the automation.
 
 To keep it, tap **Get the full version** in the app. Your device ID is filled in for you.
-Send the message and you will get a link back that unlocks it in one tap.
+Send the message and you will get a link back that unlocks it in one tap. Since this is a 
+closed source project, there will be a fee for unlimited access. I have yet to decide how much. 
 
 | | |
 | --- | --- |
