@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/social-preview.png" width="760" alt="TapSwitch - your door card, until you open Wallet.">
+  <img src="assets/social-preview.png" width="760" alt="TapSwitch - your default card, until you open the other one.">
 </p>
 
 <p align="center">
