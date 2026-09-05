@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oppo access card vs Google Wallet: fixing the ColorOS NFC conflict — TapSwitch</title>
+<meta name="description" content="On Oppo and ColorOS phones only one app can own the NFC slot, so your building access card and Google Wallet fight over it. TapSwitch keeps whichever card you choose as the default and lends the slot to the other only while its app is open.">
+<link rel="canonical" href="https://jugal1990.github.io/tapswitch-releases/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your door card stopped working when you set up Google Wallet">
+<meta property="og:description" content="ColorOS lets one app own the NFC slot. TapSwitch keeps the card you choose as the default and lends the slot to the other only while its app is open.">
+<meta property="og:url" content="https://jugal1990.github.io/tapswitch-releases/">
+<meta property="og:image" content="https://jugal1990.github.io/tapswitch-releases/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF1F4; --raise:#FFFFFF; --ink:#131920; --muted:#5A6672;
+  --rule:#D2D9E0; --slot:#111820; --slotedge:#26313D;
+  --access:#1B9B58; --access-lit:#3FD98A;
+  --wallet:#2565DD; --wallet-lit:#5E9BFF;
+  --wrap:min(1080px,100% - 3rem);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:400 17px/1.6 Archivo,"Helvetica Neue",Arial,sans-serif;
+  font-synthesis-weight:none;}
+.wrap{width:var(--wrap);margin-inline:auto}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.022em;line-height:1.1}
+h1{font-size:clamp(2.1rem,5.4vw,3.5rem)}
+h2{font-size:clamp(1.45rem,2.9vw,2rem);letter-spacing:-.02em}
+h3{font-size:1.06rem;letter-spacing:-.01em}
+p{margin:0 0 1.1rem}
+.prose{max-width:63ch}
+code,.mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.88em}
+code{background:#DFE4EA;padding:.12em .38em;border-radius:3px;word-break:break-word}
+a{color:var(--wallet)}
+
+/* ---- masthead ---- */
+.top{padding:1.6rem 0 0}
+.top .wrap{display:flex;align-items:center;gap:.6rem}
+.top img{width:26px;height:26px;display:block}
+.top b{font-weight:600;letter-spacing:-.01em}
+
+/* ---- hero ---- */
+.hero{padding:3.2rem 0 3.8rem}
+.hero .lede{font-size:clamp(1.05rem,1.9vw,1.24rem);color:var(--muted);max-width:54ch;margin-top:1.4rem}
+.split{display:grid;grid-template-columns:1fr;gap:3rem;align-items:start}
+@media(min-width:900px){.split{grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}}
+
+/* ---- the slot: the one bold element ---- */
+.phone{background:var(--slot);border-radius:20px;padding:1.5rem 1.4rem 1.35rem;
+  border:1px solid var(--slotedge);box-shadow:0 20px 44px -26px rgba(12,20,30,.55)}
+.phone .head{display:flex;justify-content:space-between;align-items:baseline;
+  color:#8894A2;font-size:.79rem;margin-bottom:1.05rem}
+.phone .head .mono{color:#6E7B8A}
+.card{position:relative;border-radius:13px;padding:1.05rem 1.15rem;overflow:hidden;
+  background:#1A222C;border:1px solid #2C3742;
+  transition:background .42s ease,border-color .42s ease}
+.card+.card{margin-top:.6rem}
+.card .who{display:flex;align-items:center;gap:.62rem}
+.dot{width:9px;height:9px;border-radius:50%;background:#3B4756;flex:none;
+  transition:background .42s ease,box-shadow .42s ease}
+.card .name{color:#C4CEDA;font-weight:600;font-size:.98rem;transition:color .42s ease}
+.card .state{margin-top:.42rem;color:#78848F;font-size:.83rem;transition:color .42s ease}
+.card.live{background:#16241E;border-color:#215F41}
+.card.live .dot{background:var(--access-lit);box-shadow:0 0 0 4px rgba(63,217,138,.16)}
+.card.live .name{color:#E8F6EE}
+.card.live .state{color:var(--access-lit)}
+.card.borrow{background:#141F33;border-color:#28518F}
+.card.borrow .dot{background:var(--wallet-lit);box-shadow:0 0 0 4px rgba(94,155,255,.16)}
+.card.borrow .name{color:#E9F0FE}
+.card.borrow .state{color:var(--wallet-lit)}
+.setting{margin-top:1.05rem;padding-top:.9rem;border-top:1px solid #232D38;
+  color:#6E7B8A;font-size:.76rem;line-height:1.5}
+.setting b{color:#9BA8B6;font-weight:500;display:block;margin-top:.18rem;word-break:break-all}
+.pick{margin:1.05rem 0 0;padding:0;border:0}
+.pick legend{padding:0;color:#6E7B8A;font-size:.76rem;margin-bottom:.45rem}
+.pick button{font:inherit;font-size:.83rem;font-weight:500;cursor:pointer;
+  padding:.4rem .8rem;border-radius:7px;border:1px solid #313D4A;background:#1A222C;color:#93A0AE;
+  transition:background .16s ease,border-color .16s ease,color .16s ease}
+.pick button+button{margin-left:.4rem}
+.pick button[aria-pressed=true]{background:#22303E;border-color:#4B5C6E;color:#EAF0F6}
+.pick button:focus-visible,.drive button:focus-visible{outline:2px solid var(--wallet-lit);outline-offset:2px}
+.drive{display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap}
+.drive button{font:inherit;font-size:.86rem;font-weight:500;cursor:pointer;
+  padding:.5rem .9rem;border-radius:8px;border:1px solid #313D4A;background:#1E2833;color:#CBD5E0;
+  transition:background .16s ease,border-color .16s ease}
+.drive button:hover{background:#26323F;border-color:#3E4C5B}
+.drive .act{background:#22303E;border-color:#4B5C6E;color:#EAF0F6;font-weight:600}
+.drive .act:hover{background:#2A3947}
+
+/* ---- buttons ---- */
+.cta{display:inline-flex;align-items:center;gap:.55rem;background:var(--ink);color:#fff;
+  text-decoration:none;font-weight:600;font-size:1rem;padding:.85rem 1.3rem;border-radius:10px;
+  transition:background .16s ease}
+.cta:hover{background:#000}
+.cta:focus-visible{outline:2px solid var(--wallet);outline-offset:3px}
+.beneath{margin-top:.75rem;font-size:.88rem;color:var(--muted)}
+.beneath a{color:var(--muted)}
+
+/* ---- sections ---- */
+section{padding:3.4rem 0;border-top:1px solid var(--rule)}
+section > .wrap > h2{margin-bottom:1.5rem}
+.two{display:grid;gap:2.2rem}
+@media(min-width:820px){.two{grid-template-columns:1fr 1fr;gap:3.4rem}}
+.pair{border-left:2px solid var(--rule);padding-left:1.1rem}
+.pair.g{border-left-color:var(--access)}
+.pair.b{border-left-color:var(--wallet)}
+.pair p{margin-bottom:0;color:var(--muted);font-size:.97rem}
+.pair h3{margin-bottom:.42rem}
+video{width:100%;max-width:340px;border-radius:16px;display:block;border:1px solid var(--rule);background:#000}
+.filmrow{display:grid;gap:2rem;align-items:center}
+@media(min-width:820px){.filmrow{grid-template-columns:340px 1fr;gap:3rem}}
+
+/* ---- steps ---- */
+ol.steps{list-style:none;counter-reset:s;margin:0;padding:0;max-width:63ch}
+ol.steps li{counter-increment:s;position:relative;padding:.85rem 0 .85rem 2.6rem;border-top:1px solid var(--rule)}
+ol.steps li:first-child{border-top:0}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:.9rem;
+  width:1.6rem;height:1.6rem;border-radius:50%;background:var(--ink);color:#fff;
+  font-size:.8rem;font-weight:600;display:grid;place-items:center}
+ol.steps b{display:block;font-weight:600}
+ol.steps span{color:var(--muted);font-size:.94rem}
+
+/* ---- faq ---- */
+.faq{max-width:70ch}
+.faq details{border-top:1px solid var(--rule);padding:.2rem 0}
+.faq details:last-of-type{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;padding:.95rem 0;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--muted);font-weight:400;font-size:1.2rem;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq summary:focus-visible{outline:2px solid var(--wallet);outline-offset:2px}
+.faq .ans{padding:0 0 1.1rem;color:var(--muted);font-size:.97rem;max-width:63ch}
+.faq .ans p:last-child{margin-bottom:0}
+
+footer{padding:2.6rem 0 3.4rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;align-items:baseline}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.001ms !important}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <img src="assets/logo.svg" alt=""><b>TapSwitch</b>
+</div></div>
+
+<header class="hero"><div class="wrap split">
+  <div>
+    <h1>Release the full potential of your NFC with TapSwitch!</h1>
+    <p class="lede">Your door card stopped working when you set up Google Wallet — or your
+      tap-to-pay stopped working when you added your door card. Oppo and ColorOS phones let
+      only one app own the NFC slot. TapSwitch keeps whichever card you choose as the
+      default, and lends the slot to the other one only while its app is open.</p>
+    <p style="margin-top:1.8rem">
+      <a class="cta" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch-Setup-START-HERE.zip">Download for Oppo and ColorOS</a>
+    </p>
+    <p class="beneath">Free for 14 days · Android 12+ · setup needs a computer once ·
+      <a href="https://github.com/jugal1990/tapswitch-releases/releases/latest">all files and release notes</a></p>
+  </div>
+
+  <div class="phone" id="demo">
+    <div class="head"><span>NFC default</span><span class="mono" id="fg">com.oplus.accesscard</span></div>
+
+    <div class="card live" id="c-access">
+      <div class="who"><span class="dot"></span><span class="name">Building access card</span></div>
+      <div class="state" id="s-access">holding the slot</div>
+    </div>
+
+    <div class="card" id="c-wallet">
+      <div class="who"><span class="dot"></span><span class="name">Google Wallet</span></div>
+      <div class="state" id="s-wallet">waiting</div>
+    </div>
+
+    <div class="setting">Android is writing this setting for you, every time:
+      <b class="mono">nfc_payment_default_component</b></div>
+
+    <fieldset class="pick">
+      <legend>Which card rests as your default?</legend>
+      <button type="button" id="r-access" aria-pressed="true">Access card</button>
+      <button type="button" id="r-wallet" aria-pressed="false">Google Wallet</button>
+    </fieldset>
+    <div class="drive">
+      <button type="button" id="b-toggle" class="act">Open Google Wallet</button>
+    </div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <h2>What is actually going wrong</h2>
+  <div class="prose">
+    <p>Your phone emulates contactless cards in software, and Android will let exactly one
+      app answer a reader at a time. That choice lives in a single system setting called
+      <code>nfc_payment_default_component</code>.</p>
+    <p>Set your building's access card as the default and tap-to-pay quietly stops working
+      at the till. Set Google Wallet as the default and the door reader ignores you. Stock
+      Android has a "use the payment app while it is open" behaviour for exactly this, and
+      ColorOS does not expose it, so you end up in the NFC settings several times a day.</p>
+    <p>Nothing is broken and nothing is misconfigured. There is just one slot and two cards
+      that both want it.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>What TapSwitch does</h2>
+  <div class="two">
+    <div class="pair g">
+      <h3>You choose which card rests</h3>
+      <p>Whichever one you pick holds the NFC slot all day. Put your access card there and
+        doors behave as they always did. Put Google Wallet there and tap-to-pay is always
+        armed. Neither choice is the "right" one — it depends which you use without thinking.</p>
+    </div>
+    <div class="pair b">
+      <h3>The other one borrows it, briefly</h3>
+      <p>When the other card's app comes to the front, the slot is handed straight over.
+        Leave that app and it goes back on its own, without being asked.</p>
+    </div>
+    <div class="pair">
+      <h3>Screen timeouts at the till</h3>
+      <p>If your screen sleeps while the borrowing app is open, that card stays ready for
+        about a minute, so waking the phone in front of the reader still works.</p>
+    </div>
+    <div class="pair">
+      <h3>There is nothing to open</h3>
+      <p>You set the two cards up once. After that TapSwitch has no screen you need to visit
+        and no setting you need to change. It is doing its job when you forget it exists.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Watch the setting change</h2>
+  <div class="filmrow">
+    <video src="assets/demo.mp4" muted loop autoplay playsinline controls preload="metadata"
+           poster="assets/demo-poster.png" aria-label="Animation of the NFC default setting changing between the access card and Google Wallet, shown in both directions"></video>
+    <div class="prose">
+      <p>The setting in the middle is the real one. <code>nfc_payment_default_component</code>
+        is the single value Android reads to decide which of your cards answers a reader, and
+        those two component names are what it actually holds.</p>
+      <p>Wallet opens, the value changes and the slot goes blue. Wallet closes, the access card
+        takes it back. Nothing is tapped in TapSwitch itself, because there is nothing in
+        TapSwitch to tap.</p>
+      <p>The first half rests on the access card. Halfway through it switches over and runs
+        the same thing the other way, with Google Wallet resting and the access card
+        borrowing. Which one you rest on is a setting, not a limitation.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Installing it</h2>
+  <div class="prose">
+    <p>Setup needs a computer once, and there is no way around that. ColorOS refuses to let
+      the permission TapSwitch needs be granted on the phone alone, so a small installer
+      grants it over USB. After that the app runs by itself and updates never need a
+      computer again.</p>
+  </div>
+  <ol class="steps">
+    <li><b>Turn on developer options</b><span>Settings, About device, Version, then tap Build number seven times.</span></li>
+    <li><b>Turn on USB debugging</b><span>Settings, Additional settings, Developer options.</span></li>
+    <li><b>Plug the phone into your computer</b><span>Any USB cable that carries data.</span></li>
+    <li><b>Run the installer from the zip</b><span>Install-TapSwitch-Mac.command or Install-TapSwitch-Windows.bat.</span></li>
+    <li><b>Tap Allow on the phone</b><span>The app opens with four green checks. Make sure the switch at the top is on.</span></li>
+  </ol>
+  <p style="margin-top:1.8rem">
+    <a class="cta" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch-Setup-START-HERE.zip">Download TapSwitch-Setup-START-HERE.zip</a>
+  </p>
+  <p class="beneath">The bare APK on the releases page is for updating an install you already
+    have. On a fresh phone it installs but cannot work, because nothing grants it the permission.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Questions</h2>
+  <div class="faq">
+    <details><summary>Can Google Wallet be the default instead of my access card?</summary><div class="ans">
+      <p>Yes. Either card can be the one that rests in the NFC slot; you pick during setup and
+        can change it later. If Wallet rests, your access card takes the slot only while its
+        own app is on screen. The two directions work the same way — the only question is which
+        card you reach for more often without thinking about it.</p></div></details>
+
+    <details><summary>Which phones does this work on?</summary><div class="ans">
+      <p>Oppo phones running ColorOS on Android 12 or newer. It was built and tested on a
+        Find X9 running ColorOS 16. Other Android phones may work and are untested — you are
+        welcome to try it and say what happened.</p></div></details>
+
+    <details><summary>Why does it need a computer to install?</summary><div class="ans">
+      <p>Writing <code>nfc_payment_default_component</code> requires a permission Android
+        will not let an app request from inside itself. On most phones you can grant it with
+        one command; ColorOS blocks that too, and the only route left is a granting install
+        over USB. The installer in the zip does it and then gets out of the way.</p></div></details>
+
+    <details><summary>Does it drain the battery?</summary><div class="ans">
+      <p>It checks which app is in front and writes one setting when that changes. There is
+        no network traffic, no location, and no wake locks beyond a brief hold at the till.</p></div></details>
+
+    <details><summary>What does it cost?</summary><div class="ans">
+      <p>Free for 14 days, and the clock starts the first time it actually runs rather than
+        when you download it. After that there is a one-off fee for a permanent unlock —
+        no subscription, no account, and it is tied to your handset. When the trial ends
+        TapSwitch puts your access card back as the default, so your doors keep working
+        exactly as before. Only the automation stops.</p></div></details>
+
+    <details><summary>Does it see what apps I use?</summary><div class="ans">
+      <p>It has to know when your payment app is in front, so it reads the foreground app.
+        Nothing leaves the phone. The diagnostic log records any app that is not your
+        configured pay or access app as <code>(other)</code>, so even a bug report you send
+        cannot carry your app usage.</p></div></details>
+
+    <details><summary>Will it work in a cloned app or Second Space?</summary><div class="ans">
+      <p>No, and it refuses to try. Android keeps NFC settings separate per profile, so a
+        copy running there could not change the card your phone actually presents.</p></div></details>
+
+    <details><summary>How do updates work?</summary><div class="ans">
+      <p>Install over the top. Settings, permissions and your unlock are all kept, and no
+        computer is involved. The app tells you under About when a newer version exists, or
+        you can point <a href="https://github.com/ImranR98/Obtainium">Obtainium</a> at the
+        releases repository.</p></div></details>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>TapSwitch — your door card, until you open Wallet.</span>
+  <a href="https://github.com/jugal1990/tapswitch-releases">Releases and source of this page</a>
+</div></footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication",
+"name":"TapSwitch","operatingSystem":"Android 12+","applicationCategory":"UtilitiesApplication",
+"description":"Automatically switches the NFC default payment app on Oppo and ColorOS phones, so a building access card and Google Wallet can both work. Either card can be the resting default.",
+"url":"https://jugal1990.github.io/tapswitch-releases/",
+"downloadUrl":"https://github.com/jugal1990/tapswitch-releases/releases/latest",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free 14-day trial, then a one-off unlock fee"}}
+</script>
+
+<script>
+(function(){
+  var open=false, restAccess=true, timer=null;
+  var ACCESS={app:'the access card app', comp:'com.oplus.accesscard'},
+      WALLET={app:'Google Wallet',          comp:'com.google.android.apps.walletnfcrel'};
+  var acc=document.getElementById('c-access'), wal=document.getElementById('c-wallet'),
+      sa=document.getElementById('s-access'), sw=document.getElementById('s-wallet'),
+      fg=document.getElementById('fg'), tog=document.getElementById('b-toggle'),
+      ra=document.getElementById('r-access'), rw=document.getElementById('r-wallet');
+
+  function render(){
+    var restCard = restAccess ? acc : wal,
+        lendCard = restAccess ? wal : acc,
+        restState= restAccess ? sa : sw,
+        lendState= restAccess ? sw : sa,
+        lend     = restAccess ? WALLET : ACCESS,
+        rest     = restAccess ? ACCESS : WALLET;
+
+    acc.className = 'card'; wal.className = 'card';
+    if(open){ lendCard.classList.add('borrow'); } else { restCard.classList.add('live'); }
+
+    restState.textContent = open ? 'handed the slot over' : 'holding the slot';
+    lendState.textContent = open ? 'using the slot' : 'waiting';
+    fg.textContent = open ? lend.comp : rest.comp;
+    tog.textContent = (open ? 'Leave ' : 'Open ') + lend.app;
+    ra.setAttribute('aria-pressed', String(restAccess));
+    rw.setAttribute('aria-pressed', String(!restAccess));
+  }
+  function stop(){ clearTimeout(timer); }
+  tog.addEventListener('click', function(){ stop(); open=!open; render(); });
+  ra.addEventListener('click', function(){ stop(); restAccess=true;  open=false; render(); });
+  rw.addEventListener('click', function(){ stop(); restAccess=false; open=false; render(); });
+
+  // One orchestrated demonstration on arrival, then it belongs to the visitor.
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    timer=setTimeout(function(){ open=true; render();
+      timer=setTimeout(function(){ open=false; render(); }, 2600);
+    }, 1500);
+  }
+  render();
+})();</script>
+</body>
+</html>
