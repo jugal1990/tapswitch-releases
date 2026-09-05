@@ -27,17 +27,21 @@ several times a day.
 
 ## What TapSwitch does
 
-Holds your **access card** as the phone's NFC default, and hands over to **Google Wallet**
-as soon as you open it. Switch to another app and it hands straight back.
+You choose which of your two cards rests as the phone's NFC default. TapSwitch holds it
+there all day, and hands the slot to the other card the moment that card's app comes to the
+front. Leave that app and the slot goes straight back.
 
-If your screen simply times out while Wallet is open, TapSwitch keeps the payment card
-ready for about a minute, so waking the phone at the till still pays. After that it returns
-to your access card on its own.
+Rest on your **access card** and doors behave exactly as they always did, with Google Wallet
+borrowing the slot while you pay. Rest on **Google Wallet** and tap-to-pay is always armed,
+with your access card taking the slot only while its own app is on screen. Both directions
+work the same way. The only question is which card you reach for more often without
+thinking about it.
+
+If your screen simply times out while the borrowing app is open, TapSwitch keeps that card
+ready for about a minute, so waking the phone at the till still works. After that the
+resting card takes the slot back on its own.
 
 You never open TapSwitch. You never change a setting. Doors work, paying works.
-
-Prefer it the other way round? **Reverse mode** makes Google Wallet the permanent default
-and lets the access card take over only while its own app is on screen.
 
 ***
 
@@ -73,9 +77,11 @@ The app opens with four green checks. Make sure the switch at the top is on. Tha
 TapSwitch works fully for 14 days. The clock starts the first time it is actually running,
 not when you download it, so there is no rush between the two.
 
-When the trial ends, TapSwitch puts your **access card back** as the NFC default and stops
-switching. Nothing breaks: your doors work exactly as they did before you installed it. The
-only thing that stops is the automation.
+When the trial ends, TapSwitch stops switching and puts your **access card** back as the NFC
+default. It does that whichever direction you had it set to, on purpose: once the automation
+stops, whatever card the last write left in force is the one you live with, and a door you
+cannot open is worse than a payment you can make another way. Nothing else breaks, and your
+doors work exactly as they did before you installed it.
 
 To keep it, tap **Get the full version** in the app. Your device ID is filled in for you.
 Send the message and you will get a link back that unlocks it in one tap. Since this is a 
@@ -108,8 +114,9 @@ repository and it will track releases for you.
 
 - **Screen on.** Access cards of this kind only respond while the screen is on. That is how
   the phone works, with or without TapSwitch.
-- **Reverse mode and doors.** In reverse, the access card is only the default while its app
-  is open, so doors need the screen on and that app in front.
+- **The borrowing card needs its own app in front.** Whichever card is not the resting one
+  takes the slot only while its app is on screen. If that is your access card, doors need
+  the screen on and that app open.
 - **Something not working?** **About**, then **Report a problem**, writes a diagnostic log
   into the message for you, so a bug report does not have to start with twenty questions.
 - **Main profile only.** TapSwitch does not run in a cloned app, Second Space or a work
