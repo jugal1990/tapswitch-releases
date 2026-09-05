@@ -43,7 +43,11 @@ and lets the access card take over only while its own app is on screen.
 
 ## Install
 
-**[Download the latest release](https://github.com/jugal1990/tapswitch-releases/releases/latest)**, and take `TapSwitch-Setup.zip`.
+**[Download the latest release](https://github.com/jugal1990/tapswitch-releases/releases/latest)**, and take
+**`TapSwitch-Setup-START-HERE.zip`**.
+
+The bare `TapSwitch-advanced-only.apk` next to it is for updating an install you already have.
+On a fresh phone it installs but cannot work, because nothing grants it the permission below.
 
 Setup needs a computer once. ColorOS blocks the permission TapSwitch needs from being
 granted on the phone alone, so a small installer grants it over USB. After that the app runs
