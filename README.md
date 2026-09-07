@@ -83,7 +83,7 @@ stops, whatever card the last write left in force is the one you live with, and 
 cannot open is worse than a payment you can make another way. Nothing else breaks, and your
 doors work exactly as they did before you installed it.
 
-To keep it costs **US$9, once**. Not a subscription, and there is no account to make.
+To keep it costs **$9 US Dollars, paid once**. Not a subscription, and there is no account to make.
 
 Tap **Get the full version** in the app and your device ID is filled in for you. Send the
 message; the reply tells you how to pay, and the code follows. Codes are sent by hand,
