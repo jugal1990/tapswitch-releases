@@ -117,6 +117,10 @@ repository and it will track releases for you.
 - **The borrowing card needs its own app in front.** Whichever card is not the resting one
   takes the slot only while its app is on screen. If that is your access card, doors need
   the screen on and that app open.
+- **A card app may ask to be made the default.** That prompt comes from the card app, not
+  from TapSwitch. It opens, sees it is not holding the NFC default, and offers to take it.
+  Dismiss it and the card works as normal. Accepting it is harmless too: TapSwitch takes the
+  slot back on the next switch.
 - **Something not working?** **About**, then **Report a problem**, writes a diagnostic log
   into the message for you, so a bug report does not have to start with twenty questions.
 - **Main profile only.** TapSwitch does not run in a cloned app, Second Space or a work
