@@ -83,9 +83,11 @@ stops, whatever card the last write left in force is the one you live with, and 
 cannot open is worse than a payment you can make another way. Nothing else breaks, and your
 doors work exactly as they did before you installed it.
 
-To keep it, tap **Get the full version** in the app. Your device ID is filled in for you.
-Send the message and you will get a link back that unlocks it in one tap. Since this is a 
-closed source project, there will be a fee for unlimited access. I have yet to decide how much. 
+To keep it costs **US$9, once**. Not a subscription, and there is no account to make.
+
+Tap **Get the full version** in the app and your device ID is filled in for you. Send the
+message; the reply tells you how to pay, and the code follows. Codes are sent by hand,
+usually within a day, and the link unlocks the app in one tap.
 
 | | |
 | --- | --- |
