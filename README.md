@@ -95,7 +95,8 @@ involved.
 TapSwitch looks for a newer version once a day and puts a quiet notice in your notification
 shade. No sound, no vibration, no banner across your screen, because an app that promises you
 never have to open it should not shout. Tap the notice and it tells you what changed and hands
-you the file. The same thing sits under **About** whenever you want to look.
+you the file. It downloads nothing by itself and installs nothing by itself, so the moment you
+update is yours to pick. The same thing sits under **About** whenever you want to look.
 
 If you would rather a tool did it, point [Obtainium](https://github.com/ImranR98/Obtainium) at
 this repository and it will track releases for you.
