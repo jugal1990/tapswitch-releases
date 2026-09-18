@@ -92,9 +92,13 @@ identity, so that does need a fresh code: send the receipt and you get one.
 Install over the top. Your settings, permissions and unlock are all kept, and no computer is
 involved.
 
-The app tells you under **About** when a newer version exists. If you would rather it happened
-by itself, point [Obtainium](https://github.com/ImranR98/Obtainium) at this repository and it
-will track releases for you.
+TapSwitch looks for a newer version once a day and puts a quiet notice in your notification
+shade. No sound, no vibration, no banner across your screen, because an app that promises you
+never have to open it should not shout. Tap the notice and it tells you what changed and hands
+you the file. The same thing sits under **About** whenever you want to look.
+
+If you would rather a tool did it, point [Obtainium](https://github.com/ImranR98/Obtainium) at
+this repository and it will track releases for you.
 
 ***
 
