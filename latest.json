@@ -1,1 +1,1 @@
-{"versionCode":28,"versionName":"2.6.2","url":"https://github.com/jugal1990/tapswitch-releases/releases/download/v2.6.2/TapSwitch.apk","notes":"The Buy now button opened an email instead of the payment page. It now opens the payment page."}
+{"versionCode":29,"versionName":"2.6.3","url":"https://github.com/jugal1990/tapswitch-releases/releases/download/v2.6.3/TapSwitch.apk","notes":"TapSwitch opens itself again after setup finishes, instead of leaving you on the home screen to go looking for it."}
