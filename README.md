@@ -7,87 +7,68 @@
   <img src="https://img.shields.io/github/downloads/jugal1990/tapswitch-releases/total?style=flat-square&color=4C8DFF" alt="Downloads">
   <img src="https://img.shields.io/badge/Android-12%2B-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android 12+">
   <img src="https://img.shields.io/badge/built%20for-Oppo%20%C2%B7%20ColorOS-262626?style=flat-square" alt="Built for ColorOS">
-  <img src="https://img.shields.io/badge/trial-14%20days%2C%20free-4C8DFF?style=flat-square" alt="14-day trial">
+  <img src="https://img.shields.io/badge/14%20days%20free%2C%20then%20US%244.99-4C8DFF?style=flat-square" alt="14 days free, then US$4.99 once">
 </p>
 
+<h3 align="center">
+  <a href="https://jugal1990.github.io/tapswitch-releases/">Download and set up &rarr;</a>
+</h3>
+
 <p align="center">
-  No settings to change · No app to open · No account
+  One file, 6.5&nbsp;MB &middot; no computer &middot; no account &middot; nothing to open again
 </p>
 
 ***
 
 ## The problem
 
-Your phone can present **one** NFC card at a time.
-
-Set your building's access card as the default and tap-to-pay stops working. Set Google
-Wallet as the default and your door stops opening. Android has no "use the payment app
-while it's open" behaviour on these phones, so you end up digging through the NFC settings
-several times a day.
+Your phone can present **one** NFC card at a time. Set your building's access card as the
+default and tap-to-pay stops working. Set Google Wallet as the default and your door stops
+opening.
 
 ## What TapSwitch does
 
-You choose which of your two cards rests as the phone's NFC default. TapSwitch holds it
-there all day, and hands the slot to the other card the moment that card's app comes to the
-front. Leave that app and the slot goes straight back.
+You pick which of your two cards rests in the phone's NFC slot. TapSwitch holds it there all
+day, and hands the slot to the other card the moment that card's app comes to the front.
+Leave that app and the slot goes straight back.
 
 Rest on your **access card** and doors behave exactly as they always did, with Google Wallet
 borrowing the slot while you pay. Rest on **Google Wallet** and tap-to-pay is always armed,
 with your access card taking the slot only while its own app is on screen. Both directions
-work the same way. The only question is which card you reach for more often without
-thinking about it.
+work the same way.
 
-If your screen simply times out while the borrowing app is open, TapSwitch keeps that card
-ready for about a minute, so waking the phone at the till still works. After that the
-resting card takes the slot back on its own.
+If your screen times out while the borrowing app is open, TapSwitch keeps that card ready for
+about a minute, so waking the phone at the till still works.
 
-You never open TapSwitch. You never change a setting. Doors work, paying works.
+You never open TapSwitch after setup.
 
 ***
 
 ## Install
 
-**[Download the latest release](https://github.com/jugal1990/tapswitch-releases/releases/latest)**, and take
-**`TapSwitch-Setup-START-HERE.zip`**.
+Download **`TapSwitch.apk`** from the
+[download page](https://jugal1990.github.io/tapswitch-releases/), open it, and setup starts on
+its own.
 
-The bare `TapSwitch-advanced-only.apk` next to it is for updating an install you already have.
-On a fresh phone it installs but cannot work, because nothing grants it the permission below.
+**No computer, no cable, no scripts.** Android hides the switch TapSwitch needs behind
+Developer options, so the app walks you through turning that on, names the exact row to tap in
+your phone maker's own words, and turns everything back off behind you. It takes about eight
+taps.
 
-Setup needs a computer once. ColorOS blocks the permission TapSwitch needs from being
-granted on the phone alone, so a small installer grants it over USB. After that the app runs
-on its own, and updates never need a computer again.
-
-| Step | Where | What |
-| --- | --- | --- |
-| 1 | Phone | Settings, About device, **Version**, then tap **Build number** seven times |
-| 2 | Phone | Settings, Additional settings, Developer options, turn on **USB debugging** |
-| 3 | Both | Plug the phone into the computer |
-| 4 | Computer | Run `Install-TapSwitch-Mac.command` or `Install-TapSwitch-Windows.bat` |
-| 5 | Phone | Tap **Allow** on the USB debugging prompt |
-
-The app opens with four green checks. Make sure the switch at the top is on. That is it.
-
-> The installer downloads Google's official `platform-tools` the first time if you don't
-> already have it, which adds a moment on first run. Nothing else leaves your computer.
+The [download page](https://jugal1990.github.io/tapswitch-releases/#file) also lists the file's
+size, version and SHA-256, so you can check the download before you install it. TapSwitch is
+not on the Play Store, so nothing has checked it for you.
 
 ***
 
-## Free for 14 days
+## Price
 
-TapSwitch works fully for 14 days. The clock starts the first time it is actually running,
-not when you download it, so there is no rush between the two.
+Free for 14 days, then **US$4.99, paid once**. Not a subscription, and there is no account to
+make.
 
-When the trial ends, TapSwitch stops switching and puts your **access card** back as the NFC
-default. It does that whichever direction you had it set to, on purpose: once the automation
-stops, whatever card the last write left in force is the one you live with, and a door you
-cannot open is worse than a payment you can make another way. Nothing else breaks, and your
-doors work exactly as they did before you installed it.
-
-To keep it costs **$9 US Dollars, paid once**. Not a subscription, and there is no account to make.
-
-Tap **Get the full version** in the app and your device ID is filled in for you. Send the
-message; the reply tells you how to pay, and the code follows. Codes are sent by hand,
-usually within a day, and the link unlocks the app in one tap.
+The countdown starts when the app is actually working, not when you download it. Tap **Get the
+full version**, the checkout opens carrying your device ID, and your unlock code is on screen
+the moment the payment clears, with a copy by email.
 
 | | |
 | --- | --- |
@@ -96,8 +77,13 @@ usually within a day, and the link unlocks the app in one tap.
 | **Survives a reinstall** | Uninstall the app or clear its data, your unlock returns |
 | **No server** | Your unlock is verified on the phone, never checked online |
 
-Your code is shown again any time under **About**, so you can keep it somewhere safe. A
-factory reset gives the phone a new identity, so that does need a fresh code.
+**No refunds.** The 14 days are free and nothing is held back in them, so you find out whether
+TapSwitch works on your phone before you pay rather than after. When the trial ends, TapSwitch
+puts your **access card** back as the NFC default and stops switching, so your doors keep
+working exactly as they did before you installed it.
+
+Your code is shown again any time under **About**. A factory reset gives the phone a new
+identity, so that does need a fresh code: send the receipt and you get one.
 
 ***
 
@@ -106,34 +92,34 @@ factory reset gives the phone a new identity, so that does need a fresh code.
 Install over the top. Your settings, permissions and unlock are all kept, and no computer is
 involved.
 
-The app tells you under **About** when a newer version exists. If you would rather it
-happened by itself, point [Obtainium](https://github.com/ImranR98/Obtainium) at this
-repository and it will track releases for you.
+The app tells you under **About** when a newer version exists. If you would rather it happened
+by itself, point [Obtainium](https://github.com/ImranR98/Obtainium) at this repository and it
+will track releases for you.
 
 ***
 
-## Good to know
+## Before you download
 
-- **Screen on.** Access cards of this kind only respond while the screen is on. That is how
-  the phone works, with or without TapSwitch.
-- **The borrowing card needs its own app in front.** Whichever card is not the resting one
-  takes the slot only while its app is on screen. If that is your access card, doors need
-  the screen on and that app open.
-- **A card app may ask to be made the default.** That prompt comes from the card app, not
-  from TapSwitch. It opens, sees it is not holding the NFC default, and offers to take it.
-  Dismiss it and the card works as normal. Accepting it is harmless too: TapSwitch takes the
-  slot back on the next switch.
-- **Something not working?** **About**, then **Report a problem**, writes a diagnostic log
-  into the message for you, so a bug report does not have to start with twenty questions.
-- **Main profile only.** TapSwitch does not run in a cloned app, Second Space or a work
-  profile. Android keeps NFC settings separate per profile, so a copy running there could
-  not change the card your phone actually presents.
-- **Built for ColorOS.** Oppo phones on Android 12 or newer. Other Android
-  phones may work but are untested. You are welcome to try it and send feedback!
+Honest about what it does not do:
+**[What it does not do](https://jugal1990.github.io/tapswitch-releases/#limits)**, on the
+download page. The short version is that an access card needs the screen on, the borrowing card
+needs its own app in front, TapSwitch runs in the main profile only, and Oppo ColorOS is the
+only thing it has been tested on.
+
+Something not working? **About**, then **Report a problem**, writes a diagnostic log into the
+message for you.
 
 ***
 
 ## What's in this repository
 
-Built releases only. The app's source is private. `latest.json` is the version manifest that
-the in-app update check reads.
+Built releases only. The app's source is private.
+
+| File | What it is |
+| --- | --- |
+| `TapSwitch.apk` | The app itself, on every release. The only file attached on purpose; GitHub adds the two source zips by itself, and they hold this page, not the app. |
+| `latest.json` | The version manifest the in-app update check reads. |
+| `index.html`, `assets/` | The download page, served by GitHub Pages. |
+| `u/` | The page an unlock link lands on. |
+
+TapSwitch is not affiliated with Google or Oppo.
