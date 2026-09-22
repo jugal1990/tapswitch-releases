@@ -8,7 +8,7 @@
   </defs>
   <rect width="108" height="108" rx="24" fill="url(#tsBg)"/>
   <g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M34,44 L72,44 M72,44 L63,37 M72,44 L63,51"/>
-    <path d="M74,64 L36,64 M36,64 L45,57 M36,64 L45,71"/>
+    <path d="M35,44 L73,44 M73,44 L65,36 M73,44 L65,52"/>
+    <path d="M73,64 L35,64 M35,64 L43,56 M35,64 L43,72"/>
   </g>
 </svg>
