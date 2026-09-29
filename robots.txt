@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /u/
+
+Sitemap: https://tapswitch.fyi/sitemap.xml
