@@ -11,7 +11,7 @@
 </p>
 
 <h3 align="center">
-  <a href="https://jugal1990.github.io/tapswitch-releases/">Download and set up &rarr;</a>
+  <a href="https://tapswitch.fyi/">Download and set up &rarr;</a>
 </h3>
 
 <p align="center">
@@ -47,7 +47,7 @@ You never open TapSwitch after setup.
 ## Install
 
 Download **`TapSwitch.apk`** from the
-[download page](https://jugal1990.github.io/tapswitch-releases/), open it, and setup starts on
+[download page](https://tapswitch.fyi/), open it, and setup starts on
 its own.
 
 **No computer, no cable, no scripts.** Android hides the switch TapSwitch needs behind
@@ -55,7 +55,7 @@ Developer options, so the app walks you through turning that on, names the exact
 your phone maker's own words, and turns everything back off behind you. It takes about eight
 taps.
 
-The [download page](https://jugal1990.github.io/tapswitch-releases/#file) also lists the file's
+The [download page](https://tapswitch.fyi/#file) also lists the file's
 size, version and SHA-256, so you can check the download before you install it. TapSwitch is
 not on the Play Store, so nothing has checked it for you.
 
@@ -106,7 +106,7 @@ this repository and it will track releases for you.
 ## Before you download
 
 Honest about what it does not do:
-**[What it does not do](https://jugal1990.github.io/tapswitch-releases/#limits)**, on the
+**[What it does not do](https://tapswitch.fyi/#limits)**, on the
 download page. The short version is that an access card needs the screen on, the borrowing card
 needs its own app in front, TapSwitch runs in the main profile only, and Oppo ColorOS is the
 only thing it has been tested on.
