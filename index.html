@@ -211,6 +211,18 @@ a:hover { color: #86B6FF; }
 .compare .after { border-left: 2px solid var(--access); padding-left: 22px; }
 .compare .after h3 { color: var(--access); }
 
+/* the first customer, in his own words */
+.quote { margin: 44px 0 0; padding: 4px 0 4px 22px; border-left: 2px solid var(--access); max-width: var(--measure); }
+.quote blockquote {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.6vw, 1.4rem);
+  letter-spacing: -.015em;
+  line-height: 1.4;
+}
+.quote figcaption { margin: 12px 0 0; color: var(--muted); font-size: .92rem; }
+
 /* ---------- sections ---------- */
 
 section { padding: 76px 0 0; }
@@ -406,6 +418,10 @@ footer p { margin: 0 0 8px; max-width: var(--measure); }
         </ul>
       </div>
     </div>
+    <figure class="quote">
+      <blockquote>&ldquo;I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.&rdquo;</blockquote>
+      <figcaption>Jalal, Oppo Find X9 Ultra user</figcaption>
+    </figure>
   </section>
 
   <section id="setup">
