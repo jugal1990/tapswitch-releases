@@ -261,7 +261,7 @@ h1, h2, h3 { text-wrap: balance; }
    Kept out of the column sizing, so switching modes never nudges the phone or the readers. */
 .demo .mode { contain: inline-size; justify-self: stretch; margin-inline: auto; width: 100%; }
 /* No words tell the visitor what to do: the phone wobbles slowly in place and both readers
-   glow until the first drag. The hint stays for screen readers. */
+   glow while it rests. The hint stays for screen readers. */
 .hint { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .demo.waiting .reader .face { animation: beckon 4s ease-in-out infinite; }
 .demo.waiting .reader.till .face { animation-delay: 2s; }
@@ -791,6 +791,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
     clearTimer = setTimeout(function () {
       reader.classList.remove("ok", "no");
       reader.querySelector(".msg").textContent = "";
+      beckon();
     }, 2600);
   }
 
@@ -851,9 +852,14 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
     e.preventDefault(); tried(); flyTo(r);
   });
 
-  // Until the visitor first moves the phone (a drag or an arrow key), the readers glow.
+  // The readers glow while the phone rests. The glow stops when the phone moves (a drag or
+  // an arrow key) and comes back once the reader's answer fades, or the phone is home after a miss.
   demo.classList.add("waiting");
   function tried() { demo.classList.remove("waiting"); }
+  function beckon() {
+    if (start || busy || demo.querySelector(".reader.ok, .reader.no")) return;
+    demo.classList.add("waiting");
+  }
   // Dragging: the phone follows the finger, but only as far as the readers.
   // The readers sit level with the phone's NFC spot, so the phone only slides left or
   // right, never past the middle of either reader.
@@ -906,6 +912,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
       setTimeout(function () { busy = false; }, 500);
     } else {
       hold.style.transform = "";
+      setTimeout(beckon, 480);
     }
   }
   hold.addEventListener("pointerup", drop);
