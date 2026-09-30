@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<script>
+/* light by day (07:00 to 18:59 on the visitor's clock), dark at night, set before anything
+   paints. A choice made with the sun or moon lasts for the rest of this visit only. */
+(function () {
+  var t = null;
+  try { t = sessionStorage.getItem("ts-theme"); } catch (e) { /* storage blocked: use the clock */ }
+  if (t !== "light" && t !== "dark") { var h = new Date().getHours(); t = h >= 7 && h < 19 ? "light" : "dark"; }
+  document.documentElement.setAttribute("data-theme", t);
+})();
+</script>
 <title>TapSwitch: your NFC access card and Google Wallet on one Android phone</title>
-<meta name="description" content="Office access card and Google Wallet (Google Pay) fighting over NFC on your Android phone? TapSwitch switches the NFC card for you. Made on Oppo ColorOS, works on Android 12 or newer.">
+<meta name="description" content="Office access card and Google Wallet (Google Pay) fighting over NFC on your Android phone? TapSwitch makes your access card the default NFC and hands over to Google Wallet when you need it. Made on Oppo ColorOS, works on Android 16 or newer.">
 <link rel="canonical" href="https://tapswitch.fyi/">
 <meta property="og:url" content="https://tapswitch.fyi/">
 <meta property="og:type" content="website">
@@ -16,346 +26,497 @@
   "name": "TapSwitch",
   "url": "https://tapswitch.fyi/",
   "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Android 12 or newer",
-  "description": "Lets an NFC access card app and Google Wallet share one Android phone. The access card answers door readers, and Google Wallet takes over while it is open to pay.",
+  "operatingSystem": "Android 16 or newer",
+  "description": "Makes your NFC access card the default on an Android phone, and hands over to Google Wallet while it is open, so you can pay.",
   "image": "https://tapswitch.fyi/assets/social-preview.png",
   "downloadUrl": "https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk",
   "offers": { "@type": "Offer", "price": "4.99", "priceCurrency": "USD" }
 }
 </script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<meta property="og:title" content="You change that setting twice a day. Stop.">
-<meta property="og:description" content="Your phone shows one NFC card at a time. TapSwitch hands the slot to whichever card you need, the moment you need it.">
+<meta property="og:title" content="Access Card by default. Google Wallet when you need it.">
+<meta property="og:description" content="NFC on autopilot. TapSwitch makes your access card the default NFC, and Google Wallet takes over only while it is open.">
 <meta property="og:image" content="https://tapswitch.fyi/assets/social-preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
+/* Layout: a calm two column hero (words left, a phone to try out right), then a quiet single column story
+   with hairline separators, and the technical detail tucked into a softer band near the end.
+   Look: a minimal product page. Near white ground, white panels only where they mark an object. */
 :root {
-  --bg: #0F1216;
-  --bg-lift: #131922;
-  --surface: #191E26;
-  --surface-2: #212A35;
-  --line: #2C333F;
-  --ink: #ECEFF4;
-  --muted: #98A2B0;
-  --access: #57D3A0;   /* always: the card resting in the slot */
-  --wallet: #5B9CFF;   /* always: the card borrowing the slot */
-  --gutter: 16px;
-  --measure: 62ch;
-  --display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
-  --body: "IBM Plex Sans", system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --bg: #FBFBFD;
+  --panel: #FFFFFF;
+  --ink: #1D1D1F;
+  --muted: #6E6E73;
+  --line: #D2D2D7;
+  --fill: #E8E8ED;
+  --seg-on: #FFFFFF;
+  --quiet: #F5F5F7;
+  --green: #1FA874;
+  --green-card: #57D3A0;
+  --blue: #2F74E6;
+  --blue-card: #5B9CFF;
+  --action: #2F74E6;
+  --action-hover: #2563CF;
+  --action-ink: #FFFFFF;
+  --shadow: rgba(0, 0, 0, .08);
+  --sun-y: 0%;
+  --moon-y: 130%;
+  --night: 0;
+  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter Tight", "Helvetica Neue", system-ui, sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter Tight", "Helvetica Neue", system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #000000; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C;
+    --fill: #1D1D1F; --seg-on: #3A3A3C; --quiet: #111113;
+    --green: #57D3A0; --green-card: #57D3A0; --blue: #6FA8FF; --blue-card: #5B9CFF;
+    --action: #3A7FEF; --action-hover: #5590F3; --action-ink: #FFFFFF; --shadow: rgba(0, 0, 0, .6);
+    --sun-y: 130%; --moon-y: 0%; --night: 1;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #000000; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C;
+  --fill: #1D1D1F; --seg-on: #3A3A3C; --quiet: #111113;
+  --green: #57D3A0; --green-card: #57D3A0; --blue: #6FA8FF; --blue-card: #5B9CFF;
+  --action: #3A7FEF; --action-hover: #5590F3; --action-ink: #FFFFFF; --shadow: rgba(0, 0, 0, .6);
+  --sun-y: 130%; --moon-y: 0%; --night: 1;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
-
-html { -webkit-text-size-adjust: 100%; }
-
 body {
   margin: 0;
   background: var(--bg);
-  background-image: linear-gradient(177deg, var(--bg) 0%, var(--bg-lift) 55%, var(--bg) 100%);
-  background-attachment: fixed;
   color: var(--ink);
-  font: 400 17px/1.6 var(--body);
+  font: 400 17px/1.5 var(--body);
+  letter-spacing: -.011em;
   -webkit-font-smoothing: antialiased;
+  transition: background .3s ease, color .3s ease;
 }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 16px; }
+@media (min-width: 700px) { .wrap { padding-inline: 32px; } }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--action); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3 { text-wrap: balance; }
 
-.wrap { max-width: 880px; margin: 0 auto; padding: 0 var(--gutter); }
-
-a { color: var(--wallet); text-underline-offset: 3px; }
-a:hover { color: #86B6FF; }
-
-:focus-visible {
-  outline: 2px solid var(--access);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-/* ---------- top bar ---------- */
-
+/* top bar: frosted glass that the page slides under */
 .bar {
-  position: sticky; top: 0; z-index: 10;
-  background: rgba(15,18,22,.82);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
 }
-.bar .wrap {
-  display: flex; align-items: center; gap: 12px;
-  height: 60px;
+.bar .wrap { display: flex; align-items: center; gap: 10px; height: 52px; }
+.brand { display: flex; align-items: center; gap: 9px; font: 600 17px/1 var(--display); letter-spacing: -.02em; }
+.brand svg { width: 26px; height: 26px; }
+.spacer { flex: 1; }
+
+/* the light or dark switch is the sky itself: the sun (light) or moon (dark) sits beside
+   the name, with the bottom of the bar as its horizon. Whichever body is leaving sets at
+   once; the arriving one waits, then rises. The bar is sticky, so it follows the scroll. */
+.sky {
+  position: relative; width: 34px; height: 30px; margin-left: 4px; padding: 0; border: 0;
+  background: none; cursor: pointer; overflow: hidden; border-radius: 8px 8px 0 0;
 }
-.brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 700; font-size: 18px; letter-spacing: -.01em; }
-.brand img { width: 26px; height: 26px; border-radius: 7px; }
-.bar .spacer { flex: 1; }
+.sky svg { position: absolute; inset: 3px 5px 3px; width: 24px; height: 24px; }
+.sky .sun { transform: translateY(var(--sun-y)); transition: transform .55s cubic-bezier(.2,.8,.3,1) .5s; }
+.sky .moon { transform: translateY(var(--moon-y)); transition: transform .45s cubic-bezier(.6,0,.9,.4); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sky .sun { transition: transform .45s cubic-bezier(.6,0,.9,.4); }
+  :root:not([data-theme="light"]) .sky .moon { transition: transform .55s cubic-bezier(.2,.8,.3,1) .5s; }
+}
+:root[data-theme="dark"] .sky .sun { transition: transform .45s cubic-bezier(.6,0,.9,.4); }
+:root[data-theme="dark"] .sky .moon { transition: transform .55s cubic-bezier(.2,.8,.3,1) .5s; }
+.sky .rays { transform-box: view-box; transform-origin: 12px 12px; animation: rays 24s linear infinite; }
+@keyframes rays { to { transform: rotate(360deg); } }
+.sky .star { animation: twinkle 2.4s ease-in-out infinite; }
+.sky .star + .star { animation-delay: 1.2s; }
+@keyframes twinkle { 50% { opacity: .25; } }
+.sky:hover .sun, .sky:hover .moon { filter: brightness(1.12); }
+
+/* a short wash of dusk or dawn light over the page while the colours change */
+.wash { position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0; }
+.dusk .wash { background: linear-gradient(180deg, rgba(255,138,76,.38), rgba(128,70,170,.26) 55%, rgba(20,20,60,.12)); animation: wash 1.4s ease-in-out; }
+.dawn .wash { background: linear-gradient(180deg, rgba(255,196,120,.42), rgba(255,140,170,.24) 55%, rgba(255,255,255,.1)); animation: wash 1.4s ease-in-out; }
+@keyframes wash { 0%, 100% { opacity: 0; } 40% { opacity: 1; } }
+/* the whole page cross-fades slowly between themes; the sun or moon is left out of the
+   fade so it can be seen setting and rising */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 1s; animation-timing-function: cubic-bezier(.4, 0, .2, 1); }
+.sky { view-transition-name: sky; }
+::view-transition-old(sky) { display: none; }
+::view-transition-new(sky) { animation: none; }
+.fading, .fading :not(.sky, .sky *) { transition: background-color .7s ease, color .7s ease, border-color .7s ease, box-shadow .7s ease !important; }
 
 .btn {
-  display: inline-block;
-  font: 600 15px/1 var(--body);
-  padding: 11px 18px;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  background: var(--access);
-  color: #06281C;
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 500 14px/1 var(--body); letter-spacing: -.01em;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--action);
+  color: var(--action-ink);
   text-decoration: none;
   white-space: nowrap;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
-.btn:hover { background: #6FE0B1; color: #06281C; }
-.btn-lg { font-size: 17px; padding: 15px 26px; border-radius: 12px; }
-.btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
-.btn-ghost:hover { background: var(--surface); color: var(--ink); }
+.btn:hover { background: var(--action-hover); text-decoration: none; }
+.btn-lg { font-size: 17px; padding: 14px 26px; }
+.btn-plain { background: transparent; color: var(--blue); box-shadow: 0 0 0 1px var(--action) inset; }
+.btn-plain:hover { background: var(--action); color: var(--action-ink); }
 
-/* ---------- hero ---------- */
-
-.hero { padding: 72px 0 8px; }
+/* hero */
+.hero { display: grid; gap: 36px; align-items: center; padding-block: 36px 32px; }
+/* on a laptop the headline starts level with the top of the demo, not floating in the middle */
+@media (min-width: 860px) { .hero { grid-template-columns: 1.08fr .92fr; gap: 48px; padding-block: 40px 24px; align-items: start; } }
+.hero > * { min-width: 0; }
 .hero h1 {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: clamp(2.5rem, 7.2vw, 4.2rem);
-  line-height: 1.02;
-  letter-spacing: -.035em;
-  margin: 0 0 22px;
-  max-width: 15ch;
-}
-.lede {
+  font: 600 clamp(2.5rem, 5.4vw, 4.4rem)/1.04 var(--display);
+  letter-spacing: -.045em;
   margin: 0;
-  max-width: 54ch;
-  font-size: 1.18rem;
-  color: var(--muted);
 }
-.lede strong { color: var(--ink); font-weight: 500; }
+.hero-cta { margin: 28px 0 0; }
+.hero h1 .g { color: var(--green); }
+.hero h1 .b { color: var(--blue); }
+/* the headline types itself in, then the two card names trade places and back,
+   the way the app swaps cards. Each name stays on one line so the roll is clean. */
+.hero h1 .g, .hero h1 .b { display: inline-block; white-space: nowrap; }
+.hero h1 .m { color: var(--muted); }
+.hero h1.typing .ch { visibility: hidden; }
+.hero h1.typing .ch.on { visibility: visible; }
+/* the cursor floats over the text and takes no room, so it can never push a word
+   onto the next line halfway through typing it */
+.hero h1 { position: relative; }
+.hero h1 .caret {
+  position: absolute; width: .06em; margin-left: .03em;
+  background: currentColor; animation: caret 1s steps(1) infinite; pointer-events: none;
+}
+@keyframes caret { 50% { opacity: 0; } }
 
-/* ---------- the slot ---------- */
+/* the logo's two arrows spin once when a download button is hovered */
+.brand svg g { transform-box: view-box; transform-origin: 54px 54px; }
+.brand svg.spin g { animation: logospin .8s cubic-bezier(.45,0,.25,1); }
+@keyframes logospin { to { transform: rotate(360deg); } }
 
+/* the phone: a physical object, so it keeps its own dark titanium body and screen in both themes */
+.stage { display: grid; justify-items: center; gap: 18px; position: relative; }
+.stage::before {
+  content: ""; position: absolute; inset: 4% 8% 22%;
+  background: radial-gradient(50% 50% at 50% 50%, var(--glow), transparent 72%);
+  transition: background .6s ease; pointer-events: none;
+}
+.stage[data-slot="wallet"] { --glow: color-mix(in srgb, var(--blue-card) 18%, transparent); }
+.stage { --glow: color-mix(in srgb, var(--green-card) 16%, transparent); }
+.phone {
+  position: relative;
+  width: min(290px, 78vw); max-width: 100%;
+  aspect-ratio: 9 / 19;
+  border-radius: 46px; padding: 12px;
+  background: linear-gradient(150deg, #4A4D52 0%, #1C1D20 22%, #0B0B0C 60%, #2A2B2E 100%);
+  box-shadow:
+    0 0 0 1px #5C5F65 inset, 0 0 0 3px #111214 inset,
+    0 1px 0 1px rgba(255, 255, 255, .06),
+    0 40px 60px -34px rgba(0, 0, 0, .55), 0 18px 30px -24px rgba(0, 0, 0, .4);
+}
+/* side buttons, so the silhouette reads as a real phone */
+.phone::before, .phone::after {
+  content: ""; position: absolute; width: 3px; border-radius: 2px;
+  background: linear-gradient(90deg, #6A6D73, #2A2B2E);
+}
+.phone::before { right: -2px; top: 26%; height: 16%; }
+.phone::after { left: -2px; top: 20%; height: 9%; }
+.screen {
+  position: relative; height: 100%;
+  border-radius: 36px; overflow: hidden;
+  background: linear-gradient(180deg, #0B0D11, #06070A);
+  display: flex; flex-direction: column;
+  padding: 44px 16px 20px; color: #EEF2F7;
+}
+.island { position: absolute; top: 14px; left: 50%; width: 80px; height: 22px; margin-left: -40px; border-radius: 20px; background: #000; }
+
+/* the try-it demo: drag the phone (or tap a reader) and the card in the tap slot answers.
+   Phone and readers are physical objects, so they keep their own colours in both themes. */
 .demo {
-  margin: 48px 0 0;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: var(--surface);
-  overflow: hidden;
+  grid-template-columns: auto auto auto; grid-template-areas: "door phone till" "mode mode mode";
+  justify-content: center; align-items: center; column-gap: clamp(12px, 3vw, 30px); row-gap: 22px;
 }
-
-.slot-bay {
-  padding: 34px 28px 30px;
+/* on a phone the readers shrink with the phone so all three fit side by side */
+/* equal side columns keep the phone in the middle; labels stay on one line so both readers sit level */
+@media (max-width: 559px) { .demo .reader { zoom: .8; } .demo { grid-template-columns: 1fr auto 1fr; } .demo .rlabel { white-space: nowrap; } }
+@media (max-width: 359px) { .demo { column-gap: 6px; } .demo .rlabel { white-space: normal; } }
+/* on a laptop the readers and phone shrink a little so they fit the first screen beside the headline */
+@media (min-width: 860px) {
+  .demo { row-gap: 16px; }
+  .demo .reader { zoom: .9; }
+}
+/* the mode line spans all three columns; its text changes with the mode.
+   Kept out of the column sizing, so switching modes never nudges the phone or the readers. */
+.demo .mode { contain: inline-size; justify-self: stretch; margin-inline: auto; width: 100%; }
+/* No words tell the visitor what to do: the phone wobbles slowly in place and both readers
+   glow until the first drag. The hint stays for screen readers. */
+.hint { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.demo.waiting .reader .face { animation: beckon 4s ease-in-out infinite; }
+.demo.waiting .reader.till .face { animation-delay: 2s; }
+/* the phone wobbles whenever it rests in the middle, and holds still only while it moves */
+.demo .phone-hold:not(.moving) .phone { animation: wobble 3.2s ease-in-out infinite; }
+@keyframes wobble { 0%, 50%, 100% { transform: none; } 15% { transform: rotate(-3deg); } 35% { transform: rotate(3deg); } }
+@keyframes beckon {
+  0%, 100% { box-shadow: 0 0 0 1px #45474C inset, 0 1px 0 0 rgba(255,255,255,.08) inset, 0 24px 36px -24px rgba(0,0,0,.55), 0 0 0 0 rgba(111,176,255,0); }
+  50% { box-shadow: 0 0 0 1px #45474C inset, 0 1px 0 0 rgba(255,255,255,.08) inset, 0 24px 36px -24px rgba(0,0,0,.55), 0 0 0 3px rgba(111,176,255,.45), 0 0 28px -4px rgba(111,176,255,.7); }
+}
+.demo { -webkit-user-select: none; user-select: none; }
+.demo .phone-hold { grid-area: phone; position: relative; z-index: 3; touch-action: pan-y; cursor: grab; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+.demo .phone-hold.held { cursor: grabbing; transition: none; }
+.demo .reader.door { grid-area: door; }
+/* the readers sit level with the top of the phone, where its NFC spot is (set by the script) */
+.demo .reader { align-self: start; }
+.demo .reader.till { grid-area: till; }
+/* drawn to the real Oppo Find X9: 73.93 x 156.98 mm body, a 6.59 inch screen with an even
+   2.3 mm border all round, a flat metal frame with rounded corners, a round camera hole in
+   the middle at the top. Right side: volume, then power.
+   Left side: the Snap Key. At 214px wide, 1 mm is about 2.9px. */
+.demo .phone { width: clamp(200px, 56vw, 214px); aspect-ratio: 73.93 / 156.98; border-radius: 30px; padding: 7px; zoom: .8; }
+.demo .phone::before {
+  right: -2px; top: 20%; height: 50%; width: 3px;
+  background: linear-gradient(180deg, #6A6D73 0 20%, transparent 20% 27%, #6A6D73 27% 38%, transparent 38%);
+}
+.demo .phone::after { left: -2px; top: 21%; height: 6%; }
+/* on phone screens the whole drawing shrinks a fifth, text and apps included */
+@media (max-width: 559px) { .demo .phone { zoom: .64; } }
+@media (min-width: 860px) { .demo .phone { zoom: .72; } }
+.demo .screen {
+  border-radius: 23px; padding: 0; color: #FFFFFF;
   background:
-    radial-gradient(120% 90% at 50% 0%, rgba(91,156,255,.07), transparent 65%),
-    var(--surface);
-  border-bottom: 1px solid var(--line);
+    radial-gradient(120% 70% at 20% 0%, rgba(111,176,255,.55), transparent 60%),
+    radial-gradient(90% 60% at 100% 100%, rgba(87,211,160,.45), transparent 65%),
+    linear-gradient(170deg, #1B3F8F 0%, #0F2554 50%, #0B3B37 100%);
 }
-
-.slot-title {
-  font-size: .95rem;
-  color: var(--muted);
-  margin: 0 0 16px;
+/* the phone's wallpaper follows the page: day with the sun, a starry night with the moon.
+   The night sky is a layer over the day one that fades in, in time with the moonrise. */
+.demo .screen::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  opacity: var(--night); transition: opacity 1s ease .3s;
+  background:
+    radial-gradient(1px 1px at 18% 14%, #FFFFFF 99%, transparent),
+    radial-gradient(1px 1px at 72% 9%, #FFFFFF 99%, transparent),
+    radial-gradient(1.5px 1.5px at 84% 26%, #FFFFFF 99%, transparent),
+    radial-gradient(1px 1px at 34% 31%, rgba(255,255,255,.8) 99%, transparent),
+    radial-gradient(1px 1px at 58% 22%, rgba(255,255,255,.7) 99%, transparent),
+    radial-gradient(1.5px 1.5px at 10% 44%, rgba(255,255,255,.8) 99%, transparent),
+    radial-gradient(1px 1px at 90% 52%, rgba(255,255,255,.6) 99%, transparent),
+    radial-gradient(60% 40% at 80% 8%, rgba(242,239,216,.28), transparent 70%),
+    linear-gradient(175deg, #0B1026 0%, #1A1745 55%, #2B1F4F 100%);
 }
+.demo .home { position: relative; z-index: 1; }
+.demo .island { top: 10px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; z-index: 4; box-shadow: 0 0 0 1px rgba(255,255,255,.06); }
 
-.seat {
-  position: relative;
-  max-width: 520px;
-  height: 126px;
-  border: 1px dashed #3A4553;
-  border-radius: 15px;
-  background: rgba(0,0,0,.22);
-  padding: 9px;
+/* normal or reverse: which card the phone uses when nothing is open */
+.mode { grid-area: mode; display: grid; justify-items: center; gap: 10px; }
+.switch { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--fill); }
+.switch button {
+  font: 500 13px/1 var(--body); letter-spacing: -.01em; color: var(--muted); background: none; border: 0; cursor: pointer;
+  padding: 8px 16px; border-radius: 999px; transition: background .25s ease, color .25s ease, box-shadow .25s ease;
 }
+.switch button[aria-pressed="true"] { background: var(--seg-on); color: var(--ink); box-shadow: 0 1px 3px var(--shadow), 0 0 0 .5px var(--shadow); }
+.mode p { margin: 0; font-size: .86rem; color: var(--muted); text-align: center; max-width: 40ch; min-height: 2.8em; }
 
-.card {
-  width: 100%;
-  height: 100%;
-  border-radius: 11px;
-  padding: 17px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform .42s cubic-bezier(.22,.9,.3,1), opacity .28s ease, background .3s ease, border-color .3s ease;
+/* inside the phone: an unlocked home screen, so it reads as a real phone */
+.sbar {
+  position: relative; z-index: 3; display: flex; align-items: center; gap: 5px;
+  height: 34px; padding: 4px 16px 0; font: 600 11px/1 var(--body); font-variant-numeric: tabular-nums;
+  transition: color .3s ease;
 }
-.card .who { font-family: var(--display); font-weight: 700; font-size: 1.25rem; letter-spacing: -.02em; }
-.card .role { font-size: .85rem; opacity: .85; }
+.demo[data-app] .sbar { color: #1D1D1F; }
+.sbar .ts { width: 11px; height: 11px; }
+.sbar .gap { flex: 1; }
+.sbar .wifi { width: 12px; height: 12px; }
+.sbar .batt { width: 18px; height: 9px; border: 1.3px solid currentColor; border-radius: 3px; padding: 1px; opacity: .95; }
+.sbar .batt::after { content: ""; display: block; height: 100%; width: 72%; background: currentColor; border-radius: 1px; }
+.home { display: flex; flex-direction: column; height: calc(100% - 34px); padding: 10px 12px 12px; }
+.bigclock { text-align: center; margin: 4px 0 16px; }
+.bigclock b { display: block; font: 600 clamp(34px, 9vw, 44px)/1 var(--display); letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.bigclock span { font-size: 11px; font-weight: 500; opacity: .85; }
+.apps { display: flex; justify-content: center; gap: 30px; }
+.app { display: grid; justify-items: center; gap: 5px; background: none; border: 0; padding: 0; color: inherit; font: 500 11px/1.1 var(--body); }
+button.app { cursor: pointer; }
+.app i { width: 50px; height: 50px; border-radius: 13px; display: grid; place-items: center; box-shadow: 0 6px 14px -6px rgba(0,0,0,.5); transition: transform .15s ease; }
+button.app:hover i { transform: scale(1.06); }
+.app i svg { width: 28px; height: 28px; }
+.app .wal { background: #FFFFFF; }
+.app .acc { background: linear-gradient(140deg, #6BE0B0, #1FA874); }
+.homebar { display: block; margin: 10px auto 0; width: 70px; height: 4px; border-radius: 4px; background: rgba(255,255,255,.85); border: 0; padding: 0; cursor: pointer; }
 
-.card[data-card="access"] {
-  background: linear-gradient(145deg, #1E4E3C, #143529);
-  border: 1px solid var(--access);
-  color: #DFFBEF;
+/* an app open on the phone: a light screen with its card, over the home screen */
+.appview {
+  position: absolute; inset: 0; z-index: 2; background: #F5F5F7; color: #1D1D1F;
+  display: flex; flex-direction: column; padding: 40px 12px 12px;
+  transform: translateY(8%); opacity: 0; pointer-events: none; transition: transform .3s ease, opacity .3s ease;
 }
-.card[data-card="wallet"] {
-  background: linear-gradient(145deg, #1E3862, #14243F);
-  border: 1px solid var(--wallet);
-  color: #E3EEFF;
+.appview.on { transform: none; opacity: 1; pointer-events: auto; }
+.appview .top { display: flex; align-items: center; gap: 8px; font: 600 15px/1 var(--display); letter-spacing: -.02em; }
+.appview .back { width: 26px; height: 26px; border-radius: 50%; border: 0; background: #E3E3E8; color: #1D1D1F; cursor: pointer; font: 600 16px/1 var(--body); }
+.appview .card { margin: 16px 0 0; height: 96px; border-radius: 12px; padding: 12px; color: #FFFFFF; font: 600 13px/1 var(--display);
+  display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 20px -12px rgba(0,0,0,.45); }
+.appview .card small { font: 500 11px/1 var(--body); opacity: .9; }
+.appview[data-app="wallet"] .card { background: linear-gradient(140deg, #6FA8FF, #2F66C2); }
+.appview[data-app="access"] .card { background: linear-gradient(140deg, #6BE0B0, #2A9E73); color: #06281C; }
+.appview .hold { margin: 14px 0 0; text-align: center; font-size: 11px; color: #6E6E73; }
+.appview .homebar { margin-top: auto; background: #1D1D1F; }
+
+/* the small box: which card a tap uses right now, and why. It stays in view over any app. */
+.tapnow {
+  position: absolute; left: 10px; right: 10px; bottom: 32px; z-index: 3;
+  display: grid; grid-template-columns: 12px 1fr; column-gap: 9px; row-gap: 3px; align-items: center;
+  padding: 10px 12px; border-radius: 16px; background: rgba(255,255,255,.82); color: #1D1D1F;
+  -webkit-backdrop-filter: saturate(180%) blur(16px); backdrop-filter: saturate(180%) blur(16px);
+  box-shadow: 0 10px 24px -12px rgba(0,0,0,.5);
 }
-.card.leaving { transform: translateY(26px) scale(.96); opacity: 0; }
+.tapnow .dot { grid-row: 1 / span 2; width: 12px; height: 12px; border-radius: 50%; transition: background .3s ease; }
+.tapnow.access .dot { background: #1FA874; }
+.tapnow.wallet .dot { background: #2F74E6; }
+.tapnow span { font-size: 12px; color: #6E6E73; }
+/* large inside the drawing, because the whole phone is drawn at about two thirds size */
+.tapnow p { margin: 0; font: 400 15px/1.3 var(--body); letter-spacing: -.01em; }
+.tapnow b { font-weight: 700; }
 
-.caption {
-  margin: 18px 0 0;
-  font-size: 1rem;
-  color: var(--muted);
-  min-height: 3em;
-  max-width: 56ch;
+/* the readers: matte graphite hardware with a soft top highlight */
+.reader {
+  position: relative; display: grid; justify-items: center; gap: 10px;
+  background: none; border: 0; padding: 0; color: inherit; font: inherit;
 }
-.caption b { color: var(--ink); font-weight: 500; }
-
-.controls { padding: 22px 28px 26px; display: grid; gap: 18px; }
-@media (min-width: 620px) { .controls { grid-template-columns: 1fr 1fr; gap: 26px; } }
-
-.control > span { display: block; font-size: .9rem; color: var(--muted); margin-bottom: 9px; }
-
-.seg { display: flex; border: 1px solid var(--line); border-radius: 11px; padding: 4px; gap: 4px; background: var(--bg); }
-.seg button {
-  flex: 1;
-  font: 500 14px/1 var(--body);
-  color: var(--muted);
-  background: none;
-  border: 0;
-  border-radius: 8px;
-  padding: 10px 8px;
-  cursor: pointer;
-  transition: background .18s ease, color .18s ease;
+.reader .face {
+  position: relative; display: grid; place-items: center;
+  background: linear-gradient(170deg, #3A3C41 0%, #1E1F22 38%, #121214 100%);
+  box-shadow: 0 0 0 1px #45474C inset, 0 1px 0 0 rgba(255,255,255,.08) inset, 0 24px 36px -24px rgba(0,0,0,.55);
+  transition: transform .2s ease, box-shadow .3s ease;
 }
-.seg button:hover { color: var(--ink); }
-.seg button[aria-pressed="true"] { background: var(--surface-2); color: var(--ink); }
-
-.cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 40px 0 0; }
-.cta-note { font-size: .92rem; color: var(--muted); }
-
-.hint { margin: -4px 0 0; padding: 0 28px 24px; color: var(--muted); font-size: .92rem; }
-
-/* today vs TapSwitch */
-.compare { display: grid; gap: 30px; align-items: start; }
-@media (min-width: 620px) { .compare { grid-template-columns: 1fr 1fr; gap: 44px; } }
-.compare h3 { margin: 0 0 12px; font: 600 1.05rem/1.4 var(--body); color: var(--muted); }
-.compare ul { margin: 0; padding: 0; list-style: none; }
-.compare li { padding: 12px 0; border-bottom: 1px solid var(--line); }
-.compare li:last-child { border-bottom: 0; }
-.compare .now li { color: var(--muted); }
-.compare .after { border-left: 2px solid var(--access); padding-left: 22px; }
-.compare .after h3 { color: var(--access); }
-
-/* the first customer, in his own words */
-.quote { margin: 44px 0 0; padding: 4px 0 4px 22px; border-left: 2px solid var(--access); max-width: var(--measure); }
-.quote blockquote {
-  margin: 0;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: clamp(1.15rem, 2.6vw, 1.4rem);
-  letter-spacing: -.015em;
-  line-height: 1.4;
+.reader.door .face { width: 86px; height: 128px; border-radius: 20px; }
+.reader.till .face { width: 86px; height: 128px; border-radius: 20px; align-content: start; padding-top: 12px; }
+.reader.till .glass {
+  width: 64px; height: 46px; border-radius: 9px; background: linear-gradient(180deg, #F2F2F5, #DCDCE1);
+  display: grid; place-items: center; color: #6E6E73; transition: background .3s ease;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.25);
 }
-.quote figcaption { margin: 12px 0 0; color: var(--muted); font-size: .92rem; }
-
-/* ---------- sections ---------- */
-
-section { padding: 76px 0 0; }
-h2 {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(1.55rem, 3.4vw, 2.05rem);
-  letter-spacing: -.028em;
-  line-height: 1.12;
-  margin: 0 0 10px;
+/* number keypad: 3 x 4 keys, bottom row is cancel (red), clear (yellow), OK (green) */
+.reader.till .keys { margin-top: 7px; display: grid; grid-template-columns: repeat(3, 18px); grid-auto-rows: 10px; gap: 3px 5px; }
+.reader.till .keys i { border-radius: 3px; background: linear-gradient(180deg, #3C3E43, #2A2C30);
+  box-shadow: 0 1px 0 rgba(255,255,255,.07) inset, 0 1px 1px rgba(0,0,0,.4); position: relative; }
+.reader.till .keys i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 3px; height: 3px; margin: -1.5px 0 0 -1.5px; border-radius: 50%; background: #8E8E93; opacity: .7; }
+.reader.till .keys i:nth-child(n+10)::after { display: none; }
+.reader.till .keys i:nth-child(10) { background: linear-gradient(180deg, #D9534F, #A93A36); }
+.reader.till .keys i:nth-child(11) { background: linear-gradient(180deg, #E8C547, #B8962A); }
+.reader.till .keys i:nth-child(12) { background: linear-gradient(180deg, #3CBF7A, #2A8F5A); }
+.reader .wave { width: 30px; height: 30px; color: #8E8E93; transition: color .3s ease, opacity .3s ease; }
+.reader .led { position: absolute; left: 50%; bottom: 10px; width: 26px; height: 4px; margin-left: -13px; border-radius: 4px; background: #3A3B3F; transition: background .3s ease, box-shadow .3s ease; }
+.reader.till .led { bottom: auto; top: 4px; }
+.reader .rlabel { font-size: .78rem; font-weight: 500; line-height: 1.2; text-align: center; color: var(--muted); }
+.reader .msg {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(.9);
+  width: max-content; max-width: 130px; padding: 7px 10px; border-radius: 10px;
+  font: 600 12px/1.25 var(--body); text-align: center; opacity: 0; pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
 }
-.sub { margin: 0 0 30px; color: var(--muted); max-width: var(--measure); }
+.reader.ok .led { background: #57D3A0; box-shadow: 0 0 14px #57D3A0; }
+.reader.ok .face { box-shadow: 0 0 0 1px #45474C inset, 0 0 0 3px #57D3A0, 0 0 34px -4px #57D3A0; }
+.reader.no .face { box-shadow: 0 0 0 1px #45474C inset, 0 0 0 3px #F2B544, 0 0 34px -4px #F2B544; }
+.reader.no .led { background: #F2B544; box-shadow: 0 0 14px #F2B544; }
+.reader.ok .wave, .reader.no .wave { opacity: 0; }
+.reader.ok .msg { background: #1FA874; color: #FFFFFF; opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.reader.no .msg { background: #F2B544; color: #2B1D00; opacity: 1; transform: translate(-50%, -50%) scale(1); }
 
-/* steps: a real sequence, so it is numbered */
-ol.steps { list-style: none; counter-reset: s; margin: 0; padding: 0; }
-ol.steps li {
+/* sections: generous air, divided by hairlines rather than boxes */
+section { padding-block: 40px 0; }
+section + section { margin-top: 40px; border-top: 1px solid var(--line); }
+@media (min-width: 760px) { section { padding-block: 56px 0; } section + section { margin-top: 56px; } }
+/* the customer quote follows the price as its proof, so no rule or big gap between them */
+section.said { margin-top: 0; border-top: 0; padding-block: 36px 0; }
+h2 { font: 600 clamp(1.9rem, 4.2vw, 3rem)/1.08 var(--display); letter-spacing: -.035em; margin: 0 0 14px; }
+.sub { margin: 0 0 24px; font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
+
+/* customer quotes: a magazine pull quote. A thin green to blue line on the left, the words
+   large beside it, the name and phone underneath. More quotes sit side by side, up to three. */
+.quotes { display: grid; gap: 40px 48px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+.quote {
+  margin: 0; min-width: 0; display: grid; gap: 18px; align-content: start;
+  padding: 4px 0 4px 26px; position: relative;
+}
+.quote::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 3px;
+  background: linear-gradient(180deg, var(--green-card), var(--blue-card));
+}
+.quote blockquote { margin: 0; font: 500 clamp(1.3rem, 2.6vw, 1.75rem)/1.35 var(--display); letter-spacing: -.025em; max-width: 40ch; }
+.quote figcaption { font-size: .94rem; color: var(--muted); }
+.quote .who { color: var(--ink); font-weight: 600; }
+.quote .who + .model::before { content: "\00B7"; margin: 0 8px; }
+
+/* setup: four numbered steps on hairlines, no boxes */
+ol.setup { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; column-gap: 48px; }
+@media (min-width: 760px) { ol.setup { grid-template-columns: 1fr 1fr; } }
+ol.setup li {
   counter-increment: s;
-  position: relative;
-  padding: 0 0 26px 52px;
-  border-left: 1px solid var(--line);
-  margin-left: 15px;
-}
-ol.steps li:last-child { border-left-color: transparent; padding-bottom: 0; }
-ol.steps li::before {
-  counter-increment: none;
-  content: counter(s);
-  position: absolute; left: -15px; top: -2px;
-  width: 30px; height: 30px;
-  display: grid; place-items: center;
-  border-radius: 50%;
-  background: var(--surface-2);
-  border: 1px solid var(--line);
-  font: 600 14px/1 var(--body);
-  color: var(--ink);
-}
-ol.steps h3 { font-family: var(--body); font-size: 1.05rem; font-weight: 600; margin: 2px 0 5px; }
-ol.steps p { margin: 0; color: var(--muted); max-width: var(--measure); }
-
-/* receipt: what you are about to download */
-.receipt {
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--surface);
-  overflow: hidden;
-}
-.receipt dl { margin: 0; }
-.receipt .row {
-  display: grid;
-  gap: 4px 20px;
-  padding: 16px 22px;
-  border-bottom: 1px solid var(--line);
-}
-@media (min-width: 620px) { .receipt .row { grid-template-columns: 170px 1fr; } }
-.receipt .row:last-child { border-bottom: 0; }
-.receipt dt { color: var(--muted); font-size: .92rem; }
-.receipt dd { margin: 0; }
-.receipt .hash { font-family: var(--mono); font-size: .78rem; line-height: 1.55; word-break: break-all; color: #BCC6D4; }
-
-/* permissions */
-.perms { border-top: 1px solid var(--line); margin: 34px 0 0; }
-.perm { display: grid; gap: 4px 22px; padding: 18px 0; border-bottom: 1px solid var(--line); }
-@media (min-width: 620px) { .perm { grid-template-columns: 230px 1fr; } }
-.perm h3 { margin: 0; font: 500 1rem/1.5 var(--body); }
-.perm p { margin: 0; color: var(--muted); max-width: var(--measure); }
-
-/* limits */
-.limits { margin: 0; padding: 0; list-style: none; }
-.limits li {
-  padding: 16px 0 16px 26px;
-  border-bottom: 1px solid var(--line);
-  position: relative;
-  color: var(--muted);
-}
-.limits li > span { display: block; max-width: 72ch; }
-.limits li::before {
-  content: "";
-  position: absolute; left: 0; top: 26px;
-  width: 11px; height: 1px;
-  background: #4A5666;
-}
-.limits b { color: var(--ink); font-weight: 500; }
-
-/* price */
-.price {
-  margin: 30px 0 0;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--surface);
-  padding: 30px 26px;
-}
-.price .amount {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: 2.6rem;
-  letter-spacing: -.035em;
-  line-height: 1;
-}
-.price p { color: var(--muted); max-width: var(--measure); margin: 12px 0 0; }
-
-footer {
-  margin: 84px 0 0;
   border-top: 1px solid var(--line);
-  padding: 26px 0 60px;
-  color: var(--muted);
-  font-size: .92rem;
+  padding: 16px 0 18px 56px; position: relative; min-width: 0;
 }
-footer p { margin: 0 0 8px; max-width: var(--measure); }
+ol.setup li::before {
+  content: counter(s);
+  position: absolute; left: 0; top: 14px;
+  width: 34px; height: 34px; border-radius: 50%;
+  display: grid; place-items: center;
+  box-shadow: 0 0 0 1px var(--line) inset; color: var(--blue);
+  font: 600 16px/1 var(--display);
+}
+ol.setup h3 { margin: 4px 0 6px; font: 600 1.15rem/1.3 var(--display); letter-spacing: -.02em; }
+ol.setup p { margin: 0; color: var(--muted); }
 
-@media (max-width: 520px) {
-  .slot-bay { padding: 26px 18px 24px; }
-  .controls { padding: 20px 18px 24px; }
-  .receipt .row { padding: 15px 18px; }
-  .hero { padding: 52px 0 8px; }
-  section { padding: 60px 0 0; }
+.price {
+  display: grid; gap: 24px;
+  background: var(--panel); border-radius: 28px;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent), 0 20px 40px -30px var(--shadow);
+  padding: 32px 26px;
 }
+@media (min-width: 760px) { .price { grid-template-columns: 260px 1fr; gap: 40px; padding: 36px 40px; } }
+.price > * { min-width: 0; }
+.amount { font: 600 clamp(3rem, 6vw, 4rem)/1 var(--display); letter-spacing: -.045em; }
+.amount-note { margin: 12px 0 0; color: var(--muted); font-size: .94rem; }
+.price-points { display: grid; gap: 16px; }
+.price-points p { margin: 0; color: var(--muted); max-width: 62ch; }
+.price-points strong { color: var(--ink); font-weight: 600; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0 0; }
+
+/* quieter technical band */
+.careful { margin: 56px 0 0; background: var(--quiet); border-top: 1px solid var(--line); padding-block: 44px 40px; font-size: 15px; }
+.careful h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.careful h3.small { font: 600 1.05rem/1.3 var(--display); letter-spacing: -.015em; margin: 32px 0 12px; }
+.facts { width: 100%; border-collapse: collapse; }
+.facts-box { overflow-x: auto; border-radius: 18px; background: var(--panel); box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent); }
+.facts th, .facts td { text-align: left; padding: 13px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.facts tr:last-child th, .facts tr:last-child td { border-bottom: 0; }
+.facts th { font-weight: 400; color: var(--muted); width: 170px; white-space: nowrap; }
+/* the long codes fold away under one line; most visitors never need them */
+.tech { border-top: 1px solid var(--line); }
+.tech summary { padding: 13px 20px; cursor: pointer; color: var(--blue); list-style: none; }
+.tech summary::-webkit-details-marker { display: none; }
+.tech summary::after { content: " +"; }
+.tech[open] summary::after { content: " \2212"; }
+.tech .facts { border-top: 1px solid var(--line); }
+.hash { font-family: var(--mono); font-size: .76rem; word-break: break-all; }
+.perms { display: grid; gap: 0; margin: 0; }
+@media (min-width: 760px) { .perms { grid-template-columns: 1fr 1fr; column-gap: 32px; } }
+.perm { padding: 14px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.perm dt { font-weight: 600; }
+.perm dd { margin: 4px 0 0; color: var(--muted); }
+.limits { margin: 0; padding: 0 0 0 20px; display: grid; gap: 10px; color: var(--muted); max-width: 76ch; }
+.limits b { color: var(--ink); font-weight: 600; }
+
+footer { padding-block: 16px 32px; color: var(--muted); font-size: .8rem; line-height: 1.55; background: var(--quiet); }
+footer .wrap { border-top: 1px solid var(--line); padding-top: 22px; }
+footer p { margin: 0 0 8px; max-width: 72ch; }
+.mail { font-family: var(--mono); color: var(--ink); user-select: all; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
@@ -363,288 +524,514 @@ footer p { margin: 0 0 8px; max-width: var(--measure); }
 </style>
 </head>
 <body>
-
 <header class="bar">
   <div class="wrap">
-    <span class="brand"><img src="assets/logo.svg" alt=""> TapSwitch</span>
+    <span class="brand">
+      <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="tsBg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#tsBg)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M35,44 L73,44 M73,44 L65,36 M73,44 L65,52"/><path d="M73,64 L35,64 M35,64 L43,56 M35,64 L43,72"/></g></svg>
+      TapSwitch
+    </span>
     <span class="spacer"></span>
-    <a class="btn" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download</a>
+    <button type="button" class="sky" id="themeBtn" aria-label="Switch to dark mode">
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><g class="rays" stroke="#FFB21E" stroke-width="1.8" stroke-linecap="round"><path d="M12 1.5v2.6M12 19.9v2.6M1.5 12h2.6M19.9 12h2.6M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g><circle cx="12" cy="12" r="5.4" fill="#FFC53D"/><circle cx="12" cy="12" r="5.4" fill="none" stroke="#FF9F0A" stroke-width=".8"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.8 3.2a8.6 8.6 0 1 0 5 13.6A7 7 0 0 1 15.8 3.2z" fill="#F2EFD8"/><circle class="star" cx="5.2" cy="5" r=".9" fill="#F2EFD8"/><circle class="star" cx="9.6" cy="2.6" r=".6" fill="#F2EFD8"/></svg>
+    </button>
   </div>
 </header>
+<div class="wash" aria-hidden="true"></div>
 
-<main class="wrap">
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1><span class="g">Access Card</span> by default. <span class="b">Google Wallet</span> when you need it. <span class="m">NFC on autopilot.</span></h1>
+        <p class="hero-cta"><a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download TapSwitch</a></p>
+      </div>
 
-  <div class="hero">
-    <h1>You change that setting twice a day. Stop.</h1>
-    <p class="lede">Your phone can show <strong>one</strong> NFC card at a time, so your door card and
-      Google Wallet keep taking the slot from each other. TapSwitch hands it to whichever card you
-      need, the moment you need it.</p>
+      <div class="stage demo" id="demo" data-slot="access" data-mode="normal">
+        <div class="mode">
+          <div class="switch" role="group" aria-label="Which card is the default">
+            <button type="button" data-mode="normal" aria-pressed="true">Normal mode</button>
+            <button type="button" data-mode="reverse" aria-pressed="false">Reverse mode</button>
+          </div>
+          <p id="modeNote"></p>
+        </div>
+        <div class="reader door" data-wants="access" data-ok="Door opens">
+          <span class="face"><svg class="wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8.5 8.5a5 5 0 0 1 0 7"/><path d="M12 5a10 10 0 0 1 0 14"/><path d="M15.5 2a15 15 0 0 1 0 20"/></svg><span class="led"></span><span class="msg" aria-live="polite"></span></span>
+          <span class="rlabel">Door Access</span>
+        </div>
+        <div class="phone-hold" id="phoneHold" tabindex="0" aria-label="Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal.">
+          <div class="phone">
+            <div class="screen">
+              <span class="island"></span>
+              <div class="sbar"><span id="demoClock">08:52</span><svg class="ts" viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30,40 L78,40 M78,40 L66,28 M78,40 L66,52"/><path d="M78,68 L30,68 M30,68 L42,56 M30,68 L42,80"/></svg><span class="gap"></span><svg class="wifi" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 20l4-5a6.5 6.5 0 0 0-8 0z"/><path d="M2 9a15 15 0 0 1 20 0l-2.6 3.2a11 11 0 0 0-14.8 0z" opacity=".9"/></svg><span class="batt"></span></div>
+              <div class="home">
+                <div class="bigclock"><b id="bigClock">08:52</b><span id="demoDate">Tuesday, 29 September</span></div>
+                <div class="apps">
+                  <button type="button" class="app" data-app="access"><i class="acc"><svg viewBox="0 0 24 24" fill="none" stroke="#06281C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="14.5" cy="12" r="1" fill="#06281C"/></svg></i>Access</button>
+                  <button type="button" class="app" data-app="wallet"><i class="wal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="3" fill="#2F74E6"/><rect x="3" y="9" width="18" height="3" fill="#5B9CFF"/><rect x="14" y="14" width="4" height="2" rx="1" fill="#FFFFFF"/></svg></i>Wallet</button>
+                </div>
+                <span class="homebar" aria-hidden="true" style="margin-top:auto"></span>
+              </div>
+              <div class="appview" id="appView" data-app="wallet" aria-hidden="true">
+                <div class="top"><button type="button" class="back" aria-label="Back to the home screen">&lsaquo;</button><span id="appTitle">Google Wallet</span></div>
+                <div class="card"><span id="appCard">Visa</span><small>&bull;&bull;&bull;&bull; <span id="appNum">4821</span></small></div>
+                <p class="hold">Hold near reader</p>
+                <button type="button" class="homebar" aria-label="Back to the home screen"></button>
+              </div>
+              <div class="tapnow access" id="nowBox" aria-live="polite">
+                <span class="dot"></span>
+                <span>Hint</span>
+                <p id="nowLine">TapSwitch makes your <b>Access Card</b> the default NFC.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reader till" data-wants="wallet" data-ok="Paid">
+          <span class="face"><span class="led"></span><span class="glass"><svg class="wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8.5 8.5a5 5 0 0 1 0 7"/><path d="M12 5a10 10 0 0 1 0 14"/><path d="M15.5 2a15 15 0 0 1 0 20"/></svg></span><span class="keys" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="msg" aria-live="polite"></span></span>
+          <span class="rlabel">Payment Terminal</span>
+        </div>
+        <p class="hint">Drag the phone left or right onto a reader.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="demo">
-    <div class="slot-bay">
-      <p class="slot-title">Your phone's NFC slot</p>
-      <div class="seat">
-        <div class="card" id="card" data-card="access">
-          <span class="who" id="cardWho">Access card</span>
-          <span class="role" id="cardRole">Resting here. It answers every reader.</span>
+  <div class="wrap">
+    <section id="price" style="padding-block:16px 0">
+      <h2>One price, paid once</h2>
+      <div class="price">
+        <div>
+          <div class="amount">US$4.99</div>
+          <p class="amount-note">For one phone, forever. No subscription, no account.</p>
+        </div>
+        <div class="price-points">
+          <p><strong>Try it free for 14 days.</strong> The clock starts when the app is actually working
+            on your phone, not when you download it. Nothing is held back during the trial.</p>
+          <p><strong>No refunds, and here is why.</strong> The free 14 days are your chance to see it work
+            on your own phone before you pay, so a code cannot be refunded once it is issued.</p>
+          <p><strong>Buy it inside the app.</strong> Tap "Get the full version" and pay. Your unlock code
+            appears on screen straight away, and a copy is emailed to you.</p>
         </div>
       </div>
-      <p class="caption" id="caption"></p>
-    </div>
+      <div class="cta-row">
+        <a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download TapSwitch</a>
+        <a class="btn btn-lg btn-plain" href="https://github.com/jugal1990/tapswitch-releases/releases">All versions</a>
+      </div>
+    </section>
 
-    <div class="controls">
-      <div class="control">
-        <span id="lblRest">Which card rests in the slot</span>
-        <div class="seg" role="group" aria-labelledby="lblRest">
-          <button type="button" data-rest="access" aria-pressed="true">Access card</button>
-          <button type="button" data-rest="wallet" aria-pressed="false">Google Wallet</button>
-        </div>
+    <section class="said" aria-label="What a customer said">
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote>I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.</blockquote>
+          <figcaption><span class="who">Jalal</span><span class="model">Oppo Find X9 Ultra</span></figcaption>
+        </figure>
       </div>
-      <div class="control">
-        <span id="lblScreen">What is on screen right now</span>
-        <div class="seg" role="group" aria-labelledby="lblScreen">
-          <button type="button" data-screen="other" aria-pressed="true">Anything else</button>
-          <button type="button" data-screen="borrow" aria-pressed="false" id="borrowBtn">Google Wallet</button>
-        </div>
-      </div>
-    </div>
-    <p class="hint">Move the switches. This is the whole app, and there is nothing else to learn.</p>
+    </section>
+
+    <section id="setup">
+      <h2>Setting it up takes about five minutes</h2>
+      <p class="sub">Everything happens on the phone. No computer or cable necessary.</p>
+      <ol class="setup">
+        <li>
+          <h3>Install the file</h3>
+          <p>Your phone asks whether to allow installs from your browser. Say yes, then open TapSwitch.</p>
+        </li>
+        <li>
+          <h3>Unlock a hidden menu, once</h3>
+          <p>You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap.</p>
+        </li>
+        <li>
+          <h3>Flip one switch</h3>
+          <p>Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification.</p>
+        </li>
+        <li>
+          <h3>Pick your two cards and you are done!</h3>
+          <p>Your access card app and your pay app.</p>
+        </li>
+      </ol>
+    </section>
   </div>
 
-  <div class="cta-row">
-    <a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download TapSwitch</a>
-    <span class="cta-note">One file, 6.5 MB. Free for 14 days, then US$4.99 once. Android 12 or newer.</span>
+
+  <div class="careful" id="careful">
+    <div class="wrap">
+      <h2>For the careful</h2>
+      <p class="sub">TapSwitch is not on the Play Store. Want to be sure it is safe? Check it yourself with a free virus scan.</p>
+
+      <div class="facts-box">
+        <table class="facts">
+          <tr><th>File</th><td>TapSwitch.apk</td></tr>
+          <tr><th>Version</th><td>2.6.8</td></tr>
+          <tr><th>Size</th><td>6.5 MB</td></tr>
+          <tr><th>Scan it</th><td><a href="https://www.virustotal.com/gui/home/upload">Check it on VirusTotal</a>, free. Upload the file, or paste its SHA-256 from the details below.</td></tr>
+        </table>
+        <details class="tech">
+          <summary>Show technical details</summary>
+          <table class="facts">
+            <tr><th>SHA-256 of the file</th><td class="hash">0c835543296a069902123bfcf5c09491966a95fa59f88b3bccf1bfcabb3eb987</td></tr>
+            <tr><th>Signed by</th><td class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</td></tr>
+          </table>
+        </details>
+      </div>
+
+      <h3 class="small">Important facts</h3>
+      <ul class="limits">
+        <li>Built and used daily on <b>Oppo ColorOS</b>. Any Android 16 or newer phone should work, but nothing else has been tested.</li>
+        <li>Setup needs <b>Wi-Fi</b> and about eight taps in a settings menu most people have never opened.</li>
+        <li>On phones that refuse the quick permission, TapSwitch <b>installs itself over the top</b> during setup. Your phone may ask you to confirm, and the app closes and reopens once. Nothing is lost.</li>
+        <li>After the trial ends, TapSwitch stops switching and your phone goes back to how it was.</li>
+        <li>"Buy now" opens your browser at the checkout, and your code is on screen as soon as the payment clears, with a copy by email.</li>
+      </ul>
+    </div>
   </div>
-
-  <section>
-    <div class="compare">
-      <div class="now">
-        <h3>Your day today</h3>
-        <ul>
-          <li>Open Settings, change the card, then the door opens.</li>
-          <li>At the till, open Settings again, change it back.</li>
-          <li>Forget once, and the tap just fails, at the door or at the till.</li>
-        </ul>
-      </div>
-      <div class="after">
-        <h3>Your day with TapSwitch</h3>
-        <ul>
-          <li>Walk up to the door and tap. It opens.</li>
-          <li>Open Wallet at the till and pay. It pays.</li>
-          <li>You never open TapSwitch again after setup.</li>
-        </ul>
-      </div>
-    </div>
-    <figure class="quote">
-      <blockquote>&ldquo;I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.&rdquo;</blockquote>
-      <figcaption>Jalal, Oppo Find X9 Ultra user</figcaption>
-    </figure>
-  </section>
-
-  <section id="setup">
-    <h2>Setting it up, on the phone</h2>
-    <p class="sub">No computer, no cable, no scripts. Android hides the switch TapSwitch needs
-      behind Developer options, so you turn that on once and the app does the rest to itself.</p>
-    <ol class="steps">
-      <li>
-        <h3>Install the file</h3>
-        <p>Android will ask whether to allow installs from your browser. Say yes, then open
-          TapSwitch. Setup starts on its own.</p>
-      </li>
-      <li>
-        <h3>Unlock the hidden menu, once</h3>
-        <p>Android keeps the toggle TapSwitch needs behind a developer options menu that stays
-          hidden until you tap your phone's version number seven times. TapSwitch opens the right screen and names the
-          exact row to tap, in your phone maker's own words.</p>
-      </li>
-      <li>
-        <h3>Turn on Wireless debugging</h3>
-        <p>The app opens the settings screen for you and tells you what to tap. You turn the
-          switch on, choose "Pair device with pairing code", and type the six digits into the
-          notification TapSwitch puts in your shade.</p>
-      </li>
-      <li>
-        <h3>Pick your two cards</h3>
-        <p>Your access card app and your tap-to-pay app. TapSwitch turns Wireless debugging back
-          off behind you and starts working. You do not open it again.</p>
-      </li>
-    </ol>
-  </section>
-
-  <section id="file">
-    <h2>What you are about to download</h2>
-    <p class="sub">TapSwitch is not on the Play Store, so nothing has checked it for you. Here is
-      everything you would need to check it yourself.</p>
-
-    <div class="receipt">
-      <dl>
-        <div class="row">
-          <dt>File</dt>
-          <dd>TapSwitch.apk</dd>
-        </div>
-        <div class="row">
-          <dt>Version</dt>
-          <dd>2.6.8</dd>
-        </div>
-        <div class="row">
-          <dt>Size</dt>
-          <dd>6.5 MB</dd>
-        </div>
-        <div class="row">
-          <dt>SHA-256 of the file</dt>
-          <dd class="hash">0c835543296a069902123bfcf5c09491966a95fa59f88b3bccf1bfcabb3eb987</dd>
-        </div>
-        <div class="row">
-          <dt>Signed by</dt>
-          <dd class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</dd>
-        </div>
-        <div class="row">
-          <dt>Scanned</dt>
-          <dd><a href="https://www.virustotal.com/gui/home/upload">Check it on VirusTotal</a>
-            against the hash above.</dd>
-        </div>
-      </dl>
-    </div>
-
-    <div class="perms">
-      <div class="perm">
-        <h3>Change which card your phone presents</h3>
-        <p>This is the entire app. It is also why setup needs Developer options: Android will not
-          hand this to an app any other way.</p>
-      </div>
-      <div class="perm">
-        <h3>See which app is in front</h3>
-        <p>How it knows Wallet is open. It reads the name of the app on screen, never anything
-          inside it, and nothing is stored or sent.</p>
-      </div>
-      <div class="perm">
-        <h3>Keep running, and restart after a reboot</h3>
-        <p>A switcher that stops when you are not looking is worse than no switcher.</p>
-      </div>
-      <div class="perm">
-        <h3>Reach the internet</h3>
-        <p>Only to ask whether a newer version exists. There is no account, no analytics and no
-          server that knows you exist.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="limits">
-    <h2>What it does not do</h2>
-    <p class="sub">The things that would annoy you later, said now.</p>
-    <ul class="limits">
-      <li><span>The borrowing card only holds the slot <b>while its own app is on screen</b>. If you
-        set your access card as the borrower, the door needs the screen on with that app open.</span></li>
-      <li><span>Built and used daily on <b>Oppo ColorOS</b>. Any Android 12 or newer phone should work,
-        but nothing else has been tested.</span></li>
-      <li><span>Setup needs <b>Wi-Fi</b> and about eight taps in a settings menu most people have never
-        opened.</span></li>
-      <li><span>On phones that refuse the quick permission, TapSwitch <b>installs itself over the top</b>
-        during setup. Your phone may ask you to confirm that install, and the app closes and reopens
-        once. Nothing is lost.</span></li>
-      <li><span>Paying leaves the app. Buy now opens your browser at the checkout, and your code is
-        on screen the moment the payment clears, with a copy by email.</span></li>
-    </ul>
-  </section>
-
-  <section id="price">
-    <h2>Price</h2>
-    <div class="price">
-      <div class="amount">US$4.99</div>
-      <p>Paid once, for this phone, forever. No subscription and no account. Free for 14 days
-        first, and the countdown starts when the app is actually working, not when you download
-        it.</p>
-      <p>When the trial ends, TapSwitch stops switching and your phone goes back to the way it
-        worked before. Only one app answers the reader then, whichever one is set as the phone's
-        default, your wallet or your access card.</p>
-      <p><strong>No refunds.</strong> The 14 days are free and nothing is held back in them, so
-        you find out whether TapSwitch works on your phone before you pay rather than after.
-        That trial is your chance to decide, and it is why a code cannot be refunded once it
-        has been issued.</p>
-      <p><strong>You buy it inside the app.</strong> Open TapSwitch, tap "Get the full version",
-        and pay. Your unlock code appears on screen straight away, and a copy is emailed to you.</p>
-    </div>
-    <div class="cta-row">
-      <a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download TapSwitch</a>
-      <a class="btn btn-lg btn-ghost" href="https://github.com/jugal1990/tapswitch-releases/releases">All versions</a>
-    </div>
-  </section>
 
   <footer>
-    <p>Made by one person, for one annoying problem. If something breaks, the app has a "report a
-      problem" button that fills the message in for you.</p>
-    <p>TapSwitch is not affiliated with Google or Oppo.</p>
+    <div class="wrap">
+      <p>Made by one person, for one annoying problem. Contact me: <span class="mail">hello@tapswitch.fyi</span></p>
+      <p>TapSwitch is not affiliated with Google or Oppo.</p>
+    </div>
   </footer>
-
 </main>
 
 <script>
 (function () {
-  var state = { rest: "access", screen: "other" };
+  var demo = document.getElementById("demo");
+  var hold = document.getElementById("phoneHold");
+  var view = document.getElementById("appView");
+  var note = document.getElementById("modeNote");
+  var readers = demo.querySelectorAll(".reader");
+  var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var card = document.getElementById("card");
-  var who = document.getElementById("cardWho");
-  var role = document.getElementById("cardRole");
-  var caption = document.getElementById("caption");
-  var borrowBtn = document.getElementById("borrowBtn");
-
-  var NAME = { access: "Access card", wallet: "Google Wallet" };
-  var APP = { access: "your access card app", wallet: "Google Wallet" };
-
-  function holder() {
-    var borrower = state.rest === "access" ? "wallet" : "access";
-    return state.screen === "borrow" ? borrower : state.rest;
-  }
-
-  function describe() {
-    var borrower = state.rest === "access" ? "wallet" : "access";
-    if (state.screen === "borrow") {
-      return "<b>" + NAME[borrower] + "</b> is on screen, so it has borrowed the slot. "
-        + "Leave that app and " + NAME[state.rest] + " takes it straight back.";
+  // Normal: the access card is the default and Google Wallet borrows the slot while
+  // it is open. Reverse mode swaps the roles, the same as the switch in the app.
+  var MODES = {
+    normal: {
+      rest: "access", borrower: "wallet", app: "Google Wallet",
+      note: "Your access card is the default. Google Wallet takes over only while it is open."
+    },
+    reverse: {
+      rest: "wallet", borrower: "access", app: "your access card app",
+      note: "Google Wallet is the default. Your access card takes over only while it is open."
     }
-    return "<b>" + NAME[state.rest] + "</b> is resting in the slot, so it answers every reader "
-      + "without you doing anything. Open " + APP[borrower] + " and it hands the slot over.";
-  }
-
-  function render(animate) {
-    var next = holder();
-    var changed = card.dataset.card !== next;
-
-    borrowBtn.textContent = state.rest === "access" ? "Google Wallet" : "Door app";
-
-    function paint() {
-      card.dataset.card = next;
-      who.textContent = NAME[next];
-      role.textContent = next === state.rest
-        ? "Resting here. It answers every reader."
-        : "Borrowing the slot while its app is open.";
-      card.classList.remove("leaving");
-      caption.innerHTML = describe();
+  };
+  // the hint box on the phone: what TapSwitch is doing with NFC right now
+  var HINT = {
+    normal: {
+      rest: "TapSwitch makes your <b>Access Card</b> the default NFC.",
+      open: "<b>Google Wallet</b> takes over NFC while it is open."
+    },
+    reverse: {
+      rest: "TapSwitch makes <b>Google Wallet</b> the default NFC.",
+      open: "Your <b>Access Card</b> takes over NFC while its app is open."
     }
+  };
+  // openApp is the app on screen: null (home screen), "wallet" or "access".
+  // Only the borrowing card's own app moves the slot, as on a real phone.
+  var mode = "normal", openApp = null;
+  var borrowing = function () { return openApp === MODES[mode].borrower; };
+  var slot = function () { return borrowing() ? MODES[mode].borrower : MODES[mode].rest; };
+  var APP = {
+    wallet: { title: "Google Wallet", card: "Visa", num: "4821" },
+    access: { title: "Access card", card: "Office", num: "0917" }
+  };
+  var q = function (k) { return document.getElementById(k); };
 
-    if (changed && animate) {
-      card.classList.add("leaving");
-      setTimeout(paint, 220);
-    } else {
-      paint();
-    }
+  // The phone shows the visitor's own time, so it reads as a real phone.
+  function tick() {
+    var d = new Date();
+    var t = ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+    q("demoClock").textContent = t;
+    q("bigClock").textContent = t;
+    q("demoDate").textContent = d.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" });
   }
+  tick(); setInterval(tick, 20000);
 
-  document.querySelectorAll(".seg button").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var key = b.dataset.rest ? "rest" : "screen";
-      state[key] = b.dataset.rest || b.dataset.screen;
-      b.parentElement.querySelectorAll("button").forEach(function (sib) {
-        sib.setAttribute("aria-pressed", String(sib === b));
-      });
-      render(true);
+  function render() {
+    var m = MODES[mode], card = slot();
+    demo.dataset.slot = card;
+    demo.dataset.mode = mode;
+    if (openApp) demo.dataset.app = openApp; else delete demo.dataset.app;
+    note.textContent = m.note;
+    view.classList.toggle("on", !!openApp);
+    view.setAttribute("aria-hidden", String(!openApp));
+    if (openApp) {
+      view.dataset.app = openApp;
+      q("appTitle").textContent = APP[openApp].title;
+      q("appCard").textContent = APP[openApp].card;
+      q("appNum").textContent = APP[openApp].num;
+    }
+    q("nowBox").className = "tapnow " + card;
+    q("nowLine").innerHTML = HINT[mode][borrowing() ? "open" : "rest"];
+    demo.querySelectorAll(".switch button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.mode === mode));
     });
+  }
+  demo.querySelectorAll(".switch button").forEach(function (b) {
+    b.addEventListener("click", function () { mode = b.dataset.mode; openApp = null; render(); });
+  });
+  demo.querySelectorAll("button.app").forEach(function (b) {
+    b.addEventListener("click", function () { openApp = b.dataset.app; render(); });
+  });
+  view.querySelectorAll(".back, .homebar").forEach(function (b) {
+    b.addEventListener("click", function () { openApp = null; render(); });
   });
 
-  render(false);
+  // A tap: whichever card holds the slot answers. A wrong card says how to fix it.
+  var clearTimer = null;
+  function answer(reader) {
+    readers.forEach(function (r) { r.classList.remove("ok", "no"); r.querySelector(".msg").textContent = ""; });
+    var wants = reader.dataset.wants, good = wants === slot(), m = MODES[mode];
+    var fix = (borrowing() ? "Close " : "Open ") + m.app + " first";
+    reader.classList.add(good ? "ok" : "no");
+    reader.querySelector(".msg").textContent = good ? reader.dataset.ok : fix;
+    chime(good ? reader.dataset.wants : "wrong");
+    clearTimeout(clearTimer);
+    clearTimer = setTimeout(function () {
+      reader.classList.remove("ok", "no");
+      reader.querySelector(".msg").textContent = "";
+    }, 2600);
+  }
+
+  // Reader sounds, made on the spot with no sound files: a double beep at the door,
+  // a two-note ding at the till, a low buzz for the wrong card. The sound system only
+  // wakes after the visitor touches the demo, as browsers require.
+  var audio = null;
+  function wake() {
+    var A = window.AudioContext || window.webkitAudioContext;
+    if (!A) return;
+    try { audio = audio || new A(); if (audio.state === "suspended") audio.resume(); } catch (e) { audio = null; }
+  }
+  demo.addEventListener("pointerdown", wake);
+  function tone(freq, type, at, len, vol) {
+    var o = audio.createOscillator(), g = audio.createGain(), t = audio.currentTime + at;
+    o.type = type; o.frequency.value = freq;
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + 0.01);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + len);
+    o.connect(g); g.connect(audio.destination);
+    o.start(t); o.stop(t + len + 0.02);
+  }
+  function chime(kind) {
+    if (!audio) return;
+    if (kind === "access") { tone(1046, "sine", 0, 0.09, 0.08); tone(1046, "sine", 0.14, 0.09, 0.08); }
+    else if (kind === "wallet") { tone(1318, "triangle", 0, 0.5, 0.09); tone(1760, "triangle", 0.12, 0.6, 0.07); }
+    else { tone(196, "square", 0, 0.2, 0.03); }
+  }
+
+  // The NFC antenna sits near the top of the phone's back, so the top of the phone is
+  // what touches a reader: NFC is how far down the phone that spot is.
+  var NFC = 0.15;
+  // An arrow key flies the phone to a reader and back; the reader answers as the phone leaves.
+  var busy = false;
+  // "moving" pauses the wobble while the phone travels, until it is home again
+  var restTimer = null;
+  function moving(on, after) {
+    clearTimeout(restTimer);
+    if (on) { hold.classList.add("moving"); return; }
+    restTimer = setTimeout(function () { hold.classList.remove("moving"); }, after || 0);
+  }
+  function flyTo(reader) {
+    if (busy) return;
+    if (still) { answer(reader); return; }
+    busy = true; moving(true); moving(false, 900);
+    var p = hold.getBoundingClientRect(), f = reader.querySelector(".face").getBoundingClientRect();
+    var dx = f.left + f.width / 2 - (p.left + p.width / 2);
+    var dy = f.top + f.height / 2 - (p.top + p.height * NFC);
+    hold.style.transform = "translate(" + dx + "px," + dy + "px) rotate(" + (dx < 0 ? -4 : 4) + "deg)";
+    setTimeout(function () { hold.style.transform = ""; }, 440);
+    setTimeout(function () { answer(reader); }, 560);
+    setTimeout(function () { busy = false; }, 900);
+  }
+  // Only the phone moves: dragged, or with the arrow keys for keyboard users.
+  hold.addEventListener("keydown", function (e) {
+    var r = e.key === "ArrowLeft" ? readers[0] : e.key === "ArrowRight" ? readers[1] : null;
+    if (!r) return;
+    e.preventDefault(); tried(); flyTo(r);
+  });
+
+  // Until the visitor first moves the phone (a drag or an arrow key), the readers glow.
+  demo.classList.add("waiting");
+  function tried() { demo.classList.remove("waiting"); }
+  // Dragging: the phone follows the finger, but only as far as the readers.
+  // The readers sit level with the phone's NFC spot, so the phone only slides left or
+  // right, never past the middle of either reader.
+  var start = null, home = null, box = null;
+  function centre(el) {
+    var b = el.getBoundingClientRect();
+    return { x: b.left + b.width / 2, y: b.top + b.height / 2, w: b.width, h: b.height };
+  }
+  function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
+  // A reader is hit when the top of the phone (its NFC spot) is over the reader.
+  function under(cx, cy) {
+    var hit = null, nx = cx, ny = cy - home.h / 2 + home.h * NFC, pad = 8;
+    readers.forEach(function (r) {
+      var f = r.querySelector(".face").getBoundingClientRect();
+      if (nx > f.left - pad && nx < f.right + pad && ny > f.top - pad && ny < f.bottom + pad) hit = r;
+    });
+    return hit;
+  }
+  hold.addEventListener("pointerdown", function (e) {
+    if (busy || e.target.closest("button")) return;
+    e.preventDefault();
+    home = centre(hold);
+    var xs = [home.x];
+    readers.forEach(function (r) { xs.push(centre(r.querySelector(".face")).x); });
+    box = { x0: Math.min.apply(null, xs), x1: Math.max.apply(null, xs) };
+    start = { x: e.clientX, y: e.clientY, cx: home.x, cy: home.y };
+    try { hold.setPointerCapture(e.pointerId); } catch (err) { /* synthetic events have no live pointer */ }
+    hold.classList.add("held");
+  });
+  hold.addEventListener("pointermove", function (e) {
+    if (!start) return;
+    if (Math.abs(e.clientX - start.x) > 3) { tried(); moving(true); }
+    start.cx = clamp(home.x + e.clientX - start.x, box.x0, box.x1);
+    start.cy = home.y;
+    var dx = start.cx - home.x, dy = start.cy - home.y;
+    hold.style.transform = "translate(" + dx + "px," + dy + "px) rotate(" + (dx < 0 ? -4 : 4) + "deg)";
+  });
+  function drop() {
+    if (!start) return;
+    var hit = under(start.cx, start.cy);
+    start = null;
+    hold.classList.remove("held");
+    moving(false, 480); // back to wobbling once the slide home is over
+    if (hit) {
+      // the phone heads home at once and the reader's answer shows as it slides away,
+      // so the words are never hidden under the phone
+      busy = true;
+      hold.style.transform = "";
+      setTimeout(function () { answer(hit); }, 140);
+      setTimeout(function () { busy = false; }, 500);
+    } else {
+      hold.style.transform = "";
+    }
+  }
+  hold.addEventListener("pointerup", drop);
+  hold.addEventListener("pointercancel", drop);
+
+  // Lift each reader so its middle lines up with the phone's NFC spot. The readers are
+  // drawn at a reduced size, so the gap is divided by that size to get the margin.
+  function level() {
+    if (start) return;
+    var ph = hold.getBoundingClientRect(); // the holder never wobbles, so it gives the true spot
+    readers.forEach(function (r) {
+      r.style.marginTop = "0px";
+      var f = r.querySelector(".face").getBoundingClientRect();
+      var z = parseFloat(getComputedStyle(r).zoom) || 1;
+      r.style.marginTop = ((ph.top + ph.height * NFC) - (f.top + f.height / 2)) / z + "px";
+    });
+  }
+  level();
+  window.addEventListener("resize", level);
+
+  render();
+})();
+
+// The headline types itself in, letter by letter, then "Access Card" and "Google Wallet"
+// roll into each other's places and back. The finished headline is the original markup,
+// so readers and search engines always get the real words.
+(function () {
+  var h = document.querySelector(".hero h1");
+  if (!h || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  var original = h.innerHTML, chars = [];
+  (function wrap(node) {
+    Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) {
+        var frag = document.createDocumentFragment();
+        n.textContent.split("").forEach(function (c) {
+          var sp = document.createElement("span"); sp.className = "ch"; sp.textContent = c;
+          frag.appendChild(sp); chars.push(sp);
+        });
+        n.parentNode.replaceChild(frag, n);
+      } else if (n.nodeType === 1) wrap(n);
+    });
+  })(h);
+  var caret = document.createElement("span"); caret.className = "caret"; caret.setAttribute("aria-hidden", "true");
+  h.setAttribute("aria-label", h.textContent);
+  h.classList.add("typing");
+  var i = 0;
+  (function next() {
+    if (i < chars.length) {
+      chars[i].classList.add("on");
+      var hr = h.getBoundingClientRect(), cr = chars[i].getBoundingClientRect();
+      caret.style.left = (cr.right - hr.left) + "px";
+      caret.style.top = (cr.top - hr.top + cr.height * .12) + "px";
+      caret.style.height = (cr.height * .76) + "px";
+      caret.style.color = getComputedStyle(chars[i]).color;
+      if (!caret.parentNode) h.appendChild(caret);
+      var c = chars[i++].textContent;
+      setTimeout(next, c === " " ? 90 : c === "." ? 320 : c === "," ? 260 : 50 + Math.random() * 40);
+      return;
+    }
+    setTimeout(function () {
+      h.innerHTML = original; h.classList.remove("typing"); h.removeAttribute("aria-label");
+      setTimeout(function () { swap(function () { setTimeout(swap, 1600); }); }, 500);
+    }, 700);
+  })();
+  function swap(done) {
+    var g = h.querySelector(".g"), b = h.querySelector(".b");
+    if (!g.animate) { if (done) done(); return; }
+    var out = { duration: 220, easing: "ease-in", fill: "forwards" };
+    var inn = { duration: 320, easing: "cubic-bezier(.2,.8,.2,1)" };
+    g.animate([{ transform: "none", opacity: 1 }, { transform: "translateY(45%)", opacity: 0 }], out);
+    b.animate([{ transform: "none", opacity: 1 }, { transform: "translateY(-45%)", opacity: 0 }], out).onfinish = function () {
+      var gt = g.textContent; g.textContent = b.textContent; b.textContent = gt;
+      g.className = g.className === "g" ? "b" : "g"; b.className = b.className === "b" ? "g" : "b";
+      g.getAnimations().forEach(function (a) { a.cancel(); }); b.getAnimations().forEach(function (a) { a.cancel(); });
+      g.animate([{ transform: "translateY(-45%)", opacity: 0 }, { transform: "none", opacity: 1 }], inn);
+      b.animate([{ transform: "translateY(45%)", opacity: 0 }, { transform: "none", opacity: 1 }], inn).onfinish = done || null;
+    };
+  }
+})();
+
+// Hovering any download button spins the arrows in the logo once.
+(function () {
+  var logo = document.querySelector(".brand svg");
+  document.querySelectorAll('a.btn[href$=".apk"]').forEach(function (a) {
+    a.addEventListener("mouseenter", function () { logo.classList.add("spin"); });
+  });
+  logo.addEventListener("animationend", function () { logo.classList.remove("spin"); });
+})();
+
+// The light or dark switch. The page opens light by day and dark at night (set in the
+// head); a click flips the theme on <html> and keeps it for the rest of this visit.
+(function () {
+  var btn = document.getElementById("themeBtn");
+  var root = document.documentElement;
+  var sys = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function current() {
+    var t = root.getAttribute("data-theme");
+    if (t === "light" || t === "dark") return t;
+    return sys && sys.matches ? "dark" : "light";
+  }
+  function label() {
+    btn.setAttribute("aria-label", current() === "dark" ? "Switch to light mode" : "Switch to dark mode");
+  }
+  var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var timer = null;
+  btn.addEventListener("click", function () {
+    var next = current() === "dark" ? "light" : "dark";
+    function apply() {
+      root.setAttribute("data-theme", next);
+      try { sessionStorage.setItem("ts-theme", next); } catch (e) { /* storage blocked: the choice lasts this page view */ }
+      label();
+    }
+    if (still) { apply(); return; }
+    // dusk when the sun sets, dawn when the moon does
+    clearTimeout(timer);
+    root.classList.remove("dusk", "dawn");
+    void root.offsetWidth;
+    root.classList.add(next === "dark" ? "dusk" : "dawn");
+    timer = setTimeout(function () { root.classList.remove("dusk", "dawn", "fading"); }, 1400);
+    // Where the browser can, the whole page cross-fades as one picture, so gradients,
+    // drawings and the phone wallpaper all change together instead of some parts jumping.
+    // Older browsers fade the colours one by one instead.
+    if (document.startViewTransition) { document.startViewTransition(apply); return; }
+    root.classList.add("fading");
+    apply();
+  });
+  if (sys && sys.addEventListener) sys.addEventListener("change", label);
+  label();
 })();
 </script>
-
 </body>
 </html>
