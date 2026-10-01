@@ -186,6 +186,18 @@ h1, h2, h3 { text-wrap: balance; }
 /* on a laptop the headline starts level with the top of the demo, not floating in the middle */
 @media (min-width: 860px) { .hero { grid-template-columns: 1.08fr .92fr; gap: 48px; padding-block: 40px 24px; align-items: start; } }
 .hero > * { min-width: 0; }
+.hero > #price { padding-block: 12px 0; }
+@media (max-width: 859px) { .hero { padding-bottom: 0; } }
+/* on a laptop the price sits in the space under the headline, and the demo stays in view
+   beside it while the visitor reads; on a phone the order stays headline, demo, price */
+@media (min-width: 860px) {
+  .hero { grid-template-areas: "head demo" "price demo"; grid-template-rows: auto 1fr; row-gap: 32px; }
+  .hero > div:first-child { grid-area: head; }
+  .hero > .demo { grid-area: demo; position: sticky; top: 72px; }
+  .hero > #price { grid-area: price; }
+  .hero > #price { padding-block: 0; }
+  .hero #price .price { grid-template-columns: 1fr; gap: 24px; padding: 32px; }
+}
 .hero h1 {
   font: 600 clamp(2.25rem, 4vw, 3.2rem)/1.04 var(--display);
   letter-spacing: -.045em;
@@ -649,32 +661,33 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
         </div>
         <p class="hint">Drag the phone left or right onto a reader.</p>
       </div>
+
+      <section id="price">
+        <h2>One price, paid once</h2>
+        <div class="price">
+          <div>
+            <div class="amount">US$4.99</div>
+            <p class="amount-note">Pay once for one phone, with no subscription and no account.</p>
+          </div>
+          <div class="price-points">
+            <p><strong>Try it free for 14 days.</strong> The clock starts when the app first works
+              on your phone, not when you download it. Every feature works during the trial.</p>
+            <p><strong>There are no refunds.</strong> The free 14 days let you see it work
+              on your own phone before you pay, so a code cannot be refunded once it is issued.</p>
+            <p><strong>Buy it inside the app.</strong> Tap "Get the full version", then "Buy now" to pay in your browser.
+              Your unlock code appears on screen straight away, and a copy is emailed to you.</p>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download TapSwitch</a>
+          <a class="btn btn-lg btn-plain" href="https://github.com/jugal1990/tapswitch-releases/releases">All versions on GitHub</a>
+        </div>
+        <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#careful">How to check it is safe</a></p>
+      </section>
     </div>
   </div>
 
   <div class="wrap">
-    <section id="price" style="padding-block:16px 0">
-      <h2>One price, paid once</h2>
-      <div class="price">
-        <div>
-          <div class="amount">US$4.99</div>
-          <p class="amount-note">Pay once for one phone, with no subscription and no account.</p>
-        </div>
-        <div class="price-points">
-          <p><strong>Try it free for 14 days.</strong> The clock starts when the app first works
-            on your phone, not when you download it. Every feature works during the trial.</p>
-          <p><strong>There are no refunds.</strong> The free 14 days let you see it work
-            on your own phone before you pay, so a code cannot be refunded once it is issued.</p>
-          <p><strong>Buy it inside the app.</strong> Tap "Get the full version", then "Buy now" to pay in your browser.
-            Your unlock code appears on screen straight away, and a copy is emailed to you.</p>
-        </div>
-      </div>
-      <div class="cta-row">
-        <a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download TapSwitch</a>
-        <a class="btn btn-lg btn-plain" href="https://github.com/jugal1990/tapswitch-releases/releases">All versions on GitHub</a>
-      </div>
-      <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#careful">How to check it is safe</a></p>
-    </section>
 
     <section class="said" aria-label="What a customer said">
       <div class="quotes">
