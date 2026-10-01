@@ -982,6 +982,9 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
       copy.querySelectorAll("[id]").forEach(function (n) { n.removeAttribute("id"); });
       copy.querySelectorAll("button").forEach(function (n) { n.setAttribute("tabindex", "-1"); });
       ghost.replaceChildren(copy);
+      // start from the phone itself: a tour stopped halfway (say by a mode switch) leaves the
+      // hidden ghost beside a reader, and it would otherwise slide in from there
+      ghost.style.transition = "none"; ghost.style.transform = ""; void ghost.offsetWidth; ghost.style.transition = "";
     }
     if (reader) ghost.dataset.to = reader.dataset.wants; else delete ghost.dataset.to;
     ghost.style.transform = reader ? "translateX(" + x + "px) rotate(" + (x < 0 ? -4 : 4) + "deg)" : "";
