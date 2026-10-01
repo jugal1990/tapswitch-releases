@@ -5,8 +5,8 @@
 <p align="center">
   <img src="https://img.shields.io/github/v/release/jugal1990/tapswitch-releases?style=flat-square&color=2ECC71" alt="Release">
   <img src="https://img.shields.io/github/downloads/jugal1990/tapswitch-releases/total?style=flat-square&color=4C8DFF" alt="Downloads">
-  <img src="https://img.shields.io/badge/Android-12%2B-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android 12+">
-  <img src="https://img.shields.io/badge/built%20for-Oppo%20%C2%B7%20ColorOS-262626?style=flat-square" alt="Built for ColorOS">
+  <img src="https://img.shields.io/badge/Android-16%2B-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android 16+">
+  <img src="https://img.shields.io/badge/tested%20on-Oppo%20%C2%B7%20ColorOS-262626?style=flat-square" alt="Tested on Oppo ColorOS">
   <img src="https://img.shields.io/badge/14%20days%20free%2C%20then%20US%244.99-4C8DFF?style=flat-square" alt="14 days free, then US$4.99 once">
 </p>
 
@@ -52,12 +52,12 @@ its own.
 
 **No computer, no cable, no scripts.** Android hides the switch TapSwitch needs behind
 Developer options, so the app walks you through turning that on, names the exact row to tap in
-your phone maker's own words, and turns everything back off behind you. It takes about eight
-taps.
+your phone maker's own words, and turns everything back off behind you. It takes about five
+minutes, and you need Wi-Fi for one step.
 
-The [download page](https://tapswitch.fyi/#file) also lists the file's
-size, version and SHA-256, so you can check the download before you install it. TapSwitch is
-not on the Play Store, so nothing has checked it for you.
+The [download page](https://tapswitch.fyi/) also lists the file's
+size, version and SHA-256, with a link to scan it free on VirusTotal before you install it.
+TapSwitch is not on the Play Store, so nothing has checked it for you.
 
 ***
 
@@ -82,8 +82,9 @@ TapSwitch works on your phone before you pay rather than after. When the trial e
 puts your **access card** back as the NFC default and stops switching, so your doors keep
 working exactly as they did before you installed it.
 
-Your code is shown again any time under **About**. A factory reset gives the phone a new
-identity, so that does need a fresh code: send the receipt and you get one.
+Your code is shown again any time under **About TapSwitch**. A factory reset gives the phone a new
+identity, so that does need a fresh code: email your receipt to hello@tapswitch.fyi and you
+get one.
 
 ***
 
@@ -105,14 +106,13 @@ this repository and it will track releases for you.
 
 ## Before you download
 
-Honest about what it does not do:
-**[What it does not do](https://tapswitch.fyi/#limits)**, on the
-download page. The short version is that an access card needs the screen on, the borrowing card
-needs its own app in front, TapSwitch runs in the main profile only, and Oppo ColorOS is the
-only thing it has been tested on.
+What it does not do: an access card needs the screen on, the borrowing card needs its own app
+in front, and TapSwitch runs in the main profile only. It needs Android 16 or newer. It is built
+and used daily on Oppo ColorOS, and no other phones have been tested yet. The
+[download page](https://tapswitch.fyi/#careful) has the rest.
 
-Something not working? **About**, then **Report a problem**, writes a diagnostic log into the
-message for you.
+Something not working? **About TapSwitch**, then **Report a problem**, writes a diagnostic log
+into the message for you. Anything else, write to hello@tapswitch.fyi.
 
 ***
 
