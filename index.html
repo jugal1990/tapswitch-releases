@@ -661,19 +661,19 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
           <p class="amount-note">Pay once for one phone, with no subscription and no account.</p>
         </div>
         <div class="price-points">
-          <p><strong>Try it free for 14 days.</strong> The clock starts when the app is actually working
-            on your phone, not when you download it. Nothing is held back during the trial.</p>
-          <p><strong>No refunds, and here is why.</strong> The free 14 days are your chance to see it work
+          <p><strong>Try it free for 14 days.</strong> The clock starts when the app first works
+            on your phone, not when you download it. Every feature works during the trial.</p>
+          <p><strong>There are no refunds.</strong> The free 14 days let you see it work
             on your own phone before you pay, so a code cannot be refunded once it is issued.</p>
-          <p><strong>Buy it inside the app.</strong> Tap "Get the full version" and pay. Your unlock code
-            appears on screen straight away, and a copy is emailed to you.</p>
+          <p><strong>Buy it inside the app.</strong> Tap "Get the full version", then "Buy now" to pay in your browser.
+            Your unlock code appears on screen straight away, and a copy is emailed to you.</p>
         </div>
       </div>
       <div class="cta-row">
         <a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download TapSwitch</a>
         <a class="btn btn-lg btn-plain" href="https://github.com/jugal1990/tapswitch-releases/releases">All versions on GitHub</a>
       </div>
-      <p class="cta-note">Needs Android 16 or newer. Built on Oppo ColorOS; the free trial lets you check it on your phone. Your phone will warn you because the file is not from the Play Store. That is normal. <a href="#careful">How to check it is safe</a></p>
+      <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#careful">How to check it is safe</a></p>
     </section>
 
     <section class="said" aria-label="What a customer said">
@@ -687,7 +687,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
 
     <section id="setup">
       <h2>Setting it up takes about five minutes</h2>
-      <p class="sub">Everything happens on the phone. No computer or cable necessary.</p>
+      <p class="sub">You do everything on the phone, without a computer or cable.</p>
       <ol class="setup">
         <li>
           <h3>Install the file</h3>
@@ -702,7 +702,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
           <p>You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost.</p>
         </li>
         <li>
-          <h3>Pick your two cards and you are done!</h3>
+          <h3>Pick your two cards</h3>
           <p>Your access card app and your pay app.</p>
         </li>
       </ol>
@@ -712,8 +712,8 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
 
   <div class="careful" id="careful">
     <div class="wrap">
-      <h2>For the careful</h2>
-      <p class="sub">TapSwitch is not on the Play Store. Want to be sure it is safe? Check it yourself with a free virus scan.</p>
+      <h2>Is it safe?</h2>
+      <p class="sub">TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan.</p>
 
       <div class="facts-box">
         <table class="facts">
@@ -734,17 +734,16 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
 
       <h3 class="small">What TapSwitch can and cannot do</h3>
       <dl class="perms">
-        <div class="perm"><dt>Change your default tap card</dt><dd>The one phone setting it changes, so the right card answers the reader.</dd></div>
+        <div class="perm"><dt>Change your default tap card</dt><dd>This is the only phone setting it changes, so the right card answers the reader.</dd></div>
         <div class="perm"><dt>See which app is on screen</dt><dd>So it knows when Google Wallet or your access card app is open.</dd></div>
-        <div class="perm"><dt>Check for updates once a day</dt><dd>The only time it goes online. No account, nothing to sign in to.</dd></div>
+        <div class="perm"><dt>Check for updates once a day</dt><dd>This is the only time it goes online. There is no account to sign in to.</dd></div>
         <div class="perm"><dt>Never sees your cards</dt><dd>It cannot read card numbers, payments or door logs. It only picks which app answers.</dd></div>
       </dl>
 
       <h3 class="small">Important facts</h3>
       <ul class="limits">
-        <li>Built and used daily on <b>Oppo ColorOS</b>. It should work on any Android 16 or newer phone, though others have not been tested yet.</li>
+        <li>It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet.</li>
         <li>After the trial ends, TapSwitch stops switching and your phone goes back to how it was.</li>
-        <li>"Buy now" opens your browser at the checkout, and your code is on screen as soon as the payment clears, with a copy by email.</li>
       </ul>
 
       <p class="closing">Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href="#price">Back to the download</a></span></p>
@@ -1024,8 +1023,8 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
     });
     at(13400, function () {
       tourTimers = []; rounds++;
-      // two rounds, then it rests until the visitor touches the demo
-      if (rounds < 2 && onScreen) runTour(); else { touring = false; demo.classList.remove("touring"); }
+      // one round per mode, then it rests until the visitor touches the demo
+      if (rounds < 1 && onScreen) runTour(); else { touring = false; demo.classList.remove("touring"); }
     });
   }
   function stopTour() {
