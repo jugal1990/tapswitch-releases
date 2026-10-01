@@ -77,7 +77,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #000000; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C;
+    --bg: #0B0B0D; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C;
     --fill: #1D1D1F; --seg-on: #3A3A3C; --quiet: #111113;
     --green: #57D3A0; --green-card: #57D3A0; --blue: #6FA8FF; --blue-card: #5B9CFF;
     --action: #2B6BDB; --action-hover: #2160CB; --action-ink: #FFFFFF; --shadow: rgba(0, 0, 0, .6);
@@ -87,7 +87,7 @@
   }
 }
 :root[data-theme="dark"] {
-  --bg: #000000; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C;
+  --bg: #0B0B0D; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C;
   --fill: #1D1D1F; --seg-on: #3A3A3C; --quiet: #111113;
   --green: #57D3A0; --green-card: #57D3A0; --blue: #6FA8FF; --blue-card: #5B9CFF;
   --action: #2B6BDB; --action-hover: #2160CB; --action-ink: #FFFFFF; --shadow: rgba(0, 0, 0, .6);
@@ -187,7 +187,7 @@ h1, h2, h3 { text-wrap: balance; }
 @media (min-width: 860px) { .hero { grid-template-columns: 1.08fr .92fr; gap: 48px; padding-block: 40px 24px; align-items: start; } }
 .hero > * { min-width: 0; }
 .hero h1 {
-  font: 600 clamp(2.5rem, 5.4vw, 4.4rem)/1.04 var(--display);
+  font: 600 clamp(2.25rem, 4vw, 3.2rem)/1.04 var(--display);
   letter-spacing: -.045em;
   margin: 0;
 }
@@ -387,7 +387,7 @@ h1, h2, h3 { text-wrap: balance; }
 .mode { grid-area: mode; display: grid; justify-items: center; gap: 10px; }
 .switch { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--fill); }
 .switch button {
-  font: 500 13px/1 var(--body); letter-spacing: -.01em; color: var(--muted); background: none; border: 0; cursor: pointer;
+  font: 500 13px/1 var(--body); letter-spacing: -.01em; color: color-mix(in srgb, var(--muted) 80%, var(--ink)); background: none; border: 0; cursor: pointer;
   padding: 8px 16px; border-radius: 999px; transition: background .25s ease, color .25s ease, box-shadow .25s ease;
 }
 .switch button[aria-pressed="true"] { background: var(--seg-on); color: var(--ink); box-shadow: 0 1px 3px var(--shadow), 0 0 0 .5px var(--shadow); }
