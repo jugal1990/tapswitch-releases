@@ -292,7 +292,7 @@ h1, h2, h3 { text-wrap: balance; }
 .demo .ghost {
   position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0;
   display: grid; place-items: center;
-  transition: transform 1.1s cubic-bezier(.45,0,.25,1), opacity .5s ease, filter .6s ease;
+  transition: transform .6s cubic-bezier(.45,0,.25,1), opacity .3s ease, filter .4s ease;
 }
 .demo .ghost .phone { box-shadow: 0 0 0 1px #5C5F65 inset, 0 0 0 3px #111214 inset; }
 /* what is on the ghost's screen is softened, so it reads as a shadow of the phone, not a second phone */
@@ -326,8 +326,26 @@ h1, h2, h3 { text-wrap: balance; }
 .reader .tip.on { opacity: 1; transform: translate(calc(-50% + var(--tx, 0px)), 0); }
 /* the readers are drawn smaller on phones, so the tip text is set larger to come out the same */
 @media (max-width: 559px) { .reader .tip { font-size: 14px; } .reader .tip b { font-size: 15px; } }
+/* once the tour ends, the resting phone invites the visitor to try it: one line in the empty
+   lower screen, like a lock screen hint, with a bright shine running across it. Both readers
+   glow while it shows, so the eye goes to them too. */
+.demo .invite {
+  position: absolute; left: 0; right: 0; bottom: 64px; z-index: 2; margin: 0; padding-inline: 10px; pointer-events: none;
+  text-align: center; text-wrap: balance; font: 600 17px/1.25 var(--display); letter-spacing: -.01em;
+  opacity: 0; transform: translateY(10px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.demo .invite span {
+  background: linear-gradient(100deg, rgba(255,255,255,.62) 38%, #FFFFFF 50%, rgba(255,255,255,.62) 62%) 0 0 / 250% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shine 2.2s linear infinite;
+}
+@keyframes shine { from { background-position: 100% 0; } to { background-position: -150% 0; } }
+.demo.invited .invite { opacity: 1; transform: none; }
+.demo.invited .reader .face { animation: beckon 2s ease-in-out infinite; }
+@media (max-width: 559px) { .demo .invite { bottom: 48px; padding-inline: 2px; font-size: 15px; white-space: nowrap; } }
+@media (max-width: 359px) { .demo .invite { font-size: 14.5px; } }
 /* the tour presses an app on the phone before it opens */
-.app.pressing i { animation: press .6s ease-in-out; }
+.app.pressing i { animation: press .4s ease-in-out; }
 @keyframes press { 40% { transform: scale(.86); box-shadow: 0 0 0 4px rgba(255,255,255,.7), 0 6px 14px -6px rgba(0,0,0,.5); } }
 @keyframes beckon {
   0%, 100% { box-shadow: 0 0 0 1px #45474C inset, 0 1px 0 0 rgba(255,255,255,.08) inset, 0 24px 36px -24px rgba(0,0,0,.55), 0 0 0 0 rgba(111,176,255,0); }
@@ -643,6 +661,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
                   <button type="button" class="app" data-app="access"><i class="acc"><svg viewBox="0 0 24 24" fill="none" stroke="#06281C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="14.5" cy="12" r="1" fill="#06281C"/></svg></i>Access</button>
                   <button type="button" class="app" data-app="wallet"><i class="wal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="3" fill="#2F74E6"/><rect x="3" y="9" width="18" height="3" fill="#5B9CFF"/><rect x="14" y="14" width="4" height="2" rx="1" fill="#FFFFFF"/></svg></i>Wallet</button>
                 </div>
+                <p class="invite" aria-hidden="true"><span>Drag the phone to try it</span></p>
                 <span class="homebar" aria-hidden="true" style="margin-top:auto"></span>
               </div>
               <div class="appview" id="appView" data-app="wallet" aria-hidden="true">
@@ -949,7 +968,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
   // under the other reader, the tour presses the other card's app, the app opens, the ghost
   // slides there, then the app closes. Then it starts again. Any move by the visitor stops it;
   // it comes back once the phone rests again. It never closes an app the visitor opened.
-  // On the first visit it waits for the headline to finish typing, so only one thing moves at a time.
+  // On the first visit it starts as soon as "by default" is typed, so visitors see it early.
   var ghost = hold.querySelector(".ghost");
   var tourTimers = [], tourApp = null, touring = false, rounds = 0, onScreen = true;
   // keep the words between the screen edge and the phone, never under either. Worked out
@@ -1007,7 +1026,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
       ghostAt.ping = setTimeout(function () {
         reader.classList.remove("ping"); void reader.offsetWidth; reader.classList.add("ping");
         setTimeout(function () { reader.classList.remove("ping"); }, 1000);
-      }, 1050);
+      }, 600);
     }
   }
   function at(ms, fn) { tourTimers.push(setTimeout(fn, ms)); }
@@ -1021,29 +1040,31 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
     function words(on) { readers.forEach(function (r) { r.querySelector(".tip").classList.toggle("on", on && r.classList.contains("focus")); }); }
     function home() { ghost.style.transition = "none"; ghostAt(null, false); void ghost.offsetWidth; ghost.style.transition = ""; }
     tips(first, TOUR[mode].first);
-    at(2400, function () { words(false); });
-    at(2900, function () { ghostAt(null, true); });
-    at(3100, function () { ghostAt(first, true); });
-    at(5000, function () { ghost.style.opacity = "0"; });
-    at(5600, function () { home(); tips(second, TOUR[mode].second); });
-    at(8200, function () { words(false); });
-    at(8700, function () { appBtn.classList.add("pressing"); });
-    at(9300, function () { appBtn.classList.remove("pressing"); tourApp = m.borrower; openApp = tourApp; render(); });
-    at(9900, function () { ghostAt(null, true); });
-    at(10100, function () { ghostAt(second, true); });
-    at(12000, function () { ghost.style.opacity = "0"; });
-    at(12600, function () {
+    // the words keep enough time to be read (the second tip is twice as long); the moves are quick
+    at(1600, function () { words(false); });
+    at(1900, function () { ghostAt(null, true); });
+    at(2000, function () { ghostAt(first, true); });
+    at(3100, function () { ghost.style.opacity = "0"; });
+    at(3500, function () { home(); tips(second, TOUR[mode].second); });
+    at(5700, function () { words(false); });
+    at(5900, function () { appBtn.classList.add("pressing"); });
+    at(6300, function () { appBtn.classList.remove("pressing"); tourApp = m.borrower; openApp = tourApp; render(); });
+    at(6600, function () { ghostAt(null, true); });
+    at(6700, function () { ghostAt(second, true); });
+    at(7800, function () { ghost.style.opacity = "0"; });
+    at(8100, function () {
       home(); tips(null);
       if (openApp === tourApp) { openApp = null; render(); }
       tourApp = null;
     });
-    at(13400, function () {
+    at(8300, function () {
       tourTimers = []; rounds++;
       // one round per mode, then it rests until the visitor touches the demo
-      if (rounds < 1 && onScreen) runTour(); else { touring = false; demo.classList.remove("touring"); }
+      if (rounds < 1 && onScreen) runTour(); else { touring = false; demo.classList.remove("touring"); invite(true); }
     });
   }
   function stopTour() {
+    invite(false);
     touring = false; demo.classList.remove("touring");
     tourTimers.forEach(clearTimeout); tourTimers = [];
     tips(null);
@@ -1055,24 +1076,30 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
     tourApp = null;
   }
   var resumeTimer = null;
-  function resumeTour() {
+  function resumeTour(wait) {
     clearTimeout(resumeTimer);
     resumeTimer = setTimeout(function () {
       if (touring || start || busy || openApp || !onScreen || demo.querySelector(".reader.ok, .reader.no")) return;
       // with reduced motion the first tip simply stays put: nothing moves and no app opens
-      if (still) { tips(demo.querySelector('.reader[data-wants="' + MODES[mode].rest + '"]'), TOUR[mode].first); return; }
+      if (still) { tips(demo.querySelector('.reader[data-wants="' + MODES[mode].rest + '"]'), TOUR[mode].first); invite(true); return; }
       touring = true; demo.classList.add("touring"); runTour();
-    }, 600);
+    }, wait == null ? 600 : wait);
   }
-  function tried() { stopTour(); rounds = 0; }
+  // Every time a tour round ends, the resting phone says it is the visitor's turn.
+  // It hides while they touch the phone or a reader, and comes back after the next round.
+  function invite(on) {
+    on = on && !openApp;
+    demo.classList.toggle("invited", on);
+  }
+  function tried() { invite(false); stopTour(); rounds = 0; }
   function beckon() { resumeTour(); }
   // the headline script runs after this one and skips typing when motion is reduced
   var ready = false;
-  function go() { ready = true; resumeTour(); }
+  function go() { ready = true; resumeTour(0); }
   if (still) go();
   else {
     var first = setTimeout(go, 12000); // in case the headline never says it is done
-    document.addEventListener("ts:typed", function () { clearTimeout(first); go(); }, { once: true });
+    document.addEventListener("ts:cue", function () { clearTimeout(first); go(); }, { once: true });
   }
 
   // Dragging: the phone follows the finger, but only as far as the readers.
@@ -1096,6 +1123,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
   hold.addEventListener("pointerdown", function (e) {
     if (busy || e.target.closest("button")) return;
     e.preventDefault();
+    invite(false);
     home = centre(hold);
     var xs = [home.x];
     readers.forEach(function (r) { xs.push(centre(r.querySelector(".face")).x); });
@@ -1181,6 +1209,9 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
   var caret = document.createElement("span"); caret.className = "caret"; caret.setAttribute("aria-hidden", "true");
   h.setAttribute("aria-label", h.textContent);
   h.classList.add("typing");
+  // the demo beside it starts its tour once "by default" is typed (halfway if those words ever change)
+  var cue = h.textContent.indexOf("by default");
+  cue = cue < 0 ? Math.floor(chars.length / 2) : cue + "by default".length - 1;
   var i = 0;
   (function next() {
     if (i < chars.length) {
@@ -1191,6 +1222,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
       caret.style.height = (cr.height * .76) + "px";
       caret.style.color = getComputedStyle(chars[i]).color;
       if (!caret.parentNode) h.appendChild(caret);
+      if (i === cue) document.dispatchEvent(new Event("ts:cue"));
       var c = chars[i++].textContent;
       setTimeout(next, c === " " ? 90 : c === "." ? 320 : c === "," ? 260 : 50 + Math.random() * 40);
       return;
