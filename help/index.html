@@ -185,5 +185,17 @@ footer p { margin: 0 0 8px; }
     <p>TapSwitch is not affiliated with Google or Oppo.</p>
   </div>
 </footer>
+<script>
+// Owner's private count: one visit per browser per day, and each Download click. Shows nothing.
+(function () {
+  var url = 'https://tapswitch-codes.tapswitch-pay.workers.dev/site';
+  function send(stage) { try { navigator.sendBeacon(url, JSON.stringify({ stage: stage })); } catch (e) {} }
+  var day = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
+  try { if (localStorage.getItem('ts-day') !== day) { localStorage.setItem('ts-day', day); send('visit'); } } catch (e) { send('visit'); }
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('a[href$="/TapSwitch.apk"]')) send('click');
+  }, true);
+})();
+</script>
 </body>
 </html>
