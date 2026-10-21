@@ -125,11 +125,12 @@ a.btn[href]:hover { background: var(--action-hover); text-decoration: none; }
 /* hero: the logo and words on the left, the demo clip on the right; on a phone, words then clip */
 .hero { display: grid; gap: 36px; align-items: start; padding-block: 36px 0; }
 .hero > * { min-width: 0; }
-@media (min-width: 860px) { .hero { grid-template-columns: 1.08fr .92fr; gap: 56px; padding-block: 56px 8px; } }
+@media (min-width: 860px) { .hero { grid-template-columns: 1.2fr .8fr; gap: 56px; padding-block: 40px 0; } }
 .hero h1 { font: 600 clamp(2.25rem, 4vw, 3.2rem)/1.04 var(--display); letter-spacing: -.045em; margin: 0; }
 .lede { margin: 18px 0 0; font-size: 1.1rem; color: var(--muted); max-width: 46ch; }
 .what { margin: 14px 0 0; font-size: .88rem; color: var(--muted); max-width: 46ch; }
 .what b { color: inherit; font-weight: 500; }
+.hero .cta-row { margin-top: 28px; }
 .clip {
   display: block; width: 100%; height: auto; max-width: 520px; aspect-ratio: 1; margin-inline: auto;
   border-radius: 28px; background: #EEF1F6;
@@ -139,10 +140,17 @@ a.btn[href]:hover { background: var(--action-hover); text-decoration: none; }
 /* sections: generous air, divided by hairlines rather than boxes */
 section { padding-block: 40px 0; }
 section + section { margin-top: 40px; border-top: 1px solid var(--line); }
-@media (min-width: 760px) { section { padding-block: 56px 0; } section + section { margin-top: 56px; } }
+@media (min-width: 760px) { section { padding-block: 40px 0; } section + section { margin-top: 40px; } }
 h2 { font: 600 clamp(1.9rem, 4.2vw, 3rem)/1.08 var(--display); letter-spacing: -.035em; margin: 0 0 14px; }
 .sub { margin: 0 0 24px; font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
 .sub + p { margin: 0; color: var(--muted); max-width: 62ch; }
+
+/* phones: the heading on the left, its two short lines on the right, so the row has no empty half */
+@media (min-width: 760px) {
+  #phones { display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; align-content: start; }
+  #phones h2 { grid-row: span 2; margin: 0; }
+  #phones .sub { margin: 6px 0 12px; }
+}
 
 /* setup: four numbered steps on hairlines, no boxes */
 ol.setup { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; column-gap: 48px; }
@@ -177,7 +185,7 @@ ol.setup p { margin: 0; color: var(--muted); }
 .faq h3 { margin: 0 0 6px; font: 600 1.1rem/1.3 var(--display); letter-spacing: -.02em; }
 .faq p { margin: 0; color: var(--muted); }
 
-.also { margin: 56px 0 0; padding: 24px 0 56px; border-top: 1px solid var(--line); color: var(--muted); }
+.also { margin: 40px 0 0; padding: 24px 0 40px; border-top: 1px solid var(--line); color: var(--muted); }
 
 footer { padding-block: 16px 32px; color: var(--muted); font-size: .8rem; line-height: 1.55; background: var(--quiet); }
 footer .wrap::before { content: ""; display: block; border-top: 1px solid var(--line); margin-bottom: 22px; }
@@ -211,6 +219,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
         <h1>Smart Sidebar apps open full screen, in one tap.</h1>
         <p class="lede">On an Oppo phone, an app you open from the Smart Sidebar starts in a small floating window, and you have to expand it. FloatAway opens it full screen straight away, the same as opening it from your home screen.</p>
         <p class="what">An app for <b>Oppo and ColorOS</b>. Free for 14 days, then paid once.</p>
+        <p class="cta-row"><a class="btn" href="#price">Try it free</a></p>
       </div>
       <video class="clip" src="/assets/floataway-demo.mp4" poster="/assets/floataway-demo-poster.webp" width="720" height="720"
         muted autoplay loop playsinline preload="metadata"
