@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FloatAway unlock</title>
+<meta name="robots" content="noindex">
+<style>
+  body { font: 16px/1.5 system-ui, sans-serif; margin: 0; padding: 40px 24px;
+         background: #111; color: #eee; }
+  code { display: block; word-break: break-all; margin: 16px 0; color: #9ad; }
+  a { color: #9ad; }
+</style>
+<h1>Unlocking FloatAway</h1>
+<p id="msg">Opening the app.</p>
+<code id="code"></code>
+<p>If nothing happened, open FloatAway, tap the trial banner, choose
+   <strong>I have a code</strong>, and paste the code above.</p>
+<script>
+  // The code travels in the URL fragment, which browsers never send to a server, so
+  // it is not in any web log, here or at GitHub.
+  var code = decodeURIComponent(location.hash.slice(1));
+  if (code) {
+    document.getElementById('code').textContent = code;
+    location.replace('floataway://unlock?c=' + encodeURIComponent(code));
+  } else {
+    document.getElementById('msg').textContent = 'This link is missing its code. Ask the creator to resend it.';
+  }
+</script>

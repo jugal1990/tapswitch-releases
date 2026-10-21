@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<script>
+/* same light or dark choice as the rest of the site: the visitor's pick for this visit, else the clock */
+(function () {
+  var t = null;
+  try { t = sessionStorage.getItem("ts-theme"); } catch (e) { /* storage blocked: use the clock */ }
+  if (t !== "light" && t !== "dark") { var h = new Date().getHours(); t = h >= 7 && h < 19 ? "light" : "dark"; }
+  document.documentElement.setAttribute("data-theme", t);
+})();
+</script>
+<title>FloatAway: Oppo Smart Sidebar apps open full screen, not in a floating window</title>
+<meta name="description" content="On Oppo and ColorOS phones, apps from the Smart Sidebar open in a small floating window. FloatAway opens them full screen in one tap, like from the home screen. Free for 14 days.">
+<link rel="canonical" href="https://tapswitch.fyi/floataway/">
+<meta property="og:url" content="https://tapswitch.fyi/floataway/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FloatAway: Smart Sidebar apps, full screen">
+<meta property="og:description" content="Apps you open from Oppo's Smart Sidebar open full screen in one tap, not in a small floating window.">
+<meta property="og:image" content="https://tapswitch.fyi/assets/floataway-logo-512.png">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FloatAway",
+  "url": "https://tapswitch.fyi/floataway/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Android (Oppo ColorOS with the Smart Sidebar)",
+  "description": "Makes apps opened from the Oppo Smart Sidebar open full screen in one tap, instead of in a small floating window.",
+  "image": "https://tapswitch.fyi/assets/floataway-logo-512.png",
+  "offers": { "@type": "Offer", "price": "2.00", "priceCurrency": "USD" }
+}
+</script>
+<link rel="icon" href="/assets/floataway-logo.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/floataway-logo-256.png" type="image/png" sizes="256x256">
+<link rel="apple-touch-icon" href="/assets/floataway-logo-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* the home page's look: near white ground, hairline sections, white panels only where they mark an object */
+:root {
+  --bg: #FBFBFD; --panel: #FFFFFF; --ink: #1D1D1F; --muted: #6E6E73; --line: #D2D2D7; --quiet: #F5F5F7;
+  --blue: #2B6BDB; --action: #2B6BDB; --action-hover: #2160CB; --action-ink: #FFFFFF;
+  --shadow: rgba(0, 0, 0, .08);
+  --sun-y: 0%; --moon-y: 130%;
+  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter Tight", "Helvetica Neue", system-ui, sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter Tight", "Helvetica Neue", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B0B0D; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C; --quiet: #111113;
+    --blue: #6FA8FF; --shadow: rgba(0, 0, 0, .6); --sun-y: 130%; --moon-y: 0%; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B0B0D; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C; --quiet: #111113;
+  --blue: #6FA8FF; --shadow: rgba(0, 0, 0, .6); --sun-y: 130%; --moon-y: 0%; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.5 var(--body); letter-spacing: -.011em; -webkit-font-smoothing: antialiased; transition: background .3s ease, color .3s ease; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 16px; }
+@media (min-width: 700px) { .wrap { padding-inline: 32px; } }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--action); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3 { text-wrap: balance; }
+
+/* top bar: frosted glass that the page slides under */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+.bar .wrap { display: flex; align-items: center; gap: 10px; height: 52px; }
+.brand { color: inherit; text-decoration: none !important; display: flex; align-items: center; gap: 9px; font: 600 17px/1 var(--display); letter-spacing: -.02em; }
+.brand svg { width: 26px; height: 26px; }
+.spacer { flex: 1; }
+
+/* the light or dark switch, as on the home page: the sun or moon rises over the bar's bottom edge */
+.sky {
+  position: relative; width: 34px; height: 30px; margin-left: 4px; padding: 0; border: 0;
+  box-sizing: content-box; border-bottom: 7px solid transparent; border-top: 7px solid transparent; background-clip: padding-box;
+  background: none; cursor: pointer; overflow: hidden; border-radius: 8px 8px 0 0;
+}
+.sky svg { position: absolute; inset: 3px 5px 3px; width: 24px; height: 24px; }
+.sky .sun { transform: translateY(var(--sun-y)); transition: transform .55s cubic-bezier(.2,.8,.3,1) .5s; }
+.sky .moon { transform: translateY(var(--moon-y)); transition: transform .45s cubic-bezier(.6,0,.9,.4); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sky .sun { transition: transform .45s cubic-bezier(.6,0,.9,.4); }
+  :root:not([data-theme="light"]) .sky .moon { transition: transform .55s cubic-bezier(.2,.8,.3,1) .5s; }
+}
+:root[data-theme="dark"] .sky .sun { transition: transform .45s cubic-bezier(.6,0,.9,.4); }
+:root[data-theme="dark"] .sky .moon { transition: transform .55s cubic-bezier(.2,.8,.3,1) .5s; }
+.sky .rays { transform-box: view-box; transform-origin: 12px 12px; animation: rays 24s linear infinite; }
+@keyframes rays { to { transform: rotate(360deg); } }
+.sky .star { animation: twinkle 2.4s ease-in-out infinite; }
+.sky .star + .star { animation-delay: 1.2s; }
+@keyframes twinkle { 50% { opacity: .25; } }
+.wash { position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0; }
+.dusk .wash { background: linear-gradient(180deg, rgba(255,138,76,.38), rgba(128,70,170,.26) 55%, rgba(20,20,60,.12)); animation: wash 1.4s ease-in-out; }
+.dawn .wash { background: linear-gradient(180deg, rgba(255,196,120,.42), rgba(255,140,170,.24) 55%, rgba(255,255,255,.1)); animation: wash 1.4s ease-in-out; }
+@keyframes wash { 0%, 100% { opacity: 0; } 40% { opacity: 1; } }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 1s; animation-timing-function: cubic-bezier(.4, 0, .2, 1); }
+.sky { view-transition-name: sky; }
+::view-transition-old(sky) { display: none; }
+::view-transition-new(sky) { animation: none; }
+.fading, .fading :not(.sky, .sky *) { transition: background-color .7s ease, color .7s ease, border-color .7s ease, box-shadow .7s ease !important; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 500 17px/1 var(--body); letter-spacing: -.01em; padding: 14px 26px;
+  border-radius: 999px; background: var(--action); color: var(--action-ink);
+  text-decoration: none; white-space: nowrap; transition: background .2s ease;
+}
+a.btn[href]:hover { background: var(--action-hover); text-decoration: none; }
+/* until launch day the button is a label: a quiet outline, no pointer, nothing to press */
+.btn:not([href]) { background: transparent; color: var(--muted); box-shadow: 0 0 0 1px var(--line) inset; cursor: default; }
+
+/* hero: the logo and words on the left, the demo clip on the right; on a phone, words then clip */
+.hero { display: grid; gap: 36px; align-items: center; padding-block: 36px 0; }
+.hero > * { min-width: 0; }
+@media (min-width: 860px) { .hero { grid-template-columns: 1.08fr .92fr; gap: 56px; padding-block: 56px 8px; } }
+.logo { display: block; width: 104px; height: 104px; margin: 0 0 22px -6px; }
+.hero h1 { font: 600 clamp(2.25rem, 4vw, 3.2rem)/1.04 var(--display); letter-spacing: -.045em; margin: 0; }
+.lede { margin: 18px 0 0; font-size: 1.1rem; color: var(--muted); max-width: 46ch; }
+.what { margin: 14px 0 0; font-size: .88rem; color: var(--muted); max-width: 46ch; }
+.what b { color: inherit; font-weight: 500; }
+.clip {
+  display: block; width: 100%; height: auto; max-width: 520px; aspect-ratio: 1; margin-inline: auto;
+  border-radius: 28px; background: #EEF1F6;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent), 0 20px 40px -30px var(--shadow);
+}
+
+/* sections: generous air, divided by hairlines rather than boxes */
+section { padding-block: 40px 0; }
+section + section { margin-top: 40px; border-top: 1px solid var(--line); }
+@media (min-width: 760px) { section { padding-block: 56px 0; } section + section { margin-top: 56px; } }
+h2 { font: 600 clamp(1.9rem, 4.2vw, 3rem)/1.08 var(--display); letter-spacing: -.035em; margin: 0 0 14px; }
+.sub { margin: 0 0 24px; font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
+.sub + p { margin: 0; color: var(--muted); max-width: 62ch; }
+
+/* setup: four numbered steps on hairlines, no boxes */
+ol.setup { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; column-gap: 48px; }
+@media (min-width: 760px) { ol.setup { grid-template-columns: 1fr 1fr; } }
+ol.setup li { counter-increment: s; border-top: 1px solid var(--line); padding: 16px 0 18px 56px; position: relative; min-width: 0; }
+ol.setup li::before {
+  content: counter(s); position: absolute; left: 0; top: 14px;
+  width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  box-shadow: 0 0 0 1px var(--line) inset; color: var(--blue); font: 600 16px/1 var(--display);
+}
+ol.setup h3 { margin: 4px 0 6px; font: 600 1.15rem/1.3 var(--display); letter-spacing: -.02em; }
+ol.setup p { margin: 0; color: var(--muted); }
+
+.price {
+  display: grid; gap: 24px; background: var(--panel); border-radius: 28px;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent), 0 20px 40px -30px var(--shadow);
+  padding: 32px 26px;
+}
+@media (min-width: 760px) { .price { grid-template-columns: 260px 1fr; gap: 40px; padding: 36px 40px; } }
+.price > * { min-width: 0; }
+.amount { font: 600 clamp(3rem, 6vw, 4rem)/1 var(--display); letter-spacing: -.045em; }
+.amount-note { margin: 12px 0 0; color: var(--muted); font-size: .94rem; }
+.price-points { display: grid; gap: 16px; }
+.price-points p { margin: 0; color: var(--muted); max-width: 62ch; }
+.price-points strong { color: var(--ink); font-weight: 600; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0 0; }
+
+/* questions: plain question and answer pairs on hairlines */
+.faq { display: grid; column-gap: 48px; }
+@media (min-width: 760px) { .faq { grid-template-columns: 1fr 1fr; } }
+.faq div { border-top: 1px solid var(--line); padding: 16px 0 18px; min-width: 0; }
+.faq h3 { margin: 0 0 6px; font: 600 1.1rem/1.3 var(--display); letter-spacing: -.02em; }
+.faq p { margin: 0; color: var(--muted); }
+
+.also { margin: 56px 0 0; padding: 24px 0 56px; border-top: 1px solid var(--line); color: var(--muted); }
+
+footer { padding-block: 16px 32px; color: var(--muted); font-size: .8rem; line-height: 1.55; background: var(--quiet); }
+footer .wrap::before { content: ""; display: block; border-top: 1px solid var(--line); margin-bottom: 22px; }
+footer p { margin: 0 0 8px; max-width: 72ch; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+</style>
+</head>
+<body id="top">
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="FloatAway, back to the top">
+      <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="faBg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#faBg)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M41,31 H67 A10,10 0 0 1 77,41 V67 A10,10 0 0 1 67,77 H41 A10,10 0 0 1 31,67 V41 A10,10 0 0 1 41,31 Z" opacity=".55"/><path d="M58,50 L66,42 M58,42 L66,42 L66,50"/><path d="M50,58 L42,66 M50,66 L42,66 L42,58"/></g></svg>
+      FloatAway
+    </a>
+    <span class="spacer"></span>
+    <button type="button" class="sky" id="themeBtn" aria-label="Switch to dark mode">
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><g class="rays" stroke="#FFB21E" stroke-width="1.8" stroke-linecap="round"><path d="M12 1.5v2.6M12 19.9v2.6M1.5 12h2.6M19.9 12h2.6M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g><circle cx="12" cy="12" r="5.4" fill="#FFC53D"/><circle cx="12" cy="12" r="5.4" fill="none" stroke="#FF9F0A" stroke-width=".8"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.8 3.2a8.6 8.6 0 1 0 5 13.6A7 7 0 0 1 15.8 3.2z" fill="#F2EFD8"/><circle class="star" cx="5.2" cy="5" r=".9" fill="#F2EFD8"/><circle class="star" cx="9.6" cy="2.6" r=".6" fill="#F2EFD8"/></svg>
+    </button>
+  </div>
+</header>
+<div class="wash" aria-hidden="true"></div>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <img class="logo" src="/assets/floataway-logo-256.png" width="104" height="104" alt="">
+        <h1>Smart Sidebar apps open full screen, in one tap.</h1>
+        <p class="lede">On an Oppo phone, an app you open from the Smart Sidebar starts in a small floating window, and you have to expand it. FloatAway opens it full screen straight away, the same as opening it from your home screen.</p>
+        <p class="what">An app for <b>Oppo and ColorOS</b>. Free for 14 days, then paid once.</p>
+      </div>
+      <video class="clip" src="/assets/floataway-demo.mp4" poster="/assets/floataway-demo-poster.webp" width="720" height="720"
+        muted autoplay loop playsinline preload="metadata"
+        aria-label="A short clip: without FloatAway, a sidebar app opens in a small window; with FloatAway, it opens full screen."></video>
+    </div>
+
+    <section id="phones">
+      <h2>Which phones it works on</h2>
+      <p class="sub">Oppo or ColorOS phones with the Smart Sidebar.</p>
+      <p>It is built and tested on an Oppo Find X9. The 14-day free trial is how you find out if it works on yours.</p>
+    </section>
+
+    <section id="setup">
+      <h2>Setting it up</h2>
+      <p class="sub">You set it up once, on the phone itself. You do not need a computer or a cable.</p>
+      <ol class="setup">
+        <li>
+          <h3>Install the file</h3>
+          <p>Your phone asks whether to allow installs from your browser. Say yes, then open FloatAway.</p>
+        </li>
+        <li>
+          <h3>Turn on Developer options</h3>
+          <p>FloatAway guides you through it. You only do this once.</p>
+        </li>
+        <li>
+          <h3>Turn on Wireless debugging</h3>
+          <p>You need Wi-Fi for this step. Your phone shows six digits, and you type them into the FloatAway notification. FloatAway turns Wireless debugging back off when it is done. Your phone may close and reopen FloatAway once. Nothing is lost.</p>
+        </li>
+        <li>
+          <h3>Let it run in the background</h3>
+          <p>This keeps sidebar apps opening full screen. FloatAway shows one quiet notification while it is on.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="price">
+      <h2>Free for 14 days, then one price</h2>
+      <div class="price">
+        <div>
+          <div class="amount">US$2</div>
+          <p class="amount-note">Pay once and it works on that phone for good. There is no subscription and no account.</p>
+        </div>
+        <div class="price-points">
+          <p><strong>Try it free for 14 days.</strong> The 14 days start once setup is done, not when you install it.</p>
+          <p><strong>No refunds.</strong> The free 14 days are there so you can try it first. Once a code is issued, it cannot be refunded.</p>
+          <p><strong>Buy it inside the app.</strong> Tap "Buy now" to pay in your browser. Your unlock code shows on screen, and a copy is emailed to you.</p>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn" data-download href="https://github.com/jugal1990/floataway-releases/releases/latest/download/FloatAway.apk">Download</a>
+      </div>
+    </section>
+
+    <section id="questions">
+      <h2>Common questions</h2>
+      <div class="faq">
+        <div>
+          <h3>What about files I share from one app to another?</h3>
+          <p>They open full screen too. If you would rather they did not, turn it off with the switch on FloatAway's home screen.</p>
+        </div>
+        <div>
+          <h3>What happens to apps I already have open?</h3>
+          <p>They stay where they are. FloatAway only changes how an app opens.</p>
+        </div>
+        <div>
+          <h3>What happens when the 14 days end?</h3>
+          <p>FloatAway asks you to buy it. If you do not, you owe nothing.</p>
+        </div>
+        <div>
+          <h3>I uninstalled FloatAway and shared files still open full screen. How do I undo it?</h3>
+          <p>The sharing switch is a phone setting, so it stays after FloatAway is gone. Reinstall FloatAway, run the setup again, and switch it off on FloatAway's home screen. Then you can uninstall it.</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="also">Also from the maker of <a href="https://tapswitch.fyi/">TapSwitch</a>, the app that keeps your office access card and Google Wallet working on one phone.</p>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p>Made by one person. Contact me: <a href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p>
+      <p>FloatAway is not affiliated with Oppo.</p>
+    </div>
+  </footer>
+</main>
+
+<script>
+// The light or dark switch, as on the home page: a click flips the theme for the rest of this visit.
+(function () {
+  var btn = document.getElementById("themeBtn");
+  var root = document.documentElement;
+  var sys = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function current() {
+    var t = root.getAttribute("data-theme");
+    if (t === "light" || t === "dark") return t;
+    return sys && sys.matches ? "dark" : "light";
+  }
+  function label() { btn.setAttribute("aria-label", current() === "dark" ? "Switch to light mode" : "Switch to dark mode"); }
+  var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var timer = null;
+  btn.addEventListener("click", function () {
+    var next = current() === "dark" ? "light" : "dark";
+    function apply() {
+      root.setAttribute("data-theme", next);
+      try { sessionStorage.setItem("ts-theme", next); } catch (e) { /* storage blocked: the choice lasts this page view */ }
+      label();
+    }
+    if (still) { apply(); return; }
+    clearTimeout(timer);
+    root.classList.remove("dusk", "dawn");
+    void root.offsetWidth;
+    root.classList.add(next === "dark" ? "dusk" : "dawn");
+    timer = setTimeout(function () { root.classList.remove("dusk", "dawn", "fading"); }, 1400);
+    if (document.startViewTransition) { document.startViewTransition(apply); return; }
+    root.classList.add("fading");
+    apply();
+  });
+  if (sys && sys.addEventListener) sys.addEventListener("change", label);
+  label();
+})();
+
+// A visitor who asks for less motion gets the clip paused, with controls to play it.
+(function () {
+  var v = document.querySelector(".clip");
+  if (v && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    v.removeAttribute("autoplay"); v.pause(); v.controls = true;
+  }
+})();
+</script>
+<script>
+// Owner's private count: one visit per browser per day, and each Download click. Shows nothing.
+(function () {
+  var url = 'https://floataway-codes.tapswitch-pay.workers.dev/site';
+  function send(stage) { try { navigator.sendBeacon(url, JSON.stringify({ stage: stage })); } catch (e) {} }
+  var day = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
+  try { if (localStorage.getItem('fa-day') !== day) { localStorage.setItem('fa-day', day); send('visit'); } } catch (e) { /* storage blocked: send nothing rather than a visit on every page load */ }
+  // only a real link counts, so the only the Download link, which has an href, is counted
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('a[data-download][href]')) send('click');
+  }, true);
+})();
+</script>
+</body>
+</html>
