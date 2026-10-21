@@ -123,10 +123,9 @@ a.btn[href]:hover { background: var(--action-hover); text-decoration: none; }
 .btn:not([href]) { background: transparent; color: var(--muted); box-shadow: 0 0 0 1px var(--line) inset; cursor: default; }
 
 /* hero: the logo and words on the left, the demo clip on the right; on a phone, words then clip */
-.hero { display: grid; gap: 36px; align-items: center; padding-block: 36px 0; }
+.hero { display: grid; gap: 36px; align-items: start; padding-block: 36px 0; }
 .hero > * { min-width: 0; }
 @media (min-width: 860px) { .hero { grid-template-columns: 1.08fr .92fr; gap: 56px; padding-block: 56px 8px; } }
-.logo { display: block; width: 104px; height: 104px; margin: 0 0 22px -6px; }
 .hero h1 { font: 600 clamp(2.25rem, 4vw, 3.2rem)/1.04 var(--display); letter-spacing: -.045em; margin: 0; }
 .lede { margin: 18px 0 0; font-size: 1.1rem; color: var(--muted); max-width: 46ch; }
 .what { margin: 14px 0 0; font-size: .88rem; color: var(--muted); max-width: 46ch; }
@@ -209,7 +208,6 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
   <div class="wrap">
     <div class="hero">
       <div>
-        <img class="logo" src="/assets/floataway-logo-256.png" width="104" height="104" alt="">
         <h1>Smart Sidebar apps open full screen, in one tap.</h1>
         <p class="lede">On an Oppo phone, an app you open from the Smart Sidebar starts in a small floating window, and you have to expand it. FloatAway opens it full screen straight away, the same as opening it from your home screen.</p>
         <p class="what">An app for <b>Oppo and ColorOS</b>. Free for 14 days, then paid once.</p>
