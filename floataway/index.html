@@ -178,6 +178,23 @@ ol.setup p { margin: 0; color: var(--muted); }
 .price-points strong { color: var(--ink); font-weight: 600; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0 0; }
 
+/* safety: the file's facts in one quiet box, the long codes folded away */
+.facts-box { overflow-x: auto; border-radius: 18px; background: var(--panel); box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent); }
+.facts { width: 100%; border-collapse: collapse; }
+.facts th, .facts td { text-align: left; padding: 13px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.facts tr:last-child th, .facts tr:last-child td { border-bottom: 0; }
+.facts th { font-weight: 400; color: var(--muted); width: 170px; white-space: nowrap; }
+.facts td.sig-note { padding-top: 0; font-size: .82rem; color: var(--muted); }
+.facts tr:has(+ tr > .sig-note) th, .facts tr:has(+ tr > .sig-note) td { border-bottom: 0; }
+.tech { border-top: 1px solid var(--line); }
+.tech summary { padding: 13px 20px; cursor: pointer; color: var(--blue); list-style: none; }
+.tech summary::-webkit-details-marker { display: none; }
+.tech summary::after { content: " +"; }
+.tech[open] summary::after { content: " \2212"; }
+.tech .facts { border-top: 1px solid var(--line); }
+.hash { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .76rem; word-break: break-all; }
+@media (max-width: 520px) { .facts th { width: auto; white-space: normal; } }
+
 /* questions: plain question and answer pairs on hairlines */
 .faq { display: grid; column-gap: 48px; }
 @media (min-width: 760px) { .faq { grid-template-columns: 1fr 1fr; } }
@@ -268,6 +285,27 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
           <p>This keeps sidebar apps opening full screen. FloatAway shows one quiet notification while it is on.</p>
         </li>
       </ol>
+    </section>
+
+    <section id="safe">
+      <h2>Is it safe?</h2>
+      <p class="sub">FloatAway is not on the Play Store, so you can check it yourself with a free virus scan.</p>
+      <div class="facts-box">
+        <table class="facts">
+          <tr><th>File</th><td>FloatAway.apk</td></tr>
+          <tr><th>Latest version</th><td>1.0.1</td></tr>
+          <tr><th>Size</th><td>6.8 MB</td></tr>
+          <tr><th>Virus scan</th><td>0 of 68 virus checkers flag it (VirusTotal, 24 Oct 2026). <a href="https://www.virustotal.com/gui/file/29d320f9b7d7a51926eabfc52e399e134a92199eb6430194f179b00a7027fa50">See the full report</a></td></tr>
+        </table>
+        <details class="tech">
+          <summary>Show technical details</summary>
+          <table class="facts">
+            <tr><th>SHA-256 of the file</th><td class="hash">29d320f9b7d7a51926eabfc52e399e134a92199eb6430194f179b00a7027fa50</td></tr>
+            <tr><th>Signed by</th><td class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</td></tr>
+            <tr><td colspan="2" class="sig-note">Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it.</td></tr>
+          </table>
+        </details>
+      </div>
     </section>
 
     <section id="questions">
