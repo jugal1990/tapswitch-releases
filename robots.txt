@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /u/
+Disallow: /floataway/u/
 
 Sitemap: https://tapswitch.fyi/sitemap.xml
