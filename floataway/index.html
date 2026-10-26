@@ -248,7 +248,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
     <div class="hero">
       <div>
         <h1>Smart Sidebar apps open full screen, in one tap.</h1>
-        <p class="lede">On an Oppo phone, an app you open from the Smart Sidebar starts in a small floating window, and you have to expand it. FloatAway opens it full screen straight away, the same as opening it from your home screen.</p>
+        <p class="lede">On an Oppo phone, an app you open from the Smart Sidebar starts in a small floating window, and you have to expand it. FloatAway opens it full screen straight away, the same as opening it from your home screen. Cloned apps too.</p>
         <p class="what">An app for <b>Oppo and ColorOS</b>, Android 12 or newer. Free for 14 days, then US$2 once.</p>
       </div>
       <video class="clip" src="/assets/floataway-demo.mp4" poster="/assets/floataway-demo-poster.webp" width="720" height="720"
@@ -305,20 +305,44 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
       </ol>
     </section>
 
+    <section id="clones">
+      <h2>Cloned apps open full screen too</h2>
+      <p class="sub">Some apps can run twice on one phone, for example two WhatsApp accounts. Oppo calls the second copy a cloned app, and its icon has a small badge.</p>
+      <p>Tap a cloned app in the Smart Sidebar and FloatAway opens it full screen, in the same single motion as any other app. That works when the app is starting fresh and when it is already open in the background, and it keeps working after you restart your phone.</p>
+      <ol class="setup">
+        <li>
+          <h3>Find the switch</h3>
+          <p>On FloatAway's home screen, under "Cloned apps open full screen". It is on once setup is done.</p>
+        </li>
+        <li>
+          <h3>Had FloatAway before version 1.0.2?</h3>
+          <p>The line under the switch says "Needs one more setup step". Turn the switch on and FloatAway takes you through the Wireless debugging step once more. You need Wi-Fi for it, and it takes about a minute.</p>
+        </li>
+      </ol>
+      <h3 class="small">What the line under the switch means</h3>
+      <dl class="perms">
+        <div class="perm"><dt>Working</dt><dd>Cloned apps open full screen.</dd></div>
+        <div class="perm"><dt>Off</dt><dd>You switched it off. Cloned apps open in the small window, the way your phone does on its own.</dd></div>
+        <div class="perm"><dt>Needs one more setup step</dt><dd>Turn the switch on to do it.</dd></div>
+        <div class="perm"><dt>No cloned apps on this phone</dt><dd>Clone an app in your phone's settings, and the switch becomes available.</dd></div>
+        <div class="perm"><dt>This phone did not allow it</dt><dd>Your phone refused the extra step. Other apps still open full screen.</dd></div>
+      </dl>
+    </section>
+
     <section id="safe">
       <h2>Is it safe?</h2>
       <p class="sub">FloatAway is not on the Play Store, so you can check it yourself with a free virus scan.</p>
       <div class="facts-box">
         <table class="facts">
           <tr><th>File</th><td>FloatAway.apk</td></tr>
-          <tr><th>Latest version</th><td>1.0.1</td></tr>
+          <tr><th>Latest version</th><td>1.0.2</td></tr>
           <tr><th>Size</th><td>6.8 MB</td></tr>
-          <tr><th>Virus scan</th><td>0 of 68 virus checkers flag it (VirusTotal, 24 Oct 2026). <a href="https://www.virustotal.com/gui/file/29d320f9b7d7a51926eabfc52e399e134a92199eb6430194f179b00a7027fa50">See the full report</a></td></tr>
+          <tr><th>Virus scan</th><td>0 of 61 virus checkers flag it (VirusTotal, 26 Oct 2026). <a href="https://www.virustotal.com/gui/file/8db08f08aa27a2924f5b22924efcd21245601aaa7e01c34ec82761403d1f16dc">See the full report</a></td></tr>
         </table>
         <details class="tech">
           <summary>Show technical details</summary>
           <table class="facts">
-            <tr><th>SHA-256 of the file</th><td class="hash">29d320f9b7d7a51926eabfc52e399e134a92199eb6430194f179b00a7027fa50</td></tr>
+            <tr><th>SHA-256 of the file</th><td class="hash">8db08f08aa27a2924f5b22924efcd21245601aaa7e01c34ec82761403d1f16dc</td></tr>
             <tr><th>Signed by</th><td class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</td></tr>
             <tr><td colspan="2" class="sig-note">Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it.</td></tr>
           </table>
@@ -327,7 +351,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
 
       <h3 class="small">What FloatAway can and cannot do</h3>
       <dl class="perms">
-        <div class="perm"><dt>See which app just opened</dt><dd>So it knows when you tapped an app in the Smart Sidebar.</dd></div>
+        <div class="perm"><dt>See which app just opened</dt><dd>So it knows when you tapped an app in the Smart Sidebar, cloned apps included.</dd></div>
         <div class="perm"><dt>Show over other apps</dt><dd>It places one tiny invisible window, only while the sidebar is open. Your phone needs it before FloatAway can open an app for you.</dd></div>
         <div class="perm"><dt>Change one phone setting</dt><dd>The one that makes shared files open in a small window. It goes back when you switch FloatAway off or the trial ends.</dd></div>
         <div class="perm"><dt>Never sees what is in your apps</dt><dd>It cannot read your screen, messages or files, and there is no account. It checks for updates once a day.</dd></div>
