@@ -225,6 +225,19 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+/* tag above the headline: news a visitor should see first */
+.tag { display: inline-flex; align-items: center; gap: 7px; margin: 0 0 16px; padding: 6px 12px 6px 10px; border-radius: 999px; font: 500 .84rem/1 var(--body); letter-spacing: -.005em; color: var(--blue); background: color-mix(in srgb, var(--blue) 10%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 24%, transparent) inset; }
+.tag svg { width: 15px; height: 15px; flex: none; }
+/* the other app from the same maker: one card that opens its page */
+section.also-from { border-top: 0; }
+.other { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; color: inherit; text-decoration: none !important; background: var(--panel); border-radius: 22px; padding: 22px 24px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent), 0 20px 40px -30px var(--shadow); transition: box-shadow .2s ease, transform .2s ease; }
+.other:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 45%, transparent), 0 24px 44px -28px var(--shadow); }
+.other > svg { width: 56px; height: 56px; flex: none; align-self: flex-start; }
+.other .txt { flex: 1 1 200px; min-width: 0; }
+.other .k { display: block; font-size: .8rem; color: var(--muted); }
+.other b { display: block; margin: 2px 0 4px; font: 600 1.3rem/1.2 var(--display); letter-spacing: -.02em; }
+.other .d { display: block; color: var(--muted); max-width: 60ch; }
+.other .go { flex: none; color: var(--blue); font-weight: 500; }
 </style>
 </head>
 <body id="top">
@@ -247,6 +260,7 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
   <div class="wrap">
     <div class="hero">
       <div>
+        <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works on ColorOS 17</p>
         <h1>Smart Sidebar apps open full screen, in one tap.</h1>
         <p class="lede">On an Oppo phone, an app you open from the Smart Sidebar starts in a small floating window, and you have to expand it. FloatAway opens it full screen straight away, the same as opening it from your home screen. Cloned apps too.</p>
         <p class="what">An app for <b>Oppo and ColorOS</b>, Android 12 or newer. Free for 14 days, then US$2 once.</p>
@@ -280,6 +294,14 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
       <h2>Which phones it works on</h2>
       <p class="sub">Oppo or ColorOS phones with the Smart Sidebar.</p>
       <p>It is built and tested on an Oppo Find X9. The 14-day free trial is how you find out if it works on yours.</p>
+    </section>
+
+    <section class="also-from" aria-label="Also from the same maker">
+      <a class="other" href="https://tapswitch.fyi/">
+        <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="tsBg2" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#tsBg2)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M35,44 L73,44 M73,44 L65,36 M73,44 L65,52"/><path d="M73,64 L35,64 M35,64 L43,56 M35,64 L43,72"/></g></svg>
+        <span class="txt"><span class="k">Also from the maker of FloatAway</span><b>TapSwitch</b><span class="d">Your access card works by default, and Google Wallet takes over when you open it. Also works in reverse mode. Both on one phone. Free for 14 days, then US$4.99 once.</span></span>
+        <span class="go">See TapSwitch &rsaquo;</span>
+      </a>
     </section>
 
     <section id="setup">
@@ -382,12 +404,12 @@ footer p { margin: 0 0 8px; max-width: 72ch; }
 
     <p class="closing">Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href="#price">Back to the download</a></span></p>
 
-    <p class="also">Also from the maker of <a href="https://tapswitch.fyi/">TapSwitch</a>, the app that keeps your office access card and Google Wallet working on one phone.</p>
   </div>
 
   <footer>
     <div class="wrap">
       <p>Made by one person. Contact me: <a href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p>
+      <p>Also from the maker of FloatAway: <a href="https://tapswitch.fyi/">TapSwitch, access card and Google Wallet on one phone</a></p>
       <p>FloatAway is not affiliated with Oppo.</p>
     </div>
   </footer>
