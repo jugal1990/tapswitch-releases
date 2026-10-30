@@ -184,6 +184,14 @@ ol.setup p { margin: 0; color: var(--muted); }
 .btn-plain { background: transparent; color: var(--blue); box-shadow: 0 0 0 1px var(--action) inset; }
 a.btn-plain[href]:hover { background: var(--action); color: var(--action-ink); }
 .cta-note { margin: 12px 0 0; font-size: .9rem; color: var(--muted); max-width: 62ch; }
+/* what's new in the newest version, under the download button */
+.whatsnew { margin: 24px 0 0; padding: 20px 22px 18px; background: var(--quiet); border-radius: 18px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent); max-width: 62ch; }
+.whatsnew h3 { margin: 0; font: 600 1.05rem/1.35 var(--display); letter-spacing: -.015em; }
+.whatsnew h3 span { margin-left: 8px; font: 400 .85rem var(--body); color: var(--muted); }
+.whatsnew .lead { margin: 6px 0 0; font-weight: 600; color: var(--blue); }
+.whatsnew ul { margin: 10px 0 0; padding-left: 20px; }
+.whatsnew li + li { margin-top: 6px; }
+.whatsnew .carry { margin: 12px 0 0; font-size: .9rem; color: var(--muted); }
 
 /* safety: the file's facts in one quiet box, the long codes folded away */
 .facts-box { overflow-x: auto; border-radius: 18px; background: var(--panel); box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent); }
@@ -290,6 +298,15 @@ section.also-from { border-top: 0; }
         <a class="btn btn-plain" href="https://github.com/jugal1990/floataway-releases/releases">All versions on GitHub</a>
       </div>
       <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#safe">How to check it is safe</a></p>
+      <div class="whatsnew" id="whats-new">
+        <h3>What's new in 1.0.3 <span>29 Oct 2026</span></h3>
+        <p class="lead">Smoother games, and videos that keep playing.</p>
+        <ul>
+          <li>Games you open from the Smart Sidebar now run smoothly, with your phone's game mode still on.</li>
+          <li>Open another app from the sidebar while a video plays, and the video moves into a small window.</li>
+          <li>Apps open full screen on more Oppo phones.</li>
+        </ul>
+      </div>
     </section>
 
     <section id="phones">

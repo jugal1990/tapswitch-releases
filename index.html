@@ -572,6 +572,14 @@ ol.setup p { margin: 0; color: var(--muted); }
 .price-points strong { color: var(--ink); font-weight: 600; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0 0; }
 .cta-note { margin: 12px 0 0; font-size: .9rem; color: var(--muted); max-width: 62ch; }
+/* what's new in the newest version, under the download button */
+.whatsnew { margin: 24px 0 0; padding: 20px 22px 18px; background: var(--quiet); border-radius: 18px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent); max-width: 62ch; }
+.whatsnew h3 { margin: 0; font: 600 1.05rem/1.35 var(--display); letter-spacing: -.015em; }
+.whatsnew h3 span { margin-left: 8px; font: 400 .85rem var(--body); color: var(--muted); }
+.whatsnew .lead { margin: 6px 0 0; font-weight: 600; color: var(--blue); }
+.whatsnew ul { margin: 10px 0 0; padding-left: 20px; }
+.whatsnew li + li { margin-top: 6px; }
+.whatsnew .carry { margin: 12px 0 0; font-size: .9rem; color: var(--muted); }
 .facts td.sig-note { padding-top: 0; font-size: .82rem; color: var(--muted); }
 .facts tr:has(+ tr > .sig-note) th, .facts tr:has(+ tr > .sig-note) td { border-bottom: 0; }
 .closing { margin: 36px 0 0; font: 600 clamp(1.3rem, 2.6vw, 1.6rem)/1.3 var(--display); letter-spacing: -.02em; max-width: 34ch; }
@@ -724,6 +732,16 @@ section.also-from { border-top: 0; }
           <a class="btn btn-lg btn-plain" href="https://github.com/jugal1990/tapswitch-releases/releases">All versions on GitHub</a>
         </div>
         <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#careful">How to check it is safe</a></p>
+        <div class="whatsnew" id="whats-new">
+          <h3>What's new in 3.0.0 <span>2 Oct 2026</span></h3>
+          <p class="lead">A fresh new look and an easier setup.</p>
+          <ul>
+            <li>Setup asks one simple question: which card should your phone use when you tap?</li>
+            <li>A new Settings page, a page that shows how it works, and a list of every time it switched cards for you.</li>
+            <li>If your free trial ends, your phone goes back to the card it used before TapSwitch.</li>
+          </ul>
+          <p class="carry">Already using it? Your setup and unlock code carry over, so there is nothing to redo.</p>
+        </div>
       </section>
     </div>
   </div>
