@@ -188,6 +188,15 @@ footer p { margin: 0 0 8px; }
 <script>
 // Owner's private count: one visit per browser per day, and each Download click. Shows nothing.
 (function () {
+  // Not counted: the owner's own browsers (open tapswitch.fyi/#me once in each; #count-me undoes it)
+  // and script-driven browsers, which is how Claude checks the site.
+  if (navigator.webdriver) return;
+  try {
+    if (location.hash === '#me') localStorage.setItem('ts-owner', '1');
+    if (location.hash === '#count-me') localStorage.removeItem('ts-owner');
+    if (/^#(me|count-me)$/.test(location.hash)) history.replaceState(null, '', location.pathname + location.search);
+    if (localStorage.getItem('ts-owner')) return;
+  } catch (e) {}
   var url = 'https://tapswitch-codes.tapswitch-pay.workers.dev/site';
   function send(stage) { try { navigator.sendBeacon(url, JSON.stringify({ stage: stage })); } catch (e) {} }
   var day = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
