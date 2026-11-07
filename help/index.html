@@ -12,8 +12,8 @@
   document.documentElement.setAttribute("data-theme", t);
 })();
 </script>
-<title>Access card and Google Wallet not working together on Android: common questions | TapSwitch</title>
-<meta name="description" content="Your phone can offer only one tap card at a time, so an access card and Google Wallet fight over NFC. How to switch the default card by hand, and how TapSwitch does it for you. Tested on Oppo ColorOS.">
+<title>Access card and Google Wallet not working together on Android: how to switch between cards | TapSwitch</title>
+<meta name="description" content="Your phone can offer only one tap card at a time, so an access card and Google Wallet fight over NFC. How to switch between cards by hand, every way compared, and how TapSwitch does it for you. Tested on Oppo ColorOS.">
 <link rel="canonical" href="https://tapswitch.fyi/help/">
 <meta property="og:url" content="https://tapswitch.fyi/help/">
 <meta property="og:type" content="article">
@@ -41,7 +41,9 @@
     { "@type": "Question", "name": "Why is TapSwitch not on the Play Store?",
       "acceptedAnswer": { "@type": "Answer", "text": "TapSwitch is made and sold by one person, straight from tapswitch.fyi. You download the file from this site and your phone asks once whether to allow it. Because it does not come from the Play Store, your phone shows a warning, which is normal." } },
     { "@type": "Question", "name": "What happens after the 14 day free trial?",
-      "acceptedAnswer": { "@type": "Answer", "text": "TapSwitch costs US$4.99, paid once. If you do not buy it, TapSwitch stops switching when the trial ends and your phone goes back to how it was. You owe nothing." } }
+      "acceptedAnswer": { "@type": "Answer", "text": "TapSwitch costs US$4.99, paid once. If you do not buy it, TapSwitch stops switching when the trial ends and your phone goes back to how it was. You owe nothing." } },
+    { "@type": "Question", "name": "What are all the ways to use an access card and Google Wallet together?",
+      "acceptedAnswer": { "@type": "Answer", "text": "There are three. Switch the default by hand in Settings: free, but you do it before every door and every payment. Carry the plastic access card, if your office gave you one: free, and your phone stays on Google Wallet. Or use TapSwitch: US$4.99 paid once after a 14 day free trial, and you do nothing at all: tap at the door to open, use Google Wallet to pay, and you never open Settings again." } }
   ]
 }
 </script>
@@ -98,6 +100,11 @@ p { margin: 0 0 12px; }
 ol.steps { margin: 0 0 12px; padding-left: 1.3em; }
 ol.steps li { margin: 6px 0; }
 .note { color: var(--muted); font-size: .94rem; }
+.ways { overflow-x: auto; margin: 0 0 12px; }
+.ways table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+.ways th, .ways td { text-align: left; vertical-align: top; padding: 10px 12px; overflow-wrap: break-word; border-bottom: 1px solid var(--line); }
+.ways th { color: var(--muted); font-weight: 600; }
+@media (max-width: 480px) { .ways th, .ways td { padding: 8px 6px; font-size: .88rem; } }
 .cta { margin: 56px 0 0; padding: 26px 24px; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; }
 .cta p { margin: 0 0 16px; }
 .cta a.btn { display: inline-block; background: var(--action); color: var(--action-ink); font-weight: 600; padding: 12px 20px; border-radius: 999px; text-decoration: none; }
@@ -133,6 +140,7 @@ footer p { margin: 0 0 8px; }
         <li><a href="#safe">Is it safe, and can it see my cards?</a></li>
         <li><a href="#play-store">Why is it not on the Play Store?</a></li>
         <li><a href="#trial">What happens after the 14 day free trial?</a></li>
+        <li><a href="#every-way">What are all the ways to use an access card and Google Wallet together?</a></li>
       </ol>
     </nav>
 
@@ -171,6 +179,15 @@ footer p { margin: 0 0 8px; }
 
     <h2 id="trial">What happens after the 14 day free trial?</h2>
     <p>TapSwitch costs US$4.99, paid once. If you do not buy it, TapSwitch stops switching when the trial ends and your phone goes back to how it was. You owe nothing.</p>
+
+    <h2 id="every-way">What are all the ways to use an access card and Google Wallet together?</h2>
+    <p>There are three. Pick the one that fits your day.</p>
+    <div class="ways"><table>
+      <tr><th>Way</th><th>Cost</th><th>What you do every day</th></tr>
+      <tr><td><a href="#by-hand">Switch by hand in Settings</a></td><td>Free</td><td>Change the default before every door, and again before you pay</td></tr>
+      <tr><td>Carry the plastic access card, if your office gave you one</td><td>Free</td><td>Keep the card with you. Your phone stays on Google Wallet</td></tr>
+      <tr><td><a href="/">TapSwitch</a></td><td><span style="white-space: nowrap">US$4.99</span> once, after 14 days free</td><td><b>Nothing at all.</b> Tap at the door to open, use Google Wallet to pay. TapSwitch switches for you, so you never open Settings again</td></tr>
+    </table></div>
 
     <div class="cta">
       <p>Try it on your own phone for 14 days, free. Setting it up takes about five minutes.</p>
