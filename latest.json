@@ -1,1 +1,1 @@
-{"versionCode":36,"versionName":"3.0.1","url":"https://github.com/jugal1990/tapswitch-releases/releases/download/v3.0.1/TapSwitch.apk","notes":"Setup no longer gets stuck on some phones. If it cannot finish, it now tells you why.","feedbackRound":"2026-09","askFeedback":"2.6.8"}
+{"versionCode":37,"versionName":"3.0.2","url":"https://github.com/jugal1990/tapswitch-releases/releases/download/v3.0.2/TapSwitch.apk","notes":"Bug fix: Setup now works when you try a second time.","feedbackRound":"2026-09","askFeedback":"2.6.8"}
