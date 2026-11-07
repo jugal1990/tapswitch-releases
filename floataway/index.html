@@ -285,6 +285,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 @keyframes cm-ping { 0%, 62% { opacity: 0; transform: scale(1); } 64% { opacity: .55; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
 @keyframes cm-rise { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
 /*cmap-css-end*/
+  .beta { font-size: .45em; font-weight: 700; letter-spacing: .04em; color: var(--blue); border: 1px solid var(--blue); border-radius: .5em; padding: .15em .5em; vertical-align: middle; }
 </style>
 </head>
 <body id="top">
@@ -347,12 +348,12 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       </div>
       <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#safe">How to check it is safe</a></p>
       <div class="whatsnew" id="whats-new">
-        <h3>What's new in 1.0.4 <span>5 Nov 2026</span></h3>
-        <p class="lead">Setup no longer gets stuck on some phones.</p>
+        <h3>What's new in 1.0.5 <span>7 Nov 2026</span></h3>
+        <p class="lead">Open any folder from the Smart Sidebar. This is a BETA feature.</p>
         <ul>
-          <li>Fixed a problem that could keep setup spinning without finishing on some phones.</li>
-          <li>If setup cannot finish, it now stops and tells you why.</li>
-          <li>The screen where setup stops now has a Report a problem button, so you can reach us in one tap.</li>
+          <li>New: Sidebar folders. Give a slot a folder and its button appears in your sidebar.</li>
+          <li>Setup now works when you try a second time.</li>
+          <li>After you install FloatAway, Open now takes you to its home page.</li>
         </ul>
       </div>
     </section>
@@ -402,14 +403,14 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       <div class="facts-box">
         <table class="facts">
           <tr><th>File</th><td>FloatAway.apk</td></tr>
-          <tr><th>Latest version</th><td>1.0.4</td></tr>
+          <tr><th>Latest version</th><td>1.0.5</td></tr>
           <tr><th>Size</th><td>6.9 MB</td></tr>
-          <tr><th>Virus scan</th><td>0 of 68 virus checkers flag it (VirusTotal, 5 Nov 2026). <a href="https://www.virustotal.com/gui/file/859aa66bca54fad19a314639e707e5b8d45c2c24dd6328e675a558b34325276d">See the full report</a></td></tr>
+          <tr><th>Virus scan</th><td>0 of 68 virus checkers flag it (VirusTotal, 7 Nov 2026). <a href="https://www.virustotal.com/gui/file/12a8439c0050bea6b820c7768958a3b298bbb2285c13e453caa772bc6ede2d1a">See the full report</a></td></tr>
         </table>
         <details class="tech">
           <summary>Show technical details</summary>
           <table class="facts">
-            <tr><th>SHA-256 of the file</th><td class="hash">859aa66bca54fad19a314639e707e5b8d45c2c24dd6328e675a558b34325276d</td></tr>
+            <tr><th>SHA-256 of the file</th><td class="hash">12a8439c0050bea6b820c7768958a3b298bbb2285c13e453caa772bc6ede2d1a</td></tr>
             <tr><th>Signed by</th><td class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</td></tr>
             <tr><td colspan="2" class="sig-note">Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it.</td></tr>
           </table>
@@ -421,7 +422,8 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
         <div class="perm"><dt>See which app just opened</dt><dd>So it knows when you tapped an app in the Smart Sidebar, cloned apps included.</dd></div>
         <div class="perm"><dt>Show over other apps</dt><dd>It places one tiny invisible window, only while the sidebar is open. Your phone needs it before FloatAway can open an app for you.</dd></div>
         <div class="perm"><dt>Change one phone setting</dt><dd>The one that makes shared files open in a small window. It goes back when you switch FloatAway off or the trial ends.</dd></div>
-        <div class="perm"><dt>Never sees what is in your apps</dt><dd>It cannot read your screen, messages or files, and there is no account. It checks for updates once a day.</dd></div>
+        <div class="perm"><dt>Sidebar folders only: use the sidebar for you</dt><dd>When you add a folder, FloatAway opens the sidebar and taps its Edit steps, behind a pop-up. For those seconds it reads where the buttons sit on screen, never any words.</dd></div>
+        <div class="perm"><dt>Never sees what is in your apps</dt><dd>It cannot read your messages or files, or any words on your screen, and there is no account. It checks for updates once a day.</dd></div>
       </dl>
 
       <h3 class="small">Important facts</h3>
@@ -454,6 +456,26 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
         <div class="perm"><dt>No cloned apps on this phone</dt><dd>Clone an app in your phone's settings, and the switch becomes available.</dd></div>
         <div class="perm"><dt>This phone did not allow it</dt><dd>Your phone refused the extra step. Other apps still open full screen.</dd></div>
       </dl>
+    </section>
+
+    <section id="folders">
+      <h2>Sidebar folders <span class="beta">BETA</span></h2>
+      <p class="sub">Open any folder on your phone straight from the Smart Sidebar. This feature is new and still being polished.</p>
+      <ol class="setup">
+        <li>
+          <h3>Pick a folder</h3>
+          <p>On FloatAway's home screen, under Sidebar folders, tap Begin setup and give a slot a folder.</p>
+        </li>
+        <li>
+          <h3>Its button appears</h3>
+          <p>FloatAway adds the button to your sidebar with the folder's real name.</p>
+        </li>
+        <li>
+          <h3>Tap to open it</h3>
+          <p>The folder opens full screen.</p>
+        </li>
+      </ol>
+      <p>Android blocks some folders, like Download and your phone's main storage. If you see "Can't use this folder", pick a folder inside it.</p>
     </section>
 
     <p class="closing">Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href="#price">Back to the download</a></span></p>
