@@ -286,9 +286,20 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 @keyframes cm-rise { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
 /*cmap-css-end*/
   .beta { font-size: .45em; font-weight: 700; letter-spacing: .04em; color: var(--blue); border: 1px solid var(--blue); border-radius: .5em; padding: .15em .5em; vertical-align: middle; }
+
+/* Price rise notice (8 Nov 2026), comes down on price update day */
+.pstrip { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:4px 10px; padding:8px 16px; font-size:14.5px; text-align:center;
+  background: color-mix(in srgb, #FF9F0A 18%, var(--bg)); border-bottom: 1px solid color-mix(in srgb, #FF9F0A 35%, transparent); color: var(--ink); }
+.pstrip b { font-weight:600; }
+.pstrip a { color: var(--blue); font-weight:500; white-space:nowrap; }
+.rise { display:inline-flex; align-items:center; gap:8px; margin:14px 0 0; padding:7px 12px; border-radius:999px; font-size:.9rem; font-weight:500;
+  background: color-mix(in srgb, #FF9F0A 18%, var(--panel)); color: var(--ink); box-shadow: 0 0 0 1px color-mix(in srgb, #FF9F0A 40%, transparent); }
+.rise::before { content:""; width:8px; height:8px; border-radius:50%; background:#FF9F0A; flex:none; }
+@media (max-width:520px){ .pstrip { font-size:13px; padding:7px 12px; } .pstrip .long { display:none; } }
 </style>
 </head>
 <body id="top">
+<div class="pstrip"><span><b>The price goes up to US$7.35 soon.</b><span class="long"> Get FloatAway now for US$2.</span></span><a href="#price">See the price ›</a></div>
 <header class="bar">
   <div class="xstrip"><a href="https://tapswitch.fyi/"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="tsBg2" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#tsBg2)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M35,44 L73,44 M73,44 L65,36 M73,44 L65,52"/><path d="M73,64 L35,64 M35,64 L43,56 M35,64 L43,72"/></g></svg><span>Also from us: <b>TapSwitch</b>, your access card and Google Wallet on one phone.</span><span class="go">See TapSwitch &rsaquo;</span></a><button type="button" class="x" aria-label="Close">&times;</button></div>
   <div class="wrap">
@@ -335,6 +346,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
         <div>
           <div class="amount">US$2</div>
           <p class="amount-note">Pay once and it works on that phone for good. There is no subscription and no account.</p>
+          <p class="rise">Goes up to US$7.35 soon</p>
         </div>
         <div class="price-points">
           <p><strong>Try it free for 14 days.</strong> The 14 days start once setup is done, not when you install it.</p>
