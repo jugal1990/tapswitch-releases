@@ -39,7 +39,7 @@
   "description": "Makes your NFC access card the default on an Android phone, and hands over to Google Wallet while it is open, so you can pay.",
   "image": "https://tapswitch.fyi/assets/social-preview.png",
   "downloadUrl": "https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk",
-  "offers": { "@type": "Offer", "price": "4.99", "priceCurrency": "USD" }
+  "offers": { "@type": "Offer", "price": "7.35", "priceCurrency": "USD" }
 }
 </script>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -686,19 +686,26 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 @keyframes cm-rise { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
 /*cmap-css-end*/
 
-/* Price rise notice (8 Nov 2026), comes down on price update day */
-.pstrip { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:4px 10px; padding:8px 16px; font-size:14.5px; text-align:center;
-  background: color-mix(in srgb, #FF9F0A 18%, var(--bg)); border-bottom: 1px solid color-mix(in srgb, #FF9F0A 35%, transparent); color: var(--ink); }
-.pstrip b { font-weight:600; }
-.pstrip a { color: var(--blue); font-weight:500; white-space:nowrap; }
-.rise { display:inline-flex; align-items:center; gap:8px; margin:14px 0 0; padding:7px 12px; border-radius:999px; font-size:.9rem; font-weight:500;
-  background: color-mix(in srgb, #FF9F0A 18%, var(--panel)); color: var(--ink); box-shadow: 0 0 0 1px color-mix(in srgb, #FF9F0A 40%, transparent); }
-.rise::before { content:""; width:8px; height:8px; border-radius:50%; background:#FF9F0A; flex:none; }
-@media (max-width:520px){ .pstrip { font-size:13px; padding:7px 12px; } .pstrip .long { display:none; } }
+/* Lifetime access card (price update, mockup v5 in docs/design/site-redesign/lifetime-access) */
+.lifetime{margin:20px 0 0;padding:22px 24px 20px;border-radius:24px;max-width:62ch;
+  background:color-mix(in srgb,var(--blue) 7%,var(--panel));
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--blue) 35%,transparent)}
+.lt-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
+.lt-badge{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.lt-badge svg{width:22px;height:22px}
+.lt-price{font:600 1.5rem/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.lt-price span{font:500 .95rem var(--body);color:var(--muted);letter-spacing:0;margin-left:4px}
+.lt-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
+.lt-list li{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;color:var(--muted);font-size:.95rem}
+.lt-list li>div{min-width:0}
+.lt-list strong{display:block;color:var(--ink);font-weight:600}
+.lt-list svg{width:24px;height:24px;color:var(--blue)}
+.lt-green{color:#167F57}
+:root[data-theme="dark"] .lt-green{color:#57D3A0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lt-green{color:#57D3A0}}
 </style>
 </head>
 <body id="top">
-<div class="pstrip"><span><b>The price goes up to US$7.35 soon.</b><span class="long"> Get TapSwitch now for US$4.99.</span></span><a href="#price">See the price ›</a></div>
 <header class="bar">
   <div class="xstrip"><a href="/floataway/"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="faBg2" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#faBg2)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M41,31 H67 A10,10 0 0 1 77,41 V67 A10,10 0 0 1 67,77 H41 A10,10 0 0 1 31,67 V41 A10,10 0 0 1 41,31 Z" opacity=".55"/><path d="M58,50 L66,42 M58,42 L66,42 L66,50"/><path d="M50,58 L42,66 M50,66 L42,66 L42,58"/></g></svg><span>Also from us: <b>FloatAway</b>, Smart Sidebar apps open full screen on Oppo.</span><span class="go">See FloatAway &rsaquo;</span></a><button type="button" class="x" aria-label="Close">&times;</button></div>
   <div class="wrap">
@@ -731,7 +738,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       <div>
         <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works on ColorOS 17</p>
         <h1><span class="g">Access Card</span> by default. <span class="b">Google Wallet</span> when you need it. <span class="m">NFC on autopilot.</span></h1>
-        <p class="what">An app for <b>Android 16 or newer</b>. Free for 14 days, then US$4.99 once.</p>
+        <p class="what">An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once.</p>
       </div>
 
       <div class="stage demo" id="demo" data-slot="access" data-mode="normal">
@@ -780,12 +787,11 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       </div>
 
       <section id="price">
-        <h2>Free for 14 days, then one price</h2>
+        <h2>Free for 14 days, then one price for <span class="lt-green">lifetime access</span></h2>
         <div class="price">
           <div>
-            <div class="amount">US$4.99</div>
-            <p class="amount-note">Pay once for one phone, with no subscription and no account.</p>
-          <p class="rise">Goes up to US$7.35 soon</p>
+            <div class="amount">US$7.35</div>
+            <p class="amount-note">One payment, and no account needed.</p>
           </div>
           <div class="price-points">
             <p><strong>Try it free for 14 days.</strong> The clock starts when the app first works
@@ -796,16 +802,25 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
               Your unlock code appears on screen straight away, and a copy is emailed to you.</p>
           </div>
         </div>
+        <div class="lifetime" role="group" aria-label="Lifetime access">
+          <div class="lt-head"><span class="lt-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18.2 8.5c-2.4 0-3.9 1.7-6.2 3.5-2.3 1.8-3.8 3.5-6.2 3.5a3.5 3.5 0 1 1 0-7c2.4 0 3.9 1.7 6.2 3.5 2.3 1.8 3.8 3.5 6.2 3.5a3.5 3.5 0 1 0 0-7z"/></svg>Lifetime access</span><span class="lt-price">US$7.35<span>once</span></span></div>
+          <ul class="lt-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div><strong>Pay once, never again.</strong>No subscription and no monthly fee, ever.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div><strong>Every future update is free.</strong>New versions and fixes cost you nothing.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div><strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it.</div></li>
+          </ul>
+        </div>
         <div class="cta-row">
           <a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download TapSwitch</a>
           <a class="btn btn-lg btn-plain" href="https://github.com/jugal1990/tapswitch-releases/releases">All versions on GitHub</a>
         </div>
         <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#careful">How to check it is safe</a></p>
         <div class="whatsnew" id="whats-new">
-          <h3>What's new in 3.0.3 <span>7 Nov 2026</span></h3>
-          <p class="lead">Behind the scenes update. Nothing changes for you.</p>
+          <h3>What's new in 3.1.0 <span>9 Nov 2026</span></h3>
+          <p class="lead">You can now tell us how TapSwitch is working for you.</p>
           <ul>
-            <li>TapSwitch now uses our own web address behind the scenes.</li>
+            <li>From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it.</li>
+            <li>Update notices now arrive more reliably.</li>
           </ul>
           <p class="carry">Already using it? Your setup and unlock code carry over, so there is nothing to redo.</p>
         </div>
@@ -873,14 +888,14 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       <div class="facts-box">
         <table class="facts">
           <tr><th>File</th><td>TapSwitch.apk</td></tr>
-          <tr><th>Latest version</th><td>3.0.3</td></tr>
+          <tr><th>Latest version</th><td>3.1.0</td></tr>
           <tr><th>Size</th><td>6.7 MB</td></tr>
-          <tr><th>Virus scan</th><td>0 of 68 virus checkers flag it (VirusTotal, 7 Nov 2026). <a href="https://www.virustotal.com/gui/file/d67d7a0c962f76722d55078cc226bdce30a8754291db826d720aba9ee25edbdc">See the full report</a></td></tr>
+          <tr><th>Virus scan</th><td>0 of 68 virus checkers flag it (VirusTotal, 8 Nov 2026). <a href="https://www.virustotal.com/gui/file/8b0de57aaeb8add1efeb2ec58ce684f1644034f24f78aed8f146a6c8a8f4afa4">See the full report</a></td></tr>
         </table>
         <details class="tech">
           <summary>Show technical details</summary>
           <table class="facts">
-            <tr><th>SHA-256 of the file</th><td class="hash">d67d7a0c962f76722d55078cc226bdce30a8754291db826d720aba9ee25edbdc</td></tr>
+            <tr><th>SHA-256 of the file</th><td class="hash">8b0de57aaeb8add1efeb2ec58ce684f1644034f24f78aed8f146a6c8a8f4afa4</td></tr>
             <tr><th>Signed by</th><td class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</td></tr>
             <tr><td colspan="2" class="sig-note">Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it.</td></tr>
           </table>

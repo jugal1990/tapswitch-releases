@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/github/downloads/jugal1990/tapswitch-releases/total?style=flat-square&color=4C8DFF" alt="Downloads">
   <img src="https://img.shields.io/badge/Android-16%2B-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android 16+">
   <img src="https://img.shields.io/badge/tested%20on-Oppo%20%C2%B7%20ColorOS-262626?style=flat-square" alt="Tested on Oppo ColorOS">
-  <img src="https://img.shields.io/badge/14%20days%20free%2C%20then%20US%244.99-4C8DFF?style=flat-square" alt="14 days free, then US$4.99 once">
+  <img src="https://img.shields.io/badge/14%20days%20free%2C%20then%20US%247.35-4C8DFF?style=flat-square" alt="14 days free, then US$7.35 once">
 </p>
 
 <h3 align="center">
@@ -63,7 +63,7 @@ TapSwitch is not on the Play Store, so nothing has checked it for you.
 
 ## Price
 
-Free for 14 days, then **US$4.99, paid once**. Not a subscription, and there is no account to
+Free for 14 days, then **US$7.35, paid once**. Not a subscription, and there is no account to
 make.
 
 The countdown starts when the app is actually working, not when you download it. Tap **Get the
