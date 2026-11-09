@@ -91,6 +91,7 @@ h1, h2 { text-wrap: balance; font-family: var(--display); letter-spacing: -.025e
 .bar .wrap { display: flex; align-items: center; height: 52px; max-width: 1120px; }
 .brand { color: inherit; text-decoration: none !important; display: flex; align-items: center; gap: 9px; font: 600 17px/1 var(--display); letter-spacing: -.02em; }
 .brand svg { width: 26px; height: 26px; }
+.bar .langwrap { margin-inline-start: auto; }
 
 main { padding-block: 40px 56px; }
 h1 { font-size: clamp(1.9rem, 4.4vw, 2.6rem); line-height: 1.12; font-weight: 700; margin: 0 0 14px; }
@@ -121,7 +122,7 @@ footer p { margin: 0 0 8px; }
 <body>
 <header class="bar">
   <div class="wrap">
-    <a class="brand" href="/floataway/" aria-label="FloatAway home page">
+    <a class="brand" href="/floataway/" aria-label="FloatAway home page" data-i18n-attr="aria-label:bar.brand">
       <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="faBg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#faBg)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M41,31 H67 A10,10 0 0 1 77,41 V67 A10,10 0 0 1 67,77 H41 A10,10 0 0 1 31,67 V41 A10,10 0 0 1 41,31 Z" opacity=".55"/><path d="M58,50 L66,42 M58,42 L66,42 L66,50"/><path d="M50,58 L42,66 M50,66 L42,66 L42,58"/></g></svg>
       FloatAway
     </a>
@@ -130,77 +131,86 @@ footer p { margin: 0 0 8px; }
 
 <main>
   <div class="wrap">
-    <h1>FloatAway common questions</h1>
-    <p class="lede">FloatAway opens apps from Oppo's Smart Sidebar full screen, in one tap. Here are the questions people ask most.</p>
+    <h1 data-i18n="h1">FloatAway common questions</h1>
+    <p class="lede" data-i18n="lede">FloatAway opens apps from Oppo's Smart Sidebar full screen, in one tap. Here are the questions people ask most.</p>
 
-    <nav class="toc" aria-label="Questions on this page">
+    <nav class="toc" aria-label="Questions on this page" data-i18n-attr="aria-label:toc.aria">
       <ol>
-        <li><a href="#shared">What about files I share from one app to another?</a></li>
-        <li><a href="#open-apps">What happens to apps I already have open?</a></li>
-        <li><a href="#trial">What happens when the 14 days end?</a></li>
-        <li><a href="#uninstall">I uninstalled FloatAway and shared files still open full screen. How do I undo it?</a></li>
-        <li><a href="#folders">What are Sidebar folders?</a></li>
-        <li><a href="#blocked">Why does it say "Can't use this folder"?</a></li>
-        <li><a href="#wifi">Why does it say "Connect to Wi-Fi first"?</a></li>
-        <li><a href="#add-yourself">Why does FloatAway ask me to add a folder myself?</a></li>
-        <li><a href="#remove-folder">How do I remove a folder?</a></li>
-        <li><a href="#gone">What if I delete or rename a folder?</a></li>
-        <li><a href="#every-way">What are all the ways to open Smart Sidebar apps full screen?</a></li>
+        <li><a data-i18n="q1" href="#shared">What about files I share from one app to another?</a></li>
+        <li><a data-i18n="q2" href="#open-apps">What happens to apps I already have open?</a></li>
+        <li><a data-i18n="q3" href="#trial">What happens when the 14 days end?</a></li>
+        <li><a data-i18n="q4" href="#uninstall">I uninstalled FloatAway and shared files still open full screen. How do I undo it?</a></li>
+        <li><a data-i18n="q5" href="#folders">What are Sidebar folders?</a></li>
+        <li><a data-i18n="q6" href="#blocked">Why does it say "Can't use this folder"?</a></li>
+        <li><a data-i18n="q7" href="#wifi">Why does it say "Connect to Wi-Fi first"?</a></li>
+        <li><a data-i18n="q8" href="#add-yourself">Why does FloatAway ask me to add a folder myself?</a></li>
+        <li><a data-i18n="q9" href="#remove-folder">How do I remove a folder?</a></li>
+        <li><a data-i18n="q10" href="#gone">What if I delete or rename a folder?</a></li>
+        <li><a data-i18n="q11" href="#every-way">What are all the ways to open Smart Sidebar apps full screen?</a></li>
       </ol>
     </nav>
 
     <h2 id="shared">What about files I share from one app to another?</h2>
-    <p>They open full screen too. If you would rather they did not, turn it off with the switch on FloatAway's home screen.</p>
+    <p data-i18n="a1.1">They open full screen too. If you would rather they did not, turn it off with the switch on FloatAway's home screen.</p>
 
     <h2 id="open-apps">What happens to apps I already have open?</h2>
-    <p>They stay where they are. FloatAway only changes how an app opens.</p>
+    <p data-i18n="a2.1">They stay where they are. FloatAway only changes how an app opens.</p>
 
     <h2 id="trial">What happens when the 14 days end?</h2>
-    <p>FloatAway stops, and sidebar apps open in the small window again, the way your phone did before. Shared files go back too. Your sidebar folders are removed, and if you buy, you set them up again. It asks you to buy it, and if you do not, you owe nothing.</p>
+    <p data-i18n="a3.1">FloatAway stops, and sidebar apps open in the small window again, the way your phone did before. Shared files go back too. Your sidebar folders are removed, and if you buy, you set them up again. It asks you to buy it, and if you do not, you owe nothing.</p>
 
     <h2 id="uninstall">I uninstalled FloatAway and shared files still open full screen. How do I undo it?</h2>
-    <p>The sharing switch is a phone setting, so it stays after FloatAway is gone. Reinstall FloatAway, run the setup again, and switch it off on FloatAway's home screen. Then you can uninstall it.</p>
+    <p data-i18n="a4.1">The sharing switch is a phone setting, so it stays after FloatAway is gone. Reinstall FloatAway, run the setup again, and switch it off on FloatAway's home screen. Then you can uninstall it.</p>
 
     <h2 id="folders">What are Sidebar folders?</h2>
-    <p>They put up to three folders from your phone on the Smart Sidebar as buttons. Tap a button and the folder opens full screen. The feature has a BETA tag because it is new and still being polished.</p>
+    <p data-i18n="a5.1">They put up to three folders from your phone on the Smart Sidebar as buttons. Tap a button and the folder opens full screen. The feature has a BETA tag because it is new and still being polished.</p>
 
     <h2 id="blocked">Why does it say "Can't use this folder"?</h2>
-    <p>Android blocks some folders, like Download and your phone's main storage. Pick a folder inside it instead.</p>
+    <p data-i18n="a6.1">Android blocks some folders, like Download and your phone's main storage. Pick a folder inside it instead.</p>
 
     <h2 id="wifi">Why does it say "Connect to Wi-Fi first"?</h2>
-    <p>Adding or clearing a folder needs Wi-Fi. Connect, then try again.</p>
+    <p data-i18n="a7.1">Adding or clearing a folder needs Wi-Fi. Connect, then try again.</p>
 
     <h2 id="add-yourself">Why does FloatAway ask me to add a folder myself?</h2>
-    <p>Sometimes an add does not finish. FloatAway then shows the steps: open the sidebar, tap Edit, find the folder, tap its plus sign, then tap Done. It also sends me a short report, without the folder's name, so I can fix it.</p>
+    <p data-i18n="a8.1">Sometimes an add does not finish. FloatAway then shows the steps: open the sidebar, tap Edit, find the folder, tap its plus sign, then tap Done. It also sends me a short report, without the folder's name, so I can fix it.</p>
 
     <h2 id="remove-folder">How do I remove a folder?</h2>
-    <p>On FloatAway's home screen, tap its slot, then tap Clear this slot. Its button leaves the sidebar.</p>
+    <p data-i18n="a9.1">On FloatAway's home screen, tap its slot, then tap Clear this slot. Its button leaves the sidebar.</p>
 
     <h2 id="gone">What if I delete or rename a folder?</h2>
-    <p>Its button tells you the folder is gone and opens Sidebar folders, so you can pick a new one.</p>
+    <p data-i18n="a10.1">Its button tells you the folder is gone and opens Sidebar folders, so you can pick a new one.</p>
 
     <h2 id="every-way">What are all the ways to open Smart Sidebar apps full screen?</h2>
-    <p>There are three. Pick the one that fits your day.</p>
+    <p data-i18n="a11.1">There are three. Pick the one that fits your day.</p>
     <div class="ways"><table>
-      <tr><th>Way</th><th>Cost</th><th>What you do every day</th></tr>
-      <tr><td>Expand the floating window by hand</td><td>Free</td><td>Expand it every time you open an app from the sidebar</td></tr>
-      <tr><td>Open the app from your home screen instead</td><td>Free</td><td>Leave the sidebar and find the app on your home screen</td></tr>
-      <tr><td><a href="/floataway/">FloatAway</a></td><td><span style="white-space: nowrap">US$7.35</span> once, after 14 days free</td><td><b>Nothing at all.</b> Tap it in the sidebar and it opens full screen, so you never expand a window again</td></tr>
+      <tr><th data-i18n="ways.r0.c1">Way</th><th data-i18n="ways.r0.c2">Cost</th><th data-i18n="ways.r0.c3">What you do every day</th></tr>
+      <tr><td data-i18n="ways.r1.c1">Expand the floating window by hand</td><td data-i18n="ways.r1.c2">Free</td><td data-i18n="ways.r1.c3">Expand it every time you open an app from the sidebar</td></tr>
+      <tr><td data-i18n="ways.r2.c1">Open the app from your home screen instead</td><td data-i18n="ways.r2.c2">Free</td><td data-i18n="ways.r2.c3">Leave the sidebar and find the app on your home screen</td></tr>
+      <tr><td data-i18n="ways.r3.c1"><a href="/floataway/">FloatAway</a></td><td data-i18n="ways.r3.c2"><span style="white-space: nowrap">US$7.35</span> once, after 14 days free</td><td data-i18n="ways.r3.c3"><b>Nothing at all.</b> Tap it in the sidebar and it opens full screen, so you never expand a window again</td></tr>
     </table></div>
 
     <div class="cta">
-      <p>Try it on your own phone for 14 days, free. Setting it up takes under five minutes.</p>
-      <a class="btn" href="/floataway/#price">Get FloatAway</a>
+      <p data-i18n="cta.p">Try it on your own phone for 14 days, free. Setting it up takes under five minutes.</p>
+      <a class="btn" data-i18n="cta.btn" href="/floataway/#price">Get FloatAway</a>
     </div>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Made by one person. Contact me: <a href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p>
-    <p>FloatAway is not affiliated with Oppo.</p>
+    <p data-i18n="foot.1">Made by one person. Contact me: <a href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p>
+    <p data-i18n="foot.2">FloatAway is not affiliated with Oppo.</p>
   </div>
 </footer>
+<script>
+/* keys the question headings at run time: the search checks read these lines exactly as they are */
+(function () {
+  var h = document.querySelectorAll("main h2");
+  for (var i = 0; i < h.length; i++) h[i].setAttribute("data-i18n", "q" + (i + 1));
+})();
+</script>
+<script src="../../assets/lang/lang.js"></script>
+<script src="../../assets/lang/floataway-help.js"></script>
 <script>
 // Owner's private count: one visit per browser per day, and each Download click. Shows nothing.
 (function () {
@@ -217,6 +227,26 @@ footer p { margin: 0 0 8px; }
   function send(stage) { try { navigator.sendBeacon(url, JSON.stringify({ stage: stage })); } catch (e) {} }
   var day = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
   try { if (localStorage.getItem('fa-day') !== day) { localStorage.setItem('fa-day', day); send('visit'); } } catch (e) { /* storage blocked: send nothing rather than a visit on every page load */ }
+  // lang-view-start
+  // One language view per browser per day per language; no storage means once per page load.
+  function langView(code, day, store, send, seen, prefix) {
+    try {
+      if (store.getItem('ts-owner')) return;
+      if (store.getItem(prefix + code) === day) return;
+      store.setItem(prefix + code, day);
+    } catch (e) {
+      if (seen[code]) return;
+      seen[code] = 1;
+    }
+    send(code);
+  }
+  // lang-view-end
+  var langSeen = {}, langStore = null;
+  try { langStore = localStorage; } catch (e) {}
+  function sendLang(code) { try { navigator.sendBeacon(url, JSON.stringify({ stage: 'lang', lang: code })); } catch (e) {} }
+  function langViewed(code) { langView(code, day, langStore, sendLang, langSeen, 'fa-lang-'); }
+  langViewed((window.TSLang && window.TSLang.lang) || 'en');
+  if (window.TSLang && window.TSLang.onChange) window.TSLang.onChange(langViewed);
   // only a real link counts, so the only the Download link, which has an href, is counted
   document.addEventListener('click', function (e) {
     if (e.target.closest && e.target.closest('a[data-download][href]')) send('click');

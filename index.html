@@ -707,9 +707,9 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 </head>
 <body id="top">
 <header class="bar">
-  <div class="xstrip"><a href="/floataway/"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="faBg2" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#faBg2)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M41,31 H67 A10,10 0 0 1 77,41 V67 A10,10 0 0 1 67,77 H41 A10,10 0 0 1 31,67 V41 A10,10 0 0 1 41,31 Z" opacity=".55"/><path d="M58,50 L66,42 M58,42 L66,42 L66,50"/><path d="M50,58 L42,66 M50,66 L42,66 L42,58"/></g></svg><span>Also from us: <b>FloatAway</b>, Smart Sidebar apps open full screen on Oppo.</span><span class="go">See FloatAway &rsaquo;</span></a><button type="button" class="x" aria-label="Close">&times;</button></div>
+  <div class="xstrip"><a href="/floataway/"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="faBg2" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#faBg2)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M41,31 H67 A10,10 0 0 1 77,41 V67 A10,10 0 0 1 67,77 H41 A10,10 0 0 1 31,67 V41 A10,10 0 0 1 41,31 Z" opacity=".55"/><path d="M58,50 L66,42 M58,42 L66,42 L66,50"/><path d="M50,58 L42,66 M50,66 L42,66 L42,58"/></g></svg><span data-i18n="strip.text">Also from us: <b>FloatAway</b>, Smart Sidebar apps open full screen on Oppo.</span><span class="go" data-i18n="strip.go">See FloatAway &rsaquo;</span></a><button type="button" class="x" aria-label="Close" data-i18n-attr="aria-label:strip.close">&times;</button></div>
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="TapSwitch, back to the top">
+    <a class="brand" href="#top" aria-label="TapSwitch, back to the top" data-i18n-attr="aria-label:bar.brand">
       <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="tsBg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#tsBg)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M35,44 L73,44 M73,44 L65,36 M73,44 L65,52"/><path d="M73,64 L35,64 M35,64 L43,56 M35,64 L43,72"/></g></svg>
       TapSwitch
     </a>
@@ -736,54 +736,54 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   <div class="wrap">
     <div class="hero">
       <div>
-        <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works on ColorOS 17</p>
-        <h1><span class="g">Access Card</span> by default. <span class="b">Google Wallet</span> when you need it. <span class="m">NFC on autopilot.</span></h1>
-        <p class="what">An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once.</p>
+        <p class="tag" data-i18n-text="hero.tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works on ColorOS 17</p>
+        <h1 data-i18n="hero.h1"><span class="g">Access Card</span> by default. <span class="b">Google Wallet</span> when you need it. <span class="m">NFC on autopilot.</span></h1>
+        <p class="what" data-i18n="hero.what">An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once.</p>
       </div>
 
       <div class="stage demo" id="demo" data-slot="access" data-mode="normal">
         <div class="mode">
-          <div class="switch" role="group" aria-label="Which card is the default">
-            <button type="button" data-mode="normal" aria-pressed="true">Normal mode</button>
-            <button type="button" data-mode="reverse" aria-pressed="false">Reverse mode</button>
+          <div class="switch" role="group" aria-label="Which card is the default" data-i18n-attr="aria-label:demo.switch">
+            <button type="button" data-mode="normal" aria-pressed="true" data-i18n="demo.normal">Normal mode</button>
+            <button type="button" data-mode="reverse" aria-pressed="false" data-i18n="demo.reverse">Reverse mode</button>
           </div>
           <p id="modeNote"></p>
         </div>
-        <div class="reader door" data-wants="access" data-ok="Door opens">
+        <div class="reader door" data-wants="access" data-ok="Door opens" data-i18n-attr="data-ok:demo.door.ok">
           <span class="face"><svg class="wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8.5 8.5a5 5 0 0 1 0 7"/><path d="M12 5a10 10 0 0 1 0 14"/><path d="M15.5 2a15 15 0 0 1 0 20"/></svg><span class="led"></span><span class="msg" aria-live="polite"></span></span>
-          <span class="rlabel">Access Card Reader</span>
+          <span class="rlabel" data-i18n="demo.door.label">Access Card Reader</span>
           <span class="tip" aria-hidden="true"></span>
         </div>
-        <div class="phone-hold" id="phoneHold" tabindex="0" aria-label="Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal.">
+        <div class="phone-hold" id="phoneHold" tabindex="0" aria-label="Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal." data-i18n-attr="aria-label:demo.phone">
           <span class="ghost" aria-hidden="true"></span>
           <div class="phone">
             <div class="screen">
               <span class="island"></span>
               <div class="sbar"><span id="demoClock">08:52</span><svg class="ts" viewBox="0 0 108 108" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30,40 L78,40 M78,40 L66,28 M78,40 L66,52"/><path d="M78,68 L30,68 M30,68 L42,56 M30,68 L42,80"/></svg><span class="gap"></span><svg class="wifi" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 20l4-5a6.5 6.5 0 0 0-8 0z"/><path d="M2 9a15 15 0 0 1 20 0l-2.6 3.2a11 11 0 0 0-14.8 0z" opacity=".9"/></svg><span class="batt"></span></div>
               <div class="home">
-                <div class="bigclock"><b id="bigClock">08:52</b><span id="demoDate">Tuesday, 29 September</span></div>
+                <div class="bigclock"><b id="bigClock">08:52</b><span id="demoDate" translate="no">Tuesday, 29 September</span></div>
                 <div class="apps">
-                  <button type="button" class="app" data-app="access"><i class="acc"><svg viewBox="0 0 24 24" fill="none" stroke="#06281C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="14.5" cy="12" r="1" fill="#06281C"/></svg></i>Access</button>
-                  <button type="button" class="app" data-app="wallet"><i class="wal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="3" fill="#2F74E6"/><rect x="3" y="9" width="18" height="3" fill="#5B9CFF"/><rect x="14" y="14" width="4" height="2" rx="1" fill="#FFFFFF"/></svg></i>Wallet</button>
+                  <button type="button" class="app" data-app="access" data-i18n-text="demo.app.access"><i class="acc"><svg viewBox="0 0 24 24" fill="none" stroke="#06281C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="14.5" cy="12" r="1" fill="#06281C"/></svg></i>Access</button>
+                  <button type="button" class="app" data-app="wallet" data-i18n-text="demo.app.wallet"><i class="wal"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="3" fill="#2F74E6"/><rect x="3" y="9" width="18" height="3" fill="#5B9CFF"/><rect x="14" y="14" width="4" height="2" rx="1" fill="#FFFFFF"/></svg></i>Wallet</button>
                 </div>
-                <p class="invite" aria-hidden="true"><span>Drag the phone to try it</span></p>
+                <p class="invite" aria-hidden="true"><span data-i18n="demo.invite">Drag the phone to try it</span></p>
                 <span class="homebar" aria-hidden="true" style="margin-top:auto"></span>
               </div>
               <div class="appview" id="appView" data-app="wallet" aria-hidden="true">
-                <div class="top"><button type="button" class="back" aria-label="Back to the home screen">&lsaquo;</button><span id="appTitle">Google Wallet</span></div>
-                <div class="card"><span id="appCard">Visa</span><small>&bull;&bull;&bull;&bull; <span id="appNum">4821</span></small></div>
-                <p class="hold">Hold near reader</p>
-                <button type="button" class="homebar" aria-label="Back to the home screen"></button>
+                <div class="top"><button type="button" class="back" aria-label="Back to the home screen" data-i18n-attr="aria-label:demo.back">&lsaquo;</button><span id="appTitle">Google Wallet</span></div>
+                <div class="card"><span id="appCard" translate="no">Visa</span><small>&bull;&bull;&bull;&bull; <span id="appNum">4821</span></small></div>
+                <p class="hold" data-i18n="demo.hold">Hold near reader</p>
+                <button type="button" class="homebar" aria-label="Back to the home screen" data-i18n-attr="aria-label:demo.back"></button>
               </div>
             </div>
           </div>
         </div>
-        <div class="reader till" data-wants="wallet" data-ok="Paid">
+        <div class="reader till" data-wants="wallet" data-ok="Paid" data-i18n-attr="data-ok:demo.till.ok">
           <span class="face"><span class="led"></span><span class="glass"><svg class="wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8.5 8.5a5 5 0 0 1 0 7"/><path d="M12 5a10 10 0 0 1 0 14"/><path d="M15.5 2a15 15 0 0 1 0 20"/></svg></span><span class="keys" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="msg" aria-live="polite"></span></span>
-          <span class="rlabel">Payment Terminal</span>
+          <span class="rlabel" data-i18n="demo.till.label">Payment Terminal</span>
           <span class="tip" aria-hidden="true"></span>
         </div>
-        <p class="hint">Drag the phone left or right onto a reader.</p>
+        <p class="hint" data-i18n="demo.hint">Drag the phone left or right onto a reader.</p>
       </div>
 
       <section id="price">
@@ -794,35 +794,35 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
             <p class="amount-note">One payment, and no account needed.</p>
           </div>
           <div class="price-points">
-            <p><strong>Try it free for 14 days.</strong> The clock starts when the app first works
+            <p data-i18n="price.pp1"><strong>Try it free for 14 days.</strong> The clock starts when the app first works
               on your phone, not when you download it. Every feature works during the trial.</p>
-            <p><strong>There are no refunds.</strong> The free 14 days let you see it work
+            <p data-i18n="price.pp2"><strong>There are no refunds.</strong> The free 14 days let you see it work
               on your own phone before you pay, so a code cannot be refunded once it is issued.</p>
-            <p><strong>Buy it inside the app.</strong> Tap "Get the full version", then "Buy now" to pay in your browser.
+            <p data-i18n="price.pp3"><strong>Buy it inside the app.</strong> Tap "Get the full version", then "Buy now" to pay in your browser.
               Your unlock code appears on screen straight away, and a copy is emailed to you.</p>
           </div>
         </div>
-        <div class="lifetime" role="group" aria-label="Lifetime access">
-          <div class="lt-head"><span class="lt-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18.2 8.5c-2.4 0-3.9 1.7-6.2 3.5-2.3 1.8-3.8 3.5-6.2 3.5a3.5 3.5 0 1 1 0-7c2.4 0 3.9 1.7 6.2 3.5 2.3 1.8 3.8 3.5 6.2 3.5a3.5 3.5 0 1 0 0-7z"/></svg>Lifetime access</span><span class="lt-price">US$7.35<span>once</span></span></div>
+        <div class="lifetime" role="group" aria-label="Lifetime access" data-i18n-attr="aria-label:lt.aria">
+          <div class="lt-head"><span class="lt-badge" data-i18n-text="lt.badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18.2 8.5c-2.4 0-3.9 1.7-6.2 3.5-2.3 1.8-3.8 3.5-6.2 3.5a3.5 3.5 0 1 1 0-7c2.4 0 3.9 1.7 6.2 3.5 2.3 1.8 3.8 3.5 6.2 3.5a3.5 3.5 0 1 0 0-7z"/></svg>Lifetime access</span><span class="lt-price">US$7.35<span>once</span></span></div>
           <ul class="lt-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div><strong>Pay once, never again.</strong>No subscription and no monthly fee, ever.</div></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div><strong>Every future update is free.</strong>New versions and fixes cost you nothing.</div></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div><strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div data-i18n="lt.li1"><strong>Pay once, never again.</strong>No subscription and no monthly fee, ever.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div data-i18n="lt.li2"><strong>Every future update is free.</strong>New versions and fixes cost you nothing.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div data-i18n="lt.li3"><strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it.</div></li>
           </ul>
         </div>
         <div class="cta-row">
-          <a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk">Download TapSwitch</a>
-          <a class="btn btn-lg btn-plain" href="https://github.com/jugal1990/tapswitch-releases/releases">All versions on GitHub</a>
+          <a class="btn btn-lg" href="https://github.com/jugal1990/tapswitch-releases/releases/latest/download/TapSwitch.apk" data-i18n="cta.download">Download TapSwitch</a>
+          <a class="btn btn-lg btn-plain" href="https://github.com/jugal1990/tapswitch-releases/releases" data-i18n="cta.all">All versions on GitHub</a>
         </div>
-        <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#careful">How to check it is safe</a></p>
+        <p class="cta-note" data-i18n="cta.note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#careful">How to check it is safe</a></p>
         <div class="whatsnew" id="whats-new">
-          <h3>What's new in 3.1.0 <span>9 Nov 2026</span></h3>
-          <p class="lead">You can now tell us how TapSwitch is working for you.</p>
+          <h3>What's new in 3.1.0 <span translate="no" data-date>9 Nov 2026</span></h3>
+          <p class="lead" data-i18n="wn.lead">You can now tell us how TapSwitch is working for you.</p>
           <ul>
-            <li>From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it.</li>
-            <li>Update notices now arrive more reliably.</li>
+            <li data-i18n="wn.li1">From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it.</li>
+            <li data-i18n="wn.li2">Update notices now arrive more reliably.</li>
           </ul>
-          <p class="carry">Already using it? Your setup and unlock code carry over, so there is nothing to redo.</p>
+          <p class="carry" data-i18n="wn.carry">Already using it? Your setup and unlock code carry over, so there is nothing to redo.</p>
         </div>
       </section>
     </div>
@@ -830,50 +830,50 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 
   <div class="wrap">
 
-    <section class="said" aria-label="What a customer said">
+    <section class="said" aria-label="What a customer said" data-i18n-attr="aria-label:said.aria">
       <div class="quotes">
         <figure class="quote">
-          <blockquote>I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.</blockquote>
-          <figcaption><span class="who">Jalal</span><span class="model">Oppo Find X9 Ultra</span></figcaption>
+          <blockquote data-i18n="said.quote">I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.</blockquote>
+          <figcaption translate="no"><span class="who">Jalal</span><span class="model">Oppo Find X9 Ultra</span></figcaption>
         </figure>
       </div>
     </section>
 
     <!--cmap-start-->
     <section id="customers" class="cm" hidden aria-labelledby="customers-h">
-      <h2 id="customers-h">Where our customers come from</h2>
+      <h2 id="customers-h" data-i18n="cm.h2">Where our customers come from</h2>
       <!-- Land outlines: Natural Earth (public domain) via the world-atlas package (ISC), simplified. -->
-      <div class="cm-map"><canvas aria-hidden="true"></canvas></div>
-      <ul class="cm-list"></ul>
+      <div class="cm-map" translate="no"><canvas aria-hidden="true"></canvas></div>
+      <ul class="cm-list" translate="no"></ul>
     </section>
 <!--cmap-end-->
 
     <section id="phones">
-      <h2>Which phones it works on</h2>
-      <p class="sub">Oppo ColorOS phones with Android 16 or newer.</p>
-      <p>It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours.</p>
+      <h2 data-i18n="phones.h2">Which phones it works on</h2>
+      <p class="sub" data-i18n="phones.sub">Oppo ColorOS phones with Android 16 or newer.</p>
+      <p data-i18n="phones.p">It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours.</p>
     </section>
 
 
     <section id="setup">
-      <h2>Setting it up takes about five minutes</h2>
-      <p class="sub">You do everything on the phone, without a computer or cable.</p>
+      <h2 data-i18n="setup.h2">Setting it up takes about five minutes</h2>
+      <p class="sub" data-i18n="setup.sub">You do everything on the phone, without a computer or cable.</p>
       <ol class="setup">
         <li>
-          <h3>Install the file</h3>
-          <p>Your phone asks whether to allow installs from your browser. Say yes, then open TapSwitch.</p>
+          <h3 data-i18n="setup.s1.h">Install the file</h3>
+          <p data-i18n="setup.s1.p">Your phone asks whether to allow installs from your browser. Say yes, then open TapSwitch.</p>
         </li>
         <li>
-          <h3>Unlock a hidden menu, once</h3>
-          <p>You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap.</p>
+          <h3 data-i18n="setup.s2.h">Unlock a hidden menu, once</h3>
+          <p data-i18n="setup.s2.p">You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap.</p>
         </li>
         <li>
-          <h3>Turn on Wireless debugging for a minute</h3>
-          <p>You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost.</p>
+          <h3 data-i18n="setup.s3.h">Turn on Wireless debugging for a minute</h3>
+          <p data-i18n="setup.s3.p">You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost.</p>
         </li>
         <li>
-          <h3>Pick your two cards</h3>
-          <p>Your access card app and your pay app.</p>
+          <h3 data-i18n="setup.s4.h">Pick your two cards</h3>
+          <p data-i18n="setup.s4.p">Your access card app and your pay app.</p>
         </li>
       </ol>
     </section>
@@ -882,55 +882,79 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 
   <div class="careful" id="careful">
     <div class="wrap">
-      <h2>Is it safe?</h2>
-      <p class="sub">TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan.</p>
+      <h2 data-i18n="safe.h2">Is it safe?</h2>
+      <p class="sub" data-i18n="safe.sub">TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan.</p>
 
       <div class="facts-box">
         <table class="facts">
           <tr><th>File</th><td>TapSwitch.apk</td></tr>
           <tr><th>Latest version</th><td>3.1.0</td></tr>
           <tr><th>Size</th><td>6.7 MB</td></tr>
-          <tr><th>Virus scan</th><td>0 of 68 virus checkers flag it (VirusTotal, 8 Nov 2026). <a href="https://www.virustotal.com/gui/file/8b0de57aaeb8add1efeb2ec58ce684f1644034f24f78aed8f146a6c8a8f4afa4">See the full report</a></td></tr>
+          <tr><th>Virus scan</th><td><span data-i18n="facts.scanResult">0 of 68 virus checkers flag it</span> <span translate="no">(VirusTotal, <span data-date>8 Nov 2026</span>).</span> <a href="https://www.virustotal.com/gui/file/8b0de57aaeb8add1efeb2ec58ce684f1644034f24f78aed8f146a6c8a8f4afa4" data-i18n="facts.report">See the full report</a></td></tr>
         </table>
         <details class="tech">
-          <summary>Show technical details</summary>
+          <summary data-i18n="facts.tech">Show technical details</summary>
           <table class="facts">
             <tr><th>SHA-256 of the file</th><td class="hash">8b0de57aaeb8add1efeb2ec58ce684f1644034f24f78aed8f146a6c8a8f4afa4</td></tr>
             <tr><th>Signed by</th><td class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</td></tr>
-            <tr><td colspan="2" class="sig-note">Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it.</td></tr>
+            <tr><td colspan="2" class="sig-note" data-i18n="facts.sigNote">Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it.</td></tr>
           </table>
         </details>
       </div>
 
-      <h3 class="small">What TapSwitch can and cannot do</h3>
+      <h3 class="small" data-i18n="perms.h3">What TapSwitch can and cannot do</h3>
       <dl class="perms">
-        <div class="perm"><dt>Change your default tap card</dt><dd>This is the only phone setting it changes, so the right card answers the reader.</dd></div>
-        <div class="perm"><dt>See which app is on screen</dt><dd>So it knows when Google Wallet or your access card app is open.</dd></div>
-        <div class="perm"><dt>Check for updates once a day</dt><dd>There is no account to sign in to.</dd></div>
-        <div class="perm"><dt>Never sees your cards</dt><dd>It cannot read card numbers, payments or door logs. It only picks which app answers.</dd></div>
+        <div class="perm"><dt data-i18n="perms.1.t">Change your default tap card</dt><dd data-i18n="perms.1.d">This is the only phone setting it changes, so the right card answers the reader.</dd></div>
+        <div class="perm"><dt data-i18n="perms.2.t">See which app is on screen</dt><dd data-i18n="perms.2.d">So it knows when Google Wallet or your access card app is open.</dd></div>
+        <div class="perm"><dt data-i18n="perms.3.t">Check for updates once a day</dt><dd data-i18n="perms.3.d">There is no account to sign in to.</dd></div>
+        <div class="perm"><dt data-i18n="perms.4.t">Never sees your cards</dt><dd data-i18n="perms.4.d">It cannot read card numbers, payments or door logs. It only picks which app answers.</dd></div>
       </dl>
 
-      <h3 class="small">Important facts</h3>
+      <h3 class="small" data-i18n="limits.h3">Important facts</h3>
       <ul class="limits">
-        <li>It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet.</li>
-        <li>After the trial ends, TapSwitch stops switching and your phone goes back to how it was.</li>
+        <li data-i18n="limits.1">It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet.</li>
+        <li data-i18n="limits.2">After the trial ends, TapSwitch stops switching and your phone goes back to how it was.</li>
       </ul>
-      <p class="help-link">Access card stopped working after you set up Google Wallet? <a href="/help/">Read the common questions</a></p>
+      <p class="help-link" data-i18n="safe.help">Access card stopped working after you set up Google Wallet? <a href="/help/">Read the common questions</a></p>
 
-      <p class="closing">Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href="#price">Back to the download</a></span></p>
+      <p class="closing" data-i18n="safe.closing">Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href="#price">Back to the download</a></span></p>
     </div>
   </div>
 
   <footer>
     <div class="wrap">
-      <p>Made by one person, for one annoying problem. Contact me: <a class="mail" href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p>
-      <p><a href="/help/">Common questions: access card and Google Wallet on Android</a></p>
-      <p>Also from the maker of TapSwitch: <a href="/floataway/">FloatAway, Smart Sidebar apps full screen</a></p>
-      <p>TapSwitch is not affiliated with Google or Oppo.</p>
+      <p data-i18n="foot.made">Made by one person, for one annoying problem. Contact me: <a class="mail" href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p>
+      <p data-i18n="foot.help"><a href="/help/">Common questions: access card and Google Wallet on Android</a></p>
+      <p data-i18n="foot.also">Also from the maker of TapSwitch: <a href="/floataway/">FloatAway, Smart Sidebar apps full screen</a></p>
+      <p data-i18n="foot.notAffiliated">TapSwitch is not affiliated with Google or Oppo.</p>
     </div>
   </footer>
 </main>
 
+<script>
+// Language keys for the lines that other checks read character for character (price heading, amount note,
+// "once", the facts labels, the What's new heading). Set here, before lang.js reads them, so those lines'
+// HTML stays exactly as the checks expect. The version number in What's new stays outside its key.
+(function () {
+  [["#price > h2", "price.h2"], ["#price .amount-note", "price.amountNote"], ["#price .lt-price > span", "lt.once"]].forEach(function (p) {
+    var el = document.querySelector(p[0]); if (el) el.setAttribute("data-i18n", p[1]);
+  });
+  var TH = { "File": "facts.file", "Latest version": "facts.version", "Size": "facts.size", "Virus scan": "facts.scan", "SHA-256 of the file": "facts.sha", "Signed by": "facts.signed" };
+  document.querySelectorAll(".facts th").forEach(function (el) { var k = TH[el.textContent]; if (k) el.setAttribute("data-i18n", k); });
+  var h = document.querySelector("#whats-new h3"), n = h && h.firstChild;
+  var m = n && n.nodeType === 3 && /^(.*?)\s+(\d[\d.]*)\s*$/.exec(n.textContent);
+  if (!m) return;
+  var words = document.createElement("span"), ver = document.createElement("span");
+  words.setAttribute("data-i18n", "wn.h3"); words.textContent = m[1];
+  ver.setAttribute("translate", "no"); ver.textContent = m[2];
+  // the h3's own span style is for the date only
+  words.style.cssText = ver.style.cssText = "margin:0;font:inherit;color:inherit";
+  h.replaceChild(ver, n); h.insertBefore(document.createTextNode(" "), ver); h.insertBefore(words, h.firstChild);
+  ver.after(" ");
+})();
+</script>
+<script src="assets/lang/lang.js"></script>
+<script src="assets/lang/home.js"></script>
 <script>
 (function () {
   var demo = document.getElementById("demo");
@@ -939,39 +963,43 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   var note = document.getElementById("modeNote");
   var readers = demo.querySelectorAll(".reader");
   var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // The demo's words, in English; lang.js gives them in the visitor's language. Without lang.js this English is used.
+  var EN = {
+    "mode.normal": "Your access card is the default. Google Wallet takes over only while it is open.",
+    "mode.reverse": "Google Wallet is the default. Your access card takes over only while it is open.",
+    "fix.open.normal": "Open Google Wallet first", "fix.close.normal": "Close Google Wallet first",
+    "fix.open.reverse": "Open your access card app first", "fix.close.reverse": "Close your access card app first",
+    "tour.normal.first": "Trying to open the door? Just tap your phone.",
+    "tour.normal.second": "Paying for something? Just open the Wallet app and tap your phone.",
+    "tour.reverse.first": "Paying for something? Just tap your phone.",
+    "tour.reverse.second": "Trying to open the door? Just open the Access app and tap your phone.",
+    "app.wallet.title": "Google Wallet", "app.access.title": "Access card", "app.access.card": "Office",
+    "demo.tap.door": "Tap the phone on the Access Card Reader", "demo.tap.till": "Tap the phone on the Payment Terminal"
+  };
+  if (window.TSLang) TSLang.def(EN);
+  var T = window.TSLang ? TSLang.t : function (k) { return EN[k]; };
 
   // Normal: the access card is the default and Google Wallet borrows the slot while
   // it is open. Reverse mode swaps the roles, the same as the switch in the app.
   var MODES = {
     normal: {
-      rest: "access", borrower: "wallet", app: "Google Wallet",
-      note: "Your access card is the default. Google Wallet takes over only while it is open."
+      rest: "access", borrower: "wallet", note: "mode.normal"
     },
     reverse: {
-      rest: "wallet", borrower: "access", app: "your access card app",
-      note: "Google Wallet is the default. Your access card takes over only while it is open."
+      rest: "wallet", borrower: "access", note: "mode.reverse"
     }
   };
   // The guided tour, one pair of tips per mode: first the default card's reader, then open
-  // the other card's app and use the other reader. The tips are his words.
-  var TOUR = {
-    normal: {
-      first: "Trying to open the door? Just tap your phone.",
-      second: "Paying for something? Just open the Wallet app and tap your phone."
-    },
-    reverse: {
-      first: "Paying for something? Just tap your phone.",
-      second: "Trying to open the door? Just open the Access app and tap your phone."
-    }
-  };
+  // the other card's app and use the other reader. The tips are his words (keys tour.<mode>.first and .second).
+  function tour(step) { return "tour." + mode + "." + step; }
   // openApp is the app on screen: null (home screen), "wallet" or "access".
   // Only the borrowing card's own app moves the slot, as on a real phone.
   var mode = "normal", openApp = null;
   var borrowing = function () { return openApp === MODES[mode].borrower; };
   var slot = function () { return borrowing() ? MODES[mode].borrower : MODES[mode].rest; };
   var APP = {
-    wallet: { title: "Google Wallet", card: "Visa", num: "4821" },
-    access: { title: "Access card", card: "Office", num: "0917" }
+    wallet: { title: "app.wallet.title", card: "Visa", num: "4821" },
+    access: { title: "app.access.title", card: "app.access.card", num: "0917" }
   };
   var q = function (k) { return document.getElementById(k); };
 
@@ -981,7 +1009,8 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     var t = ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
     q("demoClock").textContent = t;
     q("bigClock").textContent = t;
-    q("demoDate").textContent = d.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" });
+    var lang = window.TSLang && TSLang.lang !== "en" ? TSLang.lang : undefined;
+    q("demoDate").textContent = d.toLocaleDateString(lang, { weekday: "long", day: "numeric", month: "long" });
   }
   tick(); setInterval(tick, 20000);
 
@@ -990,13 +1019,13 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     demo.dataset.slot = card;
     demo.dataset.mode = mode;
     if (openApp) demo.dataset.app = openApp; else delete demo.dataset.app;
-    note.textContent = m.note;
+    note.textContent = T(m.note);
     view.classList.toggle("on", !!openApp);
     view.setAttribute("aria-hidden", String(!openApp));
     if (openApp) {
       view.dataset.app = openApp;
-      q("appTitle").textContent = APP[openApp].title;
-      q("appCard").textContent = APP[openApp].card;
+      q("appTitle").textContent = T(APP[openApp].title);
+      q("appCard").textContent = APP[openApp].card === "Visa" ? "Visa" : T(APP[openApp].card);
       q("appNum").textContent = APP[openApp].num;
     }
     demo.querySelectorAll(".switch button").forEach(function (b) {
@@ -1017,8 +1046,8 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   var clearTimer = null;
   function answer(reader) {
     readers.forEach(function (r) { r.classList.remove("ok", "no"); r.querySelector(".msg").textContent = ""; });
-    var wants = reader.dataset.wants, good = wants === slot(), m = MODES[mode];
-    var fix = (borrowing() ? "Close " : "Open ") + m.app + " first";
+    var wants = reader.dataset.wants, good = wants === slot();
+    var fix = T((borrowing() ? "fix.close." : "fix.open.") + mode);
     reader.classList.add(good ? "ok" : "no");
     reader.querySelector(".msg").textContent = good ? reader.dataset.ok : fix;
     chime(good ? reader.dataset.wants : "wrong");
@@ -1091,7 +1120,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   readers.forEach(function (r) {
     var face = r.querySelector(".face");
     face.setAttribute("role", "button"); face.setAttribute("tabindex", "0");
-    face.setAttribute("aria-label", "Tap the phone on the " + r.querySelector(".rlabel").textContent);
+    face.setAttribute("aria-label", T(r.classList.contains("door") ? "demo.tap.door" : "demo.tap.till"));
     face.addEventListener("click", function () { wake(); tried(); flyTo(r); });
     face.addEventListener("keydown", function (e) {
       if (e.key !== "Enter" && e.key !== " ") return;
@@ -1125,16 +1154,22 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     t.style.width = w / z + "px";
     t.style.setProperty("--tx", dx / z + "px");
   }
-  function tips(reader, text) {
+  // the tip on show: its reader and its key, so a language switch can rewrite it in place
+  var tipNow = null;
+  function tipWords(r, key) {
+    var t = r.querySelector(".tip"), text = T(key);
+    // the question on its own line, the instruction under it (any language's question mark)
+    var q = /^(.*?[?\uFF1F\u061F])\s*([\s\S]*)$/.exec(text);
+    t.innerHTML = q ? "<b>" + q[1] + "</b>" + q[2] : text;
+    place(r);
+  }
+  function tips(reader, key) {
+    tipNow = reader ? { r: reader, key: key } : null;
     readers.forEach(function (r) {
       var t = r.querySelector(".tip"), on = r === reader;
       r.classList.toggle("focus", on);
       t.classList.toggle("on", on);
-      if (!on) return;
-      // the question on its own line, the instruction under it
-      var cut = text.indexOf("? ") + 1;
-      t.innerHTML = "<b>" + text.slice(0, cut) + "</b>" + text.slice(cut + 1);
-      place(r);
+      if (on) tipWords(r, key);
     });
   }
   function ghostAt(reader, show) {
@@ -1153,6 +1188,10 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       // a fresh copy of the phone as it looks right now, with nothing in it that can be clicked or read out
       var copy = hold.querySelector(":scope > .phone").cloneNode(true);
       copy.querySelectorAll("[id]").forEach(function (n) { n.removeAttribute("id"); });
+      // the copy is redrawn from the phone each time, so lang.js must not take it for a page line
+      copy.querySelectorAll("[data-i18n],[data-i18n-text],[data-i18n-attr]").forEach(function (n) {
+        n.removeAttribute("data-i18n"); n.removeAttribute("data-i18n-text"); n.removeAttribute("data-i18n-attr");
+      });
       copy.querySelectorAll("button").forEach(function (n) { n.setAttribute("tabindex", "-1"); });
       ghost.replaceChildren(copy);
       // start from the phone itself: a tour stopped halfway (say by a mode switch) leaves the
@@ -1180,13 +1219,13 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     // Words and ghost are never on screen together.
     function words(on) { readers.forEach(function (r) { r.querySelector(".tip").classList.toggle("on", on && r.classList.contains("focus")); }); }
     function home() { ghost.style.transition = "none"; ghostAt(null, false); void ghost.offsetWidth; ghost.style.transition = ""; }
-    tips(first, TOUR[mode].first);
+    tips(first, tour("first"));
     // the words keep enough time to be read (the second tip is twice as long); the moves are quick
     at(1600, function () { words(false); });
     at(1900, function () { ghostAt(null, true); });
     at(2000, function () { ghostAt(first, true); });
     at(3100, function () { ghost.style.opacity = "0"; });
-    at(3500, function () { home(); tips(second, TOUR[mode].second); });
+    at(3500, function () { home(); tips(second, tour("second")); });
     at(5700, function () { words(false); });
     at(5900, function () { appBtn.classList.add("pressing"); });
     at(6300, function () { appBtn.classList.remove("pressing"); tourApp = m.borrower; openApp = tourApp; render(); });
@@ -1222,7 +1261,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     resumeTimer = setTimeout(function () {
       if (touring || start || busy || openApp || !onScreen || demo.querySelector(".reader.ok, .reader.no")) return;
       // with reduced motion the first tip simply stays put: nothing moves and no app opens
-      if (still) { tips(demo.querySelector('.reader[data-wants="' + MODES[mode].rest + '"]'), TOUR[mode].first); invite(true); return; }
+      if (still) { tips(demo.querySelector('.reader[data-wants="' + MODES[mode].rest + '"]'), tour("first")); invite(true); return; }
       touring = true; demo.classList.add("touring"); runTour();
     }, wait == null ? 600 : wait);
   }
@@ -1326,6 +1365,12 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   window.addEventListener("resize", placeAll);
 
   render();
+  // A language switch rewrites the mode line, the open app, the tip on show and the date in place.
+  if (window.TSLang) TSLang.onChange(function () {
+    render(); tick();
+    if (tipNow) tipWords(tipNow.r, tipNow.key);
+    readers.forEach(function (r) { r.querySelector(".face").setAttribute("aria-label", T(r.classList.contains("door") ? "demo.tap.door" : "demo.tap.till")); });
+  });
 })();
 
 // The headline types itself in, letter by letter, then "Access Card" and "Google Wallet"
@@ -1353,7 +1398,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   // the demo beside it starts its tour once "by default" is typed (halfway if those words ever change)
   var cue = h.textContent.indexOf("by default");
   cue = cue < 0 ? Math.floor(chars.length / 2) : cue + "by default".length - 1;
-  var i = 0;
+  var i = 0, timer = null, typed = false, cued = false;
   (function next() {
     if (i < chars.length) {
       chars[i].classList.add("on");
@@ -1363,17 +1408,29 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       caret.style.height = (cr.height * .76) + "px";
       caret.style.color = getComputedStyle(chars[i]).color;
       if (!caret.parentNode) h.appendChild(caret);
-      if (i === cue) document.dispatchEvent(new Event("ts:cue"));
+      if (i === cue) { cued = true; document.dispatchEvent(new Event("ts:cue")); }
       var c = chars[i++].textContent;
-      setTimeout(next, c === " " ? 90 : c === "." ? 320 : c === "," ? 260 : 50 + Math.random() * 40);
+      timer = setTimeout(next, c === " " ? 90 : c === "." ? 320 : c === "," ? 260 : 50 + Math.random() * 40);
       return;
     }
-    setTimeout(function () {
+    timer = setTimeout(function () {
+      typed = true;
       h.innerHTML = original; h.classList.remove("typing"); h.removeAttribute("aria-label");
       document.dispatchEvent(new Event("ts:typed"));
-      setTimeout(function () { swap(function () { setTimeout(swap, 1600); }); }, 500);
+      timer = setTimeout(function () { swap(function () { timer = setTimeout(swap, 1600); }); }, 500);
     }, 700);
   })();
+  // A language switch: lang.js has already put the new headline in. Typing (or the swap still to come)
+  // stops there, so the headline is always whole and in one language, never half typed.
+  if (window.TSLang) TSLang.onChange(function () {
+    clearTimeout(timer);
+    h.getAnimations && h.querySelectorAll(".g, .b").forEach(function (n) { n.getAnimations().forEach(function (a) { a.cancel(); }); });
+    if (typed) return;
+    typed = true;
+    h.classList.remove("typing"); h.removeAttribute("aria-label");
+    if (!cued) { cued = true; document.dispatchEvent(new Event("ts:cue")); }
+    document.dispatchEvent(new Event("ts:typed"));
+  });
   function swap(done) {
     var g = h.querySelector(".g"), b = h.querySelector(".b");
     if (!g.animate) { if (done) done(); return; }
@@ -1404,6 +1461,9 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 (function () {
   var btn = document.getElementById("themeBtn");
   var root = document.documentElement;
+  var EN = { "theme.dark": "Switch to dark mode", "theme.light": "Switch to light mode" };
+  if (window.TSLang) TSLang.def(EN);
+  var T = window.TSLang ? TSLang.t : function (k) { return EN[k]; };
   var sys = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
   function current() {
     var t = root.getAttribute("data-theme");
@@ -1411,7 +1471,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     return sys && sys.matches ? "dark" : "light";
   }
   function label() {
-    btn.setAttribute("aria-label", current() === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    btn.setAttribute("aria-label", T(current() === "dark" ? "theme.light" : "theme.dark"));
   }
   var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var timer = null;
@@ -1437,7 +1497,26 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     apply();
   });
   if (sys && sys.addEventListener) sys.addEventListener("change", label);
+  if (window.TSLang) TSLang.onChange(label);
   label();
+})();
+
+// Dates written "9 Nov 2026" (What's new, the virus scan) are shown the way the visitor's language writes them.
+(function () {
+  if (!window.TSLang || !window.Intl) return;
+  var MON = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+  var els = Array.prototype.slice.call(document.querySelectorAll("[data-date]"));
+  els.forEach(function (el) { el.dataset.date = el.textContent; });
+  function show(lang) {
+    els.forEach(function (el) {
+      var m = /^(\d{1,2}) ([A-Z][a-z]{2}) (\d{4})$/.exec(el.dataset.date);
+      if (lang === "en" || !m || !(m[2] in MON)) { el.textContent = el.dataset.date; return; }
+      try { el.textContent = new Intl.DateTimeFormat(lang, { day: "numeric", month: "short", year: "numeric" }).format(new Date(+m[3], MON[m[2]], +m[1])); }
+      catch (e) { el.textContent = el.dataset.date; }
+    });
+  }
+  TSLang.onChange(show);
+  show(TSLang.lang);
 })();
 </script>
 <script>
@@ -1456,6 +1535,26 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   function send(stage) { try { navigator.sendBeacon(url, JSON.stringify({ stage: stage })); } catch (e) {} }
   var day = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
   try { if (localStorage.getItem('ts-day') !== day) { localStorage.setItem('ts-day', day); send('visit'); } } catch (e) { send('visit'); }
+  // lang-view-start
+  // One language view per browser per day per language; no storage means once per page load.
+  function langView(code, day, store, send, seen, prefix) {
+    try {
+      if (store.getItem('ts-owner')) return;
+      if (store.getItem(prefix + code) === day) return;
+      store.setItem(prefix + code, day);
+    } catch (e) {
+      if (seen[code]) return;
+      seen[code] = 1;
+    }
+    send(code);
+  }
+  // lang-view-end
+  var langSeen = {}, langStore = null;
+  try { langStore = localStorage; } catch (e) {}
+  function sendLang(code) { try { navigator.sendBeacon(url, JSON.stringify({ stage: 'lang', lang: code })); } catch (e) {} }
+  function langViewed(code) { langView(code, day, langStore, sendLang, langSeen, 'ts-lang-'); }
+  langViewed((window.TSLang && window.TSLang.lang) || 'en');
+  if (window.TSLang && window.TSLang.onChange) window.TSLang.onChange(langViewed);
   document.addEventListener('click', function (e) {
     if (e.target.closest && e.target.closest('a[href$="/TapSwitch.apk"]')) send('click');
   }, true);
@@ -1472,6 +1571,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   var W = 1000, H = M.h;
   var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var rows = [], mask, mc, alpha, lit, view0;
+  var lang = function () { return window.TSLang ? TSLang.lang : 'en'; };
   var root = document.documentElement;
   function css(v) { return getComputedStyle(box).getPropertyValue(v).trim(); }
   function ease(t) { return 1 - Math.pow(1 - t, 3); }
@@ -1574,15 +1674,20 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   }).then(function (j) {
     var codes = j && j.countries;
     if (!Array.isArray(codes)) throw 0;
-    var names = new Intl.DisplayNames(['en'], { type: 'region' });
-    codes.forEach(function (c) {
-      c = typeof c === 'string' ? c.toUpperCase() : '';
-      if (!/^[A-Z]{2}$/.test(c) || !C[c]) return;
-      var n; try { n = names.of(c); } catch (e) { return; }
-      rows.push({ code: c, name: n });
-    });
+    // Country names in the visitor's language, A to Z in that language; a switch renames and redraws them.
+    function name(lg) {
+      var names = new Intl.DisplayNames([lg], { type: 'region' });
+      rows = [];
+      codes.forEach(function (c) {
+        c = typeof c === 'string' ? c.toUpperCase() : '';
+        if (!/^[A-Z]{2}$/.test(c) || !C[c]) return;
+        var n; try { n = names.of(c); } catch (e) { return; }
+        rows.push({ code: c, name: n });
+      });
+      rows.sort(function (a, b) { return a.name.localeCompare(b.name, lg); });
+    }
+    try { name(lang()); } catch (e) { name('en'); }
     if (!rows.length) throw 0;
-    rows.sort(function (a, b) { return a.name.localeCompare(b.name); });
     mask = document.createElement('canvas'); mask.width = W; mask.height = H;
     mc = mask.getContext('2d');
     Object.keys(M.paths).forEach(function (k) { mc.fill(new Path2D(M.paths[k])); });
@@ -1599,6 +1704,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     // Follow the page's own light/dark switch (clock, sun/moon button, system setting).
     if (window.matchMedia) window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', redraw);
     new MutationObserver(redraw).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+    if (window.TSLang) TSLang.onChange(function (lg) { try { name(lg); } catch (e) { name('en'); } redraw(); });
     document.addEventListener('click', function () {
       box.querySelector('.cm-map').classList.remove('focus');
       box.querySelectorAll('.hot').forEach(function (n) { n.classList.remove('hot'); });
