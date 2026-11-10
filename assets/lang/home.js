@@ -330,8 +330,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "Boleh guna di ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "Boleh guna di Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "Akses",
@@ -748,8 +748,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "Berfungsi di ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "Berfungsi di Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "Akses",
@@ -1166,8 +1166,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "รองรับ ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "รองรับ Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "คีย์การ์ด",
@@ -1584,8 +1584,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "Chạy được trên ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "Chạy được trên Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "Ra vào",
@@ -2002,8 +2002,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "Gumagana sa ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "Gumagana sa Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "Access",
@@ -2420,8 +2420,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "适配 ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "适配 Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "门禁",
@@ -2838,8 +2838,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "Compatible con ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "Compatible con Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "Acceso",
@@ -3256,8 +3256,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "Działa na ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "Działa na Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "Dostęp",
@@ -3674,8 +3674,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "Funguje na ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "Funguje na Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "Přístup",
@@ -4092,8 +4092,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "Работает на ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "Работает на Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "Пропуск",
@@ -4510,8 +4510,8 @@ if (window.TSLang) TSLang.add({
    "en": "What a customer said"
   },
   "hero.tag": {
-   "t": "يعمل على ColorOS 17",
-   "en": "Works on ColorOS 17"
+   "t": "يعمل على Oppo ColorOS 17",
+   "en": "Works on Oppo ColorOS 17"
   },
   "demo.app.access": {
    "t": "الدخول",

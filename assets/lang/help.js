@@ -2,8 +2,8 @@
 if (window.TSLang) TSLang.add({
  "ms": {
   "h1": {
-   "t": "Kad akses dan Google Wallet tidak boleh berfungsi serentak pada Android",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "Kad akses dan Google Wallet tidak boleh berfungsi serentak pada Oppo dan telefon Android lain",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "Telefon anda hanya boleh menawarkan satu kad ketik pada satu masa. Di sini kami terangkan kenapa kedua-duanya berebut, cara membetulkannya sendiri secara percuma, dan cara TapSwitch melakukannya untuk anda.",
@@ -196,8 +196,8 @@ if (window.TSLang) TSLang.add({
  },
  "id": {
   "h1": {
-   "t": "Kartu akses dan Google Wallet tidak bisa berjalan bersamaan di Android",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "Kartu akses dan Google Wallet tidak bisa berjalan bersamaan di Oppo dan ponsel Android lainnya",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "Ponsel Anda hanya bisa memakai satu kartu tap dalam satu waktu. Berikut alasan keduanya saling berebut, cara mengatasinya sendiri secara gratis, dan cara TapSwitch melakukannya untuk Anda.",
@@ -390,8 +390,8 @@ if (window.TSLang) TSLang.add({
  },
  "th": {
   "h1": {
-   "t": "คีย์การ์ดกับ Google Wallet ใช้ด้วยกันไม่ได้บน Android",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "คีย์การ์ดกับ Google Wallet ใช้ด้วยกันไม่ได้บน Oppo และมือถือ Android รุ่นอื่น",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "โทรศัพท์ตั้งการ์ดสำหรับแตะได้ทีละใบเท่านั้น มาดูกันว่าทำไมสองอย่างนี้ถึงชนกัน วิธีแก้เองฟรี และวิธีที่ TapSwitch จัดการให้คุณ",
@@ -584,8 +584,8 @@ if (window.TSLang) TSLang.add({
  },
  "vi": {
   "h1": {
-   "t": "Thẻ ra vào và Google Wallet không dùng chung được trên Android",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "Thẻ ra vào và Google Wallet không dùng chung được trên Oppo và các điện thoại Android khác",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "Mỗi lúc điện thoại chỉ dùng được một thẻ chạm. Dưới đây là lý do hai thẻ \"giành nhau\", cách tự sửa miễn phí bằng tay, và cách TapSwitch làm việc đó giúp bạn.",
@@ -778,8 +778,8 @@ if (window.TSLang) TSLang.add({
  },
  "fil": {
   "h1": {
-   "t": "Ayaw magsabay ng access card at Google Wallet sa Android",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "Ayaw magsabay ng access card at Google Wallet sa Oppo at iba pang Android phone",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "Isang tap card lang ang kayang ialok ng phone mo sa bawat pagkakataon. Narito kung bakit nag-aagawan ang dalawa, paano ito ayusin nang mano-mano at libre, at paano ito ginagawa ng TapSwitch para sa iyo.",
@@ -972,8 +972,8 @@ if (window.TSLang) TSLang.add({
  },
  "zh": {
   "h1": {
-   "t": "安卓手机上门禁卡和 Google Wallet 无法同时使用",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "Oppo 及其他安卓手机上，门禁卡和 Google Wallet 无法同时使用",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "手机一次只能用一张卡来刷。下面说说两者为什么会“打架”，怎么免费手动解决，以及 TapSwitch 怎么帮你自动搞定。",
@@ -1166,8 +1166,8 @@ if (window.TSLang) TSLang.add({
  },
  "es": {
   "h1": {
-   "t": "Tarjeta de acceso y Google Wallet no funcionan juntas en Android",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "Tarjeta de acceso y Google Wallet no funcionan juntas en Oppo y otros teléfonos Android",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "Tu celular solo puede ofrecer una tarjeta NFC a la vez. Aquí te explicamos por qué chocan las dos, cómo resolverlo a mano gratis y cómo TapSwitch lo hace por ti.",
@@ -1360,8 +1360,8 @@ if (window.TSLang) TSLang.add({
  },
  "pl": {
   "h1": {
-   "t": "Karta dostępu i Google Wallet nie działają razem na Androidzie",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "Karta dostępu i Google Wallet nie działają razem na Oppo i innych telefonach z Androidem",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "Telefon może naraz udostępniać tylko jedną kartę zbliżeniową. Wyjaśniamy, dlaczego te dwie się gryzą, jak za darmo rozwiązać to ręcznie i jak TapSwitch zrobi to za Ciebie.",
@@ -1554,8 +1554,8 @@ if (window.TSLang) TSLang.add({
  },
  "cs": {
   "h1": {
-   "t": "Přístupová karta a Google Wallet na Androidu spolu nefungují",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "Přístupová karta a Google Wallet na Oppo a dalších telefonech s Androidem spolu nefungují",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "Telefon umí nabídnout jen jednu bezkontaktní kartu najednou. Vysvětlíme, proč se ty dvě perou, jak to zdarma vyřešit ručně a jak to za vás udělá TapSwitch.",
@@ -1748,8 +1748,8 @@ if (window.TSLang) TSLang.add({
  },
  "ru": {
   "h1": {
-   "t": "Пропуск и Google Wallet не работают вместе на Android",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "Пропуск и Google Wallet не работают вместе на Oppo и других телефонах Android",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "Телефон может использовать для касания только одну карту за раз. Ниже о том, почему они мешают друг другу, как бесплатно решить это вручную и как TapSwitch делает это за вас.",
@@ -1942,8 +1942,8 @@ if (window.TSLang) TSLang.add({
  },
  "ar": {
   "h1": {
-   "t": "بطاقة الدخول وGoogle Wallet لا يعملان معًا على Android",
-   "en": "Access card and Google Wallet not working together on Android"
+   "t": "بطاقة الدخول وGoogle Wallet لا يعملان معًا على Oppo وهواتف Android الأخرى",
+   "en": "Access card and Google Wallet not working together on Oppo and other Android phones"
   },
   "lede": {
    "t": "هاتفك يستطيع أن يقدّم بطاقة NFC واحدة فقط في كل مرة. إليك سبب التعارض بينهما، وكيف تحل المشكلة يدويًا مجانًا، وكيف يقوم TapSwitch بذلك نيابة عنك.",
