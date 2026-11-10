@@ -277,6 +277,22 @@ if (window.TSLang) TSLang.add({
    "t": "Cuba pada telefon anda sendiri selama 14 hari, percuma.<span>Kalau tak sesuai, padam sahaja dan anda tak berhutang apa-apa. <a href=\"#price\">Kembali ke muat turun</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
   },
+  "tried.h2": {
+   "t": "Sudah cuba FloatAway?",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "Tahukah anda, aplikasi dari Smart Sidebar boleh dibuka dalam skrin penuh pada Oppo?",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "Biasanya aplikasi bermula dalam tetingkap terapung yang kecil, dan anda perlu membesarkannya sendiri. FloatAway terus membukanya dalam skrin penuh, aplikasi klon pun sama. Ia juga boleh menambah folder pada sidebar anda, sesuatu yang tidak boleh dibuat oleh telefon secara lalai. Percuma 14 hari.",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Lihat FloatAway ›",
+   "en": "See FloatAway ›"
+  },
   "foot.made": {
    "t": "Dibuat oleh seorang, untuk satu masalah yang menjengkelkan. Hubungi saya: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person, for one annoying problem. Contact me: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -694,6 +710,22 @@ if (window.TSLang) TSLang.add({
   "safe.closing": {
    "t": "Coba di ponsel Anda sendiri selama 14 hari, gratis.<span>Kalau tidak cocok, hapus saja, Anda tidak berutang apa pun. <a href=\"#price\">Kembali ke unduhan</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  },
+  "tried.h2": {
+   "t": "Sudah coba FloatAway?",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "Tahukah Anda, aplikasi dari Smart Sidebar bisa langsung terbuka di layar penuh di Oppo?",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "Biasanya aplikasi muncul di jendela mengambang yang kecil, dan Anda harus memperbesarnya sendiri. FloatAway langsung membukanya di layar penuh, aplikasi kloningan juga. FloatAway juga bisa menambahkan folder ke sidebar Anda, hal yang tidak bisa dilakukan ponsel secara bawaan. Gratis 14 hari.",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Lihat FloatAway ›",
+   "en": "See FloatAway ›"
   },
   "foot.made": {
    "t": "Dibuat oleh satu orang, untuk satu masalah yang menjengkelkan. Hubungi saya: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -1113,6 +1145,22 @@ if (window.TSLang) TSLang.add({
    "t": "ลองใช้บนเครื่องของคุณเองฟรี 14 วัน<span>ถ้าไม่ถูกใจ ก็ลบทิ้งได้เลย ไม่ต้องจ่ายอะไร <a href=\"#price\">กลับไปที่ดาวน์โหลด</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
   },
+  "tried.h2": {
+   "t": "ลอง FloatAway หรือยัง?",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "รู้ไหมว่าแอปจาก Smart Sidebar เปิดแบบเต็มจอบน Oppo ได้?",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "ปกติแอปจะขึ้นมาเป็นหน้าต่างลอยเล็ก ๆ แล้วคุณต้องกดขยายเอง FloatAway เปิดแบบเต็มจอให้ทันที แอปโคลนก็ได้ด้วย แถมยังเพิ่มโฟลเดอร์ลงในแถบด้านข้างได้ ซึ่งปกติโทรศัพท์ทำเองไม่ได้ ใช้ฟรี 14 วัน",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "ดู FloatAway ›",
+   "en": "See FloatAway ›"
+  },
   "foot.made": {
    "t": "ทำโดยคนคนเดียว เพื่อแก้ปัญหาน่ารำคาญเรื่องเดียว ติดต่อผมได้ที่ <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person, for one annoying problem. Contact me: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -1530,6 +1578,22 @@ if (window.TSLang) TSLang.add({
   "safe.closing": {
    "t": "Dùng thử miễn phí 14 ngày trên chính điện thoại của bạn.<span>Không hợp thì cứ xóa đi, bạn không mất đồng nào. <a href=\"#price\">Quay lại phần tải về</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  },
+  "tried.h2": {
+   "t": "Bạn đã thử FloatAway chưa?",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "Bạn có biết ứng dụng từ Smart Sidebar có thể mở toàn màn hình trên Oppo?",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "Thường thì ứng dụng sẽ hiện trong một cửa sổ nổi nhỏ, và bạn phải tự phóng to. FloatAway mở thẳng toàn màn hình, cả ứng dụng nhân bản. FloatAway còn thêm được thư mục vào thanh bên, điều mà điện thoại không làm được theo mặc định. Miễn phí 14 ngày.",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Xem FloatAway ›",
+   "en": "See FloatAway ›"
   },
   "foot.made": {
    "t": "Do một người làm ra, để giải quyết một chuyện phiền phức. Liên hệ với tôi: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -1949,6 +2013,22 @@ if (window.TSLang) TSLang.add({
    "t": "Subukan sa sarili mong phone nang 14 na araw, libre.<span>Kung hindi bagay sa iyo, i-delete mo lang at wala kang babayaran. <a href=\"#price\">Bumalik sa download</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
   },
+  "tried.h2": {
+   "t": "Nasubukan mo na ba ang FloatAway?",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "Alam mo bang puwedeng mag-full screen agad ang mga app mula sa Smart Sidebar sa Oppo?",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "Kadalasan, nagsisimula ang mga app sa maliit na floating window, at kailangan mo pang i-expand. Binubuksan agad ng FloatAway nang full screen, pati mga cloned app. Kaya rin nitong maglagay ng mga folder sa sidebar mo, na hindi magagawa ng phone nang mag-isa. Libre sa loob ng 14 na araw.",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Tingnan ang FloatAway ›",
+   "en": "See FloatAway ›"
+  },
   "foot.made": {
    "t": "Gawa ng isang tao, para sa isang nakakainis na problema. Kontakin ako: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person, for one annoying problem. Contact me: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -2366,6 +2446,22 @@ if (window.TSLang) TSLang.add({
   "safe.closing": {
    "t": "在你自己的手机上免费试用 14 天。<span>不合适就直接删掉，一分钱都不用付。<a href=\"#price\">返回下载</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  },
+  "tried.h2": {
+   "t": "试过 FloatAway 吗？",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "你知道吗？在 Oppo 上，Smart Sidebar 里的应用可以直接全屏打开。",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "平时这些应用会先变成一个小浮窗，还得你自己放大。FloatAway 直接全屏打开，分身应用也可以。它还能把文件夹放进侧边栏，这是手机本身做不到的。免费试用 14 天。",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "看看 FloatAway ›",
+   "en": "See FloatAway ›"
   },
   "foot.made": {
    "t": "一个人做的，只为解决一个烦人的问题。联系我：<a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -2785,6 +2881,22 @@ if (window.TSLang) TSLang.add({
    "t": "Pruébala gratis en tu propio celular durante 14 días.<span>Si no te convence, la borras y no debes nada. <a href=\"#price\">Volver a la descarga</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
   },
+  "tried.h2": {
+   "t": "¿Ya probaste FloatAway?",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "¿Sabías que en un Oppo las apps de la Smart Sidebar pueden abrirse en pantalla completa?",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "Normalmente las apps empiezan en una ventanita flotante y tienes que agrandarlas. FloatAway las abre en pantalla completa desde el principio, también las apps clonadas. Además, puede agregar carpetas a tu barra lateral, algo que el celular no hace por sí solo. Gratis por 14 días.",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Ver FloatAway ›",
+   "en": "See FloatAway ›"
+  },
   "foot.made": {
    "t": "Hecha por una sola persona, para un problema muy molesto. Escríbeme: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person, for one annoying problem. Contact me: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -3202,6 +3314,22 @@ if (window.TSLang) TSLang.add({
   "safe.closing": {
    "t": "Wypróbuj ją za darmo na własnym telefonie przez 14 dni.<span>Jeśli Ci nie podejdzie, usuń ją i nic nie płacisz. <a href=\"#price\">Wróć do pobierania</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  },
+  "tried.h2": {
+   "t": "Znasz już FloatAway?",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "Czy wiesz, że na Oppo aplikacje ze Smart Sidebar mogą otwierać się od razu na pełnym ekranie?",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "Zwykle aplikacje startują w małym pływającym oknie i trzeba je powiększać. FloatAway od razu otwiera je na pełnym ekranie, także sklonowane aplikacje. Potrafi też dodać foldery do paska bocznego, czego telefon sam z siebie nie umożliwia. 14 dni za darmo.",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Zobacz FloatAway ›",
+   "en": "See FloatAway ›"
   },
   "foot.made": {
    "t": "Stworzona przez jedną osobę, na jeden irytujący problem. Napisz do mnie: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -3621,6 +3749,22 @@ if (window.TSLang) TSLang.add({
    "t": "Vyzkoušejte ji 14 dní zdarma na vlastním telefonu.<span>Když vám nebude vyhovovat, smažte ji a nic nedlužíte. <a href=\"#price\">Zpět ke stažení</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
   },
+  "tried.h2": {
+   "t": "Už jste zkusili FloatAway?",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "Víte, že na Oppo se aplikace ze Smart Sidebar mohou otevírat rovnou přes celou obrazovku?",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "Normálně se aplikace spustí v malém plovoucím okně a vy je musíte zvětšit. FloatAway je rovnou otevře přes celou obrazovku, i klonované aplikace. Umí také přidat složky do postranního panelu, což telefon sám od sebe neumí. 14 dní zdarma.",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Prohlédnout FloatAway ›",
+   "en": "See FloatAway ›"
+  },
   "foot.made": {
    "t": "Vytvořil jeden člověk kvůli jednomu otravnému problému. Napište mi: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person, for one annoying problem. Contact me: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -4039,6 +4183,22 @@ if (window.TSLang) TSLang.add({
    "t": "Попробуйте 14 дней бесплатно на своём телефоне.<span>Не подойдёт, просто удалите, и вы ничего не должны. <a href=\"#price\">Назад к скачиванию</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
   },
+  "tried.h2": {
+   "t": "Уже пробовали FloatAway?",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "А вы знали, что на Oppo приложения из Smart Sidebar могут открываться сразу на весь экран?",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "Обычно приложения запускаются в маленьком плавающем окне, и их приходится разворачивать. FloatAway сразу открывает их на весь экран, клоны приложений тоже. А ещё FloatAway умеет добавлять папки на боковую панель, чего телефон сам по себе не умеет. 14 дней бесплатно.",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Подробнее о FloatAway ›",
+   "en": "See FloatAway ›"
+  },
   "foot.made": {
    "t": "Сделано одним человеком ради одной надоедливой проблемы. Пишите мне: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person, for one annoying problem. Contact me: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -4456,6 +4616,22 @@ if (window.TSLang) TSLang.add({
   "safe.closing": {
    "t": "جرّبه على هاتفك مجانًا لمدة 14 يومًا.<span>إن لم يناسبك، احذفه ولن تدفع شيئًا. <a href=\"#price\">العودة إلى التنزيل</a></span>",
    "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  },
+  "tried.h2": {
+   "t": "هل جرّبت FloatAway؟",
+   "en": "Have you tried FloatAway?"
+  },
+  "tried.lead": {
+   "t": "هل تعلم أن التطبيقات في Smart Sidebar يمكن أن تُفتح بملء الشاشة مباشرة على هواتف Oppo؟",
+   "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
+  },
+  "tried.p": {
+   "t": "عادةً تبدأ التطبيقات في نافذة عائمة صغيرة، وعليك أن تكبّرها بنفسك. FloatAway يفتحها بملء الشاشة مباشرة، والتطبيقات المستنسخة أيضًا. كما يمكنه إضافة مجلدات إلى الشريط الجانبي، وهو أمر لا يتيحه الهاتف من تلقاء نفسه. مجاني لمدة 14 يومًا.",
+   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "تعرّف على FloatAway ›",
+   "en": "See FloatAway ›"
   },
   "foot.made": {
    "t": "صنعه شخص واحد، لحل مشكلة واحدة مزعجة. تواصل معي: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",

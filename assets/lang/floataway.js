@@ -365,6 +365,22 @@ if (window.TSLang) TSLang.add({
    "t": "Kalau tak sesuai, padam sahaja dan anda tak berhutang apa-apa. <a href=\"#price\">Kembali ke muat turun</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
   },
+  "tried.h2": {
+   "t": "Sudah cuba TapSwitch?",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "Tahukah anda, telefon Oppo atau ColorOS anda boleh menyimpan kad akses dan Google Wallet anda, tanpa perlu tukar sendiri?",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "TapSwitch memastikan kad akses anda sentiasa sedia di pintu. Buka Google Wallet dan TapSwitch bertukar sendiri supaya anda boleh bayar. Percuma 14 hari.",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Lihat TapSwitch ›",
+   "en": "See TapSwitch ›"
+  },
   "foot.made": {
    "t": "Dibuat oleh seorang. Hubungi saya: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person. Contact me: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -790,6 +806,22 @@ if (window.TSLang) TSLang.add({
   "closing.sub": {
    "t": "Kalau tidak cocok, hapus saja, Anda tidak berutang apa pun. <a href=\"#price\">Kembali ke unduhan</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
+  },
+  "tried.h2": {
+   "t": "Sudah coba TapSwitch?",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "Tahukah Anda, ponsel Oppo atau ColorOS Anda bisa menyimpan kartu akses dan Google Wallet sekaligus, tanpa perlu ganti manual?",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "TapSwitch membuat kartu akses Anda selalu siap di pintu. Buka Google Wallet, lalu TapSwitch langsung beralih supaya Anda bisa bayar. Gratis 14 hari.",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Lihat TapSwitch ›",
+   "en": "See TapSwitch ›"
   },
   "foot.made": {
    "t": "Dibuat oleh satu orang. Hubungi saya: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -1217,6 +1249,22 @@ if (window.TSLang) TSLang.add({
    "t": "ถ้าไม่ถูกใจ ก็ลบทิ้งได้เลย ไม่ต้องจ่ายอะไร <a href=\"#price\">กลับไปที่ดาวน์โหลด</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
   },
+  "tried.h2": {
+   "t": "ลอง TapSwitch หรือยัง?",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "รู้ไหมว่าโทรศัพท์ Oppo หรือ ColorOS ของคุณใช้ได้ทั้งคีย์การ์ดและ Google Wallet โดยไม่ต้องสลับเอง?",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "TapSwitch ให้คีย์การ์ดพร้อมแตะที่ประตูเสมอ พอเปิด Google Wallet ก็สลับให้ทันทีเพื่อให้คุณจ่ายเงินได้ ใช้ฟรี 14 วัน",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "ดู TapSwitch ›",
+   "en": "See TapSwitch ›"
+  },
   "foot.made": {
    "t": "ทำโดยคนคนเดียว ติดต่อผมได้ที่ <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person. Contact me: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -1642,6 +1690,22 @@ if (window.TSLang) TSLang.add({
   "closing.sub": {
    "t": "Không hợp thì cứ xóa đi, bạn không mất đồng nào. <a href=\"#price\">Quay lại phần tải về</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
+  },
+  "tried.h2": {
+   "t": "Bạn đã thử TapSwitch chưa?",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "Bạn có biết điện thoại Oppo hoặc ColorOS của bạn có thể dùng cả thẻ ra vào và Google Wallet mà không cần tự chuyển?",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "TapSwitch giữ thẻ ra vào luôn sẵn sàng ở cửa. Mở Google Wallet là TapSwitch sẽ tự chuyển để bạn thanh toán. Miễn phí 14 ngày.",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Xem TapSwitch ›",
+   "en": "See TapSwitch ›"
   },
   "foot.made": {
    "t": "Do một người làm ra. Liên hệ với tôi: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -2069,6 +2133,22 @@ if (window.TSLang) TSLang.add({
    "t": "Kung hindi bagay sa iyo, i-delete mo lang at wala kang babayaran. <a href=\"#price\">Bumalik sa download</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
   },
+  "tried.h2": {
+   "t": "Nasubukan mo na ba ang TapSwitch?",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "Alam mo bang kayang dalhin ng Oppo o ColorOS phone mo ang access card at Google Wallet mo, nang hindi ka na manu-manong lilipat?",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "Laging handa ng TapSwitch ang access card mo para sa pinto. Buksan mo ang Google Wallet at kusang lilipat ang TapSwitch para makapagbayad ka. Libre sa loob ng 14 na araw.",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Tingnan ang TapSwitch ›",
+   "en": "See TapSwitch ›"
+  },
   "foot.made": {
    "t": "Gawa ng isang tao. Kontakin ako: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person. Contact me: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -2494,6 +2574,22 @@ if (window.TSLang) TSLang.add({
   "closing.sub": {
    "t": "不合适就直接删掉，一分钱都不用付。<a href=\"#price\">返回下载</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
+  },
+  "tried.h2": {
+   "t": "试过 TapSwitch 吗？",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "你知道吗？你的 Oppo 或 ColorOS 手机可以同时装下门禁卡和 Google Wallet，不用自己来回切换。",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "TapSwitch 让门禁卡随时准备好开门。打开 Google Wallet，TapSwitch 就会自动切换过去，方便你付款。免费试用 14 天。",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "看看 TapSwitch ›",
+   "en": "See TapSwitch ›"
   },
   "foot.made": {
    "t": "一个人做的。联系我：<a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -2921,6 +3017,22 @@ if (window.TSLang) TSLang.add({
    "t": "Si no te convence, la borras y no debes nada. <a href=\"#price\">Volver a la descarga</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
   },
+  "tried.h2": {
+   "t": "¿Ya probaste TapSwitch?",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "¿Sabías que tu celular Oppo o ColorOS puede llevar tu tarjeta de acceso y Google Wallet sin que tengas que cambiar a mano?",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "TapSwitch deja tu tarjeta de acceso lista para la puerta. Abre Google Wallet y TapSwitch cambia solo para que puedas pagar. Gratis por 14 días.",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Ver TapSwitch ›",
+   "en": "See TapSwitch ›"
+  },
   "foot.made": {
    "t": "Hecha por una sola persona. Escríbeme: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person. Contact me: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -3346,6 +3458,22 @@ if (window.TSLang) TSLang.add({
   "closing.sub": {
    "t": "Jeśli Ci nie podejdzie, usuń ją i nic nie płacisz. <a href=\"#price\">Wróć do pobierania</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
+  },
+  "tried.h2": {
+   "t": "Znasz już TapSwitch?",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "Czy wiesz, że Twój telefon Oppo lub ColorOS może obsłużyć kartę dostępu i Google Wallet bez ręcznego przełączania?",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "TapSwitch trzyma kartę dostępu w gotowości przy drzwiach. Otwórz Google Wallet, a TapSwitch sam się przełączy, żeby można było zapłacić. 14 dni za darmo.",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Zobacz TapSwitch ›",
+   "en": "See TapSwitch ›"
   },
   "foot.made": {
    "t": "Stworzona przez jedną osobę. Napisz do mnie: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -3773,6 +3901,22 @@ if (window.TSLang) TSLang.add({
    "t": "Když vám nebude vyhovovat, smažte ji a nic nedlužíte. <a href=\"#price\">Zpět ke stažení</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
   },
+  "tried.h2": {
+   "t": "Už jste zkusili TapSwitch?",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "Víte, že váš telefon Oppo nebo ColorOS zvládne přístupovou kartu i Google Wallet bez ručního přepínání?",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "TapSwitch drží přístupovou kartu připravenou u dveří. Otevřete Google Wallet a TapSwitch se sám přepne, abyste mohli zaplatit. 14 dní zdarma.",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Prohlédnout TapSwitch ›",
+   "en": "See TapSwitch ›"
+  },
   "foot.made": {
    "t": "Vytvořil jeden člověk. Napište mi: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person. Contact me: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -4199,6 +4343,22 @@ if (window.TSLang) TSLang.add({
    "t": "Не подойдёт, просто удалите, и вы ничего не должны. <a href=\"#price\">Назад к скачиванию</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
   },
+  "tried.h2": {
+   "t": "Уже пробовали TapSwitch?",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "А вы знали, что пропуск и Google Wallet могут жить в вашем телефоне Oppo или ColorOS без ручного переключения?",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "TapSwitch держит пропуск наготове у двери. Откройте Google Wallet, и TapSwitch сам переключится, чтобы вы могли оплатить. 14 дней бесплатно.",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "Подробнее о TapSwitch ›",
+   "en": "See TapSwitch ›"
+  },
   "foot.made": {
    "t": "Сделано одним человеком. Пишите мне: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
    "en": "Made by one person. Contact me: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>"
@@ -4624,6 +4784,22 @@ if (window.TSLang) TSLang.add({
   "closing.sub": {
    "t": "إن لم يناسبك، احذفه ولن تدفع شيئًا. <a href=\"#price\">العودة إلى التنزيل</a>",
    "en": "If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a>"
+  },
+  "tried.h2": {
+   "t": "هل جرّبت TapSwitch؟",
+   "en": "Have you tried TapSwitch?"
+  },
+  "tried.lead": {
+   "t": "هل تعلم أن هاتفك من Oppo أو بنظام ColorOS يمكنه أن يحمل بطاقة الدخول وGoogle Wallet معًا، دون أن تبدّل بينهما بنفسك؟",
+   "en": "Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?"
+  },
+  "tried.p": {
+   "t": "يُبقي TapSwitch بطاقة الدخول جاهزة عند الباب. افتح Google Wallet فيتحوّل TapSwitch إليه تلقائيًا لتتمكن من الدفع. مجاني لمدة 14 يومًا.",
+   "en": "TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days."
+  },
+  "tried.go": {
+   "t": "تعرّف على TapSwitch ›",
+   "en": "See TapSwitch ›"
   },
   "foot.made": {
    "t": "صنعه شخص واحد. تواصل معي: <a href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",

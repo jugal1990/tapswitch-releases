@@ -620,6 +620,14 @@ ol.setup p { margin: 0; color: var(--muted); }
 .limits { margin: 0; padding: 0 0 0 20px; display: grid; gap: 10px; color: var(--muted); max-width: 76ch; }
 .limits b { color: var(--ink); font-weight: 600; }
 
+.tried { display: flex; gap: 18px; align-items: flex-start; margin: 40px 0 0; padding: 22px 22px 24px; background: color-mix(in srgb, var(--blue) 8%, var(--bg)); border-radius: 18px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 18%, transparent); max-width: 62ch; }
+.tried > svg { width: 56px; height: 56px; flex: none; }
+.tried h2 { margin: 0; font: 600 clamp(1.25rem, 2.4vw, 1.5rem)/1.3 var(--display); letter-spacing: -.02em; }
+.tried .lead { margin: 6px 0 0; font-weight: 600; color: var(--blue); }
+.tried p { margin: 8px 0 0; }
+.tried .btn { margin-top: 16px; }
+@media (max-width: 480px) { .tried { flex-direction: column; gap: 12px; padding: 20px; } .tried > svg { width: 44px; height: 44px; } }
+
 footer { padding-block: 16px 32px; color: var(--muted); font-size: .8rem; line-height: 1.55; background: var(--quiet); }
 footer .wrap::before { content: ""; display: block; border-top: 1px solid var(--line); margin-bottom: 22px; }
 footer p { margin: 0 0 8px; max-width: 72ch; }
@@ -918,6 +926,15 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       <p class="help-link" data-i18n="safe.help">Access card stopped working after you set up Google Wallet? <a href="/help/">Read the common questions</a></p>
 
       <p class="closing" data-i18n="safe.closing">Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href="#price">Back to the download</a></span></p>
+      <section class="tried" aria-labelledby="tried-h">
+        <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="faBg3" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#faBg3)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M41,31 H67 A10,10 0 0 1 77,41 V67 A10,10 0 0 1 67,77 H41 A10,10 0 0 1 31,67 V41 A10,10 0 0 1 41,31 Z" opacity=".55"/><path d="M58,50 L66,42 M58,42 L66,42 L66,50"/><path d="M50,58 L42,66 M50,66 L42,66 L42,58"/></g></svg>
+        <div>
+          <h2 id="tried-h" data-i18n="tried.h2">Have you tried FloatAway?</h2>
+          <p class="lead" data-i18n="tried.lead">Did you know apps from the Smart Sidebar can open full screen on Oppo?</p>
+          <p data-i18n="tried.p">Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days.</p>
+          <a class="btn" href="/floataway/" data-i18n="tried.go">See FloatAway &rsaquo;</a>
+        </div>
+      </section>
     </div>
   </div>
 
