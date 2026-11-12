@@ -129,6 +129,10 @@ if (window.TSLang) TSLang.add({
    "t": "Dari mana pelanggan kami datang",
    "en": "Where our customers come from"
   },
+  "cm.tap": {
+   "t": "Ketik titik untuk lihat negaranya",
+   "en": "Tap a dot to see the country"
+  },
   "phones.h2": {
    "t": "Telefon yang disokong",
    "en": "Which phones it works on"
@@ -570,6 +574,10 @@ if (window.TSLang) TSLang.add({
   "cm.h2": {
    "t": "Dari mana saja pelanggan kami",
    "en": "Where our customers come from"
+  },
+  "cm.tap": {
+   "t": "Ketuk titik untuk melihat negaranya",
+   "en": "Tap a dot to see the country"
   },
   "phones.h2": {
    "t": "Ponsel yang didukung",
@@ -1013,6 +1021,10 @@ if (window.TSLang) TSLang.add({
    "t": "ลูกค้าของเรามาจากที่ไหนบ้าง",
    "en": "Where our customers come from"
   },
+  "cm.tap": {
+   "t": "แตะจุดเพื่อดูว่าเป็นประเทศไหน",
+   "en": "Tap a dot to see the country"
+  },
   "phones.h2": {
    "t": "ใช้ได้กับโทรศัพท์รุ่นไหนบ้าง",
    "en": "Which phones it works on"
@@ -1454,6 +1466,10 @@ if (window.TSLang) TSLang.add({
   "cm.h2": {
    "t": "Khách hàng của chúng tôi đến từ đâu",
    "en": "Where our customers come from"
+  },
+  "cm.tap": {
+   "t": "Chạm vào một chấm để xem tên quốc gia",
+   "en": "Tap a dot to see the country"
   },
   "phones.h2": {
    "t": "Dùng được trên điện thoại nào",
@@ -1897,6 +1913,10 @@ if (window.TSLang) TSLang.add({
    "t": "Saan galing ang mga customer namin",
    "en": "Where our customers come from"
   },
+  "cm.tap": {
+   "t": "I-tap ang tuldok para makita ang bansa",
+   "en": "Tap a dot to see the country"
+  },
   "phones.h2": {
    "t": "Saang mga phone ito gumagana",
    "en": "Which phones it works on"
@@ -2338,6 +2358,10 @@ if (window.TSLang) TSLang.add({
   "cm.h2": {
    "t": "我们的用户来自哪里",
    "en": "Where our customers come from"
+  },
+  "cm.tap": {
+   "t": "点一下圆点，查看是哪个国家",
+   "en": "Tap a dot to see the country"
   },
   "phones.h2": {
    "t": "支持哪些手机",
@@ -2781,6 +2805,10 @@ if (window.TSLang) TSLang.add({
    "t": "De dónde son nuestros clientes",
    "en": "Where our customers come from"
   },
+  "cm.tap": {
+   "t": "Toca un punto para ver el país",
+   "en": "Tap a dot to see the country"
+  },
   "phones.h2": {
    "t": "En qué celulares funciona",
    "en": "Which phones it works on"
@@ -3222,6 +3250,10 @@ if (window.TSLang) TSLang.add({
   "cm.h2": {
    "t": "Skąd są nasi klienci",
    "en": "Where our customers come from"
+  },
+  "cm.tap": {
+   "t": "Stuknij kropkę, aby zobaczyć kraj",
+   "en": "Tap a dot to see the country"
   },
   "phones.h2": {
    "t": "Na jakich telefonach działa",
@@ -3665,6 +3697,10 @@ if (window.TSLang) TSLang.add({
    "t": "Odkud jsou naši zákazníci",
    "en": "Where our customers come from"
   },
+  "cm.tap": {
+   "t": "Klepněte na tečku a uvidíte zemi",
+   "en": "Tap a dot to see the country"
+  },
   "phones.h2": {
    "t": "Na kterých telefonech funguje",
    "en": "Which phones it works on"
@@ -4107,6 +4143,10 @@ if (window.TSLang) TSLang.add({
    "t": "Откуда наши покупатели",
    "en": "Where our customers come from"
   },
+  "cm.tap": {
+   "t": "Нажмите на точку, чтобы увидеть страну",
+   "en": "Tap a dot to see the country"
+  },
   "phones.h2": {
    "t": "На каких телефонах работает",
    "en": "Which phones it works on"
@@ -4548,6 +4588,10 @@ if (window.TSLang) TSLang.add({
   "cm.h2": {
    "t": "من أين يأتي عملاؤنا",
    "en": "Where our customers come from"
+  },
+  "cm.tap": {
+   "t": "اضغط على نقطة لمعرفة الدولة",
+   "en": "Tap a dot to see the country"
   },
   "phones.h2": {
    "t": "على أي هواتف يعمل",

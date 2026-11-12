@@ -678,6 +678,11 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 #customers .lab.right::after { top: 50%; left: -5px; margin-top: -6px; } #customers .lab.left::after { top: 50%; right: -5px; margin-top: -6px; }
 #customers .lab.up.hot { transform: translateY(-2px); } #customers .lab.down.hot { transform: translateY(2px); } #customers .lab.right.hot { transform: translateX(2px); } #customers .lab.left.hot { transform: translateX(-2px); }
 #customers .cm-map.focus .mk:not(.hot), #customers .cm-map.focus .lab:not(.hot) { opacity: .35; }
+/* Phones: eight names did not fit side by side (12 Nov 2026), so a name shows only for the tapped dot. */
+#customers .cm-tap { display: none; margin: 10px 0 0; text-align: center; font: 500 .86rem/1.3 var(--body); color: var(--muted); }
+#customers.cm-phone .cm-tap { display: block; }
+#customers.cm-phone .lab:not(.hot) { opacity: 0 !important; visibility: hidden; }
+#customers.cm-phone .lab.hot { opacity: 1 !important; }
 #customers .cm-list { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; list-style: none; }
 @media (prefers-reduced-motion: no-preference) {
   #customers .mk, #customers .lab { opacity: 0; }
@@ -852,6 +857,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       <h2 id="customers-h" data-i18n="cm.h2">Where our customers come from</h2>
       <!-- Land outlines: Natural Earth (public domain) via the world-atlas package (ISC), simplified. -->
       <div class="cm-map" translate="no"><canvas aria-hidden="true"></canvas></div>
+      <p class="cm-tap" data-i18n="cm.tap">Tap a dot to see the country</p>
       <ul class="cm-list" translate="no"></ul>
     </section>
 <!--cmap-end-->
@@ -1604,10 +1610,12 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     return { x: Math.min(Math.max(cx - w / 2, 0), W - w), y: Math.min(Math.max(cy - h / 2, 0), H - h), w: w, h: h };
   }
 
-  function build() {
+  // tapOnly: names did not fit side by side at this width, so the map works the phone way (one name per tapped dot).
+  function build(tapOnly) {
     var map = box.querySelector('.cm-map'), cv = map.querySelector('canvas'), w = map.clientWidth;
     if (!w) return;
-    var phone = w < 600, v = view(phone ? 1.4 : 2.1);
+    var phone = w < 600, tap = phone || !!tapOnly, v = view(phone ? 1.4 : 2.1);
+    box.classList.toggle('cm-phone', tap);
     var k = w / v.w, h = v.h * k, dpr = window.devicePixelRatio || 1;
     cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); cv.style.height = h + 'px';
     var gap = phone ? 5 : 6, r = gap * 0.33, step = gap / k, dots = [];
@@ -1642,6 +1650,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     map.querySelectorAll('.mk,.lab').forEach(function (n) { n.remove(); });
     map.classList.remove('focus');
     var ul = box.querySelector('.cm-list'); ul.textContent = '';
+    var crowded = false, items = [], prev;
     var taken = ptsDraw.map(function (p) { return { x: p[0] - 8, y: p[1] - 8, w: 16, h: 16 }; });
     function hits(a) { return taken.some(function (b) { return a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h; }); }
     rows.forEach(function (row, n) {
@@ -1661,18 +1670,39 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
         if (c.x < 4 || c.y < 4 || c.x + lw > w - 4 || c.y + lh > h - 4 || hits({ x: c.x - 3, y: c.y - 3, w: lw + 6, h: lh + 6 })) return false;
         spot = c; return true;
       });
-      if (!spot) spot = { x: Math.min(Math.max(px - lw / 2, 4), w - lw - 4), y: py + g, w: lw, h: lh, side: 'down' };
-      taken.push(spot); lab.classList.add(spot.side);
+      if (!spot) {
+        spot = { x: Math.min(Math.max(px - lw / 2, 4), w - lw - 4), y: py + g, w: lw, h: lh, side: 'down' };
+        if (hits(spot)) crowded = true;
+      }
+      // On phones only one name shows at a time, so names may sit over each other; dots still keep them clear.
+      if (!tap) taken.push(spot);
+      lab.classList.add(spot.side);
       lab.style.left = spot.x + 'px'; lab.style.top = spot.y + 'px';
       lab.style.transformOrigin = { up: '50% 100%', down: '50% 0', right: '0 50%', left: '100% 50%' }[spot.side];
       var li = document.createElement('li'); li.textContent = row.name; ul.appendChild(li);
       function hot(on) { [btn, lab].forEach(function (el) { el.classList.toggle('hot', on); }); map.classList.toggle('focus', on); }
       btn.addEventListener('mouseenter', function () { hot(true); });
       btn.addEventListener('mouseleave', function () { hot(false); });
-      btn.addEventListener('focus', function () { hot(true); });
+      // A tap also fires hover and focus first, which used to switch the name on and the click straight off again.
+      // Dots close together share tap space, so a tap goes to the dot nearest the finger.
+      var item = { btn: btn, px: px, py: py, hot: hot }; items.push(item);
+      // A mouse click always shows the name (hovering already did); a finger tap on a shown name hides it.
+      btn.addEventListener('pointerdown', function (e) { prev = e.pointerType === 'mouse' ? null : map.querySelector('.mk.hot'); });
+      btn.addEventListener('focus', function () { if (btn.matches(':focus-visible')) hot(true); });
       btn.addEventListener('blur', function () { hot(false); });
-      btn.addEventListener('click', function (e) { e.stopPropagation(); hot(!btn.classList.contains('hot')); });
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var t = item;
+        if (e.detail) {
+          var mr = map.getBoundingClientRect(), mx = e.clientX - mr.left, my = e.clientY - mr.top, best = 1e9;
+          items.forEach(function (it) { var d = Math.hypot(it.px - mx, it.py - my); if (d < best) { best = d; t = it; } });
+        }
+        var on = prev !== undefined ? prev === t.btn : t.btn.classList.contains('hot'); prev = undefined;
+        box.querySelectorAll('.hot').forEach(function (n) { n.classList.remove('hot'); });
+        if (!on) t.hot(true);
+      });
     });
+    if (!tap && crowded) return build(true);
     box._paint(box._played || still ? 1 : 0);
   }
 
