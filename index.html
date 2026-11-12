@@ -690,12 +690,12 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   #customers.go .mk s { animation: cm-ring 1.6s var(--cm-ease) both; animation-delay: calc(900ms + var(--n) * 140ms); }
   #customers.go .lab { animation: cm-rise .7s var(--cm-ease) both; animation-delay: calc(950ms + var(--n) * 140ms); }
   #customers.done .mk, #customers.done .lab { animation: none; opacity: 1; }
-  #customers.done .mk s { animation: cm-ping 5s cubic-bezier(.2,.7,.3,1) infinite; animation-delay: calc(var(--n) * 1.25s); }
+  #customers.done .mk.ping s { animation: cm-ping 1.5s cubic-bezier(.2,.7,.3,1) both; }
   #customers.done .cm-map.focus .mk:not(.hot), #customers.done .cm-map.focus .lab:not(.hot) { opacity: .35; }
 }
 @keyframes cm-pop { from { opacity: 0; transform: translate(-50%,-50%) scale(.4); } to { opacity: 1; transform: translate(-50%,-50%) scale(1); } }
 @keyframes cm-ring { 0% { opacity: .7; transform: scale(1); } 100% { opacity: 0; transform: scale(3.4); } }
-@keyframes cm-ping { 0%, 62% { opacity: 0; transform: scale(1); } 64% { opacity: .55; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
+@keyframes cm-ping { 0% { opacity: .55; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
 @keyframes cm-rise { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
 /*cmap-css-end*/
 
@@ -1712,7 +1712,19 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     box.classList.add('go');
     var t0 = performance.now(), dur = 1400;
     (function step(now) { var t = Math.min((now - t0) / dur, 1); box._paint(t); if (t < 1) requestAnimationFrame(step); })(t0);
-    setTimeout(function () { box.classList.add('done'); }, 2600);
+    setTimeout(function () { box.classList.add('done'); ping(); }, 2600);
+  }
+
+  // One dot blinks at a time, in turn, however many countries there are (his rule, 12 Nov 2026).
+  // Each ring lasts 1.5 s and the next starts 1.6 s later, so two never show together.
+  function ping() {
+    var turn = 0;
+    setInterval(function () {
+      var mks = box.querySelectorAll('.mk');
+      if (!mks.length || document.hidden) return;
+      var d = mks[turn++ % mks.length];
+      d.classList.remove('ping'); void d.offsetWidth; d.classList.add('ping');
+    }, 1600);
   }
 
   fetch('https://tapswitch-codes.tapswitch-pay.workers.dev/countries').then(function (r) {
