@@ -9,6 +9,10 @@ if (window.TSLang) TSLang.add({
    "t": "Lihat TapSwitch ›",
    "en": "See TapSwitch ›"
   },
+  "bar.help": {
+   "t": "Soalan Lazim",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "Aplikasi Smart Sidebar terus dibuka dalam skrin penuh, dengan satu ketikan.",
    "en": "Smart Sidebar apps open full screen, in one tap."
@@ -454,6 +458,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "Lihat TapSwitch ›",
    "en": "See TapSwitch ›"
+  },
+  "bar.help": {
+   "t": "Tanya Jawab",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "Aplikasi Smart Sidebar langsung terbuka di layar penuh, cukup sekali ketuk.",
@@ -901,6 +909,10 @@ if (window.TSLang) TSLang.add({
    "t": "ดู TapSwitch ›",
    "en": "See TapSwitch ›"
   },
+  "bar.help": {
+   "t": "ถามตอบ",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "เปิดแอปจาก Smart Sidebar แบบเต็มจอ ในแตะเดียว",
    "en": "Smart Sidebar apps open full screen, in one tap."
@@ -1346,6 +1358,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "Xem TapSwitch ›",
    "en": "See TapSwitch ›"
+  },
+  "bar.help": {
+   "t": "Hỏi đáp",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "Mở ứng dụng từ Smart Sidebar toàn màn hình, chỉ một chạm.",
@@ -1793,6 +1809,10 @@ if (window.TSLang) TSLang.add({
    "t": "Tingnan ang TapSwitch ›",
    "en": "See TapSwitch ›"
   },
+  "bar.help": {
+   "t": "FAQ",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "Full screen agad ang mga app sa Smart Sidebar, sa isang tap lang.",
    "en": "Smart Sidebar apps open full screen, in one tap."
@@ -2238,6 +2258,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "看看 TapSwitch ›",
    "en": "See TapSwitch ›"
+  },
+  "bar.help": {
+   "t": "常见问题",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "Smart Sidebar 里的应用，一点就全屏打开。",
@@ -2685,6 +2709,10 @@ if (window.TSLang) TSLang.add({
    "t": "Ver TapSwitch ›",
    "en": "See TapSwitch ›"
   },
+  "bar.help": {
+   "t": "FAQ",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "Las apps de la Smart Sidebar se abren en pantalla completa, con un solo toque.",
    "en": "Smart Sidebar apps open full screen, in one tap."
@@ -3130,6 +3158,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "Zobacz TapSwitch ›",
    "en": "See TapSwitch ›"
+  },
+  "bar.help": {
+   "t": "FAQ",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "Aplikacje ze Smart Sidebar na pełnym ekranie, jednym stuknięciem.",
@@ -3577,6 +3609,10 @@ if (window.TSLang) TSLang.add({
    "t": "Prohlédnout TapSwitch ›",
    "en": "See TapSwitch ›"
   },
+  "bar.help": {
+   "t": "Časté dotazy",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "Aplikace ze Smart Sidebar přes celou obrazovku, jedním klepnutím.",
    "en": "Smart Sidebar apps open full screen, in one tap."
@@ -4023,6 +4059,10 @@ if (window.TSLang) TSLang.add({
    "t": "Подробнее о TapSwitch ›",
    "en": "See TapSwitch ›"
   },
+  "bar.help": {
+   "t": "Частые вопросы",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "Приложения из Smart Sidebar открываются на весь экран в одно касание.",
    "en": "Smart Sidebar apps open full screen, in one tap."
@@ -4468,6 +4508,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "تعرّف على TapSwitch ›",
    "en": "See TapSwitch ›"
+  },
+  "bar.help": {
+   "t": "الأسئلة الشائعة",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "تطبيقات Smart Sidebar تفتح بملء الشاشة، بلمسة واحدة.",

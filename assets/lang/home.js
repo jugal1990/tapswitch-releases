@@ -9,6 +9,10 @@ if (window.TSLang) TSLang.add({
    "t": "Lihat FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "bar.help": {
+   "t": "Soalan Lazim",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "<span class=\"g\">Kad Akses</span> sebagai pilihan utama. <span class=\"b\">Google Wallet</span> bila anda perlukan. <span class=\"m\">NFC bertukar sendiri.</span>",
    "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
@@ -450,6 +454,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "Lihat FloatAway ›",
    "en": "See FloatAway ›"
+  },
+  "bar.help": {
+   "t": "Tanya Jawab",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "<span class=\"g\">Kartu Akses</span> jadi pilihan utama. <span class=\"b\">Google Wallet</span> saat Anda butuh. <span class=\"m\">NFC pindah sendiri.</span>",
@@ -893,6 +901,10 @@ if (window.TSLang) TSLang.add({
    "t": "ดู FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "bar.help": {
+   "t": "ถามตอบ",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "<span class=\"g\">คีย์การ์ด</span>เป็นการ์ดหลัก <span class=\"b\">Google Wallet</span> ก็พร้อมใช้เมื่อต้องการ <span class=\"m\">NFC สลับเองอัตโนมัติ</span>",
    "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
@@ -1334,6 +1346,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "Xem FloatAway ›",
    "en": "See FloatAway ›"
+  },
+  "bar.help": {
+   "t": "Hỏi đáp",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "<span class=\"g\">Thẻ ra vào</span> làm mặc định. <span class=\"b\">Google Wallet</span> khi cần. <span class=\"m\">NFC tự chuyển cho bạn.</span>",
@@ -1777,6 +1793,10 @@ if (window.TSLang) TSLang.add({
    "t": "Tingnan ang FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "bar.help": {
+   "t": "FAQ",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "<span class=\"g\">Access Card</span> ang default. <span class=\"b\">Google Wallet</span> kapag kailangan mo. <span class=\"m\">NFC na kusang lumilipat.</span>",
    "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
@@ -2218,6 +2238,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "看看 FloatAway ›",
    "en": "See FloatAway ›"
+  },
+  "bar.help": {
+   "t": "常见问题",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "默认刷<span class=\"g\">门禁卡</span>，需要时用<span class=\"b\">Google Wallet</span>，<span class=\"m\">NFC 自动切换。</span>",
@@ -2661,6 +2685,10 @@ if (window.TSLang) TSLang.add({
    "t": "Ver FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "bar.help": {
+   "t": "FAQ",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "<span class=\"g\">Tarjeta de acceso</span> por defecto. <span class=\"b\">Google Wallet</span> cuando lo necesites. <span class=\"m\">NFC en piloto automático.</span>",
    "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
@@ -3102,6 +3130,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "Zobacz FloatAway ›",
    "en": "See FloatAway ›"
+  },
+  "bar.help": {
+   "t": "FAQ",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "<span class=\"g\">Karta dostępu</span> domyślnie. <span class=\"b\">Google Wallet</span>, gdy go potrzebujesz. <span class=\"m\">NFC na autopilocie.</span>",
@@ -3545,6 +3577,10 @@ if (window.TSLang) TSLang.add({
    "t": "Prohlédnout FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "bar.help": {
+   "t": "Časté dotazy",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "<span class=\"g\">Přístupová karta</span> jako výchozí. <span class=\"b\">Google Wallet</span>, když ji potřebujete. <span class=\"m\">NFC na autopilota.</span>",
    "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
@@ -3987,6 +4023,10 @@ if (window.TSLang) TSLang.add({
    "t": "Подробнее о FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "bar.help": {
+   "t": "Частые вопросы",
+   "en": "Questions"
+  },
   "hero.h1": {
    "t": "<span class=\"g\">Пропуск</span> по умолчанию. <span class=\"b\">Google Wallet</span>, когда он нужен. <span class=\"m\">NFC на автопилоте.</span>",
    "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
@@ -4428,6 +4468,10 @@ if (window.TSLang) TSLang.add({
   "strip.go": {
    "t": "تعرّف على FloatAway ›",
    "en": "See FloatAway ›"
+  },
+  "bar.help": {
+   "t": "الأسئلة الشائعة",
+   "en": "Questions"
   },
   "hero.h1": {
    "t": "<span class=\"g\">بطاقة الدخول</span> افتراضيًا. <span class=\"b\">Google Wallet</span> عندما تحتاجه. <span class=\"m\">NFC بشكل تلقائي.</span>",

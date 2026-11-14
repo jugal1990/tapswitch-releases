@@ -84,6 +84,26 @@ h1, h2, h3 { text-wrap: balance; }
 .brand { color: inherit; text-decoration: none !important; display: flex; align-items: center; gap: 9px; font: 600 17px/1 var(--display); letter-spacing: -.02em; }
 .brand svg { width: 26px; height: 26px; }
 .spacer { flex: 1; }
+/* questions link in the top bar: a word on laptops and most phones, a round ? on phones under 380px wide.
+   On phones the language button keeps only its globe and flag to make room. Logo and sky never shrink. */
+.bar .brand, .bar .sky { flex-shrink: 0; }
+.qlink { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; height: 34px; padding: 0 10px;
+  border-radius: 999px; color: var(--ink); font: 500 .88rem var(--body); text-decoration: none !important; white-space: nowrap; }
+.qlink:hover { background: var(--fill); }
+.qlink:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.qlink svg { display: none; width: 20px; height: 20px; }
+@media (max-width: 520px) { .bar #langBtn .now { display: none; } }
+@media (max-width: 379px) {
+  .qlink { width: 34px; padding: 0; }
+  .qlink svg { display: block; }
+  .qlink span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+/* the Russian words are longer, so its ? shows from 410px down */
+@media (max-width: 409px) {
+  html[lang="ru"] .qlink { width: 34px; padding: 0; }
+  html[lang="ru"] .qlink svg { display: block; }
+  html[lang="ru"] .qlink span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
 
 /* the light or dark switch, as on the home page: the sun or moon rises over the bar's bottom edge */
 .sky {
@@ -328,6 +348,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       FloatAway
     </a>
     <span class="spacer"></span>
+    <a class="qlink" href="/floataway/help/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 17v.01"/><path d="M12 13.5a1.5 1.5 0 0 1 1-1.5a2.6 2.6 0 1 0-3-4"/></svg><span data-i18n="bar.help">Questions</span></a>
     <button type="button" class="sky" id="themeBtn" aria-label="Switch to dark mode">
       <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><g class="rays" stroke="#FFB21E" stroke-width="1.8" stroke-linecap="round"><path d="M12 1.5v2.6M12 19.9v2.6M1.5 12h2.6M19.9 12h2.6M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g><circle cx="12" cy="12" r="5.4" fill="#FFC53D"/><circle cx="12" cy="12" r="5.4" fill="none" stroke="#FF9F0A" stroke-width=".8"/></svg>
       <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.8 3.2a8.6 8.6 0 1 0 5 13.6A7 7 0 0 1 15.8 3.2z" fill="#F2EFD8"/><circle class="star" cx="5.2" cy="5" r=".9" fill="#F2EFD8"/><circle class="star" cx="9.6" cy="2.6" r=".6" fill="#F2EFD8"/></svg>
