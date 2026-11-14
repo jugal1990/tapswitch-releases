@@ -117,6 +117,10 @@ if (window.TSLang) TSLang.add({
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
   },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
+  },
   "cm.h2": {
    "t": "Dari mana pelanggan kami datang",
    "en": "Where our customers come from"
@@ -554,6 +558,10 @@ if (window.TSLang) TSLang.add({
   "said.quote": {
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "cm.h2": {
    "t": "Dari mana saja pelanggan kami",
@@ -993,6 +1001,10 @@ if (window.TSLang) TSLang.add({
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
   },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
+  },
   "cm.h2": {
    "t": "ลูกค้าของเรามาจากที่ไหนบ้าง",
    "en": "Where our customers come from"
@@ -1430,6 +1442,10 @@ if (window.TSLang) TSLang.add({
   "said.quote": {
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "cm.h2": {
    "t": "Khách hàng của chúng tôi đến từ đâu",
@@ -1869,6 +1885,10 @@ if (window.TSLang) TSLang.add({
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
   },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
+  },
   "cm.h2": {
    "t": "Saan galing ang mga customer namin",
    "en": "Where our customers come from"
@@ -2306,6 +2326,10 @@ if (window.TSLang) TSLang.add({
   "said.quote": {
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "cm.h2": {
    "t": "我们的用户来自哪里",
@@ -2745,6 +2769,10 @@ if (window.TSLang) TSLang.add({
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
   },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
+  },
   "cm.h2": {
    "t": "De dónde son nuestros clientes",
    "en": "Where our customers come from"
@@ -3182,6 +3210,10 @@ if (window.TSLang) TSLang.add({
   "said.quote": {
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "cm.h2": {
    "t": "Skąd są nasi klienci",
@@ -3621,6 +3653,10 @@ if (window.TSLang) TSLang.add({
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
   },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
+  },
   "cm.h2": {
    "t": "Odkud jsou naši zákazníci",
    "en": "Where our customers come from"
@@ -4059,6 +4095,10 @@ if (window.TSLang) TSLang.add({
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
   },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
+  },
   "cm.h2": {
    "t": "Откуда наши покупатели",
    "en": "Where our customers come from"
@@ -4496,6 +4536,10 @@ if (window.TSLang) TSLang.add({
   "said.quote": {
    "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
    "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "cm.h2": {
    "t": "من أين يأتي عملاؤنا",
