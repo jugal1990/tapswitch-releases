@@ -1797,5 +1797,34 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 })();
 </script>
 <!--cmap-js-end-->
+<script>
+/* the endless decorations (sun, moon stars, reader glow, "try it" shine) finish their loop and rest once
+   30 seconds pass with no tap or key press, so the page stops redrawing itself (his call, 14 Nov 2026).
+   A scroll does not wake them; a tap or key press does. One that starts later still gets its own 30 seconds. */
+(() => {
+  if (!document.getAnimations) return;
+  const NAMES = ['rays', 'twinkle', 'beckon', 'shine'], REST_MS = 30000, resting = new Set();
+  let woke = performance.now();
+  const loops = () => document.getAnimations().filter(a => NAMES.includes(a.animationName));
+  setInterval(() => {
+    const now = performance.now();
+    for (const a of loops()) {
+      const t = a.effect.getComputedTiming();
+      if (t.iterations !== Infinity || resting.has(a)) continue;
+      if (now - Math.max(woke, now - (a.currentTime || 0)) < REST_MS) continue;
+      // the sun takes 24 seconds a turn, so it simply stops where it is; the short loops finish first
+      if (a.animationName === 'rays') a.pause(); else a.effect.updateTiming({ iterations: (t.currentIteration || 0) + 1 });
+      resting.add(a);
+    }
+  }, 2000);
+  const wake = () => {
+    woke = performance.now();
+    for (const a of resting) { a.effect.updateTiming({ iterations: Infinity }); if (a.playState === 'paused') a.play(); }
+    resting.clear();
+  };
+  addEventListener('click', wake);
+  addEventListener('keydown', wake);
+})();
+</script>
 </body>
 </html>
