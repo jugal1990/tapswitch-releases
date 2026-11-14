@@ -14,12 +14,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">Kad Akses</span> sebagai pilihan utama. <span class=\"b\">Google Wallet</span> bila anda perlukan. <span class=\"m\">NFC bertukar sendiri.</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "Aplikasi untuk <b>Android 16 dan ke atas</b>. Percuma 14 hari, kemudian US$7.35, sekali bayar sahaja.",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "Guna <span class=\"g\">Kad Akses Oppo</span> dan <span class=\"b\">Google Wallet</span> ikut keperluan. <br><span class=\"m\">Tak perlu lagi buka Tetapan.</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "Mod biasa",
@@ -125,14 +121,6 @@ if (window.TSLang) TSLang.add({
    "t": "Sudah guna? Tetapan dan kod buka kunci anda kekal, tak perlu buat semula apa-apa.",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "Dari mana pelanggan kami datang",
    "en": "Where our customers come from"
@@ -140,6 +128,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Ketik titik untuk lihat negaranya",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "Telefon yang disokong",
@@ -468,12 +464,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">Kartu Akses</span> jadi pilihan utama. <span class=\"b\">Google Wallet</span> saat Anda butuh. <span class=\"m\">NFC pindah sendiri.</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "Aplikasi untuk <b>Android 16 ke atas</b>. Gratis 14 hari, setelah itu bayar sekali saja, US$7.35.",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "Pakai <span class=\"g\">Kartu Akses Oppo</span> dan <span class=\"b\">Google Wallet</span> sesuai kebutuhan. <br><span class=\"m\">Tak perlu lagi buka Setelan.</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "Mode normal",
@@ -579,14 +571,6 @@ if (window.TSLang) TSLang.add({
    "t": "Sudah memakainya? Pengaturan dan kode buka kunci Anda tetap aman, tidak perlu mengulang dari awal.",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "Dari mana saja pelanggan kami",
    "en": "Where our customers come from"
@@ -594,6 +578,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Ketuk titik untuk melihat negaranya",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "Ponsel yang didukung",
@@ -922,12 +914,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">คีย์การ์ด</span>เป็นการ์ดหลัก <span class=\"b\">Google Wallet</span> ก็พร้อมใช้เมื่อต้องการ <span class=\"m\">NFC สลับเองอัตโนมัติ</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "แอปสำหรับ <b>Android 16 ขึ้นไป</b> ใช้ฟรี 14 วัน หลังจากนั้นจ่ายครั้งเดียว US$7.35",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "ใช้<span class=\"g\">คีย์การ์ดใน Oppo</span> และ <span class=\"b\">Google Wallet</span> ได้ตามต้องการ <br><span class=\"m\">ไม่ต้องเข้าการตั้งค่าอีกแล้ว</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "โหมดปกติ",
@@ -1033,14 +1021,6 @@ if (window.TSLang) TSLang.add({
    "t": "ใช้อยู่แล้วใช่ไหม? การตั้งค่าและรหัสปลดล็อกยังอยู่ครบ ไม่ต้องตั้งใหม่",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "ลูกค้าของเรามาจากที่ไหนบ้าง",
    "en": "Where our customers come from"
@@ -1048,6 +1028,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "แตะจุดเพื่อดูว่าเป็นประเทศไหน",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "ใช้ได้กับโทรศัพท์รุ่นไหนบ้าง",
@@ -1376,12 +1364,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">Thẻ ra vào</span> làm mặc định. <span class=\"b\">Google Wallet</span> khi cần. <span class=\"m\">NFC tự chuyển cho bạn.</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "Ứng dụng dành cho <b>Android 16 trở lên</b>. Dùng thử miễn phí 14 ngày, sau đó trả một lần US$7.35.",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "Dùng <span class=\"g\">thẻ ra vào trên Oppo</span> và <span class=\"b\">Google Wallet</span> khi bạn cần. <br><span class=\"m\">Không phải vào Cài đặt nữa.</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "Chế độ thường",
@@ -1487,14 +1471,6 @@ if (window.TSLang) TSLang.add({
    "t": "Bạn đã dùng rồi? Cài đặt và mã mở khóa vẫn còn nguyên, không phải làm lại gì.",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "Khách hàng của chúng tôi đến từ đâu",
    "en": "Where our customers come from"
@@ -1502,6 +1478,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Chạm vào một chấm để xem tên quốc gia",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "Dùng được trên điện thoại nào",
@@ -1830,12 +1814,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">Access Card</span> ang default. <span class=\"b\">Google Wallet</span> kapag kailangan mo. <span class=\"m\">NFC na kusang lumilipat.</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "App para sa <b>Android 16 pataas</b>. Libre sa loob ng 14 na araw, tapos US$7.35, isang beses lang babayaran.",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "Gamitin ang <span class=\"g\">Oppo Access Card</span> at <span class=\"b\">Google Wallet</span> ayon sa kailangan. <br><span class=\"m\">Wala nang pagpunta sa Settings.</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "Normal mode",
@@ -1941,14 +1921,6 @@ if (window.TSLang) TSLang.add({
    "t": "Gamit mo na ito? Mananatili ang setup at unlock code mo, kaya wala nang uulitin.",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "Saan galing ang mga customer namin",
    "en": "Where our customers come from"
@@ -1956,6 +1928,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "I-tap ang tuldok para makita ang bansa",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "Saang mga phone ito gumagana",
@@ -2284,12 +2264,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "默认刷<span class=\"g\">门禁卡</span>，需要时用<span class=\"b\">Google Wallet</span>，<span class=\"m\">NFC 自动切换。</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "适用于 <b>Android 16 及以上</b>的应用。免费试用 14 天，之后一次付费 US$7.35。",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "按需使用<span class=\"g\">Oppo 门禁卡</span>和<span class=\"b\">Google Wallet</span>。<br><span class=\"m\">不用再跑去设置里切换。</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "普通模式",
@@ -2395,14 +2371,6 @@ if (window.TSLang) TSLang.add({
    "t": "已经在用了？设置和解锁码都会保留，不用重新来过。",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "我们的用户来自哪里",
    "en": "Where our customers come from"
@@ -2410,6 +2378,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "点一下圆点，查看是哪个国家",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "支持哪些手机",
@@ -2738,12 +2714,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">Tarjeta de acceso</span> por defecto. <span class=\"b\">Google Wallet</span> cuando lo necesites. <span class=\"m\">NFC en piloto automático.</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "Una app para <b>Android 16 o superior</b>. Gratis por 14 días, después US$7.35 en un solo pago.",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "Usa tu <span class=\"g\">tarjeta de acceso de Oppo</span> y <span class=\"b\">Google Wallet</span> cuando quieras. <br><span class=\"m\">Olvídate de Ajustes.</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "Modo normal",
@@ -2849,14 +2821,6 @@ if (window.TSLang) TSLang.add({
    "t": "¿Ya la usas? Tu configuración y tu código de desbloqueo se conservan, así que no tienes que volver a hacer nada.",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "De dónde son nuestros clientes",
    "en": "Where our customers come from"
@@ -2864,6 +2828,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Toca un punto para ver el país",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "En qué celulares funciona",
@@ -3192,12 +3164,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">Karta dostępu</span> domyślnie. <span class=\"b\">Google Wallet</span>, gdy go potrzebujesz. <span class=\"m\">NFC na autopilocie.</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "Aplikacja na <b>Androida 16 lub nowszego</b>. 14 dni za darmo, potem jednorazowo US$7.35.",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "Używaj <span class=\"g\">karty dostępu w Oppo</span> i <span class=\"b\">Google Wallet</span>, kiedy chcesz. <br><span class=\"m\">Bez grzebania w Ustawieniach.</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "Tryb normalny",
@@ -3303,14 +3271,6 @@ if (window.TSLang) TSLang.add({
    "t": "Korzystasz już z aplikacji? Konfiguracja i kod odblokowujący zostają, nic nie trzeba ustawiać od nowa.",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "Skąd są nasi klienci",
    "en": "Where our customers come from"
@@ -3318,6 +3278,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Stuknij kropkę, aby zobaczyć kraj",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "Na jakich telefonach działa",
@@ -3646,12 +3614,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">Přístupová karta</span> jako výchozí. <span class=\"b\">Google Wallet</span>, když ji potřebujete. <span class=\"m\">NFC na autopilota.</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "Aplikace pro <b>Android 16 a novější</b>. 14 dní zdarma, potom jednorázově US$7.35.",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "Používejte <span class=\"g\">přístupovou kartu v Oppo</span> a <span class=\"b\">Google Wallet</span> podle potřeby. <br><span class=\"m\">Bez chození do Nastavení.</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "Normální režim",
@@ -3757,14 +3721,6 @@ if (window.TSLang) TSLang.add({
    "t": "Už aplikaci používáte? Nastavení i odemykací kód se zachovají, nic nemusíte dělat znovu.",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "Odkud jsou naši zákazníci",
    "en": "Where our customers come from"
@@ -3772,6 +3728,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Klepněte na tečku a uvidíte zemi",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "Na kterých telefonech funguje",
@@ -4100,12 +4064,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">Пропуск</span> по умолчанию. <span class=\"b\">Google Wallet</span>, когда он нужен. <span class=\"m\">NFC на автопилоте.</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "Приложение для <b>Android 16 и новее</b>. 14 дней бесплатно, потом US$7.35 один раз.",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "Пользуйтесь <span class=\"g\">пропуском на Oppo</span> и <span class=\"b\">Google Wallet</span>, когда нужно. <br><span class=\"m\">Без походов в Настройки.</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "Обычный режим",
@@ -4211,14 +4171,6 @@ if (window.TSLang) TSLang.add({
    "t": "Уже пользуетесь? Настройки и код разблокировки сохранятся, ничего настраивать заново не нужно.",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "Откуда наши покупатели",
    "en": "Where our customers come from"
@@ -4226,6 +4178,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Нажмите на точку, чтобы увидеть страну",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "На каких телефонах работает",
@@ -4554,12 +4514,8 @@ if (window.TSLang) TSLang.add({
    "en": "Questions"
   },
   "hero.h1": {
-   "t": "<span class=\"g\">بطاقة الدخول</span> افتراضيًا. <span class=\"b\">Google Wallet</span> عندما تحتاجه. <span class=\"m\">NFC بشكل تلقائي.</span>",
-   "en": "<span class=\"g\">Access Card</span> by default. <span class=\"b\">Google Wallet</span> when you need it. <span class=\"m\">NFC on autopilot.</span>"
-  },
-  "hero.what": {
-   "t": "تطبيق لهواتف <b>Android 16 أو أحدث</b>. مجاني لمدة 14 يومًا، وبعدها تدفع US$7.35 مرة واحدة فقط.",
-   "en": "An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once."
+   "t": "استخدم <span class=\"g\">بطاقة الدخول على Oppo</span> و<span class=\"b\">Google Wallet</span> حسب حاجتك. <br><span class=\"m\">دون الرجوع إلى الإعدادات.</span>",
+   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
   },
   "demo.normal": {
    "t": "الوضع العادي",
@@ -4665,14 +4621,6 @@ if (window.TSLang) TSLang.add({
    "t": "هل تستخدمه بالفعل؟ إعداداتك ورمز التفعيل يبقيان كما هما، فلا حاجة لإعادة أي شيء.",
    "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
   },
-  "said.quote": {
-   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
-   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
-  },
-  "said.quote2": {
-   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
-   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
   "cm.h2": {
    "t": "من أين يأتي عملاؤنا",
    "en": "Where our customers come from"
@@ -4680,6 +4628,14 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "اضغط على نقطة لمعرفة الدولة",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues.",
+   "en": "I was having issues juggling between my Google Pay and access card on my Oppo Find X9 Ultra and this app solved all my issues."
+  },
+  "said.quote2": {
+   "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
+   "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
   },
   "phones.h2": {
    "t": "على أي هواتف يعمل",

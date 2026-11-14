@@ -46,7 +46,7 @@
 <link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<meta property="og:title" content="Access Card by default. Google Wallet when you need it.">
+<meta property="og:title" content="Use your Oppo Access Card and Google Wallet as you need them.">
 <meta property="og:description" content="NFC on autopilot. TapSwitch makes your access card the default NFC, and Google Wallet takes over only while it is open.">
 <meta property="og:image" content="https://tapswitch.fyi/assets/social-preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -220,7 +220,7 @@ h1, h2, h3 { text-wrap: balance; }
 /* on a laptop the price sits in the space under the headline, and the demo stays in view
    beside it while the visitor reads; on a phone the order stays headline, demo, price */
 @media (min-width: 860px) {
-  .hero { grid-template-areas: "head demo" "price demo"; grid-template-rows: auto 1fr; row-gap: 32px; }
+  .hero { grid-template-areas: "head demo" "price demo"; grid-template-rows: auto 1fr; row-gap: 72px; }
   .hero > div:first-child { grid-area: head; }
   .hero > .demo { grid-area: demo; position: sticky; top: calc(72px + var(--strip-h, 0px)); }
   .hero > #price { grid-area: price; }
@@ -228,18 +228,18 @@ h1, h2, h3 { text-wrap: balance; }
   .hero #price .price { grid-template-columns: 1fr; gap: 24px; padding: 32px; }
 }
 .hero h1 {
-  font: 600 clamp(2.25rem, 4vw, 3.2rem)/1.04 var(--display);
+  font: 600 clamp(2.25rem, 3.6vw, 2.8rem)/1.04 var(--display);
   letter-spacing: -.045em;
   margin: 0;
 }
+@media (max-width: 599px) { .hero h1 { font-size: clamp(1.4rem, 7.6vw, 2.25rem); } }
+.hero h1.fitting, .hero h1.fitting * { transition: none !important; }
 .hero h1 .g { color: var(--green); }
 .hero h1 .b { color: var(--blue); }
 /* the headline types itself in, then the two card names trade places and back,
    the way the app swaps cards. Each name stays on one line so the roll is clean. */
 .hero h1 .g, .hero h1 .b { display: inline-block; white-space: nowrap; }
 .hero h1 .m { color: var(--muted); }
-.hero .what { margin: 16px 0 0; font-size: .88rem; color: var(--muted); max-width: 46ch; }
-.hero .what b { color: inherit; font-weight: 500; }
 .hero h1.typing .ch { visibility: hidden; }
 .hero h1.typing .ch.on { visibility: visible; }
 /* the cursor floats over the text and takes no room, so it can never push a word
@@ -545,16 +545,16 @@ button.app:hover i { transform: scale(1.06); }
 section { padding-block: 40px 0; }
 section + section { margin-top: 40px; border-top: 1px solid var(--line); }
 @media (min-width: 760px) { section { padding-block: 56px 0; } section + section { margin-top: 56px; } }
-/* the customer quote follows the price as its proof, so no rule or big gap between them */
+/* the customer quotes sit right under the map, one block about customers, so no rule or big gap between them */
 section.said { margin-top: 0; border-top: 0; padding-block: 36px 0; }
-h2 { font: 600 clamp(1.9rem, 4.2vw, 3rem)/1.08 var(--display); letter-spacing: -.035em; margin: 0 0 14px; }
+h2 { font: 600 clamp(1.5rem, 2.6vw, 2rem)/1.08 var(--display); letter-spacing: -.035em; margin: 0 0 14px; }
 .sub { margin: 0 0 24px; font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
 
 /* customer quotes: a magazine pull quote. A short green and blue bar on top, the words
    large beside it, the name and phone underneath. More quotes sit side by side, up to three. */
 .quotes { display: grid; gap: 40px 48px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
 .quote {
-  margin: 0; min-width: 0; display: grid; gap: 18px; align-content: start;
+  margin: 0; min-width: 0; display: grid; gap: 18px; grid-template-rows: 1fr auto;
   padding: 22px 0 0; position: relative;
 }
 /* the two card colours, green for the access card and blue for Google Wallet */
@@ -594,7 +594,7 @@ ol.setup p { margin: 0; color: var(--muted); }
 }
 @media (min-width: 760px) { .price { grid-template-columns: 260px 1fr; gap: 40px; padding: 36px 40px; } }
 .price > * { min-width: 0; }
-.amount { font: 600 clamp(3rem, 6vw, 4rem)/1 var(--display); letter-spacing: -.045em; }
+.amount { font: 600 clamp(2.25rem, 4vw, 2.75rem)/1 var(--display); letter-spacing: -.045em; }
 .amount-note { margin: 12px 0 0; color: var(--muted); font-size: .94rem; }
 .price-points { display: grid; gap: 16px; }
 .price-points p { margin: 0; color: var(--muted); max-width: 62ch; }
@@ -616,7 +616,7 @@ ol.setup p { margin: 0; color: var(--muted); }
 
 /* quieter technical band */
 .careful { margin: 56px 0 0; background: var(--quiet); border-top: 1px solid var(--line); padding-block: 44px 40px; font-size: 15px; }
-.careful h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.careful h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
 .careful .help-link { margin: 20px 0 0; color: var(--muted); }
 .careful h3.small { font: 600 1.05rem/1.35 var(--display); letter-spacing: -.015em; margin: 32px 0 12px; }
 .facts { width: 100%; border-collapse: collapse; }
@@ -771,8 +771,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
     <div class="hero">
       <div>
         <p class="tag" data-i18n-text="hero.tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works on Oppo ColorOS 17</p>
-        <h1 data-i18n="hero.h1"><span class="g">Access Card</span> by default. <span class="b">Google Wallet</span> when you need it. <span class="m">NFC on autopilot.</span></h1>
-        <p class="what" data-i18n="hero.what">An app for <b>Android 16 or newer</b>. Free for 14 days, then US$7.35 once.</p>
+        <h1 data-i18n="hero.h1">Use your <span class="g">Oppo Access Card</span> and <span class="b">Google Wallet</span> as you need them. <br><span class="m">No more trips to Settings.</span></h1>
       </div>
 
       <div class="stage demo" id="demo" data-slot="access" data-mode="normal">
@@ -866,6 +865,16 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 
   <div class="wrap">
 
+    <!--cmap-start-->
+    <section id="customers" class="cm" hidden aria-labelledby="customers-h">
+      <h2 id="customers-h" data-i18n="cm.h2">Where our customers come from</h2>
+      <!-- Land outlines: Natural Earth (public domain) via the world-atlas package (ISC), simplified. -->
+      <div class="cm-map" translate="no"><canvas aria-hidden="true"></canvas></div>
+      <p class="cm-tap" data-i18n="cm.tap">Tap a dot to see the country</p>
+      <ul class="cm-list" translate="no"></ul>
+    </section>
+<!--cmap-end-->
+
     <section class="said" aria-label="What a customer said" data-i18n-attr="aria-label:said.aria">
       <div class="quotes">
         <figure class="quote" dir="ltr">
@@ -878,16 +887,6 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
         </figure>
       </div>
     </section>
-
-    <!--cmap-start-->
-    <section id="customers" class="cm" hidden aria-labelledby="customers-h">
-      <h2 id="customers-h" data-i18n="cm.h2">Where our customers come from</h2>
-      <!-- Land outlines: Natural Earth (public domain) via the world-atlas package (ISC), simplified. -->
-      <div class="cm-map" translate="no"><canvas aria-hidden="true"></canvas></div>
-      <p class="cm-tap" data-i18n="cm.tap">Tap a dot to see the country</p>
-      <ul class="cm-list" translate="no"></ul>
-    </section>
-<!--cmap-end-->
 
     <section id="phones">
       <h2 data-i18n="phones.h2">Which phones it works on</h2>
@@ -1188,7 +1187,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   // under the other reader, the tour presses the other card's app, the app opens, the ghost
   // slides there, then the app closes. Then it starts again. Any move by the visitor stops it;
   // it comes back once the phone rests again. It never closes an app the visitor opened.
-  // On the first visit it starts as soon as "by default" is typed, so visitors see it early.
+  // On the first visit it starts as soon as the green card name is typed, so visitors see it early.
   var ghost = hold.querySelector(".ghost");
   var tourTimers = [], tourApp = null, touring = false, rounds = 0, onScreen = true;
   // keep the words between the screen edge and the phone, never under either. Worked out
@@ -1423,6 +1422,34 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   });
 })();
 
+// His rule (14 Nov 2026): the headline is never more than 4 lines, in any language and with the
+// two card names either way round. Where a language runs longer, its letters step down until it fits.
+(function () {
+  var h = document.querySelector(".hero h1");
+  if (!h) return;
+  function lines() { return h.getBoundingClientRect().height / parseFloat(getComputedStyle(h).lineHeight); }
+  function worst() {
+    var g = h.querySelector(".g"), b = h.querySelector(".b"), a = lines();
+    if (!g || !b || h.classList.contains("typing")) return a;
+    var gt = g.textContent, bt = b.textContent;
+    g.textContent = bt; b.textContent = gt;
+    var s = lines();
+    g.textContent = gt; b.textContent = bt;
+    return Math.max(a, s);
+  }
+  // .fitting turns off fades while measuring, or a size change would not show yet when it is read
+  function fit() {
+    h.classList.add("fitting");
+    h.style.fontSize = "";
+    var size = parseFloat(getComputedStyle(h).fontSize), min = size * 0.6;
+    while (worst() > 4.5 && size > min) { size -= 1; h.style.fontSize = size + "px"; }
+    h.classList.remove("fitting");
+  }
+  fit();
+  if (window.TSLang) TSLang.onChange(fit);
+  var t; addEventListener("resize", function () { clearTimeout(t); t = setTimeout(fit, 150); });
+})();
+
 // The headline types itself in, letter by letter, then "Access Card" and "Google Wallet"
 // roll into each other's places and back. The finished headline is the original markup,
 // so readers and search engines always get the real words.
@@ -1445,9 +1472,9 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
   var caret = document.createElement("span"); caret.className = "caret"; caret.setAttribute("aria-hidden", "true");
   h.setAttribute("aria-label", h.textContent);
   h.classList.add("typing");
-  // the demo beside it starts its tour once "by default" is typed (halfway if those words ever change)
-  var cue = h.textContent.indexOf("by default");
-  cue = cue < 0 ? Math.floor(chars.length / 2) : cue + "by default".length - 1;
+  // the demo beside it starts its tour once the green card name is typed (halfway if there is none)
+  var green = chars.filter(function (c) { return c.parentNode.classList.contains("g"); });
+  var cue = green.length ? chars.indexOf(green[green.length - 1]) : Math.floor(chars.length / 2);
   var i = 0, timer = null, typed = false, cued = false;
   (function next() {
     if (i < chars.length) {
