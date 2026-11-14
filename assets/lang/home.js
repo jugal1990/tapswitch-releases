@@ -102,16 +102,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Kini anda boleh memberitahu kami pengalaman anda menggunakan TapSwitch.",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "Kad anda kini bertukar semula dengan lebih pantas.",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "Bermula hari ketiga, sekeping kad kecil di skrin utama akan bertanya khabar aplikasi ini. Jawab dalam beberapa saat, atau tutup sahaja.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Pergi ke skrin utama atau buka aplikasi lain, dan kad biasa anda terus kembali.",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "Notis kemas kini kini sampai dengan lebih tepat dan konsisten.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Guna kad akses semasa telefon berkunci, dan kad biasa anda kembali sebaik sahaja skrin gelap.",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "Selepas kemas kini, pertukaran kad berjalan semula dengan sendirinya.",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "Butang Clear baharu pada skrin Activity mengosongkan senarai pertukaran lepas.",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "Sudah guna? Tetapan dan kod buka kunci anda kekal, tak perlu buat semula apa-apa.",
@@ -548,16 +556,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Sekarang Anda bisa menyampaikan kesan Anda selama memakai TapSwitch.",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "Kartu Anda kini kembali lebih cepat.",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "Mulai hari ketiga, sebuah kartu kecil di layar utama akan menanyakan bagaimana pengalaman Anda. Jawab dalam hitungan detik, atau tutup saja.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Buka layar utama atau aplikasi lain, dan kartu yang biasa Anda pakai langsung kembali.",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "Notifikasi update kini lebih andal sampai ke ponsel Anda.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Pakai kartu akses saat ponsel terkunci, dan kartu yang biasa Anda pakai kembali begitu layar padam.",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "Setelah pembaruan, peralihan kartu berjalan lagi dengan sendirinya.",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "Tombol Clear baru di layar Activity menghapus daftar peralihan sebelumnya.",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "Sudah memakainya? Pengaturan dan kode buka kunci Anda tetap aman, tidak perlu mengulang dari awal.",
@@ -994,16 +1010,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "ตอนนี้คุณบอกเราได้แล้วว่าใช้ TapSwitch แล้วเป็นอย่างไรบ้าง",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "การ์ดของคุณสลับกลับได้เร็วขึ้นแล้ว",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "พอถึงวันที่สาม จะมีการ์ดใบเล็กบนหน้าจอหลักถามว่าใช้งานเป็นอย่างไรบ้าง ตอบได้ในไม่กี่วินาที หรือจะปิดทิ้งก็ได้",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "กลับไปหน้าจอหลักหรือเปิดแอปอื่น การ์ดที่ใช้ประจำจะกลับมาทันที",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "การแจ้งเตือนอัปเดตมาถึงเสถียรขึ้น",
-   "en": "Update notices now arrive more reliably."
+   "t": "ใช้คีย์การ์ดตอนล็อกหน้าจออยู่ แล้วการ์ดที่ใช้ประจำจะกลับมาทันทีที่หน้าจอดับ",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "หลังอัปเดต การสลับการ์ดจะกลับมาทำงานเองโดยอัตโนมัติ",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "ปุ่ม Clear ใหม่ในหน้า Activity ใช้ล้างรายการการสลับที่ผ่านมา",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "ใช้อยู่แล้วใช่ไหม? การตั้งค่าและรหัสปลดล็อกยังอยู่ครบ ไม่ต้องตั้งใหม่",
@@ -1440,16 +1464,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Giờ đây bạn có thể chia sẻ với chúng tôi trải nghiệm dùng TapSwitch của mình.",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "Thẻ của bạn giờ chuyển lại nhanh hơn.",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "Từ ngày thứ ba, một thẻ nhỏ trên màn hình chính sẽ hỏi bạn dùng thấy thế nào. Trả lời chỉ mất vài giây, hoặc đóng lại cũng được.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Về màn hình chính hoặc mở ứng dụng khác, thẻ quen dùng của bạn sẽ quay lại ngay.",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "Thông báo cập nhật giờ đến ổn định hơn.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Dùng thẻ ra vào khi điện thoại đang khóa, thẻ quen dùng sẽ quay lại ngay khi màn hình tắt.",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "Sau khi cập nhật, việc chuyển thẻ tự hoạt động lại.",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "Nút Clear mới trên màn hình Activity xóa danh sách các lần chuyển trước đó.",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "Bạn đã dùng rồi? Cài đặt và mã mở khóa vẫn còn nguyên, không phải làm lại gì.",
@@ -1886,16 +1918,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Puwede mo nang ikuwento sa amin kung kumusta ang TapSwitch para sa iyo.",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "Mas mabilis nang bumabalik ang mga card mo.",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "Simula sa ikatlong araw mo, may lalabas na maliit na card sa home screen na magtatanong kung kumusta ang takbo. Sagutin ito sa ilang segundo, o isara na lang.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Pumunta sa home screen o magbukas ng ibang app, at agad na babalik ang karaniwang card mo.",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "Mas maaasahan na ngayon ang pagdating ng mga notice ng update.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Gamitin ang Access Card habang naka-lock ang phone, at babalik ang karaniwang card mo pagdilim ng screen.",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "Pagkatapos ng update, kusang gagana ulit ang pagpapalit ng card.",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "May bagong Clear button sa Activity screen na nagbubura ng listahan ng mga nakaraang palit.",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "Gamit mo na ito? Mananatili ang setup at unlock code mo, kaya wala nang uulitin.",
@@ -2332,16 +2372,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "现在，你可以告诉我们 TapSwitch 用得怎么样了。",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "卡片现在切换回来更快了。",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "从第三天起，主屏幕上会出现一张小卡片，问问你用得如何。几秒钟就能答完，不想答可以直接关掉。",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "回到主屏幕或打开其他应用，常用的卡会立即切回来。",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "更新通知现在送达更稳定了。",
-   "en": "Update notices now arrive more reliably."
+   "t": "锁屏状态下刷门禁卡后，屏幕一熄灭，常用的卡就会切回来。",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "更新后，卡片切换会自动恢复运行。",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "Activity 页面新增 Clear 按钮，可清空过往的切换记录。",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "已经在用了？设置和解锁码都会保留，不用重新来过。",
@@ -2778,16 +2826,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Ahora puedes contarnos qué tal te funciona TapSwitch.",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "Ahora tus tarjetas vuelven más rápido.",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "A partir de tu tercer día de uso, una tarjeta pequeña en la pantalla de inicio te pregunta cómo te va. Responde en unos segundos o ciérrala.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Ve a la pantalla de inicio o abre otra app, y tu tarjeta de siempre vuelve al instante.",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "Los avisos de actualización ahora llegan de forma más confiable.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Usa tu tarjeta de acceso con el teléfono bloqueado, y tu tarjeta de siempre vuelve en cuanto se apaga la pantalla.",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "Después de una actualización, el cambio de tarjetas vuelve a funcionar solo.",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "Un nuevo botón Clear en la pantalla Activity borra la lista de cambios anteriores.",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "¿Ya la usas? Tu configuración y tu código de desbloqueo se conservan, así que no tienes que volver a hacer nada.",
@@ -3224,16 +3280,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Możesz teraz dać nam znać, jak sprawdza się u Ciebie TapSwitch.",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "Karty wracają teraz szybciej.",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "Od trzeciego dnia na ekranie głównym pojawia się mała karta z pytaniem, jak Ci idzie. Odpowiedz w kilka sekund albo po prostu ją zamknij.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Przejdź na ekran główny lub otwórz inną aplikację, a Twoja zwykła karta od razu wróci.",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "Powiadomienia o aktualizacjach docierają teraz pewniej.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Użyj karty dostępu przy zablokowanym telefonie, a zwykła karta wróci, gdy tylko ekran zgaśnie.",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "Po aktualizacji przełączanie kart samo zaczyna działać ponownie.",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "Nowy przycisk Clear na ekranie Activity czyści listę wcześniejszych przełączeń.",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "Korzystasz już z aplikacji? Konfiguracja i kod odblokowujący zostają, nic nie trzeba ustawiać od nowa.",
@@ -3670,16 +3734,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Teď nám můžete dát vědět, jak vám TapSwitch slouží.",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "Karty se teď přepínají zpět rychleji.",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "Od třetího dne se vás na domovské obrazovce malá karta zeptá, jak se vám s aplikací daří. Odpovíte za pár vteřin, nebo ji prostě zavřete.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Přejděte na domovskou obrazovku nebo otevřete jinou aplikaci a vaše obvyklá karta se hned vrátí.",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "Upozornění na aktualizace teď docházejí spolehlivěji.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Když použijete přístupovou kartu na zamčeném telefonu, obvyklá karta se vrátí, jakmile displej zhasne.",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "Po aktualizaci se přepínání karet samo znovu spustí.",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "Nové tlačítko Clear na obrazovce Activity vymaže seznam dřívějších přepnutí.",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "Už aplikaci používáte? Nastavení i odemykací kód se zachovají, nic nemusíte dělat znovu.",
@@ -4116,16 +4188,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Теперь вы можете сообщить нам, как TapSwitch работает у вас.",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "Карты теперь переключаются обратно быстрее.",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "С третьего дня на главном экране появится небольшая карточка с вопросом, как идут дела. Ответьте за пару секунд или просто закройте её.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Перейдите на главный экран или откройте другое приложение, и ваша обычная карта сразу вернётся.",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "Уведомления об обновлениях теперь приходят надёжнее.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Воспользуйтесь пропуском на заблокированном телефоне, и обычная карта вернётся, как только погаснет экран.",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "После обновления переключение карт снова включается само.",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "Новая кнопка Clear на экране Activity очищает список прошлых переключений.",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "Уже пользуетесь? Настройки и код разблокировки сохранятся, ничего настраивать заново не нужно.",
@@ -4562,16 +4642,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "صار بإمكانك الآن أن تخبرنا كيف يعمل TapSwitch معك.",
-   "en": "You can now tell us how TapSwitch is working for you."
+   "t": "أصبحت بطاقاتك تعود الآن بشكل أسرع.",
+   "en": "Your cards now switch back faster."
   },
   "wn.li1": {
-   "t": "ابتداءً من اليوم الثالث، ستظهر لك على الشاشة الرئيسية بطاقة صغيرة تسألك عن تجربتك. أجب في ثوانٍ أو أغلقها.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "اذهب إلى الشاشة الرئيسية أو افتح تطبيقًا آخر، وستعود بطاقتك المعتادة فورًا.",
+   "en": "Go to the home screen or open another app, and your usual card comes back at once."
   },
   "wn.li2": {
-   "t": "صارت إشعارات التحديث تصلك بشكل أكثر موثوقية.",
-   "en": "Update notices now arrive more reliably."
+   "t": "استخدم بطاقة الدخول والهاتف مقفل، وستعود بطاقتك المعتادة بمجرد أن تنطفئ الشاشة.",
+   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+  },
+  "wn.li3": {
+   "t": "بعد التحديث، يعود تبديل البطاقات للعمل من تلقاء نفسه.",
+   "en": "After an update, card switching starts again by itself."
+  },
+  "wn.li4": {
+   "t": "زر Clear جديد في شاشة Activity يمسح قائمة التبديلات السابقة.",
+   "en": "A new Clear button on the Activity screen empties the list of past switches."
   },
   "wn.carry": {
    "t": "هل تستخدمه بالفعل؟ إعداداتك ورمز التفعيل يبقيان كما هما، فلا حاجة لإعادة أي شيء.",
