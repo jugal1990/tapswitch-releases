@@ -26,22 +26,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "Kenapa aplikasi Oppo Access Card minta dijadikan pilihan utama?",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "Adakah ia berfungsi pada telefon Samsung, Xiaomi atau Pixel?",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "Selamatkah ia, dan bolehkah ia melihat kad saya?",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "Kenapa ia tiada di Play Store?",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "Apa berlaku selepas percubaan percuma 14 hari?",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "Apakah semua cara untuk guna kad akses dan Google Wallet bersama?",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -88,6 +92,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "Boleh. Hidupkan <b>Reverse mode</b> dalam aplikasi. Google Wallet kemudian kekal sebagai pilihan utama, dan kad akses anda hanya mengambil alih semasa aplikasinya dibuka.",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "Dalam Reverse mode, Google Wallet ialah pilihan utama. Apabila anda membuka aplikasi Oppo Access Card, satu tetingkap timbul muncul meminta aplikasi itu dijadikan pilihan utama. Aplikasi Oppo melakukannya sendiri dan TapSwitch tidak dapat menghalangnya.",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "Biarkan tetingkap timbul itu pada skrin dan dekatkan telefon ke pembaca kad. TapSwitch sudah bertukar ke kad akses anda, jadi pintu akan terbuka.",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "TapSwitch dibina dan diuji pada telefon Oppo yang menggunakan ColorOS. Ia mungkin berfungsi pada telefon Android lain dengan Android 16 dan ke atas, tetapi belum ada yang diuji.",
@@ -220,22 +232,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "Kenapa aplikasi Oppo Access Card minta dijadikan pilihan utama?",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "Apakah bisa dipakai di ponsel Samsung, Xiaomi, atau Pixel?",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "Apakah aman, dan bisakah ia melihat kartu saya?",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "Kenapa tidak ada di Play Store?",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "Apa yang terjadi setelah gratis 14 hari selesai?",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "Apa saja cara memakai kartu akses dan Google Wallet bersamaan?",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -282,6 +298,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "Bisa. Aktifkan <b>Reverse mode</b> di aplikasi. Google Wallet akan tetap jadi default, dan kartu akses Anda hanya mengambil alih selama aplikasinya terbuka.",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "Di Reverse mode, Google Wallet jadi default. Saat Anda membuka aplikasi Oppo Access Card, muncul pop-up yang meminta aplikasi itu dijadikan default. Aplikasi Oppo melakukannya sendiri, dan TapSwitch tidak bisa mencegahnya.",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "Biarkan pop-up itu tetap di layar, lalu tempelkan ponsel ke pembaca kartu. TapSwitch sudah beralih ke kartu akses Anda, jadi pintunya terbuka.",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "TapSwitch dibuat dan diuji di ponsel Oppo dengan ColorOS. Mungkin bisa berjalan di ponsel Android lain dengan Android 16 ke atas, tapi belum ada yang diuji.",
@@ -414,22 +438,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "ทำไมแอป Oppo Access Card ถึงขอเป็นการ์ดหลัก?",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "ใช้กับ Samsung, Xiaomi หรือ Pixel ได้ไหม?",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "ปลอดภัยไหม แล้วแอปเห็นข้อมูลการ์ดของฉันหรือเปล่า?",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "ทำไมไม่มีใน Play Store?",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "หลังทดลองใช้ฟรี 14 วันแล้วจะเป็นอย่างไร?",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "มีวิธีไหนบ้างที่ใช้คีย์การ์ดกับ Google Wallet ร่วมกันได้?",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -476,6 +504,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "ได้ เปิด <b>Reverse mode</b> (โหมดกลับด้าน) ในแอป จากนั้น Google Wallet จะเป็นการ์ดหลัก และคีย์การ์ดจะทำงานแทนเฉพาะตอนที่เปิดแอปของมันอยู่",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "เมื่อเปิด Reverse mode อยู่ Google Wallet จะเป็นการ์ดหลัก พอคุณเปิดแอป Oppo Access Card แอปจะเด้งหน้าต่างขอให้ตั้งเป็นการ์ดหลัก แอปของ Oppo ทำแบบนี้เอง และ TapSwitch ห้ามไม่ได้",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "ปล่อยหน้าต่างนั้นไว้บนจอ แล้วแตะโทรศัพท์ที่เครื่องอ่านได้เลย TapSwitch สลับไปใช้คีย์การ์ดให้แล้ว ประตูจึงเปิด",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "TapSwitch สร้างและทดสอบบนโทรศัพท์ Oppo ที่ใช้ ColorOS อาจใช้ได้กับโทรศัพท์ Android รุ่นอื่นที่เป็น Android 16 ขึ้นไป แต่ยังไม่ได้ทดสอบเลยสักรุ่น",
@@ -608,22 +644,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "Vì sao ứng dụng Oppo Access Card yêu cầu được đặt làm mặc định?",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "Có dùng được trên điện thoại Samsung, Xiaomi hay Pixel không?",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "Có an toàn không, nó có thấy thẻ của tôi không?",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "Vì sao không có trên Play Store?",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "Sau 14 ngày dùng thử miễn phí thì sao?",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "Có những cách nào để dùng thẻ ra vào và Google Wallet cùng lúc?",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -670,6 +710,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "Được. Bật <b>Reverse mode</b> (chế độ đảo ngược) trong ứng dụng. Khi đó Google Wallet là mặc định, còn thẻ ra vào chỉ thay thế khi ứng dụng của nó đang mở.",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "Ở Reverse mode, Google Wallet là mặc định. Khi bạn mở ứng dụng Oppo Access Card, nó hiện một cửa sổ hỏi có muốn đặt nó làm mặc định không. Ứng dụng của Oppo tự làm việc này, TapSwitch không chặn được.",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "Cứ để cửa sổ đó trên màn hình và chạm điện thoại vào đầu đọc thẻ. TapSwitch đã chuyển sang thẻ ra vào của bạn rồi, nên cửa sẽ mở.",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "TapSwitch được làm ra và thử nghiệm trên điện thoại Oppo chạy ColorOS. Nó có thể chạy trên các điện thoại Android khác từ Android 16 trở lên, nhưng chưa thử trên máy nào.",
@@ -802,22 +850,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "Bakit humihingi ang Oppo Access Card app na gawin itong default?",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "Gumagana ba ito sa Samsung, Xiaomi o Pixel?",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "Ligtas ba ito, at nakikita ba nito ang mga card ko?",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "Bakit wala ito sa Play Store?",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "Ano ang mangyayari pagkatapos ng 14-day free trial?",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "Anu-ano ang mga paraan para magamit nang sabay ang access card at Google Wallet?",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -864,6 +916,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "Oo. I-on ang <b>Reverse mode</b> sa app. Google Wallet na ang mananatiling default, at papalit lang ang access card mo habang bukas ang app nito.",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "Sa Reverse mode, Google Wallet ang default. Pagbukas mo ng Oppo Access Card app, may lalabas na pop-up na humihiling na gawin itong default. Kusang ginagawa ito ng app ng Oppo, at hindi ito mapipigilan ng TapSwitch.",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "Hayaan lang ang pop-up sa screen at i-tap ang phone sa reader. Nakalipat na ang TapSwitch sa access card mo, kaya bubukas ang pinto.",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "Ginawa at sinubukan ang TapSwitch sa mga Oppo phone na naka-ColorOS. Baka gumana ito sa ibang Android phone na Android 16 pataas, pero wala pang nasusubukan.",
@@ -996,22 +1056,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "为什么 Oppo Access Card 应用会要求设为默认？",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "三星、小米或 Pixel 手机能用吗？",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "安全吗？它能看到我的卡片信息吗？",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "为什么不在 Play Store 上架？",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "14 天免费试用结束后会怎样？",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "门禁卡和 Google Wallet 一起用，总共有哪几种办法？",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -1058,6 +1122,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "可以。在应用里打开 <b>Reverse mode</b>（反向模式）。这样 Google Wallet 就一直是默认卡，只有打开门禁卡应用时，才由门禁卡接手。",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "在 Reverse mode 下，Google Wallet 是默认卡。打开 Oppo Access Card 应用时，它会弹窗询问是否设为默认。这是 Oppo 应用自己弹出的，TapSwitch 无法阻止。",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "不用管弹窗，让它留在屏幕上，直接把手机靠近读卡器。TapSwitch 已经切换到你的门禁卡，门会打开。",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "TapSwitch 是在运行 ColorOS 的 Oppo 手机上开发和测试的。其他 Android 16 及以上的安卓手机也许能用，但还没有测试过。",
@@ -1190,22 +1262,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "¿Por qué la app Oppo Access Card pide ser la predeterminada?",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "¿Funciona en celulares Samsung, Xiaomi o Pixel?",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "¿Es segura? ¿Puede ver mis tarjetas?",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "¿Por qué no está en Play Store?",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "¿Qué pasa cuando terminan los 14 días de prueba gratis?",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "¿De qué formas se pueden usar juntas una tarjeta de acceso y Google Wallet?",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -1252,6 +1328,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "Sí. Activa <b>Reverse mode</b> en la app. Así Google Wallet se queda como predeterminada y tu tarjeta de acceso toma el control solo mientras su app está abierta.",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "En Reverse mode, Google Wallet es la predeterminada. Cuando abres la app Oppo Access Card, aparece una ventana emergente que pide hacerla predeterminada. Lo hace la propia app de Oppo, y TapSwitch no puede evitarlo.",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "Deja la ventana en pantalla y acerca el teléfono al lector. TapSwitch ya cambió a tu tarjeta de acceso, así que la puerta se abre.",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "TapSwitch está hecha y probada en celulares Oppo con ColorOS. Puede que funcione en otros celulares con Android 16 o superior, pero todavía no se ha probado en ninguno.",
@@ -1384,22 +1468,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "Dlaczego aplikacja Oppo Access Card prosi, żeby ustawić ją jako domyślną?",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "Czy działa na telefonach Samsung, Xiaomi albo Pixel?",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "Czy to bezpieczne i czy widzi moje karty?",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "Dlaczego nie ma jej w Play Store?",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "Co się dzieje po 14-dniowym darmowym okresie próbnym?",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "Jakie są sposoby, żeby używać karty dostępu i Google Wallet razem?",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -1446,6 +1534,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "Tak. Włącz w aplikacji <b>Reverse mode</b>. Wtedy domyślny zostaje Google Wallet, a karta dostępu przejmuje NFC tylko wtedy, gdy otwarta jest jej aplikacja.",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "W Reverse mode domyślny jest Google Wallet. Gdy otworzysz aplikację Oppo Access Card, pojawi się okienko z prośbą, żeby ustawić ją jako domyślną. Aplikacja Oppo robi to sama i TapSwitch nie może tego zatrzymać.",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "Zostaw okienko na ekranie i przyłóż telefon do czytnika. TapSwitch już przełączył się na kartę dostępu, więc drzwi się otworzą.",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "TapSwitch powstał i jest testowany na telefonach Oppo z ColorOS. Może działać na innych telefonach z Androidem 16 lub nowszym, ale żaden nie był jeszcze testowany.",
@@ -1578,22 +1674,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "Proč aplikace Oppo Access Card chce být výchozí?",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "Funguje na telefonech Samsung, Xiaomi nebo Pixel?",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "Je bezpečná a vidí moje karty?",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "Proč není v Play Store?",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "Co se stane po 14denní zkušební době zdarma?",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "Jaké jsou možnosti, jak používat přístupovou kartu spolu s Google Wallet?",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -1640,6 +1740,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "Ano. Zapněte v aplikaci <b>Reverse mode</b>. Výchozí pak zůstane Google Wallet a přístupová karta převezme jen tehdy, když je otevřená její aplikace.",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "V Reverse mode je výchozí Google Wallet. Když otevřete aplikaci Oppo Access Card, objeví se okno s žádostí, aby se stala výchozí. Dělá to sama aplikace od Oppo a TapSwitch tomu zabránit nemůže.",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "Okno nechte na obrazovce a přiložte telefon ke čtečce. TapSwitch už přepnul na vaši přístupovou kartu, takže se dveře otevřou.",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "Aplikace TapSwitch je vyvíjená a testovaná na telefonech Oppo s ColorOS. Může fungovat i na jiných telefonech s Androidem 16 a novějším, žádný ale zatím vyzkoušený není.",
@@ -1772,22 +1880,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "Почему приложение Oppo Access Card просит назначить его по умолчанию?",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "Работает ли он на телефонах Samsung, Xiaomi или Pixel?",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "Это безопасно? Видит ли он мои карты?",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "Почему его нет в Play Store?",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "Что будет после 14 бесплатных дней?",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "Какими способами можно пользоваться пропуском и Google Wallet вместе?",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -1834,6 +1946,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "Да. Включите в приложении <b>обратный режим</b> (Reverse mode). Тогда по умолчанию остаётся Google Wallet, а пропуск срабатывает, только пока открыто его приложение.",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "В обратном режиме (Reverse mode) по умолчанию стоит Google Wallet. Когда вы открываете приложение Oppo Access Card, оно показывает окно с просьбой назначить его по умолчанию. Это делает само приложение Oppo, и TapSwitch не может этому помешать.",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "Оставьте окно на экране и приложите телефон к считывателю. TapSwitch уже переключился на ваш пропуск, поэтому дверь откроется.",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "TapSwitch создан и проверен на телефонах Oppo с ColorOS. Он может работать и на других телефонах с Android 16 и новее, но их пока не проверяли.",
@@ -1966,22 +2086,26 @@ if (window.TSLang) TSLang.add({
    "en": "Can Google Wallet be the default instead?"
   },
   "q5": {
+   "t": "لماذا يطلب تطبيق Oppo Access Card أن يكون هو الافتراضي؟",
+   "en": "Why does the Oppo Access Card app ask to be the default?"
+  },
+  "q6": {
    "t": "هل يعمل على هواتف Samsung أو Xiaomi أو Pixel؟",
    "en": "Does it work on Samsung, Xiaomi or Pixel phones?"
   },
-  "q6": {
+  "q7": {
    "t": "هل هو آمن، وهل يستطيع رؤية بطاقاتي؟",
    "en": "Is it safe, and can it see my cards?"
   },
-  "q7": {
+  "q8": {
    "t": "لماذا هو غير موجود على Play Store؟",
    "en": "Why is it not on the Play Store?"
   },
-  "q8": {
+  "q9": {
    "t": "ماذا يحدث بعد انتهاء التجربة المجانية لمدة 14 يومًا؟",
    "en": "What happens after the 14 day free trial?"
   },
-  "q9": {
+  "q10": {
    "t": "ما الطرق المتاحة لاستخدام بطاقة الدخول وGoogle Wallet معًا؟",
    "en": "What are all the ways to use an access card and Google Wallet together?"
   },
@@ -2028,6 +2152,14 @@ if (window.TSLang) TSLang.add({
   "a4.1": {
    "t": "نعم. شغّل <b>الوضع العكسي</b> (Reverse mode) في التطبيق. عندها يبقى Google Wallet هو الافتراضي، وتحلّ بطاقة الدخول محلّه فقط أثناء فتح تطبيقها.",
    "en": "Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+  },
+  "a10.1": {
+   "t": "في الوضع العكسي (Reverse mode)، يكون Google Wallet هو الافتراضي. عندما تفتح تطبيق Oppo Access Card، تظهر نافذة منبثقة تطلب جعله الافتراضي. تطبيق Oppo يفعل ذلك من تلقاء نفسه، ولا يستطيع TapSwitch منعه.",
+   "en": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it."
+  },
+  "a10.2": {
+   "t": "اترك النافذة المنبثقة على الشاشة وقرّب هاتفك من القارئ. انتقل TapSwitch بالفعل إلى بطاقة الدخول، لذا سيُفتح الباب.",
+   "en": "Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
   "a5.1": {
    "t": "تم تطوير TapSwitch وتجربته على هواتف Oppo بنظام ColorOS. قد يعمل على هواتف Android أخرى بنظام Android 16 أو أحدث، لكن لم تتم تجربة أي منها حتى الآن.",
