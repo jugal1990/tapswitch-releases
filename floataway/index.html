@@ -337,6 +337,23 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 .lt-green{color:#167F57}
 :root[data-theme="dark"] .lt-green{color:#57D3A0}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lt-green{color:#57D3A0}}
+
+/* customer quote: a magazine pull quote, the same shape as the other app page. A short blue bar on top,
+   the words large beside it, the name and phone underneath. More quotes sit side by side, up to three. */
+section.said { margin-top: 0; border-top: 0; padding-block: 36px 0; }
+.quotes { display: grid; gap: 40px 48px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+.quote {
+  margin: 0; min-width: 0; display: grid; gap: 18px; grid-template-rows: 1fr auto;
+  padding: 22px 0 0; position: relative;
+}
+.quote::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 56px; height: 3px; border-radius: 3px;
+  background: var(--blue);
+}
+.quote blockquote { margin: 0; font: 500 clamp(1.3rem, 2.6vw, 1.75rem)/1.35 var(--display); letter-spacing: -.025em; max-width: 40ch; }
+.quote figcaption { font-size: .94rem; color: var(--muted); }
+.quote .who { color: var(--ink); font-weight: 600; }
+.quote .who + .model::before { content: "\00B7"; margin: 0 8px; }
 </style>
 </head>
 <body id="top">
@@ -408,13 +425,12 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       </div>
       <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#safe">How to check it is safe</a></p>
       <div class="whatsnew" id="whats-new">
-        <h3>What's new in 1.1.0 <span translate="no" data-date>9 Nov 2026</span></h3>
-        <p class="lead" data-i18n="wn.lead">You can now tell us how FloatAway is working for you, plus three fixes.</p>
+        <h3>What's new in 1.1.1 <span translate="no" data-date>18 Nov 2026</span></h3>
+        <p class="lead" data-i18n="wn.lead">Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart.</p>
         <ul>
-          <li data-i18n="wn.li1">From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it.</li>
-          <li data-i18n="wn.li2">Switching quickly between apps in the sidebar now opens every one full screen.</li>
-          <li data-i18n="wn.li3">Folder changes now try again by themselves if the first try fails.</li>
-          <li data-i18n="wn.li4">Update notices now arrive more reliably.</li>
+          <li data-i18n="wn.li1">Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time.</li>
+          <li data-i18n="wn.li2">Google Calendar opens full screen even when it was already open in the background.</li>
+          <li data-i18n="wn.li3">After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier.</li>
         </ul>
       </div>
     </section>
@@ -448,6 +464,15 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       <ul class="cm-list" translate="no"></ul>
     </section>
 <!--cmap-end-->
+
+    <section class="said" aria-label="What a customer said" data-i18n-attr="aria-label:said.aria">
+      <div class="quotes">
+        <figure class="quote" dir="ltr">
+          <blockquote data-i18n="said.quote">A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.</blockquote>
+          <figcaption translate="no"><span class="who">Tom S.</span><span class="model">Oppo Find X9 Pro</span></figcaption>
+        </figure>
+      </div>
+    </section>
 
     <section id="phones">
       <h2 data-i18n="phones.h2">Which phones it works on</h2>
@@ -485,14 +510,14 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       <div class="facts-box">
         <table class="facts">
           <tr><th>File</th><td>FloatAway.apk</td></tr>
-          <tr><th>Latest version</th><td>1.1.0</td></tr>
+          <tr><th>Latest version</th><td>1.1.1</td></tr>
           <tr><th>Size</th><td>7.0 MB</td></tr>
-          <tr><th>Virus scan</th><td><span data-i18n="facts.scanResult">0 of 68 virus checkers flag it</span> <span translate="no">(VirusTotal, <span data-date>9 Nov 2026</span>).</span> <a href="https://www.virustotal.com/gui/file/c5baa48323cdf6be8829e290fe69714d929be3522a9702b6c87b6675b26e0f25" data-i18n="facts.report">See the full report</a></td></tr>
+          <tr><th>Virus scan</th><td><span data-i18n="facts.scanResult">0 of 67 virus checkers flag it</span> <span translate="no">(VirusTotal, <span data-date>18 Nov 2026</span>).</span> <a href="https://www.virustotal.com/gui/file/bb46f2c9aefed2d3fc704ef64cdd23e0fae90bcaef38069ea63290f244500c8e" data-i18n="facts.report">See the full report</a></td></tr>
         </table>
         <details class="tech">
           <summary data-i18n="facts.tech">Show technical details</summary>
           <table class="facts">
-            <tr><th>SHA-256 of the file</th><td class="hash">c5baa48323cdf6be8829e290fe69714d929be3522a9702b6c87b6675b26e0f25</td></tr>
+            <tr><th>SHA-256 of the file</th><td class="hash">bb46f2c9aefed2d3fc704ef64cdd23e0fae90bcaef38069ea63290f244500c8e</td></tr>
             <tr><th>Signed by</th><td class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</td></tr>
             <tr><td colspan="2" class="sig-note" data-i18n="facts.sigNote">Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it.</td></tr>
           </table>

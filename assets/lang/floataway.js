@@ -78,24 +78,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Kini anda boleh memberitahu kami pengalaman anda menggunakan FloatAway, serta tiga pembetulan.",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "Dua aplikasi yang sebelum ini kekal kecil kini dibuka dalam skrin penuh, dan FloatAway bermula lebih cepat selepas telefon dimulakan semula.",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "Bermula hari ketiga, sekeping kad kecil di skrin utama akan bertanya khabar aplikasi ini. Jawab dalam beberapa saat, atau tutup sahaja.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Aplikasi perbankan seperti Smart Banka, yang dibuka melalui skrin pemula tersembunyi, kini sentiasa dibuka dalam skrin penuh.",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "Bertukar dengan pantas antara aplikasi dalam sidebar kini membuka setiap satunya dalam skrin penuh.",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "Google Calendar dibuka dalam skrin penuh walaupun ia sudah terbuka di latar belakang.",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "Perubahan folder kini akan dicuba semula secara automatik jika cubaan pertama gagal.",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "Notis kemas kini kini sampai dengan lebih tepat dan konsisten.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Selepas telefon dimulakan semula, FloatAway bermula lebih cepat, jadi aplikasi sidebar anda dibuka dalam skrin penuh lebih awal.",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "Buka mana-mana folder pada telefon anda terus dari Smart Sidebar. Ciri ini baharu dan masih sedang diperhalusi.",
@@ -136,6 +132,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Ketik titik untuk lihat negaranya",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "Telefon yang disokong",
@@ -214,8 +214,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 daripada 68 pengimbas virus menandakannya",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 daripada 67 pengimbas virus menandakannya",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "Lihat laporan penuh",
@@ -421,6 +421,10 @@ if (window.TSLang) TSLang.add({
    "t": "Akses seumur hidup",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "Kata pelanggan",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "Boleh guna di ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -528,24 +532,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Sekarang Anda bisa menyampaikan kesan Anda selama memakai FloatAway, plus tiga perbaikan.",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "Dua aplikasi yang tadinya tetap kecil kini terbuka dalam layar penuh, dan FloatAway mulai lebih cepat setelah ponsel dinyalakan ulang.",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "Mulai hari ketiga, sebuah kartu kecil di layar utama akan menanyakan bagaimana pengalaman Anda. Jawab dalam hitungan detik, atau tutup saja.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Aplikasi perbankan seperti Smart Banka, yang terbuka lewat layar pembuka tersembunyi, kini selalu terbuka dalam layar penuh.",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "Berpindah cepat antar-aplikasi di sidebar kini membuka semuanya dalam layar penuh.",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "Google Calendar terbuka dalam layar penuh meski sudah terbuka di latar belakang.",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "Perubahan folder kini dicoba ulang otomatis kalau percobaan pertama gagal.",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "Notifikasi update kini lebih andal sampai ke ponsel Anda.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Setelah ponsel dinyalakan ulang, FloatAway mulai lebih cepat, sehingga aplikasi sidebar Anda terbuka dalam layar penuh lebih awal.",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "Buka folder mana pun di ponsel Anda langsung dari Smart Sidebar. Fitur ini masih baru dan terus disempurnakan.",
@@ -586,6 +586,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Ketuk titik untuk melihat negaranya",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "Ponsel yang didukung",
@@ -664,8 +668,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 dari 68 pemindai virus menandainya",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 dari 67 pemindai virus menandainya",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "Lihat laporan lengkap",
@@ -871,6 +875,10 @@ if (window.TSLang) TSLang.add({
    "t": "Akses seumur hidup",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "Kata pelanggan",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "Berfungsi di ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -978,24 +986,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "ตอนนี้คุณบอกเราได้แล้วว่าใช้ FloatAway แล้วเป็นอย่างไรบ้าง พร้อมการแก้ไขอีกสามจุด",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "แอปสองตัวที่เคยเปิดเป็นหน้าต่างเล็กตอนนี้เปิดเต็มจอแล้ว และ FloatAway เริ่มทำงานเร็วขึ้นหลังรีสตาร์ทโทรศัพท์",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "พอถึงวันที่สาม จะมีการ์ดใบเล็กบนหน้าจอหลักถามว่าใช้งานเป็นอย่างไรบ้าง ตอบได้ในไม่กี่วินาที หรือจะปิดทิ้งก็ได้",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "แอปธนาคารอย่าง Smart Banka ที่เปิดผ่านหน้าจอเริ่มต้นที่ซ่อนอยู่ ตอนนี้เปิดเต็มจอทุกครั้ง",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "สลับแอปในแถบด้านข้างเร็ว ๆ ก็เปิดแบบเต็มจอได้ครบทุกแอปแล้ว",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "Google Calendar เปิดเต็มจอแม้ว่าแอปจะเปิดค้างอยู่ในพื้นหลังแล้วก็ตาม",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "ถ้าเปลี่ยนโฟลเดอร์ไม่สำเร็จในครั้งแรก ตอนนี้แอปจะลองใหม่ให้เอง",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "การแจ้งเตือนอัปเดตมาถึงเสถียรขึ้น",
-   "en": "Update notices now arrive more reliably."
+   "t": "หลังรีสตาร์ทโทรศัพท์ FloatAway เริ่มทำงานเร็วขึ้น แอปในแถบด้านข้างจึงเปิดเต็มจอได้เร็วกว่าเดิม",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "เปิดโฟลเดอร์ไหนก็ได้ในโทรศัพท์ได้ตรงจาก Smart Sidebar ฟีเจอร์นี้ยังใหม่ และยังอยู่ระหว่างปรับปรุง",
@@ -1036,6 +1040,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "แตะจุดเพื่อดูว่าเป็นประเทศไหน",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "ใช้ได้กับโทรศัพท์รุ่นไหนบ้าง",
@@ -1114,8 +1122,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "โปรแกรมสแกนไวรัส 0 จาก 68 ตัวที่ตรวจพบปัญหา",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "โปรแกรมสแกนไวรัส 0 จาก 67 ตัวที่ตรวจพบปัญหา",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "ดูรายงานฉบับเต็ม",
@@ -1321,6 +1329,10 @@ if (window.TSLang) TSLang.add({
    "t": "ใช้ได้ตลอดชีพ",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "เสียงจากลูกค้า",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "รองรับ ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -1428,24 +1440,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Giờ đây bạn có thể chia sẻ với chúng tôi trải nghiệm dùng FloatAway của mình, kèm ba bản sửa lỗi.",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "Hai ứng dụng trước đây vẫn mở ở cửa sổ nhỏ nay mở toàn màn hình, và FloatAway khởi động sớm hơn sau khi khởi động lại điện thoại.",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "Từ ngày thứ ba, một thẻ nhỏ trên màn hình chính sẽ hỏi bạn dùng thấy thế nào. Trả lời chỉ mất vài giây, hoặc đóng lại cũng được.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Các ứng dụng ngân hàng như Smart Banka, vốn mở qua một màn hình khởi động ẩn, nay luôn mở toàn màn hình.",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "Chuyển nhanh giữa các ứng dụng trên thanh bên giờ đều mở toàn màn hình.",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "Google Calendar mở toàn màn hình ngay cả khi ứng dụng đã mở sẵn trong nền.",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "Nếu thay đổi thư mục không thành công ở lần đầu, ứng dụng giờ sẽ tự thử lại.",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "Thông báo cập nhật giờ đến ổn định hơn.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Sau khi khởi động lại điện thoại, FloatAway khởi động sớm hơn, nên các ứng dụng trên thanh bên mở toàn màn hình sớm hơn.",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "Mở bất kỳ thư mục nào trên điện thoại ngay từ Smart Sidebar. Tính năng này còn mới và vẫn đang được hoàn thiện.",
@@ -1486,6 +1494,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Chạm vào một chấm để xem tên quốc gia",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "Dùng được trên điện thoại nào",
@@ -1564,8 +1576,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 trên 68 trình quét virus báo có vấn đề",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 trên 67 trình quét virus báo có vấn đề",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "Xem báo cáo đầy đủ",
@@ -1771,6 +1783,10 @@ if (window.TSLang) TSLang.add({
    "t": "Dùng trọn đời",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "Khách hàng nói gì",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "Chạy được trên ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -1878,24 +1894,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Puwede mo nang ikuwento sa amin kung kumusta ang FloatAway para sa iyo, at may tatlo pang bug fix.",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "Dalawang app na dating nananatiling maliit ay bumubukas na ngayon sa buong screen, at mas mabilis nang nagsisimula ang FloatAway pagkatapos i-restart ang telepono.",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "Simula sa ikatlong araw mo, may lalabas na maliit na card sa home screen na magtatanong kung kumusta ang takbo. Sagutin ito sa ilang segundo, o isara na lang.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Ang mga banking app tulad ng Smart Banka, na bumubukas sa pamamagitan ng nakatagong panimulang screen, ay bumubukas na ngayon sa buong screen tuwing bubuksan.",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "Kapag mabilis kang nagpapalipat-lipat ng app sa sidebar, full screen na ang bawat isa.",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "Bumubukas sa buong screen ang Google Calendar kahit nakabukas na ito sa background.",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "Kusa nang inuulit ang pagbabago sa folder kapag pumalya ang unang subok.",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "Mas maaasahan na ngayon ang pagdating ng mga notice ng update.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Pagkatapos i-restart ang telepono, mas mabilis nang nagsisimula ang FloatAway, kaya mas maaga nang bumubukas sa buong screen ang mga app sa sidebar mo.",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "Buksan ang kahit anong folder sa phone mo nang diretso mula sa Smart Sidebar. Bago pa ang feature na ito at inaayos pa.",
@@ -1936,6 +1948,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "I-tap ang tuldok para makita ang bansa",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "Saang mga phone ito gumagana",
@@ -2014,8 +2030,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 sa 68 virus checker ang nag-flag dito",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 sa 67 virus checker ang nag-flag dito",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "Tingnan ang buong report",
@@ -2221,6 +2237,10 @@ if (window.TSLang) TSLang.add({
    "t": "Panghabambuhay na access",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "Sabi ng isang customer",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "Gumagana sa ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -2328,24 +2348,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "现在，你可以告诉我们 FloatAway 用得怎么样了，另外还修复了三个问题。",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "两个此前一直以小窗打开的应用现在会全屏打开，手机重启后 FloatAway 也会更早启动。",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "从第三天起，主屏幕上会出现一张小卡片，问问你用得如何。几秒钟就能答完，不想答可以直接关掉。",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "像 Smart Banka 这类通过隐藏启动页打开的银行应用，现在每次都会全屏打开。",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "在侧边栏里快速切换应用时，现在每个都会全屏打开。",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "即使 Google 日历已在后台打开，也会以全屏打开。",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "文件夹改动如果第一次没成功，现在会自动重试。",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "更新通知现在送达更稳定了。",
-   "en": "Update notices now arrive more reliably."
+   "t": "手机重启后 FloatAway 会更早启动，侧边栏里的应用也就能更早全屏打开。",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "直接从 Smart Sidebar 打开手机里的任意文件夹。这是新功能，还在持续打磨中。",
@@ -2386,6 +2402,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "点一下圆点，查看是哪个国家",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "支持哪些手机",
@@ -2464,8 +2484,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "68 款杀毒引擎中 0 款报毒",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "67 款杀毒引擎中 0 款报毒",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "查看完整报告",
@@ -2671,6 +2691,10 @@ if (window.TSLang) TSLang.add({
    "t": "终身使用",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "用户评价",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "适配 ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -2778,24 +2802,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Ahora puedes contarnos qué tal te funciona FloatAway, y además trae tres correcciones.",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "Dos apps que se quedaban en ventana pequeña ahora se abren en pantalla completa, y FloatAway arranca antes tras reiniciar el teléfono.",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "A partir de tu tercer día de uso, una tarjeta pequeña en la pantalla de inicio te pregunta cómo te va. Responde en unos segundos o ciérrala.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Las apps bancarias como Smart Banka, que se abren a través de una pantalla de inicio oculta, ahora se abren siempre en pantalla completa.",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "Si cambias rápido entre apps en la barra lateral, ahora todas se abren en pantalla completa.",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "Google Calendar se abre en pantalla completa incluso si ya estaba abierto en segundo plano.",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "Si un cambio en las carpetas falla la primera vez, ahora se vuelve a intentar solo.",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "Los avisos de actualización ahora llegan de forma más confiable.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Tras reiniciar el teléfono, FloatAway arranca antes, así que tus apps de la barra lateral se abren en pantalla completa más pronto.",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "Abre cualquier carpeta de tu celular directo desde la Smart Sidebar. Esta función es nueva y todavía la estamos puliendo.",
@@ -2836,6 +2856,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Toca un punto para ver el país",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "En qué celulares funciona",
@@ -2914,8 +2938,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 de 68 antivirus lo marcan",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 de 67 antivirus lo marcan",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "Ver el informe completo",
@@ -3121,6 +3145,10 @@ if (window.TSLang) TSLang.add({
    "t": "Acceso de por vida",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "Lo que dijo un cliente",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "Compatible con ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -3228,24 +3256,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Możesz teraz dać nam znać, jak sprawdza się u Ciebie FloatAway. Do tego trzy poprawki.",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "Dwie aplikacje, które otwierały się w małym oknie, teraz otwierają się na pełnym ekranie, a FloatAway startuje szybciej po ponownym uruchomieniu telefonu.",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "Od trzeciego dnia na ekranie głównym pojawia się mała karta z pytaniem, jak Ci idzie. Odpowiedz w kilka sekund albo po prostu ją zamknij.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Aplikacje bankowe takie jak Smart Banka, które otwierają się przez ukryty ekran startowy, teraz zawsze otwierają się na pełnym ekranie.",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "Szybkie przełączanie między aplikacjami na pasku bocznym otwiera teraz każdą z nich na pełnym ekranie.",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "Kalendarz Google otwiera się na pełnym ekranie, nawet jeśli był już otwarty w tle.",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "Jeśli zmiana folderu nie uda się za pierwszym razem, aplikacja sama spróbuje ponownie.",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "Powiadomienia o aktualizacjach docierają teraz pewniej.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Po ponownym uruchomieniu telefonu FloatAway startuje szybciej, więc aplikacje z paska bocznego wcześniej otwierają się na pełnym ekranie.",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "Otwieraj dowolny folder z telefonu prosto ze Smart Sidebar. To nowa funkcja i wciąż ją dopracowujemy.",
@@ -3286,6 +3310,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Stuknij kropkę, aby zobaczyć kraj",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "Na jakich telefonach działa",
@@ -3364,8 +3392,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 z 68 antywirusów zgłasza zagrożenie",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 z 67 antywirusów zgłasza zagrożenie",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "Zobacz pełny raport",
@@ -3571,6 +3599,10 @@ if (window.TSLang) TSLang.add({
    "t": "Dostęp na zawsze",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "Co powiedział klient",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "Działa na ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -3678,24 +3710,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Teď nám můžete dát vědět, jak vám FloatAway slouží. A k tomu tři opravy.",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "Dvě aplikace, které zůstávaly v malém okně, se teď otevírají na celou obrazovku a FloatAway se po restartu telefonu spouští dřív.",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "Od třetího dne se vás na domovské obrazovce malá karta zeptá, jak se vám s aplikací daří. Odpovíte za pár vteřin, nebo ji prostě zavřete.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Bankovní aplikace jako Smart Banka, které se otevírají přes skrytou úvodní obrazovku, se teď otevírají na celou obrazovku vždy.",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "Při rychlém přepínání mezi aplikacemi v postranním panelu se teď každá otevře přes celou obrazovku.",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "Kalendář Google se otevře na celou obrazovku, i když už byl otevřený na pozadí.",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "Když se změna složky napoprvé nepovede, aplikace to teď sama zkusí znovu.",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "Upozornění na aktualizace teď docházejí spolehlivěji.",
-   "en": "Update notices now arrive more reliably."
+   "t": "Po restartu telefonu se FloatAway spustí dřív, takže se aplikace z postranního panelu otevírají na celou obrazovku dřív.",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "Otevřete libovolnou složku v telefonu přímo ze Smart Sidebar. Funkce je nová a pořád ji ladíme.",
@@ -3736,6 +3764,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Klepněte na tečku a uvidíte zemi",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "Na kterých telefonech funguje",
@@ -3814,8 +3846,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 z 68 antivirů hlásí hrozbu",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 z 67 antivirů hlásí hrozbu",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "Zobrazit celou zprávu",
@@ -4021,6 +4053,10 @@ if (window.TSLang) TSLang.add({
    "t": "Přístup na doživotí",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "Co řekl zákazník",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "Funguje na ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -4128,24 +4164,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Теперь вы можете сообщить нам, как FloatAway работает у вас. Кроме того, в версии три исправления.",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "Два приложения, которые открывались в маленьком окне, теперь открываются на весь экран, а FloatAway запускается быстрее после перезагрузки телефона.",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "С третьего дня на главном экране появится небольшая карточка с вопросом, как идут дела. Ответьте за пару секунд или просто закройте её.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "Банковские приложения вроде Smart Banka, которые открываются через скрытый стартовый экран, теперь всегда открываются на весь экран.",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "Если быстро переключаться между приложениями на боковой панели, каждое теперь открывается на весь экран.",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "Google Календарь открывается на весь экран, даже если он уже был открыт в фоне.",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "Если папку не удалось изменить с первого раза, FloatAway теперь сам пробует снова.",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "Уведомления об обновлениях теперь приходят надёжнее.",
-   "en": "Update notices now arrive more reliably."
+   "t": "После перезагрузки телефона FloatAway запускается быстрее, поэтому приложения из боковой панели раньше открываются на весь экран.",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "Открывайте любую папку на телефоне прямо из Smart Sidebar. Функция новая и ещё дорабатывается.",
@@ -4186,6 +4218,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "Нажмите на точку, чтобы увидеть страну",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "На каких телефонах работает",
@@ -4264,8 +4300,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 из 68 антивирусов нашли угрозу",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 из 67 антивирусов нашли угрозу",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "Открыть полный отчёт",
@@ -4471,6 +4507,10 @@ if (window.TSLang) TSLang.add({
    "t": "Доступ навсегда",
    "en": "Lifetime access"
   },
+  "said.aria": {
+   "t": "Отзыв покупателя",
+   "en": "What a customer said"
+  },
   "hero.tag": {
    "t": "Работает на ColorOS 17",
    "en": "Works on ColorOS 17"
@@ -4578,24 +4618,20 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "صار بإمكانك الآن أن تخبرنا كيف يعمل FloatAway معك، إضافة إلى ثلاثة إصلاحات.",
-   "en": "You can now tell us how FloatAway is working for you, plus three fixes."
+   "t": "تطبيقان كانا يُفتحان في نافذة صغيرة يُفتحان الآن بملء الشاشة، ويبدأ FloatAway أسرع بعد إعادة تشغيل الهاتف.",
+   "en": "Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart."
   },
   "wn.li1": {
-   "t": "ابتداءً من اليوم الثالث، ستظهر لك على الشاشة الرئيسية بطاقة صغيرة تسألك عن تجربتك. أجب في ثوانٍ أو أغلقها.",
-   "en": "From your third day, a small card on the home screen asks how it is going. Answer in a few seconds, or close it."
+   "t": "تطبيقات البنوك مثل Smart Banka، التي تُفتح عبر شاشة بداية مخفية، تُفتح الآن بملء الشاشة في كل مرة.",
+   "en": "Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time."
   },
   "wn.li2": {
-   "t": "عند التنقل بسرعة بين التطبيقات في الشريط الجانبي، صار كل تطبيق يفتح بملء الشاشة.",
-   "en": "Switching quickly between apps in the sidebar now opens every one full screen."
+   "t": "يُفتح تقويم Google بملء الشاشة حتى لو كان مفتوحًا بالفعل في الخلفية.",
+   "en": "Google Calendar opens full screen even when it was already open in the background."
   },
   "wn.li3": {
-   "t": "إذا فشل تعديل المجلد في المحاولة الأولى، يعيد التطبيق المحاولة تلقائيًا.",
-   "en": "Folder changes now try again by themselves if the first try fails."
-  },
-  "wn.li4": {
-   "t": "صارت إشعارات التحديث تصلك بشكل أكثر موثوقية.",
-   "en": "Update notices now arrive more reliably."
+   "t": "بعد إعادة تشغيل الهاتف، يبدأ FloatAway أسرع، فتُفتح تطبيقات الشريط الجانبي بملء الشاشة في وقت أبكر.",
+   "en": "After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier."
   },
   "fo.sub": {
    "t": "افتح أي مجلد في هاتفك مباشرة من Smart Sidebar. هذه الميزة جديدة وما زلنا نحسّنها.",
@@ -4636,6 +4672,10 @@ if (window.TSLang) TSLang.add({
   "cm.tap": {
    "t": "اضغط على نقطة لمعرفة الدولة",
    "en": "Tap a dot to see the country"
+  },
+  "said.quote": {
+   "t": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.",
+   "en": "A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen."
   },
   "phones.h2": {
    "t": "على أي هواتف يعمل",
@@ -4714,8 +4754,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 من 68 برنامج مكافحة فيروسات يعتبره خطرًا",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 من 67 برنامج مكافحة فيروسات يعتبره خطرًا",
+   "en": "0 of 67 virus checkers flag it"
   },
   "facts.report": {
    "t": "اطّلع على التقرير الكامل",
@@ -4920,6 +4960,10 @@ if (window.TSLang) TSLang.add({
   "lt.aria": {
    "t": "مدى الحياة",
    "en": "Lifetime access"
+  },
+  "said.aria": {
+   "t": "رأي أحد العملاء",
+   "en": "What a customer said"
   },
   "hero.tag": {
    "t": "يعمل على ColorOS 17",
