@@ -98,28 +98,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Kad anda kini bertukar semula dengan lebih pantas.",
-   "en": "Your cards now switch back faster."
+   "t": "Tiada lagi pop-up \"Tetapkan sebagai lalai\" daripada aplikasi Access Card Oppo.",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "Pergi ke skrin utama atau buka aplikasi lain, dan kad biasa anda terus kembali.",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "Dalam Mod terbalik, buka kad akses anda dari skrin gelap dan ia terus sedia, tanpa pop-up.",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "Guna kad akses semasa telefon berkunci, dan kad biasa anda kembali sebaik sahaja skrin gelap.",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "Ketik \"Set it up\" pada kad baharu di skrin utama, kemudian buat langkah gandingan sekali sahaja. Selepas itu pop-up tidak muncul lagi, walaupun semasa telefon anda sedang digunakan.",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "Selepas kemas kini, pertukaran kad berjalan semula dengan sendirinya.",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "Butang Clear baharu pada skrin Activity mengosongkan senarai pertukaran lepas.",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "Mod biasa berfungsi seperti dahulu.",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "Sudah guna? Tetapan dan kod buka kunci anda kekal, tak perlu buat semula apa-apa.",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "Sudah guna? Tetapan dan kod buka kunci anda kekal. Hanya Mod terbalik pada Oppo perlukan satu langkah tambahan itu.",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "Dari mana pelanggan kami datang",
@@ -214,8 +210,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 daripada 68 pengimbas virus menandakannya",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 daripada 65 pengimbas virus menandakannya",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "Lihat laporan penuh",
@@ -256,6 +252,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "Supaya ia tahu bila Google Wallet atau aplikasi kad akses anda dibuka.",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "Papar di atas aplikasi lain",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "Untuk Mod terbalik pada Oppo sahaja. Satu tetingkap kecil yang tidak kelihatan, supaya telefon anda tidak menjeda TapSwitch semasa aplikasi kad akses dibuka. Tetingkap yang sama memberitahu TapSwitch bila jari menyentuh skrin, tetapi tidak di mana. Dengan itu ia boleh bertukar ke kad akses anda sejurus sebelum aplikasinya dibuka dari senarai aplikasi terkini. Jika anda tidak pernah ketik \"Set it up\", TapSwitch tidak akan memintanya.",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "Semak kemas kini sekali sehari",
@@ -548,28 +552,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Kartu Anda kini kembali lebih cepat.",
-   "en": "Your cards now switch back faster."
+   "t": "Tidak ada lagi pop-up \"Setel sebagai default\" dari aplikasi Access Card Oppo.",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "Buka layar utama atau aplikasi lain, dan kartu yang biasa Anda pakai langsung kembali.",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "Di Mode terbalik, buka kartu akses dari layar yang padam dan kartunya langsung siap, tanpa pop-up.",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "Pakai kartu akses saat ponsel terkunci, dan kartu yang biasa Anda pakai kembali begitu layar padam.",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "Ketuk \"Set it up\" di kartu baru pada layar utama, lalu lakukan langkah penyandingan sekali saja. Setelah itu pop-up tidak muncul lagi, juga saat ponsel sedang Anda pakai.",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "Setelah pembaruan, peralihan kartu berjalan lagi dengan sendirinya.",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "Tombol Clear baru di layar Activity menghapus daftar peralihan sebelumnya.",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "Mode normal tetap berjalan seperti biasa.",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "Sudah memakainya? Pengaturan dan kode buka kunci Anda tetap aman, tidak perlu mengulang dari awal.",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "Sudah memakainya? Pengaturan dan kode buka kunci Anda tetap aman. Hanya Mode terbalik di Oppo yang perlu satu langkah tambahan itu.",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "Dari mana saja pelanggan kami",
@@ -664,8 +664,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 dari 68 pemindai virus menandainya",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 dari 65 pemindai virus menandainya",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "Lihat laporan lengkap",
@@ -706,6 +706,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "Supaya tahu kapan Google Wallet atau aplikasi kartu akses Anda dibuka.",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "Tampil di atas aplikasi lain",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "Khusus Mode terbalik di Oppo. Sebuah jendela kecil yang tidak terlihat, agar ponsel tidak menjeda TapSwitch saat aplikasi kartu akses dibuka. Jendela yang sama memberi tahu TapSwitch saat jari menyentuh layar, tetapi tidak di bagian mana. Dengan begitu TapSwitch bisa beralih ke kartu akses sesaat sebelum aplikasinya terbuka dari daftar aplikasi terbaru. Jika Anda tidak pernah mengetuk \"Set it up\", TapSwitch tidak akan memintanya.",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "Mengecek update sekali sehari",
@@ -998,28 +1006,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "การ์ดของคุณสลับกลับได้เร็วขึ้นแล้ว",
-   "en": "Your cards now switch back faster."
+   "t": "ไม่มีป๊อปอัป \"ตั้งเป็นค่าเริ่มต้น\" จากแอป Access Card ของ Oppo อีกแล้ว",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "กลับไปหน้าจอหลักหรือเปิดแอปอื่น การ์ดที่ใช้ประจำจะกลับมาทันที",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "ในโหมดกลับด้าน เปิดคีย์การ์ดจากหน้าจอที่ดับอยู่ การ์ดก็พร้อมใช้ทันที ไม่มีป๊อปอัป",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "ใช้คีย์การ์ดตอนล็อกหน้าจออยู่ แล้วการ์ดที่ใช้ประจำจะกลับมาทันทีที่หน้าจอดับ",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "แตะ \"Set it up\" บนการ์ดใหม่ที่หน้าแรก แล้วทำขั้นตอนจับคู่เพียงครั้งเดียว หลังจากนั้นป๊อปอัปจะไม่ขึ้นอีก แม้ตอนที่กำลังใช้โทรศัพท์อยู่",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "หลังอัปเดต การสลับการ์ดจะกลับมาทำงานเองโดยอัตโนมัติ",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "ปุ่ม Clear ใหม่ในหน้า Activity ใช้ล้างรายการการสลับที่ผ่านมา",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "โหมดปกติใช้งานได้เหมือนเดิม",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "ใช้อยู่แล้วใช่ไหม? การตั้งค่าและรหัสปลดล็อกยังอยู่ครบ ไม่ต้องตั้งใหม่",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "ใช้อยู่แล้วใช่ไหม? การตั้งค่าและรหัสปลดล็อกยังอยู่ครบ มีแค่โหมดกลับด้านบน Oppo ที่ต้องทำเพิ่มอีกหนึ่งขั้นตอน",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "ลูกค้าของเรามาจากที่ไหนบ้าง",
@@ -1114,8 +1118,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "โปรแกรมสแกนไวรัส 0 จาก 68 ตัวที่ตรวจพบปัญหา",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "โปรแกรมสแกนไวรัส 0 จาก 65 ตัวที่ตรวจพบปัญหา",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "ดูรายงานฉบับเต็ม",
@@ -1156,6 +1160,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "เพื่อให้รู้ว่าตอนไหนที่ Google Wallet หรือแอปคีย์การ์ดเปิดอยู่",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "แสดงทับแอปอื่น",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "เฉพาะโหมดกลับด้านบน Oppo เท่านั้น เป็นหน้าต่างเล็กๆ ที่มองไม่เห็น เพื่อไม่ให้โทรศัพท์หยุด TapSwitch ไว้ตอนที่แอปคีย์การ์ดกำลังเปิด หน้าต่างเดียวกันนี้บอก TapSwitch ว่ามีนิ้วแตะหน้าจอ แต่ไม่บอกว่าแตะตรงไหน จึงสลับไปใช้คีย์การ์ดได้ก่อนที่แอปจะเปิดขึ้นจากรายการแอปล่าสุดเล็กน้อย ถ้าคุณไม่เคยแตะ \"Set it up\" TapSwitch ก็จะไม่ขอสิทธิ์นี้เลย",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "เช็กอัปเดตวันละครั้ง",
@@ -1448,28 +1460,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Thẻ của bạn giờ chuyển lại nhanh hơn.",
-   "en": "Your cards now switch back faster."
+   "t": "Không còn cửa sổ \"Đặt làm mặc định\" bật lên từ ứng dụng Access Card của Oppo.",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "Về màn hình chính hoặc mở ứng dụng khác, thẻ quen dùng của bạn sẽ quay lại ngay.",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "Ở Chế độ đảo ngược, mở thẻ ra vào từ màn hình đang tắt là thẻ sẵn sàng ngay, không có cửa sổ bật lên.",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "Dùng thẻ ra vào khi điện thoại đang khóa, thẻ quen dùng sẽ quay lại ngay khi màn hình tắt.",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "Chạm \"Set it up\" trên thẻ mới ở màn hình chính và làm bước ghép nối một lần. Sau đó cửa sổ bật lên không xuất hiện nữa, kể cả khi bạn đang dùng điện thoại.",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "Sau khi cập nhật, việc chuyển thẻ tự hoạt động lại.",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "Nút Clear mới trên màn hình Activity xóa danh sách các lần chuyển trước đó.",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "Chế độ thường vẫn hoạt động như trước.",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "Bạn đã dùng rồi? Cài đặt và mã mở khóa vẫn còn nguyên, không phải làm lại gì.",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "Bạn đã dùng rồi? Cài đặt và mã mở khóa vẫn còn nguyên. Chỉ Chế độ đảo ngược trên Oppo cần thêm một bước đó.",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "Khách hàng của chúng tôi đến từ đâu",
@@ -1564,8 +1572,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 trên 68 trình quét virus báo có vấn đề",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 trên 65 trình quét virus báo có vấn đề",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "Xem báo cáo đầy đủ",
@@ -1606,6 +1614,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "Để biết khi nào Google Wallet hoặc ứng dụng thẻ ra vào đang mở.",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "Hiển thị trên ứng dụng khác",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "Chỉ dùng cho Chế độ đảo ngược trên Oppo. Một cửa sổ nhỏ vô hình, để điện thoại không tạm dừng TapSwitch khi ứng dụng thẻ ra vào đang mở. Cũng cửa sổ này cho TapSwitch biết khi có ngón tay chạm vào màn hình, nhưng không biết chạm ở đâu. Nhờ vậy ứng dụng chuyển sang thẻ ra vào ngay trước khi bạn mở lại ứng dụng thẻ từ danh sách ứng dụng gần đây. Nếu bạn không bao giờ chạm \"Set it up\", TapSwitch sẽ không xin quyền này.",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "Kiểm tra cập nhật mỗi ngày một lần",
@@ -1898,28 +1914,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Mas mabilis nang bumabalik ang mga card mo.",
-   "en": "Your cards now switch back faster."
+   "t": "Wala nang \"Set as default\" na pop-up mula sa Access Card app ng Oppo.",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "Pumunta sa home screen o magbukas ng ibang app, at agad na babalik ang karaniwang card mo.",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "Sa Reverse mode, buksan ang access card mo mula sa madilim na screen at handa na ito agad, walang pop-up.",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "Gamitin ang Access Card habang naka-lock ang phone, at babalik ang karaniwang card mo pagdilim ng screen.",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "I-tap ang \"Set it up\" sa bagong card sa home screen at gawin ang pairing step nang isang beses. Pagkatapos nito, hindi na lalabas ang pop-up kahit gising at gamit mo ang phone.",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "Pagkatapos ng update, kusang gagana ulit ang pagpapalit ng card.",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "May bagong Clear button sa Activity screen na nagbubura ng listahan ng mga nakaraang palit.",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "Gumagana pa rin ang Normal mode gaya ng dati.",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "Gamit mo na ito? Mananatili ang setup at unlock code mo, kaya wala nang uulitin.",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "Gamit mo na ito? Mananatili ang setup at unlock code mo. Ang Reverse mode lang sa Oppo ang may isang dagdag na hakbang.",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "Saan galing ang mga customer namin",
@@ -2014,8 +2026,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 sa 68 virus checker ang nag-flag dito",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 sa 65 virus checker ang nag-flag dito",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "Tingnan ang buong report",
@@ -2056,6 +2068,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "Para malaman nito kung bukas ang Google Wallet o ang access card app mo.",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "Display over other apps",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "Para lang sa Reverse mode sa Oppo. Isang maliit at hindi nakikitang window, para hindi i-pause ng phone ang TapSwitch habang bumubukas ang access card app mo. Sinasabi rin ng window na ito sa TapSwitch kapag may daliring dumampi sa screen, pero hindi kung saan. Dahil dito, nakakalipat ito sa access card mo bago pa bumukas ang app mula sa Recent Apps. Kung hindi mo kailanman i-tap ang \"Set it up\", hindi ito hihingin ng TapSwitch.",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "Nagche-check ng update isang beses sa isang araw",
@@ -2348,28 +2368,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "卡片现在切换回来更快了。",
-   "en": "Your cards now switch back faster."
+   "t": "Oppo 门禁卡应用不会再弹出“设为默认”的提示了。",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "回到主屏幕或打开其他应用，常用的卡会立即切回来。",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "在反向模式下，熄屏时打开门禁卡，卡立刻就能用，不会弹窗。",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "锁屏状态下刷门禁卡后，屏幕一熄灭，常用的卡就会切回来。",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "在主屏幕的新卡片上点“Set it up”，做一次配对就好。之后即使手机亮着、正在使用，也不会再弹窗。",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "更新后，卡片切换会自动恢复运行。",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "Activity 页面新增 Clear 按钮，可清空过往的切换记录。",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "普通模式和以前一样。",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "已经在用了？设置和解锁码都会保留，不用重新来过。",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "已经在用了？设置和解锁码都会保留。只有 Oppo 上的反向模式需要多做这一步。",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "我们的用户来自哪里",
@@ -2464,8 +2480,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "68 款杀毒引擎中 0 款报毒",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "65 款杀毒引擎中 0 款报毒",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "查看完整报告",
@@ -2506,6 +2522,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "这样它才知道 Google Wallet 或门禁卡应用什么时候打开。",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "显示在其他应用上层",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "仅限 Oppo 上的反向模式。一个看不见的小窗口，让手机在门禁卡应用打开时不会暂停 TapSwitch。这个窗口还会告诉 TapSwitch 有手指碰了屏幕，但不会知道碰在哪里。这样，从最近任务里打开门禁卡应用时，它能提前一点切到门禁卡。如果你从没点过“Set it up”，TapSwitch 就不会申请这个权限。",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "每天检查一次更新",
@@ -2798,28 +2822,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Ahora tus tarjetas vuelven más rápido.",
-   "en": "Your cards now switch back faster."
+   "t": "Se acabó el aviso \"Establecer como predeterminada\" de la app Access Card de Oppo.",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "Ve a la pantalla de inicio o abre otra app, y tu tarjeta de siempre vuelve al instante.",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "En modo inverso, abre tu tarjeta de acceso con la pantalla apagada y estará lista al instante, sin aviso.",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "Usa tu tarjeta de acceso con el teléfono bloqueado, y tu tarjeta de siempre vuelve en cuanto se apaga la pantalla.",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "Toca \"Set it up\" en la nueva tarjeta de la pantalla de inicio y haz el paso de vinculación una sola vez. Después, el aviso no vuelve a salir, ni siquiera con el teléfono en uso.",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "Después de una actualización, el cambio de tarjetas vuelve a funcionar solo.",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "Un nuevo botón Clear en la pantalla Activity borra la lista de cambios anteriores.",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "El modo normal funciona como siempre.",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "¿Ya la usas? Tu configuración y tu código de desbloqueo se conservan, así que no tienes que volver a hacer nada.",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "¿Ya la usas? Tu configuración y tu código de desbloqueo se conservan. Solo el modo inverso en Oppo pide ese paso extra.",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "De dónde son nuestros clientes",
@@ -2914,8 +2934,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 de 68 antivirus lo marcan",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 de 65 antivirus lo marcan",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "Ver el informe completo",
@@ -2956,6 +2976,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "Así sabe cuándo está abierta Google Wallet o la app de tu tarjeta de acceso.",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "Mostrar sobre otras apps",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "Solo en modo inverso en Oppo. Una ventana diminuta e invisible, para que el teléfono no pause TapSwitch mientras se abre la app de tu tarjeta de acceso. Esa misma ventana avisa a TapSwitch cuando un dedo toca la pantalla, nunca dónde. Así puede pasar a tu tarjeta de acceso justo antes de que la app se abra desde Apps recientes. Si nunca tocas \"Set it up\", TapSwitch nunca lo pide.",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "Buscar actualizaciones una vez al día",
@@ -3248,28 +3276,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Karty wracają teraz szybciej.",
-   "en": "Your cards now switch back faster."
+   "t": "Koniec z okienkiem \"Ustaw jako domyślną\" z aplikacji Access Card od Oppo.",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "Przejdź na ekran główny lub otwórz inną aplikację, a Twoja zwykła karta od razu wróci.",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "W trybie odwróconym otwórz kartę dostępu przy wygaszonym ekranie, a będzie od razu gotowa, bez okienka.",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "Użyj karty dostępu przy zablokowanym telefonie, a zwykła karta wróci, gdy tylko ekran zgaśnie.",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "Stuknij \"Set it up\" na nowej karcie na ekranie głównym i raz przejdź parowanie. Potem okienko już się nie pojawia, także gdy korzystasz z telefonu.",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "Po aktualizacji przełączanie kart samo zaczyna działać ponownie.",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "Nowy przycisk Clear na ekranie Activity czyści listę wcześniejszych przełączeń.",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "Tryb normalny działa jak dotąd.",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "Korzystasz już z aplikacji? Konfiguracja i kod odblokowujący zostają, nic nie trzeba ustawiać od nowa.",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "Korzystasz już z aplikacji? Konfiguracja i kod odblokowujący zostają. Tylko tryb odwrócony na Oppo wymaga tego jednego dodatkowego kroku.",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "Skąd są nasi klienci",
@@ -3364,8 +3388,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 z 68 antywirusów zgłasza zagrożenie",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 z 65 antywirusów zgłasza zagrożenie",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "Zobacz pełny raport",
@@ -3406,6 +3430,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "Dzięki temu wie, kiedy otwarty jest Google Wallet albo aplikacja karty dostępu.",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "Wyświetlanie nad innymi aplikacjami",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "Tylko w trybie odwróconym na Oppo. Malutkie, niewidoczne okno, dzięki któremu telefon nie wstrzymuje TapSwitch, gdy otwiera się aplikacja karty dostępu. To samo okno mówi TapSwitch, kiedy palec dotyka ekranu, ale nigdy gdzie. Dzięki temu może przełączyć się na kartę dostępu chwilę przed otwarciem aplikacji z ostatnich aplikacji. Jeśli nigdy nie stukniesz \"Set it up\", TapSwitch nigdy o to nie poprosi.",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "Raz dziennie sprawdzać aktualizacje",
@@ -3698,28 +3730,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Karty se teď přepínají zpět rychleji.",
-   "en": "Your cards now switch back faster."
+   "t": "Žádné další okno \"Nastavit jako výchozí\" z aplikace Access Card od Oppa.",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "Přejděte na domovskou obrazovku nebo otevřete jinou aplikaci a vaše obvyklá karta se hned vrátí.",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "V obráceném režimu otevřete přístupovou kartu ze zhasnutého displeje a je hned připravená, bez okna.",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "Když použijete přístupovou kartu na zamčeném telefonu, obvyklá karta se vrátí, jakmile displej zhasne.",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "Klepněte na \"Set it up\" na nové kartě na domovské obrazovce a jednou projděte párování. Pak se okno už neobjeví, ani když telefon právě používáte.",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "Po aktualizaci se přepínání karet samo znovu spustí.",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "Nové tlačítko Clear na obrazovce Activity vymaže seznam dřívějších přepnutí.",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "Normální režim funguje jako dřív.",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "Už aplikaci používáte? Nastavení i odemykací kód se zachovají, nic nemusíte dělat znovu.",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "Už aplikaci používáte? Nastavení i odemykací kód se zachovají. Jen obrácený režim na Oppu chce ten jeden krok navíc.",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "Odkud jsou naši zákazníci",
@@ -3814,8 +3842,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 z 68 antivirů hlásí hrozbu",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 z 65 antivirů hlásí hrozbu",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "Zobrazit celou zprávu",
@@ -3856,6 +3884,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "Díky tomu ví, kdy je otevřená Google Wallet nebo aplikace přístupové karty.",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "Zobrazení přes jiné aplikace",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "Jen pro obrácený režim na Oppu. Malé neviditelné okno, aby telefon nepozastavil TapSwitch, zatímco se otevírá aplikace přístupové karty. Stejné okno dává TapSwitch vědět, když se prst dotkne displeje, nikdy kde. Díky tomu přepne na přístupovou kartu chvilku předtím, než se aplikace otevře z nedávných aplikací. Pokud na \"Set it up\" nikdy neklepnete, TapSwitch o to nikdy nepožádá.",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "Jednou denně hledat aktualizace",
@@ -4148,28 +4184,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "Карты теперь переключаются обратно быстрее.",
-   "en": "Your cards now switch back faster."
+   "t": "Больше никаких окон «Сделать картой по умолчанию» от приложения Access Card на Oppo.",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "Перейдите на главный экран или откройте другое приложение, и ваша обычная карта сразу вернётся.",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "В обратном режиме откройте пропуск при погасшем экране, и он сразу готов, без всплывающего окна.",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "Воспользуйтесь пропуском на заблокированном телефоне, и обычная карта вернётся, как только погаснет экран.",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "Нажмите «Set it up» на новой карточке на главном экране и один раз пройдите сопряжение. После этого окно больше не появляется, даже когда вы пользуетесь телефоном.",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "После обновления переключение карт снова включается само.",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "Новая кнопка Clear на экране Activity очищает список прошлых переключений.",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "Обычный режим работает как раньше.",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "Уже пользуетесь? Настройки и код разблокировки сохранятся, ничего настраивать заново не нужно.",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "Уже пользуетесь? Настройки и код разблокировки сохранятся. Лишний шаг нужен только в обратном режиме на Oppo.",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "Откуда наши покупатели",
@@ -4264,8 +4296,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 из 68 антивирусов нашли угрозу",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 из 65 антивирусов нашли угрозу",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "Открыть полный отчёт",
@@ -4306,6 +4338,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "Чтобы знать, когда открыт Google Wallet или приложение пропуска.",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "Поверх других приложений",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "Только для обратного режима на Oppo. Крошечное невидимое окно, чтобы телефон не приостанавливал TapSwitch, пока открывается приложение пропуска. Это же окно сообщает TapSwitch, что палец коснулся экрана, но никогда не сообщает где. Так приложение успевает переключиться на пропуск за мгновение до того, как он откроется из списка недавних приложений. Если вы никогда не нажмёте «Set it up», TapSwitch никогда не попросит это разрешение.",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "Раз в день проверять обновления",
@@ -4598,28 +4638,24 @@ if (window.TSLang) TSLang.add({
    "en": "What's new in"
   },
   "wn.lead": {
-   "t": "أصبحت بطاقاتك تعود الآن بشكل أسرع.",
-   "en": "Your cards now switch back faster."
+   "t": "لا مزيد من نافذة \"تعيين كافتراضي\" من تطبيق Access Card في Oppo.",
+   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
   },
   "wn.li1": {
-   "t": "اذهب إلى الشاشة الرئيسية أو افتح تطبيقًا آخر، وستعود بطاقتك المعتادة فورًا.",
-   "en": "Go to the home screen or open another app, and your usual card comes back at once."
+   "t": "في الوضع العكسي، افتح بطاقة الدخول والشاشة مطفأة وستكون جاهزة فورًا، بلا نافذة منبثقة.",
+   "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
   "wn.li2": {
-   "t": "استخدم بطاقة الدخول والهاتف مقفل، وستعود بطاقتك المعتادة بمجرد أن تنطفئ الشاشة.",
-   "en": "Use your access card with the phone locked, and your usual card comes back when the screen goes dark."
+   "t": "اضغط \"Set it up\" على البطاقة الجديدة في الشاشة الرئيسية وأكمل خطوة الاقتران مرة واحدة. بعدها لن تظهر النافذة مجددًا، حتى وأنت تستخدم الهاتف.",
+   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
-   "t": "بعد التحديث، يعود تبديل البطاقات للعمل من تلقاء نفسه.",
-   "en": "After an update, card switching starts again by itself."
-  },
-  "wn.li4": {
-   "t": "زر Clear جديد في شاشة Activity يمسح قائمة التبديلات السابقة.",
-   "en": "A new Clear button on the Activity screen empties the list of past switches."
+   "t": "الوضع العادي يعمل كما كان.",
+   "en": "Normal mode works as before."
   },
   "wn.carry": {
-   "t": "هل تستخدمه بالفعل؟ إعداداتك ورمز التفعيل يبقيان كما هما، فلا حاجة لإعادة أي شيء.",
-   "en": "Already using it? Your setup and unlock code carry over, so there is nothing to redo."
+   "t": "هل تستخدمه بالفعل؟ إعداداتك ورمز التفعيل يبقيان كما هما. الوضع العكسي على Oppo وحده يحتاج هذه الخطوة الإضافية.",
+   "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
   },
   "cm.h2": {
    "t": "من أين يأتي عملاؤنا",
@@ -4714,8 +4750,8 @@ if (window.TSLang) TSLang.add({
    "en": "Virus scan"
   },
   "facts.scanResult": {
-   "t": "0 من 68 برنامج مكافحة فيروسات يعتبره خطرًا",
-   "en": "0 of 68 virus checkers flag it"
+   "t": "0 من 65 برنامج مكافحة فيروسات يعتبره خطرًا",
+   "en": "0 of 65 virus checkers flag it"
   },
   "facts.report": {
    "t": "اطّلع على التقرير الكامل",
@@ -4756,6 +4792,14 @@ if (window.TSLang) TSLang.add({
   "perms.2.d": {
    "t": "حتى يعرف متى يكون Google Wallet أو تطبيق بطاقة الدخول مفتوحًا.",
    "en": "So it knows when Google Wallet or your access card app is open."
+  },
+  "perms.5.t": {
+   "t": "الظهور فوق التطبيقات الأخرى",
+   "en": "Display over other apps"
+  },
+  "perms.5.d": {
+   "t": "للوضع العكسي على Oppo فقط. نافذة صغيرة غير مرئية، حتى لا يوقف الهاتف TapSwitch مؤقتًا بينما يُفتح تطبيق بطاقة الدخول. وتخبر النافذة نفسها TapSwitch عندما يلمس إصبع الشاشة، دون أن تخبره أين. بهذا يتحول إلى بطاقة الدخول قبل لحظة من فتح التطبيق من قائمة التطبيقات الأخيرة. إذا لم تضغط \"Set it up\" أبدًا، فلن يطلب TapSwitch هذا الإذن.",
+   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
   },
   "perms.3.t": {
    "t": "البحث عن تحديثات مرة واحدة يوميًا",

@@ -849,15 +849,14 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
         </div>
         <p class="cta-note" data-i18n="cta.note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#careful">How to check it is safe</a></p>
         <div class="whatsnew" id="whats-new">
-          <h3>What's new in 3.2.0 <span translate="no" data-date>14 Nov 2026</span></h3>
-          <p class="lead" data-i18n="wn.lead">Your cards now switch back faster.</p>
+          <h3>What's new in 3.3.0 <span translate="no" data-date>19 Nov 2026</span></h3>
+          <p class="lead" data-i18n="wn.lead">No more "Set as default" pop-up from Oppo's Access Card app.</p>
           <ul>
-            <li data-i18n="wn.li1">Go to the home screen or open another app, and your usual card comes back at once.</li>
-            <li data-i18n="wn.li2">Use your access card with the phone locked, and your usual card comes back when the screen goes dark.</li>
-            <li data-i18n="wn.li3">After an update, card switching starts again by itself.</li>
-            <li data-i18n="wn.li4">A new Clear button on the Activity screen empties the list of past switches.</li>
+            <li data-i18n="wn.li1">In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up.</li>
+            <li data-i18n="wn.li2">Tap "Set it up" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too.</li>
+            <li data-i18n="wn.li3">Normal mode works as before.</li>
           </ul>
-          <p class="carry" data-i18n="wn.carry">Already using it? Your setup and unlock code carry over, so there is nothing to redo.</p>
+          <p class="carry" data-i18n="wn.carry">Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step.</p>
         </div>
       </section>
     </div>
@@ -928,14 +927,14 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       <div class="facts-box">
         <table class="facts">
           <tr><th>File</th><td>TapSwitch.apk</td></tr>
-          <tr><th>Latest version</th><td>3.2.0</td></tr>
+          <tr><th>Latest version</th><td>3.3.0</td></tr>
           <tr><th>Size</th><td>6.7 MB</td></tr>
-          <tr><th>Virus scan</th><td><span data-i18n="facts.scanResult">0 of 68 virus checkers flag it</span> <span translate="no">(VirusTotal, <span data-date>14 Nov 2026</span>).</span> <a href="https://www.virustotal.com/gui/file/f251236e95c2cdd84be187f3d2689465ec72a0970ce45505ee1fff747a8a01fc" data-i18n="facts.report">See the full report</a></td></tr>
+          <tr><th>Virus scan</th><td><span data-i18n="facts.scanResult">0 of 65 virus checkers flag it</span> <span translate="no">(VirusTotal, <span data-date>19 Nov 2026</span>).</span> <a href="https://www.virustotal.com/gui/file/44d60a5179cb1d79a9090bbfd4b123638fe42c50b9f19d70163851ce6aba5cbd" data-i18n="facts.report">See the full report</a></td></tr>
         </table>
         <details class="tech">
           <summary data-i18n="facts.tech">Show technical details</summary>
           <table class="facts">
-            <tr><th>SHA-256 of the file</th><td class="hash">f251236e95c2cdd84be187f3d2689465ec72a0970ce45505ee1fff747a8a01fc</td></tr>
+            <tr><th>SHA-256 of the file</th><td class="hash">44d60a5179cb1d79a9090bbfd4b123638fe42c50b9f19d70163851ce6aba5cbd</td></tr>
             <tr><th>Signed by</th><td class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</td></tr>
             <tr><td colspan="2" class="sig-note" data-i18n="facts.sigNote">Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it.</td></tr>
           </table>
@@ -946,6 +945,7 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
       <dl class="perms">
         <div class="perm"><dt data-i18n="perms.1.t">Change your default tap card</dt><dd data-i18n="perms.1.d">This is the only phone setting it changes, so the right card answers the reader.</dd></div>
         <div class="perm"><dt data-i18n="perms.2.t">See which app is on screen</dt><dd data-i18n="perms.2.d">So it knows when Google Wallet or your access card app is open.</dd></div>
+        <div class="perm"><dt data-i18n="perms.5.t">Display over other apps</dt><dd data-i18n="perms.5.d">Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap "Set it up", TapSwitch never asks for it.</dd></div>
         <div class="perm"><dt data-i18n="perms.3.t">Check for updates once a day</dt><dd data-i18n="perms.3.d">There is no account to sign in to.</dd></div>
         <div class="perm"><dt data-i18n="perms.4.t">Never sees your cards</dt><dd data-i18n="perms.4.d">It cannot read card numbers, payments or door logs. It only picks which app answers.</dd></div>
       </dl>
