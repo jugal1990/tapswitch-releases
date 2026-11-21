@@ -1,24 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-app="floataway">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <script>
-/* same light or dark choice as the rest of the site: the visitor's pick for this visit, else the clock */
+/* light by day (07:00 to 18:59 on the visitor's clock), dark at night, set before anything
+   paints. No button: the clock alone decides (his call, 20 Nov 2026). */
 (function () {
-  var t = null;
-  try { t = sessionStorage.getItem("ts-theme"); } catch (e) { /* storage blocked: use the clock */ }
-  if (t !== "light" && t !== "dark") { var h = new Date().getHours(); t = h >= 7 && h < 19 ? "light" : "dark"; }
+  var h = new Date().getHours(), t = h >= 7 && h < 19 ? "light" : "dark";
+  var q = location.search.match(/[?&]theme=(light|dark)\b/); if (q) t = q[1];
   document.documentElement.setAttribute("data-theme", t);
+  // gv5: a visitor who closed the Also from us strip before never sees it; gv6: Arabic (saved, a #ar address or the phone language) is right to left before anything draws
+  try { if (localStorage.getItem("xstrip-closed") === "1") document.documentElement.classList.add("xclosed"); } catch (e) {}
+  var L = ["en", "ms", "id", "th", "vi", "fil", "zh", "es", "pl", "cs", "ru", "ar"], g = location.hash.slice(1), s = null, a = { tl: "fil", "in": "id" };
+  try { s = localStorage.getItem("site-lang"); } catch (e) {}
+  if (L.indexOf(g) < 0) g = L.indexOf(s) >= 0 ? s : (function () { for (var i = 0, l = navigator.languages || [navigator.language || "en"]; i < l.length; i++) { var b = String(l[i]).toLowerCase().split("-")[0]; b = a[b] || b; if (L.indexOf(b) >= 0) return b; } return "en"; })();
+  if (g === "ar") document.documentElement.dir = "rtl";
+  if (g !== "en") { document.documentElement.classList.add("langwait"); setTimeout(function () { document.documentElement.classList.remove("langwait"); }, 1000); }   // no English first frame, then a jump when the language comes in; 1 s limit
+  document.documentElement.classList.add("js");
+  if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) && "IntersectionObserver" in window)
+    document.documentElement.classList.add("motion");
 })();
 </script>
 <title>Oppo Sidebar apps and folders, full screen</title>
-<meta name="description" content="On Oppo and ColorOS phones, apps from the Smart Sidebar open in a small floating window. FloatAway opens them full screen in one tap, like from the home screen. Free for 14 days.">
+<meta name="description" content="On Oppo and ColorOS phones, apps from the Smart Sidebar open in a small floating window. FloatAway opens them full screen in one tap, like from the home screen. Free for 14 days. Needs Android 16 or newer.">
 <link rel="canonical" href="https://tapswitch.fyi/floataway/">
 <meta property="og:url" content="https://tapswitch.fyi/floataway/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="FloatAway: Smart Sidebar apps, full screen">
-<meta property="og:description" content="Apps you open from Oppo's Smart Sidebar open full screen in one tap, not in a small floating window.">
+<meta property="og:description" content="Apps you open from Oppo’s Smart Sidebar open full screen in one tap, not in a small floating window.">
 <meta property="og:image" content="https://tapswitch.fyi/assets/floataway-social.png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
@@ -40,265 +50,411 @@
 <link rel="icon" href="/assets/floataway-logo.svg" type="image/svg+xml">
 <link rel="icon" href="/assets/floataway-logo-256.png" type="image/png" sizes="256x256">
 <link rel="apple-touch-icon" href="/assets/floataway-logo-256.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
-/* the home page's look: near white ground, hairline sections, white panels only where they mark an object */
+/* Option 3, "A dressed as the live site": site A's layout (centred hero, big product panel,
+   demo tile grid, A's section order) in the live site's tokens, type, radii, buttons and dark mode. */
 :root {
-  --bg: #FBFBFD; --panel: #FFFFFF; --ink: #1D1D1F; --muted: #6E6E73; --line: #D2D2D7; --quiet: #F5F5F7;
-  --blue: #2B6BDB; --action: #2B6BDB; --action-hover: #2160CB; --action-ink: #FFFFFF;
-  --shadow: rgba(0, 0, 0, .08);
-  --sun-y: 0%; --moon-y: 130%;
+  --bg: #FBFBFD; --panel: #FFFFFF; --ink: #1D1D1F; --muted: #6E6E73; --line: #D2D2D7; --fill: #E8E8ED;
+  --seg-on: #FFFFFF; --quiet: #F5F5F7; --green: #167F57; --green-card: #57D3A0; --blue: #2B6BDB; --blue-card: #5B9CFF;
+  --action: #2B6BDB; --action-hover: #2160CB; --action-ink: #FFFFFF; --shadow: rgba(0, 0, 0, .08);
+  --blue-text: #2160CB; /* the page's darker blue, for text on the pale blue boxes (4.5 to 1 and up) */
+  --ring: rgba(47, 116, 230, .75); --halo: rgba(47, 116, 230, .6);
+  --night: 0;
   --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter Tight", "Helvetica Neue", system-ui, sans-serif;
   --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter Tight", "Helvetica Neue", system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  /* derived from the live tokens: the live hairline ring, its panel shadow, a soft blue tint */
+  --edge: color-mix(in srgb, var(--line) 60%, transparent);
+  --lift: 0 0 0 1px var(--edge), 0 20px 40px -30px var(--shadow);
+  --tint: color-mix(in srgb, var(--blue) 8%, var(--panel));
+  --card-a: linear-gradient(140deg, #6BE0B0, #2A9E73); --card-w: linear-gradient(140deg, #6FA8FF, #2F66C2);
+  --ease: cubic-bezier(.2,.8,.2,1);
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0B0B0D; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C; --quiet: #111113;
-    --blue: #6FA8FF; --shadow: rgba(0, 0, 0, .6); --sun-y: 130%; --moon-y: 0%; color-scheme: dark;
+    --bg: #0B0B0D; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C;
+    --fill: #1D1D1F; --seg-on: #3A3A3C; --quiet: #111113;
+    --green: #57D3A0; --green-card: #57D3A0; --blue: #6FA8FF; --blue-card: #5B9CFF;
+    --action: #2B6BDB; --action-hover: #2160CB; --action-ink: #FFFFFF; --shadow: rgba(0, 0, 0, .6); --blue-text: #6FA8FF;
+    --night: 1;
+    --ring: rgba(111, 176, 255, .45); --halo: rgba(111, 176, 255, .7);
+    --tint: color-mix(in srgb, var(--blue) 10%, var(--panel));
+    color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0B0B0D; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C; --quiet: #111113;
-  --blue: #6FA8FF; --shadow: rgba(0, 0, 0, .6); --sun-y: 130%; --moon-y: 0%; color-scheme: dark;
+  --bg: #0B0B0D; --panel: #1D1D1F; --ink: #F5F5F7; --muted: #86868B; --line: #38383C;
+  --fill: #1D1D1F; --seg-on: #3A3A3C; --quiet: #111113;
+  --green: #57D3A0; --green-card: #57D3A0; --blue: #6FA8FF; --blue-card: #5B9CFF;
+  --action: #2B6BDB; --action-hover: #2160CB; --action-ink: #FFFFFF; --shadow: rgba(0, 0, 0, .6); --blue-text: #6FA8FF;
+  --night: 1;
+  --ring: rgba(111, 176, 255, .45); --halo: rgba(111, 176, 255, .7);
+  --tint: color-mix(in srgb, var(--blue) 10%, var(--panel));
+  color-scheme: dark;
 }
+
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.5 var(--body); letter-spacing: -.011em; -webkit-font-smoothing: antialiased; transition: background .3s ease, color .3s ease; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.5 var(--body); letter-spacing: -.011em; -webkit-font-smoothing: antialiased; overflow-x: hidden; transition: background .3s ease, color .3s ease; }
 .wrap { max-width: 1120px; margin: 0 auto; padding-inline: 16px; }
 @media (min-width: 700px) { .wrap { padding-inline: 32px; } }
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 :focus-visible { outline: 2px solid var(--action); outline-offset: 3px; border-radius: 8px; }
-h1, h2, h3 { text-wrap: balance; }
+img, video { display: block; max-width: 100%; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+i.ph, i.ph-fill, i.ph-bold { line-height: 1; }
 
-/* top bar: frosted glass that the page slides under */
-.bar {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
-  background: color-mix(in srgb, var(--bg) 72%, transparent);
+/* top bar + strip: the live bar, frosted glass */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--bg) 72%, transparent);
   -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
-}
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
 .bar .wrap { display: flex; align-items: center; gap: 10px; height: 52px; }
-.brand { color: inherit; text-decoration: none !important; display: flex; align-items: center; gap: 9px; font: 600 17px/1 var(--display); letter-spacing: -.02em; }
-.brand svg { width: 26px; height: 26px; }
+.brand { color: inherit; text-decoration: none !important; display: flex; align-items: center; gap: 9px; font: 600 17px/1 var(--display); letter-spacing: -.02em; flex-shrink: 0; }
+.brand img { width: 26px; height: 26px; }
 .spacer { flex: 1; }
-/* questions link in the top bar: a word on laptops and most phones, a round ? on phones under 380px wide.
-   On phones the language button keeps only its globe and flag to make room. Logo and sky never shrink. */
-.bar .brand, .bar .sky { flex-shrink: 0; }
-.qlink { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; height: 34px; padding: 0 10px;
-  border-radius: 999px; color: var(--ink); font: 500 .88rem var(--body); text-decoration: none !important; white-space: nowrap; }
+.qlink { flex-shrink: 0; display: inline-flex; align-items: center; height: 34px; padding: 0 10px; border-radius: 999px; color: var(--ink); font: 500 .88rem var(--body); text-decoration: none !important; white-space: nowrap; }
 .qlink:hover { background: var(--fill); }
-.qlink:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
-.qlink svg { display: none; width: 20px; height: 20px; }
+/* the live language button (lang.js adds its own look): on phones only the globe and flag show. Arabic runs right to left,
+   but the video, the phone mockups and the map keep their left to right drawing, as on the live page. */
 @media (max-width: 520px) { .bar #langBtn .now { display: none; } }
-@media (max-width: 379px) {
-  .qlink { width: 34px; padding: 0; }
-  .qlink svg { display: block; }
-  .qlink span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-}
-/* the Russian words are longer, so its ? shows from 410px down */
-@media (max-width: 409px) {
-  html[lang="ru"] .qlink { width: 34px; padding: 0; }
-  html[lang="ru"] .qlink svg { display: block; }
-  html[lang="ru"] .qlink span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-}
-
-/* the light or dark switch, as on the home page: the sun or moon rises over the bar's bottom edge */
-.sky {
-  position: relative; width: 34px; height: 30px; margin-left: 4px; padding: 0; border: 0;
-  box-sizing: content-box; border-bottom: 7px solid transparent; border-top: 7px solid transparent; background-clip: padding-box;
-  background: none; cursor: pointer; overflow: hidden; border-radius: 8px 8px 0 0;
-}
-.sky svg { position: absolute; inset: 3px 5px 3px; width: 24px; height: 24px; }
-.sky .sun { transform: translateY(var(--sun-y)); transition: transform .55s cubic-bezier(.2,.8,.3,1) .5s; }
-.sky .moon { transform: translateY(var(--moon-y)); transition: transform .45s cubic-bezier(.6,0,.9,.4); }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .sky .sun { transition: transform .45s cubic-bezier(.6,0,.9,.4); }
-  :root:not([data-theme="light"]) .sky .moon { transition: transform .55s cubic-bezier(.2,.8,.3,1) .5s; }
-}
-:root[data-theme="dark"] .sky .sun { transition: transform .45s cubic-bezier(.6,0,.9,.4); }
-:root[data-theme="dark"] .sky .moon { transition: transform .55s cubic-bezier(.2,.8,.3,1) .5s; }
-.sky .rays { transform-box: view-box; transform-origin: 12px 12px; animation: rays 24s linear infinite; }
-@keyframes rays { to { transform: rotate(360deg); } }
-.sky .star { animation: twinkle 2.4s ease-in-out infinite; }
-.sky .star + .star { animation-delay: 1.2s; }
-@keyframes twinkle { 50% { opacity: .25; } }
-.wash { position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0; }
-.dusk .wash { background: linear-gradient(180deg, rgba(255,138,76,.38), rgba(128,70,170,.26) 55%, rgba(20,20,60,.12)); animation: wash 1.4s ease-in-out; }
-.dawn .wash { background: linear-gradient(180deg, rgba(255,196,120,.42), rgba(255,140,170,.24) 55%, rgba(255,255,255,.1)); animation: wash 1.4s ease-in-out; }
-@keyframes wash { 0%, 100% { opacity: 0; } 40% { opacity: 1; } }
+/* d8 (owner 20 Nov 2026): header links, the strip and the tabs are at least 44 px tall to tap; the bar stays 52 px */
+.brand { min-height: 44px; } .qlink { height: 44px; } .bar #langBtn { height: 44px; } .bar .btn { min-height: 44px; }
+.xstrip a { min-height: 44px; } .ftabs button { min-height: 44px; }
+:root[dir="rtl"] .vslot, :root[dir="rtl"] .tdemo, :root[dir="rtl"] .cm-map { direction: ltr; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 1s; animation-timing-function: cubic-bezier(.4, 0, .2, 1); }
-.sky { view-transition-name: sky; }
-::view-transition-old(sky) { display: none; }
-::view-transition-new(sky) { animation: none; }
-.fading, .fading :not(.sky, .sky *) { transition: background-color .7s ease, color .7s ease, border-color .7s ease, box-shadow .7s ease !important; }
-
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  font: 500 17px/1 var(--body); letter-spacing: -.01em; padding: 14px 26px;
-  border-radius: 999px; background: var(--action); color: var(--action-ink);
-  text-decoration: none; white-space: nowrap; transition: background .2s ease;
-}
-a.btn[href]:hover { background: var(--action-hover); text-decoration: none; }
-/* until launch day the button is a label: a quiet outline, no pointer, nothing to press */
-.btn:not([href]) { background: transparent; color: var(--muted); box-shadow: 0 0 0 1px var(--line) inset; cursor: default; }
-
-/* hero: the logo and words on the left, the demo clip on the right; on a phone, words then clip */
-.hero { display: grid; gap: 36px; align-items: start; padding-block: 36px 0; }
-.hero > * { min-width: 0; }
-@media (min-width: 860px) { .hero { grid-template-columns: 1.2fr .8fr; gap: 56px; padding-block: 40px 0; } }
-.hero h1 { font: 600 clamp(2.25rem, 4vw, 3.2rem)/1.04 var(--display); letter-spacing: -.045em; margin: 0; }
-.lede { margin: 18px 0 0; font-size: 1.1rem; color: var(--muted); max-width: 46ch; }
-.what { margin: 14px 0 0; font-size: .88rem; color: var(--muted); max-width: 46ch; }
-.what b { color: inherit; font-weight: 500; }
-.hero .cta-row { margin-top: 28px; }
-.clip {
-  display: block; width: 100%; height: auto; max-width: 520px; aspect-ratio: 1; margin-inline: auto;
-  border-radius: 28px; background: #EEF1F6;
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent), 0 20px 40px -30px var(--shadow);
-}
-
-/* sections: generous air, divided by hairlines rather than boxes */
-section { padding-block: 40px 0; }
-section + section { margin-top: 40px; border-top: 1px solid var(--line); }
-@media (min-width: 760px) { section { padding-block: 40px 0; } section + section { margin-top: 40px; } }
-h2 { font: 600 clamp(1.9rem, 4.2vw, 3rem)/1.08 var(--display); letter-spacing: -.035em; margin: 0 0 14px; }
-.sub { margin: 0 0 24px; font-size: 1.1rem; color: var(--muted); max-width: 56ch; }
-.sub + p { margin: 0; color: var(--muted); max-width: 62ch; }
-.sub + p + ol.setup { margin-top: 24px; }
-
-/* phones: the heading on the left, its two short lines on the right, so the row has no empty half */
-@media (min-width: 760px) {
-  #phones { display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; align-content: start; }
-  #phones h2 { grid-row: span 2; margin: 0; }
-  #phones .sub { margin: 6px 0 12px; }
-}
-
-/* setup: four numbered steps on hairlines, no boxes */
-ol.setup { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; column-gap: 48px; }
-@media (min-width: 760px) { ol.setup { grid-template-columns: 1fr 1fr; } }
-ol.setup li { counter-increment: s; border-top: 1px solid var(--line); padding: 16px 0 18px 56px; position: relative; min-width: 0; }
-ol.setup li::before {
-  content: counter(s); position: absolute; left: 0; top: 14px;
-  width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
-  box-shadow: 0 0 0 1px var(--line) inset; color: var(--blue); font: 600 16px/1 var(--display);
-}
-ol.setup h3 { margin: 4px 0 6px; font: 600 1.15rem/1.3 var(--display); letter-spacing: -.02em; }
-ol.setup p { margin: 0; color: var(--muted); }
-
-.price {
-  display: grid; gap: 24px; background: var(--panel); border-radius: 28px;
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent), 0 20px 40px -30px var(--shadow);
-  padding: 32px 26px;
-}
-@media (min-width: 760px) { .price { grid-template-columns: 260px 1fr; gap: 40px; padding: 36px 40px; } }
-.price > * { min-width: 0; }
-.amount { font: 600 clamp(3rem, 6vw, 4rem)/1 var(--display); letter-spacing: -.045em; }
-.amount-note { margin: 12px 0 0; color: var(--muted); font-size: .94rem; }
-.price-points { display: grid; gap: 16px; }
-.price-points p { margin: 0; color: var(--muted); max-width: 62ch; }
-.price-points strong { color: var(--ink); font-weight: 600; }
-.cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0 0; }
-.btn-plain { background: transparent; color: var(--blue); box-shadow: 0 0 0 1px var(--action) inset; }
-a.btn-plain[href]:hover { background: var(--action); color: var(--action-ink); }
-.cta-note { margin: 12px 0 0; font-size: .9rem; color: var(--muted); max-width: 62ch; }
-/* what's new in the newest version, under the download button */
-.whatsnew { margin: 24px 0 0; padding: 20px 22px 18px; background: var(--quiet); border-radius: 18px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent); max-width: 62ch; }
-.whatsnew h3 { margin: 0; font: 600 1.05rem/1.35 var(--display); letter-spacing: -.015em; }
-.whatsnew h3 span { margin-left: 8px; font: 400 .85rem var(--body); color: var(--muted); }
-.whatsnew .lead { margin: 6px 0 0; font-weight: 600; color: var(--blue); }
-.whatsnew ul { margin: 10px 0 0; padding-left: 20px; }
-.whatsnew li + li { margin-top: 6px; }
-.whatsnew .carry { margin: 12px 0 0; font-size: .9rem; color: var(--muted); }
-
-/* safety: the file's facts in one quiet box, the long codes folded away */
-.facts-box { overflow-x: auto; border-radius: 18px; background: var(--panel); box-shadow: 0 0 0 1px color-mix(in srgb, var(--line) 60%, transparent); }
-.facts { width: 100%; border-collapse: collapse; }
-.facts th, .facts td { text-align: left; padding: 13px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
-.facts tr:last-child th, .facts tr:last-child td { border-bottom: 0; }
-.facts th { font-weight: 400; color: var(--muted); width: 170px; white-space: nowrap; }
-.facts td.sig-note { padding-top: 0; font-size: .82rem; color: var(--muted); }
-.facts tr:has(+ tr > .sig-note) th, .facts tr:has(+ tr > .sig-note) td { border-bottom: 0; }
-.tech { border-top: 1px solid var(--line); }
-.tech summary { padding: 13px 20px; cursor: pointer; color: var(--blue); list-style: none; }
-.tech summary::-webkit-details-marker { display: none; }
-.tech summary::after { content: " +"; }
-.tech[open] summary::after { content: " \2212"; }
-.tech .facts { border-top: 1px solid var(--line); }
-.hash { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .76rem; word-break: break-all; }
-@media (max-width: 520px) { .facts th { width: auto; white-space: normal; } }
-h3.small { font: 600 1.05rem/1.35 var(--display); letter-spacing: -.015em; margin: 32px 0 12px; }
-.perms { display: grid; gap: 0; margin: 0; }
-@media (min-width: 760px) { .perms { grid-template-columns: 1fr 1fr; column-gap: 32px; } }
-.perm { padding: 14px 0; border-bottom: 1px solid var(--line); min-width: 0; }
-.perm dt { font-weight: 600; }
-.perm dd { margin: 4px 0 0; color: var(--muted); }
-/* safety section in the smaller size, like the sister page */
-#safe { font-size: 15px; background: var(--quiet); padding-block: 44px 40px; box-shadow: 0 0 0 100vmax var(--quiet); clip-path: inset(0 -100vmax); }
-#safe h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
-#safe .help-link { margin: 20px 0 0; color: var(--muted); }
-.limits { margin: 0; padding: 0 0 0 20px; display: grid; gap: 10px; color: var(--muted); max-width: 76ch; }
-.limits b { color: var(--ink); font-weight: 600; }
-
-/* questions: plain question and answer pairs on hairlines */
-
-.closing { margin: 40px 0 0; font: 600 clamp(1.3rem, 2.6vw, 1.6rem)/1.3 var(--display); letter-spacing: -.02em; max-width: 34ch; }
-.closing span { display: block; margin-top: 6px; font: 400 1rem/1.5 var(--body); letter-spacing: -.011em; color: var(--muted); }
-.also { margin: 40px 0 0; padding: 24px 0 40px; border-top: 1px solid var(--line); color: var(--muted); }
-
-.tried { display: flex; gap: 18px; align-items: flex-start; margin: 40px 0 48px; padding: 22px 22px 24px; background: color-mix(in srgb, var(--blue) 8%, var(--bg)); border-radius: 18px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 18%, transparent); max-width: 62ch; }
-.tried > svg { width: 56px; height: 56px; flex: none; }
-.tried h2 { margin: 0; font: 600 clamp(1.25rem, 2.4vw, 1.5rem)/1.3 var(--display); letter-spacing: -.02em; }
-.tried .lead { margin: 6px 0 0; font-weight: 600; color: var(--blue); }
-.tried p { margin: 8px 0 0; }
-.tried .btn { margin-top: 16px; }
-@media (max-width: 480px) { .tried { flex-direction: column; gap: 12px; padding: 20px; } .tried > svg { width: 44px; height: 44px; } }
-
-footer { padding-block: 16px 32px; color: var(--muted); font-size: .8rem; line-height: 1.55; background: var(--quiet); }
-footer .wrap::before { content: ""; display: block; border-top: 1px solid var(--line); margin-bottom: 22px; }
-footer p { margin: 0 0 8px; max-width: 72ch; }
-
-@media (prefers-reduced-motion: reduce) {
-  * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
-}
-/* tag above the headline: news a visitor should see first */
-.tag { display: inline-flex; align-items: center; gap: 7px; margin: 0 0 16px; padding: 6px 12px 6px 10px; border-radius: 999px; font: 500 .84rem/1 var(--body); letter-spacing: -.005em; color: var(--blue); background: color-mix(in srgb, var(--blue) 10%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 24%, transparent) inset; }
-.tag svg { width: 15px; height: 15px; flex: none; }
-/* the other app from the same maker: one card that opens its page */
-/* other-app strip: pinned on top of the bar, closed for good on that browser; --strip-h keeps sticky things below it */
-html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
+.bar .btn { margin-left: 6px; }
 .xstrip { display: flex; align-items: center; background: color-mix(in srgb, var(--blue) 12%, var(--bg)); border-bottom: 1px solid color-mix(in srgb, var(--blue) 18%, transparent); }
 .xstrip a { flex: 1; min-width: 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4px 10px; padding: 8px 0 8px 44px; color: inherit; font-size: 14.5px; text-align: center; text-decoration: none !important; }
-.xstrip a > svg { width: 22px; height: 22px; flex: none; }
+.xstrip a img { width: 22px; height: 22px; flex: none; }
 .xstrip b { font-weight: 600; }
-.xstrip .go { color: var(--blue); font-weight: 500; white-space: nowrap; }
+.xstrip .sh { display: none; }
+@media (max-width: 1023px) { .xstrip a > span:not(.sh) { display: none; } .xstrip .sh { display: inline; } .xstrip a { flex-wrap: nowrap; } }
+.xstrip .go { color: var(--blue-text); font-weight: 500; white-space: nowrap; }
 .xstrip a:hover .go { text-decoration: underline; text-underline-offset: 3px; }
 .xstrip .x { flex: none; width: 44px; align-self: stretch; border: 0; background: none; color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; }
-@media (max-width: 520px) { .xstrip a { font-size: 13.5px; padding-left: 16px; } .xstrip a > svg { display: none; } }
-/*cmap-css-start*/
-/* customer map: honeycomb dot land on a canvas, blue pins and tags. Only the land dot colour and the on-blue text are new tokens. */
+
+/* buttons: the live pill */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 500 14px/1 var(--body); letter-spacing: -.01em; padding: 8px 16px; border-radius: 999px; background: var(--action); color: var(--action-ink); text-decoration: none; white-space: nowrap; border: 0; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.btn:hover { background: var(--action-hover); text-decoration: none; }
+.btn-lg { font-size: 17px; padding: 14px 26px; }
+.btn-plain { background: transparent; color: var(--blue); box-shadow: 0 0 0 1px var(--action) inset; }
+.btn-plain:hover { background: var(--action); color: var(--action-ink); }
+.tag { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px 6px 10px; border-radius: 999px; font: 500 .84rem/1 var(--body); letter-spacing: -.005em; color: var(--blue); background: color-mix(in srgb, var(--blue) 10%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 24%, transparent) inset; }
+.tag svg { width: 15px; height: 15px; flex: none; }
+.tlink { font-weight: 500; display: inline-flex; align-items: center; gap: 4px; }
+.facts2 .help .tlink { color: var(--blue-text); min-height: 44px; }
+/* 44 px tap areas that look the same: padding that the matching negative margin takes back */
+.price .dl .tlink { padding-block: 11px; margin-block: -11px; }
+footer .cols p:has(> a) { display: flex; flex-wrap: wrap; align-items: center; column-gap: .3em; margin: 0; }   /* hv7: each footer link is its own 44 px band, no overlap */
+footer .cols a { display: inline-block; padding-block: 14px; }
+.cta-note a, a[data-i18n="facts.report"] { display: inline-block; padding-block: 14px; margin-block: -14px; } /* gv8: the stand-alone links ending a note */
+@media (max-width: 380px) { .bar .wrap { gap: 6px; } .qlink { padding: 0 6px; } .bar #langBtn > svg { display: none; } } /* kv2: the bar fits a 320 px phone in every language (the flag stays) */
+html.langwait main, html.langwait #foot, html.langwait .bar .qlink, html.langwait .xstrip a { visibility: hidden; }
+#langMenu button { min-height: 44px; }
+#langMenu { max-height: calc(100vh - 120px); } /* gv1: all 12 rows of 44 px show on a laptop and a normal phone; a very short screen scrolls */
+.xclosed .xstrip { display: none; } /* gv5 */
+/* Arabic page: a line that stays English among Arabic ones keeps its place at the right and its words run left to right */
+[data-ltr="w"], [data-ltr="w"] > b { unicode-bidi: plaintext; text-align: right; } /* gv4: the bold first line of a price point too */
+.cross .btn { min-height: 44px; justify-self: start; }
+
+/* hero: A's centred block, live type */
+.hero { padding: 32px 0 0; text-align: center; }
+.hero h1 { position: relative; margin: 18px auto 0; max-width: 21em; font: 600 clamp(2.25rem, 3.6vw, 2.8rem)/1.04 var(--display); letter-spacing: -.045em; }
+:root[data-app="floataway"] .hero h1 { max-width: 15em; } /* same size rule as TapSwitch (owner 20 Nov 2026) */
+@media (max-width: 599px) { .hero h1 { font-size: clamp(1.4rem, 7.6vw, 2.25rem); } }
+.hero h1 .g { color: var(--green); } .hero h1 .b { color: var(--blue); }
+.hero h1 .g, .hero h1 .b { display: inline-block; white-space: nowrap; }
+:root[data-app="floataway"] .hero h1 .b { display: inline; }   /* mv2: the comma after the blue words stays on their line */
+:lang(zh) .hero h1 { word-break: keep-all; }   /* mv3: Chinese words are not split across lines */
+.hero h1.typing .ch { visibility: hidden; } .hero h1.typing .ch.on { visibility: visible; }
+.hero h1 .caret { position: absolute; width: .06em; margin-left: .03em; background: currentColor; animation: caret 1s steps(1) infinite; pointer-events: none; }
+@keyframes caret { 50% { opacity: 0; } }
+.hero h1.fitting, .hero h1.fitting * { transition: none !important; }
+.vslot .row:has(.chips:empty) { display: none; }
+.hero .lede { text-wrap: balance; margin: 18px auto 0; max-width: 46ch; font-size: 1.1rem; color: var(--muted); }
+.hero .cta { margin-top: 22px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.hero .fine { font-size: .9rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; }
+.hero .fine span { display: inline-flex; align-items: center; gap: 6px; }
+.hero .fine i { color: var(--blue); }
+
+
+/* demo video slot: one long video with chapters, or one short clip per feature */
+/* the big product panel (A), drawn with the live panel ring and shadow: the demo video is the first screen's main visual */
+.vslot { margin: 20px auto 0; border-radius: 28px; padding: 14px; background: radial-gradient(640px 360px at 50% 0%, var(--tint), transparent 70%), var(--panel); box-shadow: var(--lift); text-align: left; }
+.vslot .frame { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 16 / 9; }
+.vslot video { width: 100%; height: 100%; display: block; object-fit: cover; }
+.vslot .row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-top: 12px; }
+.vslot .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.vslot .chips button { display: inline-flex; align-items: baseline; gap: 7px; font: 500 13px/1 var(--body); letter-spacing: -.01em; color: color-mix(in srgb, var(--muted) 80%, var(--ink)); background: var(--fill); border: 0; padding: 9px 14px; border-radius: 999px; cursor: pointer; transition: background .25s ease, color .25s ease, box-shadow .25s ease; }
+.vslot .chips button small { font: 400 12px/1 var(--mono); color: var(--muted); }
+.vslot .chips button[aria-pressed="true"] { background: var(--seg-on); color: var(--ink); box-shadow: 0 1px 3px var(--shadow), 0 0 0 .5px var(--shadow), 0 0 0 1.5px var(--blue) inset; }
+.vslot .ph-label { position: absolute; top: 8px; left: 8px; padding: 3px 8px; border-radius: 999px; background: rgba(0,0,0,.55); color: #F5F5F7; font-size: .72rem; pointer-events: none; }
+.hero .vslot { margin-top: 24px; }
+/* d3 (owner 20 Nov 2026): a play button on the video while it is not playing, and its length (read from the file) */
+.vslot .vplay { position: absolute; left: 50%; top: 50%; width: 68px; height: 68px; margin: -34px 0 0 -34px; border: 0; border-radius: 50%; background: rgba(0,0,0,.6); color: #FFFFFF; display: grid; place-items: center; cursor: pointer; box-shadow: 0 0 0 2px rgba(255,255,255,.55) inset; transition: background .2s ease, transform .2s ease; }
+.vslot .vplay:hover { background: rgba(0,0,0,.78); transform: scale(1.05); }
+.vslot .vplay svg { width: 28px; height: 28px; margin-left: 3px; }
+.vslot .frame.started .vplay, .vslot .frame.started .vlen { display: none; }
+.vslot .frame:not(.started) { cursor: pointer; }
+.vslot .vlen { position: absolute; top: 8px; right: 8px; padding: 3px 8px; border-radius: 999px; background: rgba(0,0,0,.65); color: #F5F5F7; font: 400 .72rem/1.3 var(--mono); pointer-events: none; }
+/* his ask 20 Nov 2026: on laptops the hero text and the video sit side by side, centred on each other */
+@media (min-width: 900px) {
+  .hero { text-align: left; padding-top: 40px; }
+  .hero > .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; }
+  .hero h1, .hero .lede { margin-left: 0; }
+  .hero .cta { align-items: flex-start; }
+  .hero .fine { justify-content: flex-start; }
+  .hero .vslot { margin-top: 0; margin-inline: 0; } /* hv1: the film box fills its column from the first paint, so it does not grow when the picture arrives */
+}
+
+/* sections: A's rhythm and left heads, live type */
+section { padding: 56px 0 0; }
+#quotes { padding-top: 24px; } #customers[hidden] + #quotes { padding-top: 56px; } /* the map hides itself when its list is missing; the quotes stay */
+.motion .rv { opacity: .6; transform: translateY(16px); transition: opacity .52s var(--ease), transform .52s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
+.motion .rv.in { opacity: 1; transform: none; }
+h2 { font: 600 clamp(1.5rem, 2.6vw, 2rem)/1.08 var(--display); letter-spacing: -.035em; }
+h3 { font: 600 1.15rem/1.3 var(--display); letter-spacing: -.02em; }
+.shead { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.shead p { margin-top: 10px; max-width: 78ch; font-size: 1.1rem; color: var(--muted); }
+.shead .btn { flex: none; }
+
+/* feature tiles (A), live panels */
+.fx { margin-top: 18px; display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 16px; align-items: stretch; }
+.ftabs { display: grid; gap: 8px; align-content: start; }
+.ftabs button { text-align: left; font: 600 1rem/1.3 var(--display); letter-spacing: -.015em; color: var(--ink); background: var(--panel); border: 0; border-radius: 16px; padding: 14px 16px; cursor: pointer; box-shadow: 0 0 0 1px var(--edge); transition: background .2s ease, box-shadow .2s ease; }
+.ftabs button:hover { background: var(--tint); }
+.ftabs button[aria-selected="true"] { background: var(--tint); box-shadow: 0 0 0 1.5px var(--blue) inset; color: var(--blue-text); }
+.ftabs .beta { margin-left: 6px; }
+.tiles { display: grid; }
+.tile { display: none; position: relative; border-radius: 28px; overflow: hidden; min-height: 0; padding: 26px 28px 0; background: var(--panel); box-shadow: var(--lift); grid-template-columns: minmax(0, 1fr) auto; gap: 8px 28px; align-items: center; }
+.tile.on { display: grid; }
+html:not(.js) .ftabs { display: none; } /* the tabs only work with scripts; without them every panel shows */
+.fx.duo { grid-template-columns: minmax(0, 1fr); }
+.duo .tiles { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.duo .tile { grid-template-columns: 1fr; grid-template-rows: auto auto 1fr; min-height: 0; } .duo .tile h3 { grid-column: 1; grid-row: 1; font: 600 1.25rem/1.3 var(--display); letter-spacing: -.02em; color: var(--ink); }
+.duo .tile p { max-width: none; grid-row: 2; } .duo .tile .tdemo { grid-column: 1; grid-row: 3; min-width: 0; }
+.tile .clockdot { grid-column: 1; }
+.tile > span[id] { position: absolute; top: 0; left: 0; } /* gv7: the old #folders and #clones markers sit at the top of their tile, not in the grid's last row */
+.tile .tmore { grid-column: 1; grid-row: 2; align-self: start; padding-bottom: 24px; }
+.tile.more .tdemo, .tile:has(.tmore) .tdemo { grid-row: 1 / span 2; }
+.tmore .steps { margin: 0; gap: 10px; } .tmore .steps li { background: none; box-shadow: none; padding: 0; grid-template-columns: 26px 1fr; gap: 0 10px; }
+.tmore .steps li::before { width: 26px; height: 26px; font-size: 13px; } .tmore .steps h3 { font-size: .95rem; } .tmore .steps p, .tmore .note { font-size: .88rem; max-width: 46ch; grid-row: auto; } .tmore .steps h3, .tmore .steps p { grid-column: 2; }
+.tmore .note { margin-top: 12px; } .tmore .note i { font-size: 17px; }
+.tile.g1 { background: linear-gradient(180deg, var(--panel) 0%, var(--panel) 35%, var(--tint) 100%); }
+.tile.g2 { background: linear-gradient(180deg, var(--panel) 0%, var(--panel) 30%, var(--quiet) 100%); }
+.tile.g3 { background: linear-gradient(200deg, var(--tint) 0%, var(--panel) 60%); }
+.tile.dk { background: radial-gradient(420px 300px at 50% 115%, rgba(43,107,219,.55) 0%, transparent 70%), #1D1D1F; box-shadow: 0 0 0 1px #38383C, 0 20px 40px -30px var(--shadow); }
+:root[data-theme="dark"] .tile.dk { background: radial-gradient(420px 300px at 50% 115%, rgba(43,107,219,.45) 0%, transparent 70%), #000; }
+.tile.dk p { color: #D2D2D7; }
+:root[data-theme="dark"] .tile { --muted: #A1A1A6; } /* hv4: grey text on the blue glow of the dark tiles is 4.5 to 1 or more */
+.beta { font: 600 11px/1 var(--body); letter-spacing: .06em; padding: 4px 8px; border-radius: 999px; color: var(--blue-text); background: color-mix(in srgb, var(--blue) 10%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 24%, transparent) inset; vertical-align: middle; }
+.tile p { grid-column: 1; grid-row: 1; font-size: 1.15rem; line-height: 1.45; letter-spacing: -.015em; color: var(--muted); max-width: 30ch; }
+.tile .tdemo { grid-column: 2; grid-row: 1; align-self: end; position: relative; display: flex; align-items: flex-end; justify-content: center; gap: 26px; min-width: 300px; }
+
+/* the tile phones: the live phone body and wallpaper, bleeding off the bottom edge (A) */
+.mini { position: relative; width: 176px; height: 268px; border-radius: 28px 28px 0 0; padding: 5px 5px 0; flex: none;
+  background: linear-gradient(150deg, #4A4D52 0%, #1C1D20 22%, #0B0B0C 60%, #2A2B2E 100%);
+  box-shadow: 0 0 0 1px #5C5F65 inset, 0 0 0 3px #111214 inset, 0 30px 50px -20px rgba(0,0,0,.45); }
+.mini .key { position: absolute; right: -3px; top: 70px; width: 3px; height: 34px; border-radius: 0 3px 3px 0; background: #6A6D73; }
+.mini .screen { position: relative; height: 100%; border-radius: 23px 23px 0 0; overflow: hidden; isolation: isolate; container-type: inline-size; background: #06070A; }
+.punch { position: absolute; z-index: 10; top: 3%; left: 50%; width: 4.6cqw; aspect-ratio: 1; margin-left: -2.3cqw; border-radius: 50%; background: #000; box-shadow: 0 0 0 1px rgba(255,255,255,.06); }
+.mini .lay { position: absolute; inset: 0; }
+.mini .sbar { position: absolute; z-index: 8; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 4% 8% 0; font: 600 4.4cqw/1 var(--body); color: #FFFFFF; }
+.mini .sbar span { display: inline-flex; gap: 1.5cqw; }
+.mini .home { background: radial-gradient(120% 70% at 20% 0%, rgba(111,176,255,.55), transparent 60%), radial-gradient(90% 60% at 100% 100%, rgba(87,211,160,.45), transparent 65%), linear-gradient(170deg, #1B3F8F 0%, #0F2554 50%, #0B3B37 100%); }
+.mini .home::before { content: ""; position: absolute; inset: 0; opacity: var(--night); transition: opacity 1s ease .3s; background: radial-gradient(1px 1px at 18% 14%, #FFFFFF 99%, transparent), radial-gradient(1px 1px at 72% 9%, #FFFFFF 99%, transparent), radial-gradient(1px 1px at 34% 31%, rgba(255,255,255,.8) 99%, transparent), radial-gradient(60% 40% at 80% 8%, rgba(242,239,216,.28), transparent 70%), linear-gradient(175deg, #0B1026 0%, #1A1745 55%, #2B1F4F 100%); }
+.mini .home .clock { position: absolute; top: 15%; left: 0; right: 0; text-align: center; color: #FFFFFF; }
+.mini .home .clock b { display: block; font: 600 19cqw/1 var(--display); letter-spacing: -.04em; }
+.mini .home .clock span { font-size: 4.8cqw; opacity: .85; }
+.mini .widget { position: absolute; z-index: 1; left: 8%; right: 8%; bottom: 7%; border-radius: 4cqw; padding: 4.5cqw 5cqw; display: grid; gap: 1.2cqw; font: 600 5.2cqw/1.1 var(--display); box-shadow: 0 8px 16px -10px rgba(0,0,0,.5); }
+.mini .widget small { font: 500 4.2cqw/1.1 var(--body); opacity: .85; }
+.mini .widget.a { background: var(--card-a); color: #06281C; } .mini .widget.w { background: var(--card-w); color: #FFFFFF; }
+.mini .grid { position: absolute; left: 8%; right: 8%; top: 46%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7cqw 5cqw; }
+.mini .app { display: grid; justify-items: center; align-content: start; gap: 1.6cqw; font: 500 3.6cqw/1.1 var(--body); color: #FFFFFF; }
+.mini .app .ic { width: 100%; aspect-ratio: 1; border-radius: 26%; background: rgba(255,255,255,.16); display: grid; place-items: center; font-size: 8cqw; color: rgba(255,255,255,.9); position: relative; }
+.mini .app .ic.w { background: #FFFFFF; color: #2F74E6; }
+.ripple { position: absolute; inset: -14%; border-radius: 50%; background: rgba(255,255,255,.4); border: 2px solid rgba(255,255,255,.95); opacity: 0; pointer-events: none; }
+.gbar { position: absolute; z-index: 8; bottom: 2%; left: 50%; width: 34%; height: 1.4cqw; margin-left: -17%; border-radius: 9px; background: #FFFFFF; opacity: .6; }
+.gbar[data-k="swipe"] { background: #1D1D1F; } /* it sits over the light Wallet screen */
+.appscr { background: #F5F5F7; transform: translateY(100%); padding: 22% 7% 0; color: #1D1D1F; }
+.appscr .hd { font: 600 5.6cqw/1 var(--display); letter-spacing: -.02em; display: flex; align-items: center; gap: 2cqw; }
+.bigcard { margin-top: 9%; aspect-ratio: 1.586; border-radius: 5cqw; color: #FFFFFF; padding: 7cqw; display: flex; flex-direction: column; justify-content: space-between; font: 600 5cqw/1 var(--display); box-shadow: 0 10px 20px -12px rgba(0,0,0,.45); }
+.bigcard.a { background: var(--card-a); color: #06281C; } .bigcard.w { background: var(--card-w); }
+.bigcard i { font-size: 9cqw; }
+.mini .hold { margin-top: 10%; display: grid; justify-items: center; gap: 3cqw; font-size: 5cqw; color: #6E6E73; font-weight: 500; }
+.mini .hold i { font-size: 15cqw; color: #2B6BDB; }
+.side-card { align-self: center; display: grid; justify-items: center; gap: 10px; margin-bottom: 40px; }
+.side-card .stack { display: grid; }
+.side-card .stack > * { grid-area: 1 / 1; }
+.side-card .lab { font-size: 13px; font-weight: 500; color: var(--muted); }
+.cardm { width: 168px; aspect-ratio: 1.586; border-radius: 12px; padding: 12px 14px; color: #FFFFFF; display: flex; flex-direction: column; justify-content: space-between; font: 600 13px/1 var(--display); box-shadow: 0 10px 20px -12px rgba(0,0,0,.45); }
+.cardm.a { background: var(--card-a); color: #06281C; } .cardm.w { background: var(--card-w); }
+.cardm i { font-size: 20px; }
+.chipm { display: grid; justify-items: center; }
+.chipm > div { grid-area: 1 / 1; display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: 999px; background: var(--panel); box-shadow: 0 0 0 1px var(--edge), 0 6px 16px -10px var(--shadow); font-size: 13px; font-weight: 600; white-space: nowrap; color: var(--ink); }
+.chipm .sw { width: 26px; height: 18px; border-radius: 4px; }
+.chipm .sw.a { background: var(--card-a); } .chipm .sw.w { background: var(--card-w); }
+.lock { background: linear-gradient(180deg, #0B0D11, #06070A); }
+.lock .clock { position: absolute; top: 18%; left: 0; right: 0; text-align: center; color: #F5F5F7; }
+.lock .clock b { display: block; font: 600 22cqw/1 var(--display); letter-spacing: -.04em; }
+.lock .clock span { font-size: 6cqw; color: #A1A1A6; }
+.lock .ph-lock-simple { position: absolute; top: 7%; left: 50%; margin-left: -4cqw; font-size: 8cqw; color: #A1A1A6; }
+.lockcard { position: absolute; left: 8%; right: 8%; bottom: 0; transform: translateY(100%); padding: 6cqw 6cqw 10cqw; border-radius: 9cqw 9cqw 0 0; background: rgba(29,29,31,.94); }
+.lockcard .bigcard { margin: 0; padding: 6cqw; font-size: 6cqw; }
+.lockcard .hold { margin-top: 5cqw; font-size: 6.4cqw; color: #A1A1A6; gap: 1cqw; }
+.lockcard .hold i { font-size: 12cqw; color: #57D3A0; }
+.off { background: #000; opacity: 0; z-index: 7; }
+.privacy { align-self: center; width: 100%; max-width: 300px; margin-bottom: 44px; display: grid; gap: 18px; justify-items: center; }
+.privacy .cardm { width: 220px; font-size: 15px; position: relative; }
+.privacy .cardm .num { letter-spacing: .12em; filter: blur(4px); }
+.privacy .shield { position: absolute; right: -14px; top: -14px; width: 40px; height: 40px; border-radius: 50%; background: var(--panel); color: var(--blue); display: grid; place-items: center; font-size: 22px; box-shadow: 0 0 0 1px var(--edge), 0 6px 16px -8px var(--shadow); }
+.pick { position: relative; display: grid; grid-template-columns: 1fr 1fr; padding: 3px; border-radius: 999px; background: var(--fill); width: 100%; }
+.pick span { position: relative; z-index: 1; text-align: center; font: 500 13px/1 var(--body); padding: 9px 4px; white-space: nowrap; color: var(--ink); }
+.pick .sel { position: absolute; z-index: 0; top: 3px; bottom: 3px; left: 3px; width: calc(50% - 3px); border-radius: 999px; background: var(--seg-on); box-shadow: 0 1px 3px var(--shadow), 0 0 0 .5px var(--shadow); }
+.sidebar { position: absolute; z-index: 5; right: 2.5%; top: 36%; width: 19cqw; padding: 2.6cqw 2.2cqw; border-radius: 9cqw; background: rgba(245,245,247,.92); box-shadow: 0 10px 30px -10px rgba(0,0,0,.45); display: grid; gap: 2.4cqw; }
+.sidebar .ic { width: 100%; aspect-ratio: 1; border-radius: 30%; display: grid; place-items: center; font-size: 6.5cqw; background: #E3E3E8; color: #1D1D1F; position: relative; }
+.sidebar .ic.hl { background: #2B6BDB; color: #FFFFFF; }
+.cal { background: #F5F5F7; color: #1D1D1F; padding: 20% 7% 0; }
+.cal .hd { display: flex; justify-content: space-between; align-items: center; font: 600 6cqw/1 var(--display); }
+.cal .days { margin-top: 8%; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 2.4cqw; font-size: 3.6cqw; text-align: center; color: #6E6E73; }
+.cal .days b { aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; font-weight: 500; color: #1D1D1F; }
+.cal .days b.on { background: #2B6BDB; color: #FFFFFF; }
+.cal .ev { margin-top: 9%; display: grid; gap: 3cqw; }
+.cal .ev div { border-radius: 3.6cqw; padding: 3.4cqw 4cqw; background: #E9F0FC; font-size: 4.2cqw; font-weight: 600; border-left: 1.6cqw solid #2B6BDB; }
+.cal .ev div:nth-child(n+3) { display: none; }
+.app-full { z-index: 6; transform-origin: 88% 42%; transform: scale(.12); opacity: 0; }
+.badge { position: absolute; right: -2cqw; bottom: -2cqw; width: 8cqw; height: 8cqw; border-radius: 50%; background: #2B6BDB; color: #FFFFFF; display: grid; place-items: center; font-size: 5cqw; border: .8cqw solid #F5F5F7; }
+.files { background: #F5F5F7; color: #1D1D1F; padding: 20% 7% 0; }
+.files .hd { font: 600 6.4cqw/1 var(--display); display: flex; align-items: center; gap: 2cqw; }
+.files .row { margin-top: 5cqw; display: flex; align-items: center; gap: 3cqw; font-size: 5.2cqw; }
+.files .row i { font-size: 8cqw; color: #2B6BDB; }
+.files .row span { height: 2.6cqw; border-radius: 9px; background: #D2D2D7; flex: 1; }
+.game { background: radial-gradient(60% 50% at 50% 60%, #2B6BDB, #0B0B0C); display: grid; place-items: center; color: #F5F5F7; font-size: 22cqw; }
+.gpill { position: absolute; z-index: 8; top: 12%; left: 50%; transform: translateX(-50%); }
+.gpill > div { display: inline-flex; align-items: center; gap: 2cqw; padding: 2.6cqw 4.4cqw; border-radius: 999px; background: rgba(255,255,255,.92); color: #1D1D1F; font-size: 5.4cqw; font-weight: 600; white-space: nowrap; }
+.boot { background: #000; z-index: 8; display: grid; place-items: center; opacity: 0; }
+.boot .ring { width: 16cqw; height: 16cqw; border-radius: 50%; border: 1.6cqw solid rgba(245,245,247,.18); border-top-color: #F5F5F7; }
+.notif { position: absolute; z-index: 8; top: 4%; left: 6%; right: 6%; transform: translateY(-160%); display: flex; align-items: center; gap: 3cqw; padding: 3.4cqw 4cqw; border-radius: 6cqw; background: #F5F5F7; box-shadow: 0 10px 24px -10px rgba(0,0,0,.45); font-size: 5.4cqw; font-weight: 600; color: #1D1D1F; }
+.notif img { width: 9cqw; height: 9cqw; }
+
+/* tile loops: 6 s, one change at a time (A) */
+.motion .tile { --loop: 6s; }
+.motion .tile .clockdot { animation: k-none var(--loop) linear infinite; }
+.clockdot { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+@keyframes k-none { to { opacity: 0; } }
+[data-k="in"], [data-k="in2"], [data-k="in3"], [data-k="tap"], [data-k="pill"], [data-k="boot"], [data-k="dark"] { opacity: 0; }
+.motion [data-k] { animation-duration: var(--loop, 6s); animation-iteration-count: infinite; animation-fill-mode: both; animation-timing-function: linear; }
+.motion [data-k="tap"] { animation-name: k-tap; }
+.motion [data-k="press"] { animation-name: k-press; }
+.motion [data-k="up"] { animation-name: k-up; }
+.motion [data-k="out"] { animation-name: k-out; }
+.motion [data-k="in"] { animation-name: k-in; }
+.motion [data-k="open"] { animation-name: k-open; }
+.motion [data-k="swipe"] { animation-name: k-swipe; }
+.motion [data-k="close"] { animation-name: k-close; }
+.motion [data-k="out2"] { animation-name: k-out2; }
+.motion [data-k="in2"] { animation-name: k-in2; }
+.motion [data-k="dark"] { animation-name: k-dark; }
+.motion [data-k="out3"] { animation-name: k-out3; }
+.motion [data-k="in3"] { animation-name: k-in3; }
+.motion [data-k="slide"] { animation-name: k-slide; }
+.motion [data-k="pill"] { animation-name: k-pill; }
+.motion [data-k="boot"] { animation-name: k-boot; }
+.motion [data-k="notif"] { animation-name: k-notif; }
+.motion [data-k="spin"] { animation: k-spin 1.2s linear infinite; }
+.motion .paused [data-k], .motion .paused .clockdot { animation-play-state: paused; }
+@keyframes k-tap { 0%, 17% { opacity: 0; transform: scale(.5); } 18% { opacity: 1; transform: scale(.55); animation-timing-function: cubic-bezier(.2,.7,.2,1); } 21% { opacity: .9; transform: scale(1); animation-timing-function: linear; } 24%, 100% { opacity: 0; transform: scale(1.3); } }
+@keyframes k-press { 0%, 13% { transform: none; background: #6A6D73; } 14% { transform: translateX(-2px); background: #F5F5F7; } 15.5% { transform: none; background: #6A6D73; } 17% { transform: translateX(-2px); background: #F5F5F7; } 18.5%, 100% { transform: none; background: #6A6D73; } }
+@keyframes k-up { 0%, 25% { transform: translateY(100%); animation-timing-function: cubic-bezier(.3,.7,.2,1); } 32%, 70% { transform: translateY(0); animation-timing-function: cubic-bezier(.5,0,.7,.4); } 77%, 100% { transform: translateY(100%); } }
+@keyframes k-out { 0%, 36% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 39.5%, 84.5% { opacity: 0; transform: translateY(-6px); animation-timing-function: cubic-bezier(.4,0,.2,1); } 88%, 100% { opacity: 1; transform: none; } }
+@keyframes k-in { 0%, 39.5% { opacity: 0; transform: translateY(6px); animation-timing-function: cubic-bezier(.4,0,.2,1); } 43%, 81% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 84.5%, 100% { opacity: 0; transform: translateY(6px); } }
+@keyframes k-open { 0%, 26% { opacity: 0; transform: scale(.12); animation-timing-function: cubic-bezier(.2,.75,.2,1); } 34%, 74% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,.6,.2); } 81%, 100% { opacity: 0; transform: scale(.9); } }
+@keyframes k-swipe { 0%, 28% { opacity: .6; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 36% { opacity: 0; transform: translateY(-14px); } 37%, 96% { opacity: 0; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 100% { opacity: .6; } }
+@keyframes k-close { 0%, 38% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 47%, 88% { opacity: 0; transform: scale(.72) translateY(12%); animation-timing-function: cubic-bezier(.2,.7,.2,1); } 96%, 100% { opacity: 1; transform: none; } }
+@keyframes k-out2 { 0%, 53% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 56.5%, 82.5% { opacity: 0; transform: translateY(-6px); animation-timing-function: cubic-bezier(.4,0,.2,1); } 86%, 100% { opacity: 1; transform: none; } }
+@keyframes k-in2 { 0%, 56.5% { opacity: 0; transform: translateY(6px); animation-timing-function: cubic-bezier(.4,0,.2,1); } 60%, 79% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 82.5%, 100% { opacity: 0; transform: translateY(6px); } }
+@keyframes k-dark { 0%, 58% { opacity: 0; animation-timing-function: cubic-bezier(.4,0,.2,1); } 65%, 86% { opacity: 1; animation-timing-function: cubic-bezier(.4,0,.2,1); } 93%, 100% { opacity: 0; } }
+@keyframes k-out3 { 0%, 36% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 39.5%, 72.5% { opacity: 0; transform: translateY(-6px); animation-timing-function: cubic-bezier(.4,0,.2,1); } 76%, 100% { opacity: 1; transform: none; } }
+@keyframes k-in3 { 0%, 39.5% { opacity: 0; transform: translateY(6px); animation-timing-function: cubic-bezier(.4,0,.2,1); } 43%, 69% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 72.5%, 100% { opacity: 0; transform: translateY(6px); } }
+@keyframes k-slide { 0%, 38% { transform: none; animation-timing-function: cubic-bezier(.45,0,.2,1); } 47%, 84% { transform: translateX(100%); animation-timing-function: cubic-bezier(.45,0,.2,1); } 93%, 100% { transform: none; } }
+@keyframes k-pill { 0%, 40% { opacity: 0; transform: translateY(6px); animation-timing-function: cubic-bezier(.2,.7,.2,1); } 46%, 68% { opacity: 1; transform: none; animation-timing-function: cubic-bezier(.4,0,.2,1); } 73%, 100% { opacity: 0; transform: none; } }
+@keyframes k-boot { 0%, 12% { opacity: 0; animation-timing-function: cubic-bezier(.4,0,.2,1); } 18%, 44% { opacity: 1; animation-timing-function: cubic-bezier(.4,0,.2,1); } 51%, 100% { opacity: 0; } }
+@keyframes k-notif { 0%, 56% { transform: translateY(-160%); animation-timing-function: cubic-bezier(.2,.75,.2,1); } 63%, 86% { transform: none; animation-timing-function: cubic-bezier(.5,0,.7,.4); } 92%, 100% { transform: translateY(-160%); } }
+@keyframes k-spin { to { transform: rotate(360deg); } }
+
+/* steps rows (setup, and the folders tab): live numbered circles in A's cards */
+.steps { margin: 24px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(var(--n, 3), 1fr); gap: 16px; counter-reset: s; }
+.steps li { counter-increment: s; border-radius: 18px; background: var(--panel); box-shadow: var(--lift); padding: 18px 20px; display: grid; grid-template-columns: 34px 1fr; gap: 2px 14px; align-content: start; }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; box-shadow: 0 0 0 1px var(--line) inset; color: var(--blue); font: 600 16px/1 var(--display); grid-row: 1 / span 2; }
+.steps p { color: var(--muted); font-size: .94rem; }
+.steps p.stepnote { font-size: .82rem; margin-top: 2px; grid-column: 2; }
+.note { margin-top: 12px; display: flex; gap: 10px; align-items: flex-start; color: var(--muted); font-size: .94rem; max-width: 80ch; }
+.note i { color: var(--blue); font-size: 20px; margin-top: 1px; }
+.states { margin-top: 12px; border-radius: 18px; background: var(--panel); box-shadow: var(--lift); padding: 18px 20px; }
+.states dl { margin: 10px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px 24px; }
+.states dt { font-weight: 600; font-size: .94rem; }
+.states dd { margin: 4px 0 0; color: var(--muted); font-size: .9rem; }
+
+/* price (A's two halves, live panel, live Lifetime access card colours) */
+.price { margin-top: 20px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-radius: 28px; overflow: hidden; background: var(--panel); box-shadow: var(--lift); }
+.price .l { padding: 26px 28px; display: grid; gap: 10px; align-content: start; }
+.price .amt { font: 600 clamp(2.25rem, 4vw, 2.75rem)/1 var(--display); letter-spacing: -.045em; }
+.price .amt small { font: 500 .95rem var(--body); color: var(--soft); letter-spacing: 0; margin-left: 6px; }
+.price { --soft: color-mix(in srgb, var(--ink) 80%, var(--panel)); } /* d4: black or white only, mixed, no new colour */
+.price .l p { color: var(--soft); max-width: 62ch; font-size: .94rem; }
+.price .l p b { color: var(--ink); font-weight: 600; }
+.price .r { padding: 26px 28px; background: color-mix(in srgb, var(--blue) 7%, var(--panel)); box-shadow: 1px 0 0 0 color-mix(in srgb, var(--blue) 20%, transparent) inset; display: grid; gap: 12px; align-content: start; }
+.price .r .lt { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.price .r .lt b { display: inline-flex; align-items: center; gap: 8px; font: 600 13px/1 var(--body); letter-spacing: .06em; text-transform: uppercase; color: var(--blue); }
+.price .r .lt span { color: var(--ink); }
+.price .r ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.price .r li { color: var(--soft); font-size: .95rem; }
+.price .r li b { display: block; color: var(--ink); font-weight: 600; }
+.price .dl { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 4px; }
+.price .small, .price .app-english { font-size: .9rem; color: var(--soft); }
+
+/* what's new: the live grey box, laid out the A way */
+.new { margin-top: 16px; display: block; border-radius: 28px; background: var(--panel); box-shadow: var(--lift); overflow: hidden; }
+.new .ver { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 14px 28px; border-bottom: 1px solid var(--edge); }
+.new .ver > div { display: flex; align-items: baseline; gap: 10px; }
+.new .ver b { font: 600 1.4rem/1 var(--display); letter-spacing: -.04em; }
+.new .ver span { color: var(--muted); font-size: .9rem; }
+.new .body { padding: 14px 28px 18px; font-size: .94rem; }
+.new .body ul { columns: 2; column-gap: 40px; }
+.new .body li { break-inside: avoid; }
+.new .ver > span { font-weight: 600; color: var(--ink); font-size: .94rem; }
+.new .body > p:first-child { font-weight: 600; color: var(--blue); }
+.new ul { margin: 6px 0 0; padding-left: 20px; }
+.new li + li { margin-top: 3px; }
+.new .carry { margin-top: 8px; font-size: .9rem; color: var(--muted); }
+
+/* customer map (live code and look, in A's panel) */
+#customers .cm-box { margin-top: 18px; border-radius: 28px; background: var(--panel); box-shadow: var(--lift); padding: 14px 28px; }
 #customers { --cm-land: #D0D3DA; --cm-on-blue: #FFFFFF; --cm-ease: cubic-bezier(.16,1,.3,1); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #customers { --cm-land: #3A3B41; --cm-on-blue: #0B0B0D; } }
 :root[data-theme="dark"] #customers { --cm-land: #3A3B41; --cm-on-blue: #0B0B0D; }
-#customers .cm-map { position: relative; margin-top: 8px; }
-#customers canvas { display: block; width: 100%;
-  -webkit-mask-image: radial-gradient(ellipse 66% 74% at 50% 50%, #000 55%, transparent 96%);
-          mask-image: radial-gradient(ellipse 66% 74% at 50% 50%, #000 55%, transparent 96%); }
+#customers .cm-map { position: relative; max-width: 1000px; margin-inline: auto; }
+#customers canvas { display: block; width: 100%; -webkit-mask-image: radial-gradient(ellipse 66% 74% at 50% 50%, #000 55%, transparent 96%); mask-image: radial-gradient(ellipse 66% 74% at 50% 50%, #000 55%, transparent 96%); }
 #customers .mk { position: absolute; transform: translate(-50%,-50%); width: 44px; height: 44px; border: 0; padding: 0; background: none; cursor: pointer; border-radius: 50%; transition: opacity .35s var(--cm-ease); }
-#customers .mk b { position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 3px var(--bg), 0 2px 6px rgba(0,0,0,.25); transition: transform .45s var(--cm-ease); }
-#customers .mk s { position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; border: 2px solid var(--blue); opacity: 0; }
+#customers .mk b { position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 3px var(--panel), 0 2px 6px rgba(0,0,0,.25); transition: transform .45s var(--cm-ease); }
+#customers .mk s { pointer-events: none; position: absolute; left: 50%; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; border: 2px solid var(--blue); opacity: 0; }
 #customers .mk.hot b { transform: scale(1.2); }
 #customers .mk:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-#customers .lab { position: absolute; padding: 7px 12px; border-radius: 10px; background: var(--blue); color: var(--cm-on-blue); font: 600 .86rem/1 var(--body); letter-spacing: -.005em; white-space: nowrap; pointer-events: none;
-  filter: drop-shadow(0 1px 1px rgba(29,29,31,.10)) drop-shadow(0 6px 14px rgba(29,29,31,.10)); transition: opacity .35s var(--cm-ease), transform .35s var(--cm-ease); }
+#customers .lab { position: absolute; padding: 7px 12px; border-radius: 10px; background: var(--blue); color: var(--cm-on-blue); font: 600 .86rem/1 var(--body); letter-spacing: -.005em; white-space: nowrap; pointer-events: none; filter: drop-shadow(0 1px 1px rgba(29,29,31,.10)) drop-shadow(0 6px 14px rgba(29,29,31,.10)); transition: opacity .35s var(--cm-ease), transform .35s var(--cm-ease); }
+@media (min-width: 601px) and (max-width: 1099px) { #customers .lab { padding: 5px 8px; font-size: .74rem; } } @media (min-width: 601px) and (max-width: 1099px) { #customers .cm-box { padding-inline: 14px; } }
+#customers.cm-xs .lab { padding: 4px 6px; font-size: .66rem; } /* gv2: smaller names on a tablet so all ten fit beside their dots */
 #customers .lab::after { content: ""; position: absolute; width: 12px; height: 12px; background: var(--blue); transform: rotate(45deg); border-radius: 2px; }
-#customers .lab.up::after { left: 50%; bottom: -5px; margin-left: -6px; } #customers .lab.down::after { left: 50%; top: -5px; margin-left: -6px; }
+#customers .lab.up::after { left: var(--ax, 50%); bottom: -5px; margin-left: -6px; } #customers .lab.down::after { left: var(--ax, 50%); top: -5px; margin-left: -6px; }
 #customers .lab.right::after { top: 50%; left: -5px; margin-top: -6px; } #customers .lab.left::after { top: 50%; right: -5px; margin-top: -6px; }
 #customers .lab.up.hot { transform: translateY(-2px); } #customers .lab.down.hot { transform: translateY(2px); } #customers .lab.right.hot { transform: translateX(2px); } #customers .lab.left.hot { transform: translateX(-2px); }
 #customers .cm-map.focus .mk:not(.hot), #customers .cm-map.focus .lab:not(.hot) { opacity: .35; }
-/* Phones: eight names did not fit side by side (12 Nov 2026), so a name shows only for the tapped dot. */
 #customers .cm-tap { display: none; margin: 10px 0 0; text-align: center; font: 500 .86rem/1.3 var(--body); color: var(--muted); }
 #customers.cm-phone .cm-tap { display: block; }
 #customers.cm-phone .lab:not(.hot) { opacity: 0 !important; visibility: hidden; }
@@ -317,416 +473,398 @@ html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
 @keyframes cm-ring { 0% { opacity: .7; transform: scale(1); } 100% { opacity: 0; transform: scale(3.4); } }
 @keyframes cm-ping { 0% { opacity: .55; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
 @keyframes cm-rise { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
-/*cmap-css-end*/
-  .beta { font-size: .45em; font-weight: 700; letter-spacing: .04em; color: var(--blue); border: 1px solid var(--blue); border-radius: .5em; padding: .15em .5em; vertical-align: middle; }
 
-/* Lifetime access card (price update, mockup v5 in docs/design/site-redesign/lifetime-access) */
-.lifetime{margin:20px 0 0;padding:22px 24px 20px;border-radius:24px;max-width:62ch;
-  background:color-mix(in srgb,var(--blue) 7%,var(--panel));
-  box-shadow:0 0 0 1px color-mix(in srgb,var(--blue) 35%,transparent)}
-.lt-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
-.lt-badge{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
-.lt-badge svg{width:22px;height:22px}
-.lt-price{font:600 1.5rem/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--ink)}
-.lt-price span{font:500 .95rem var(--body);color:var(--muted);letter-spacing:0;margin-left:4px}
-.lt-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
-.lt-list li{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;color:var(--muted);font-size:.95rem}
-.lt-list li>div{min-width:0}
-.lt-list strong{display:block;color:var(--ink);font-weight:600}
-.lt-list svg{width:24px;height:24px;color:var(--blue)}
-.lt-green{color:#167F57}
-:root[data-theme="dark"] .lt-green{color:#57D3A0}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lt-green{color:#57D3A0}}
-
-/* customer quote: a magazine pull quote, the same shape as the other app page. A short blue bar on top,
-   the words large beside it, the name and phone underneath. More quotes sit side by side, up to three. */
-section.said { margin-top: 0; border-top: 0; padding-block: 36px 0; }
-.quotes { display: grid; gap: 40px 48px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
-.quote {
-  margin: 0; min-width: 0; display: grid; gap: 18px; grid-template-rows: 1fr auto;
-  padding: 22px 0 0; position: relative;
-}
-.quote::before {
-  content: ""; position: absolute; left: 0; top: 0; width: 56px; height: 3px; border-radius: 3px;
-  background: var(--blue);
-}
-.quote blockquote { margin: 0; font: 500 clamp(1.3rem, 2.6vw, 1.75rem)/1.35 var(--display); letter-spacing: -.025em; max-width: 40ch; }
+/* quotes: the live pull quote (green and blue bar), in A's row */
+.quotes { margin-top: 0; display: grid; gap: 20px 48px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+.quote { margin: 0; min-width: 0; display: grid; gap: 10px; grid-template-rows: 1fr auto; padding: 16px 0 0; position: relative; }
+.quote::before { content: ""; position: absolute; left: 0; top: 0; width: 56px; height: 3px; border-radius: 3px; background: linear-gradient(90deg, var(--green-card) 50%, var(--blue-card) 50%); }
+:root[data-app="floataway"] .quote::before { background: var(--blue-card); }
+.quote blockquote { margin: 0; font: 500 clamp(1.1rem, 2vw, 1.3rem)/1.35 var(--display); letter-spacing: -.02em; max-width: 44ch; }
 .quote figcaption { font-size: .94rem; color: var(--muted); }
 .quote .who { color: var(--ink); font-weight: 600; }
 .quote .who + .model::before { content: "\00B7"; margin: 0 8px; }
+
+/* phones: lives in the left half of the price card */
+.price .works { margin-top: 6px; padding-top: 16px; border-top: 1px solid var(--edge); display: grid; gap: 6px; }
+.price .works h3 { font: 600 13px/1 var(--body); letter-spacing: .06em; text-transform: uppercase; color: var(--soft); }
+.price .works .big { font: 600 1.15rem/1.35 var(--display); letter-spacing: -.02em; color: var(--ink); }
+
+/* safety: the live quieter band, A's cards */
+#safe { background: var(--quiet); margin-top: 64px; padding: 48px 0 48px; box-shadow: 0 -1px 0 var(--line); }
+.safe { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; font-size: 15px; }
+.facts, .can, .facts2 > div { border-radius: 18px; background: var(--panel); box-shadow: 0 0 0 1px var(--edge); padding: 20px 22px; }
+.facts .vt { display: flex; align-items: center; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.facts .vt .zero { width: 52px; height: 52px; flex: none; border-radius: 14px; background: color-mix(in srgb, var(--blue) 10%, transparent); color: var(--blue); display: grid; place-items: center; font-size: 28px; }
+.facts .vt p b { font-weight: 600; }
+.facts dl { margin: 0; display: grid; grid-template-columns: 170px 1fr; }
+.facts dt, .facts dd { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+.facts details { padding-top: 0; }
+.facts summary { cursor: pointer; color: var(--blue); list-style: none; padding: 11px 0; }
+.facts summary::-webkit-details-marker { display: none; }
+.facts summary::after { content: " +"; }
+.facts details[open] summary::after { content: " \2212"; }
+.facts .hash { margin-top: 12px; font-size: .82rem; color: var(--muted); display: grid; gap: 10px; }
+.facts .hash code { display: block; color: var(--ink); word-break: break-all; font: .76rem/1.5 var(--mono); }
+.can dl { margin: 6px 0 0; display: grid; }
+.can dl > div { padding: 9px 0; border-bottom: 1px solid var(--line); }
+.can dl > div:last-child { border-bottom: 0; }
+.can dt { font-weight: 600; display: flex; gap: 10px; align-items: center; }
+.can dt i { color: var(--blue); font-size: 18px; }
+.can dd { margin: 4px 0 0 28px; color: var(--muted); }
+.facts2 { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr; gap: 16px; }
+.facts2 ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; color: var(--muted); }
+.facts2 .help { background: color-mix(in srgb, var(--blue) 8%, var(--panel)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 18%, transparent); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto auto; row-gap: 12px; align-items: start; padding: 0; }
+.help .hl, .help .hr { display: grid; grid-template-rows: subgrid; grid-row: span 2; gap: 12px; justify-items: start; align-items: center; padding: 22px 28px; } /* rv6: heading with heading, link with button */
+.help .hl p, .help .hr p { align-self: start; }
+.help .hr { border-left: 0; } /* d9: one closing card, no divider between its two halves */
+.help .hr p { font: 600 1.15rem/1.35 var(--display); letter-spacing: -.02em; text-wrap: balance; }
+.help .hr .btn { margin: 0; }
+.facts2 .help p { font: 600 1.15rem/1.35 var(--display); letter-spacing: -.02em; }
+
+/* closing nudge, cross card, footer */
+.cross { margin: 48px auto 0; display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; border-radius: 18px; padding: 18px 24px; background: color-mix(in srgb, var(--blue) 8%, var(--bg)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 18%, transparent); }
+.cross img { width: 56px; height: 56px; }
+.cross h2 { font: 600 clamp(1.25rem, 2.4vw, 1.5rem)/1.3 var(--display); letter-spacing: -.02em; }
+.cross .q { margin-top: 6px; font-weight: 600; color: var(--blue-text); }
+.cross p.p { margin-top: 6px; max-width: 80ch; font-size: .94rem; }
+footer { margin-top: 48px; padding-block: 16px 24px; color: var(--muted); font-size: .8rem; line-height: 1.55; background: var(--quiet); }
+footer .wrap::before { content: ""; display: block; border-top: 1px solid var(--line); margin-bottom: 14px; }
+footer .cols { display: grid; grid-template-columns: 1fr auto; gap: 8px 40px; align-items: first baseline; }   /* jv3: both footer lines start level */
+footer p { margin: 0 0 8px; max-width: 72ch; }
+footer .r { text-align: right; }
+.mail { font-family: var(--mono); color: var(--ink); user-select: all; }
+
+@media (max-width: 1100px) { .fx { grid-template-columns: minmax(0, 1fr); } .ftabs { display: flex; flex-wrap: wrap; padding: 2px 2px 4px; } /* tabs wrap into rows: all four show, no sideways scroll (owner 20 Nov 2026) */
+  .ftabs::-webkit-scrollbar { display: none; } .ftabs button { flex: none; scroll-snap-align: start; white-space: nowrap; padding: 10px 14px; border-radius: 999px; font-size: .92rem; } }
+/* phones (owner 20 Nov 2026): one row that slides sideways, running to the screen edge so the next button is cut by the screen, never wrapped into rows */
+@media (max-width: 600px) { .ftabs { flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; scroll-padding-inline: 16px; scrollbar-width: none; margin-inline: -16px; padding-inline: 16px; } .ftabs button { min-height: 44px; padding: 10px 12px; font-size: .88rem; } }
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  .bar .btn { display: none; }
+  .xstrip a { font-size: 13.5px; padding-left: 16px; } .xstrip a img { display: none; }
+  .hero { padding-top: 20px; } .hero h1 { margin-top: 12px; } .hero .cta { margin-top: 16px; } .hero .vslot { margin-top: 16px; }
+  .hero .cta .btn { width: 100%; }
+  .vslot { border-radius: 22px; padding: 10px; }
+  .vslot .frame { border-radius: 14px; }
+  .vslot .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: -2px; padding: 2px; } .vslot .chips::-webkit-scrollbar { display: none; } .vslot .chips button { flex: none; padding: 8px 11px; } .vslot .row { margin-top: 10px; }
+  section { padding-top: 32px; }
+  .shead { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .shead p { font-size: 1rem; }
+  .tile { min-height: 0; padding: 18px 18px 0; border-radius: 22px; grid-template-columns: 1fr; }
+  .tile p, .tile .tdemo { grid-column: 1; } .duo .tile p { grid-row: 2; } .duo .tile .tdemo { grid-row: 3; } .tile p { font-size: 1rem; max-width: none; } .tile .tdemo { grid-row: 2; min-width: 0; margin-top: 8px; gap: 14px; }
+  .tile.w4 .side-card { display: none; }
+  .tile .tmore { grid-row: 2; padding-bottom: 0; } .tile:has(.tmore) .tdemo { grid-row: 3; }
+  .mini { width: 150px; height: 220px; border-radius: 24px 24px 0 0; } .mini .screen { border-radius: 19px 19px 0 0; }
+  .privacy { margin-bottom: 20px; } .side-card { margin-bottom: 20px; }
+  .chipm > div { padding: 4px 10px 4px 5px; }
+  .price, .safe, .facts2, .duo .tiles { grid-template-columns: 1fr; }
+  .price .r { box-shadow: 0 1px 0 0 color-mix(in srgb, var(--blue) 20%, transparent) inset; }
+  .steps { grid-template-columns: 1fr; margin-top: 16px; gap: 10px; } .steps li { padding: 14px 16px; gap: 2px 12px; }
+  .quotes { margin-top: 12px; gap: 14px; } .quote { gap: 6px; padding-top: 12px; }
+  .states dl { grid-template-columns: 1fr; }
+  .price { display: flex; flex-direction: column; } .price .r { order: -1; } .price .l, .price .r { padding: 18px; }
+  .new .ver { padding: 10px 16px; } .new .body { padding: 12px 16px; } .new .body ul { columns: 1; }
+  .facts, .can, .facts2 > div { padding: 16px 16px; }
+  .facts dl { grid-template-columns: 110px 1fr; } .facts dt, .facts dd { padding: 6px 0; }
+  #safe { margin-top: 40px; padding: 36px 0; }
+  #customers .cm-box { padding: 12px; border-radius: 22px; }
+  .facts2 .help { grid-template-columns: 1fr; grid-template-rows: none; } .help .hl, .help .hr { grid-template-rows: none; grid-row: auto; padding: 16px; } .help .hr { border-left: 0; border-top: 0; }
+  .cross { grid-template-columns: 1fr; padding: 16px; margin-top: 36px; gap: 10px; }
+  .cross img { width: 44px; height: 44px; }
+  footer .cols { grid-template-columns: 1fr; } footer .r { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+}
+/* icons:start */
+/* Phosphor icons drawn from inline data (no icon font, no CDN): a mask the size of the font-size, coloured by the text colour */
+i.ph, i.ph-fill, i.ph-bold { display: inline-block; width: 1em; height: 1em; background: currentColor; -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; font-style: normal; flex: none; }
+i.ph-bold.ph-arrow-right { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M224.49%2C136.49l-72%2C72a12%2C12%2C0%2C0%2C1-17-17L187%2C140H40a12%2C12%2C0%2C0%2C1%2C0-24H187L135.51%2C64.48a12%2C12%2C0%2C0%2C1%2C17-17l72%2C72A12%2C12%2C0%2C0%2C1%2C224.49%2C136.49Z%22/%3E%3C/svg%3E"); }
+[dir="rtl"] i.ph-arrow-right { transform: scaleX(-1); } /* arrows point the way the page reads */
+i.ph.ph-arrows-clockwise { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M224%2C48V96a8%2C8%2C0%2C0%2C1-8%2C8H168a8%2C8%2C0%2C0%2C1%2C0-16h28.69L182.06%2C73.37a79.56%2C79.56%2C0%2C0%2C0-56.13-23.43h-.45A79.52%2C79.52%2C0%2C0%2C0%2C69.59%2C72.71%2C8%2C8%2C0%2C0%2C1%2C58.41%2C61.27a96%2C96%2C0%2C0%2C1%2C135%2C.79L208%2C76.69V48a8%2C8%2C0%2C0%2C1%2C16%2C0ZM186.41%2C183.29a80%2C80%2C0%2C0%2C1-112.47-.66L59.31%2C168H88a8%2C8%2C0%2C0%2C0%2C0-16H40a8%2C8%2C0%2C0%2C0-8%2C8v48a8%2C8%2C0%2C0%2C0%2C16%2C0V179.31l14.63%2C14.63A95.43%2C95.43%2C0%2C0%2C0%2C130%2C222.06h.53a95.36%2C95.36%2C0%2C0%2C0%2C67.07-27.33%2C8%2C8%2C0%2C0%2C0-11.18-11.44Z%22/%3E%3C/svg%3E"); }
+i.ph-fill.ph-battery-full { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M200%2C56H32A24%2C24%2C0%2C0%2C0%2C8%2C80v96a24%2C24%2C0%2C0%2C0%2C24%2C24H200a24%2C24%2C0%2C0%2C0%2C24-24V80A24%2C24%2C0%2C0%2C0%2C200%2C56Zm8%2C120a8%2C8%2C0%2C0%2C1-8%2C8H32a8%2C8%2C0%2C0%2C1-8-8V80a8%2C8%2C0%2C0%2C1%2C8-8H200a8%2C8%2C0%2C0%2C1%2C8%2C8ZM192%2C96v64a8%2C8%2C0%2C0%2C1-8%2C8H48a8%2C8%2C0%2C0%2C1-8-8V96a8%2C8%2C0%2C0%2C1%2C8-8H184A8%2C8%2C0%2C0%2C1%2C192%2C96Zm64%2C0v64a8%2C8%2C0%2C0%2C1-16%2C0V96a8%2C8%2C0%2C0%2C1%2C16%2C0Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-buildings { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M240%2C208H224V96a16%2C16%2C0%2C0%2C0-16-16H144V32a16%2C16%2C0%2C0%2C0-24.88-13.32L39.12%2C72A16%2C16%2C0%2C0%2C0%2C32%2C85.34V208H16a8%2C8%2C0%2C0%2C0%2C0%2C16H240a8%2C8%2C0%2C0%2C0%2C0-16ZM208%2C96V208H144V96ZM48%2C85.34%2C128%2C32V208H48ZM112%2C112v16a8%2C8%2C0%2C0%2C1-16%2C0V112a8%2C8%2C0%2C1%2C1%2C16%2C0Zm-32%2C0v16a8%2C8%2C0%2C0%2C1-16%2C0V112a8%2C8%2C0%2C1%2C1%2C16%2C0Zm0%2C56v16a8%2C8%2C0%2C0%2C1-16%2C0V168a8%2C8%2C0%2C0%2C1%2C16%2C0Zm32%2C0v16a8%2C8%2C0%2C0%2C1-16%2C0V168a8%2C8%2C0%2C0%2C1%2C16%2C0Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-calendar-blank { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M208%2C32H184V24a8%2C8%2C0%2C0%2C0-16%2C0v8H88V24a8%2C8%2C0%2C0%2C0-16%2C0v8H48A16%2C16%2C0%2C0%2C0%2C32%2C48V208a16%2C16%2C0%2C0%2C0%2C16%2C16H208a16%2C16%2C0%2C0%2C0%2C16-16V48A16%2C16%2C0%2C0%2C0%2C208%2C32ZM72%2C48v8a8%2C8%2C0%2C0%2C0%2C16%2C0V48h80v8a8%2C8%2C0%2C0%2C0%2C16%2C0V48h24V80H48V48ZM208%2C208H48V96H208V208Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-camera { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M208%2C56H180.28L166.65%2C35.56A8%2C8%2C0%2C0%2C0%2C160%2C32H96a8%2C8%2C0%2C0%2C0-6.65%2C3.56L75.71%2C56H48A24%2C24%2C0%2C0%2C0%2C24%2C80V192a24%2C24%2C0%2C0%2C0%2C24%2C24H208a24%2C24%2C0%2C0%2C0%2C24-24V80A24%2C24%2C0%2C0%2C0%2C208%2C56Zm8%2C136a8%2C8%2C0%2C0%2C1-8%2C8H48a8%2C8%2C0%2C0%2C1-8-8V80a8%2C8%2C0%2C0%2C1%2C8-8H80a8%2C8%2C0%2C0%2C0%2C6.66-3.56L100.28%2C48h55.43l13.63%2C20.44A8%2C8%2C0%2C0%2C0%2C176%2C72h32a8%2C8%2C0%2C0%2C1%2C8%2C8ZM128%2C88a44%2C44%2C0%2C1%2C0%2C44%2C44A44.05%2C44.05%2C0%2C0%2C0%2C128%2C88Zm0%2C72a28%2C28%2C0%2C1%2C1%2C28-28A28%2C28%2C0%2C0%2C1%2C128%2C160Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-caret-left { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M165.66%2C202.34a8%2C8%2C0%2C0%2C1-11.32%2C11.32l-80-80a8%2C8%2C0%2C0%2C1%2C0-11.32l80-80a8%2C8%2C0%2C0%2C1%2C11.32%2C11.32L91.31%2C128Z%22/%3E%3C/svg%3E"); }
+i.ph-fill.ph-cell-signal-full { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M208%2C40V200a16%2C16%2C0%2C0%2C1-16%2C16H32A16%2C16%2C0%2C0%2C1%2C20.7%2C188.68l160-160A16%2C16%2C0%2C0%2C1%2C208%2C40Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-chat-circle { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M128%2C24A104%2C104%2C0%2C0%2C0%2C36.18%2C176.88L24.83%2C210.93a16%2C16%2C0%2C0%2C0%2C20.24%2C20.24l34.05-11.35A104%2C104%2C0%2C1%2C0%2C128%2C24Zm0%2C192a87.87%2C87.87%2C0%2C0%2C1-44.06-11.81%2C8%2C8%2C0%2C0%2C0-6.54-.67L40%2C216%2C52.47%2C178.6a8%2C8%2C0%2C0%2C0-.66-6.54A88%2C88%2C0%2C1%2C1%2C128%2C216Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-clock { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M128%2C24A104%2C104%2C0%2C1%2C0%2C232%2C128%2C104.11%2C104.11%2C0%2C0%2C0%2C128%2C24Zm0%2C192a88%2C88%2C0%2C1%2C1%2C88-88A88.1%2C88.1%2C0%2C0%2C1%2C128%2C216Zm64-88a8%2C8%2C0%2C0%2C1-8%2C8H128a8%2C8%2C0%2C0%2C1-8-8V72a8%2C8%2C0%2C0%2C1%2C16%2C0v48h48A8%2C8%2C0%2C0%2C1%2C192%2C128Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-contactless-payment { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M128%2C24A104%2C104%2C0%2C1%2C0%2C232%2C128%2C104.11%2C104.11%2C0%2C0%2C0%2C128%2C24Zm0%2C192a88%2C88%2C0%2C1%2C1%2C88-88A88.1%2C88.1%2C0%2C0%2C1%2C128%2C216ZM97.07%2C100.26a59.33%2C59.33%2C0%2C0%2C1%2C0%2C55.48%2C8%2C8%2C0%2C1%2C1-14.14-7.48%2C42.79%2C42.79%2C0%2C0%2C0%2C0-40.52%2C8%2C8%2C0%2C0%2C1%2C14.14-7.48Zm56-32a126.67%2C126.67%2C0%2C0%2C1%2C0%2C119.54A8%2C8%2C0%2C0%2C1%2C139%2C180.23a110.62%2C110.62%2C0%2C0%2C0%2C0-104.46%2C8%2C8%2C0%2C0%2C1%2C14.12-7.54Zm-28%2C16a93%2C93%2C0%2C0%2C1%2C0%2C87.52%2C8%2C8%2C0%2C1%2C1-14.12-7.52%2C77%2C77%2C0%2C0%2C0%2C0-72.48%2C8%2C8%2C0%2C1%2C1%2C14.12-7.52Z%22/%3E%3C/svg%3E"); }
+i.ph-fill.ph-copy { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M216%2C32H88a8%2C8%2C0%2C0%2C0-8%2C8V80H40a8%2C8%2C0%2C0%2C0-8%2C8V216a8%2C8%2C0%2C0%2C0%2C8%2C8H168a8%2C8%2C0%2C0%2C0%2C8-8V176h40a8%2C8%2C0%2C0%2C0%2C8-8V40A8%2C8%2C0%2C0%2C0%2C216%2C32Zm-8%2C128H176V88a8%2C8%2C0%2C0%2C0-8-8H96V48H208Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-copy { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M216%2C32H88a8%2C8%2C0%2C0%2C0-8%2C8V80H40a8%2C8%2C0%2C0%2C0-8%2C8V216a8%2C8%2C0%2C0%2C0%2C8%2C8H168a8%2C8%2C0%2C0%2C0%2C8-8V176h40a8%2C8%2C0%2C0%2C0%2C8-8V40A8%2C8%2C0%2C0%2C0%2C216%2C32ZM160%2C208H48V96H160Zm48-48H176V88a8%2C8%2C0%2C0%2C0-8-8H96V48H208Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-credit-card { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M224%2C48H32A16%2C16%2C0%2C0%2C0%2C16%2C64V192a16%2C16%2C0%2C0%2C0%2C16%2C16H224a16%2C16%2C0%2C0%2C0%2C16-16V64A16%2C16%2C0%2C0%2C0%2C224%2C48Zm0%2C16V88H32V64Zm0%2C128H32V104H224v88Zm-16-24a8%2C8%2C0%2C0%2C1-8%2C8H168a8%2C8%2C0%2C0%2C1%2C0-16h32A8%2C8%2C0%2C0%2C1%2C208%2C168Zm-64%2C0a8%2C8%2C0%2C0%2C1-8%2C8H120a8%2C8%2C0%2C0%2C1%2C0-16h16A8%2C8%2C0%2C0%2C1%2C144%2C168Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-eye { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M247.31%2C124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57%2C61.26%2C162.88%2C48%2C128%2C48S61.43%2C61.26%2C36.34%2C86.35C17.51%2C105.18%2C9%2C124%2C8.69%2C124.76a8%2C8%2C0%2C0%2C0%2C0%2C6.5c.35.79%2C8.82%2C19.57%2C27.65%2C38.4C61.43%2C194.74%2C93.12%2C208%2C128%2C208s66.57-13.26%2C91.66-38.34c18.83-18.83%2C27.3-37.61%2C27.65-38.4A8%2C8%2C0%2C0%2C0%2C247.31%2C124.76ZM128%2C192c-30.78%2C0-57.67-11.19-79.93-33.25A133.47%2C133.47%2C0%2C0%2C1%2C25%2C128%2C133.33%2C133.33%2C0%2C0%2C1%2C48.07%2C97.25C70.33%2C75.19%2C97.22%2C64%2C128%2C64s57.67%2C11.19%2C79.93%2C33.25A133.46%2C133.46%2C0%2C0%2C1%2C231.05%2C128C223.84%2C141.46%2C192.43%2C192%2C128%2C192Zm0-112a48%2C48%2C0%2C1%2C0%2C48%2C48A48.05%2C48.05%2C0%2C0%2C0%2C128%2C80Zm0%2C80a32%2C32%2C0%2C1%2C1%2C32-32A32%2C32%2C0%2C0%2C1%2C128%2C160Z%22/%3E%3C/svg%3E"); }
+i.ph-fill.ph-eye-slash { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M96.68%2C57.87a4%2C4%2C0%2C0%2C1%2C2.08-6.6A130.13%2C130.13%2C0%2C0%2C1%2C128%2C48c34.88%2C0%2C66.57%2C13.26%2C91.66%2C38.35%2C18.83%2C18.83%2C27.3%2C37.62%2C27.65%2C38.41a8%2C8%2C0%2C0%2C1%2C0%2C6.5c-.35.79-8.82%2C19.57-27.65%2C38.4q-4.28%2C4.26-8.79%2C8.07a4%2C4%2C0%2C0%2C1-5.55-.36ZM213.92%2C210.62a8%2C8%2C0%2C1%2C1-11.84%2C10.76L180%2C197.13A127.21%2C127.21%2C0%2C0%2C1%2C128%2C208c-34.88%2C0-66.57-13.26-91.66-38.34C17.51%2C150.83%2C9%2C132.05%2C8.69%2C131.26a8%2C8%2C0%2C0%2C1%2C0-6.5C9%2C124%2C17.51%2C105.18%2C36.34%2C86.35a135%2C135%2C0%2C0%2C1%2C25-19.78L42.08%2C45.38A8%2C8%2C0%2C1%2C1%2C53.92%2C34.62Zm-65.49-48.25-52.69-58a40%2C40%2C0%2C0%2C0%2C52.69%2C58Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-eye-slash { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M53.92%2C34.62A8%2C8%2C0%2C1%2C0%2C42.08%2C45.38L61.32%2C66.55C25%2C88.84%2C9.38%2C123.2%2C8.69%2C124.76a8%2C8%2C0%2C0%2C0%2C0%2C6.5c.35.79%2C8.82%2C19.57%2C27.65%2C38.4C61.43%2C194.74%2C93.12%2C208%2C128%2C208a127.11%2C127.11%2C0%2C0%2C0%2C52.07-10.83l22%2C24.21a8%2C8%2C0%2C1%2C0%2C11.84-10.76Zm47.33%2C75.84%2C41.67%2C45.85a32%2C32%2C0%2C0%2C1-41.67-45.85ZM128%2C192c-30.78%2C0-57.67-11.19-79.93-33.25A133.16%2C133.16%2C0%2C0%2C1%2C25%2C128c4.69-8.79%2C19.66-33.39%2C47.35-49.38l18%2C19.75a48%2C48%2C0%2C0%2C0%2C63.66%2C70l14.73%2C16.2A112%2C112%2C0%2C0%2C1%2C128%2C192Zm6-95.43a8%2C8%2C0%2C0%2C1%2C3-15.72%2C48.16%2C48.16%2C0%2C0%2C1%2C38.77%2C42.64%2C8%2C8%2C0%2C0%2C1-7.22%2C8.71%2C6.39%2C6.39%2C0%2C0%2C1-.75%2C0%2C8%2C8%2C0%2C0%2C1-8-7.26A32.09%2C32.09%2C0%2C0%2C0%2C134%2C96.57Zm113.28%2C34.69c-.42.94-10.55%2C23.37-33.36%2C43.8a8%2C8%2C0%2C1%2C1-10.67-11.92A132.77%2C132.77%2C0%2C0%2C0%2C231.05%2C128a133.15%2C133.15%2C0%2C0%2C0-23.12-30.77C185.67%2C75.19%2C158.78%2C64%2C128%2C64a118.37%2C118.37%2C0%2C0%2C0-19.36%2C1.57A8%2C8%2C0%2C1%2C1%2C106%2C49.79%2C134%2C134%2C0%2C0%2C1%2C128%2C48c34.88%2C0%2C66.57%2C13.26%2C91.66%2C38.35%2C18.83%2C18.83%2C27.3%2C37.62%2C27.65%2C38.41A8%2C8%2C0%2C0%2C1%2C247.31%2C131.26Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-file { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M213.66%2C82.34l-56-56A8%2C8%2C0%2C0%2C0%2C152%2C24H56A16%2C16%2C0%2C0%2C0%2C40%2C40V216a16%2C16%2C0%2C0%2C0%2C16%2C16H200a16%2C16%2C0%2C0%2C0%2C16-16V88A8%2C8%2C0%2C0%2C0%2C213.66%2C82.34ZM160%2C51.31%2C188.69%2C80H160ZM200%2C216H56V40h88V88a8%2C8%2C0%2C0%2C0%2C8%2C8h48V216Z%22/%3E%3C/svg%3E"); }
+i.ph-fill.ph-folder { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M216%2C72H131.31L104%2C44.69A15.88%2C15.88%2C0%2C0%2C0%2C92.69%2C40H40A16%2C16%2C0%2C0%2C0%2C24%2C56V200.62A15.41%2C15.41%2C0%2C0%2C0%2C39.39%2C216h177.5A15.13%2C15.13%2C0%2C0%2C0%2C232%2C200.89V88A16%2C16%2C0%2C0%2C0%2C216%2C72ZM40%2C56H92.69l16%2C16H40Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-folder { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M216%2C72H131.31L104%2C44.69A15.86%2C15.86%2C0%2C0%2C0%2C92.69%2C40H40A16%2C16%2C0%2C0%2C0%2C24%2C56V200.62A15.4%2C15.4%2C0%2C0%2C0%2C39.38%2C216H216.89A15.13%2C15.13%2C0%2C0%2C0%2C232%2C200.89V88A16%2C16%2C0%2C0%2C0%2C216%2C72ZM40%2C56H92.69l16%2C16H40ZM216%2C200H40V88H216Z%22/%3E%3C/svg%3E"); }
+i.ph-fill.ph-game-controller { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M247.44%2C173.75a.68.68%2C0%2C0%2C0%2C0-.14L231.05%2C89.44c0-.06%2C0-.12%2C0-.18A60.08%2C60.08%2C0%2C0%2C0%2C172%2C40H83.89a59.88%2C59.88%2C0%2C0%2C0-59%2C49.52L8.58%2C173.61a.68.68%2C0%2C0%2C0%2C0%2C.14%2C36%2C36%2C0%2C0%2C0%2C60.9%2C31.71l.35-.37L109.52%2C160h37l39.71%2C45.09c.11.13.23.25.35.37A36.08%2C36.08%2C0%2C0%2C0%2C212%2C216a36%2C36%2C0%2C0%2C0%2C35.43-42.25ZM104%2C112H96v8a8%2C8%2C0%2C0%2C1-16%2C0v-8H72a8%2C8%2C0%2C0%2C1%2C0-16h8V88a8%2C8%2C0%2C0%2C1%2C16%2C0v8h8a8%2C8%2C0%2C0%2C1%2C0%2C16Zm40-8a8%2C8%2C0%2C0%2C1%2C8-8h24a8%2C8%2C0%2C0%2C1%2C0%2C16H152A8%2C8%2C0%2C0%2C1%2C144%2C104Zm84.37%2C87.47a19.84%2C19.84%2C0%2C0%2C1-12.9%2C8.23A20.09%2C20.09%2C0%2C0%2C1%2C198%2C194.31L167.8%2C160H172a60%2C60%2C0%2C0%2C0%2C51-28.38l8.74%2C45A19.82%2C19.82%2C0%2C0%2C1%2C228.37%2C191.47Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-game-controller { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M176%2C112H152a8%2C8%2C0%2C0%2C1%2C0-16h24a8%2C8%2C0%2C0%2C1%2C0%2C16ZM104%2C96H96V88a8%2C8%2C0%2C0%2C0-16%2C0v8H72a8%2C8%2C0%2C0%2C0%2C0%2C16h8v8a8%2C8%2C0%2C0%2C0%2C16%2C0v-8h8a8%2C8%2C0%2C0%2C0%2C0-16ZM241.48%2C200.65a36%2C36%2C0%2C0%2C1-54.94%2C4.81c-.12-.12-.24-.24-.35-.37L146.48%2C160h-37L69.81%2C205.09l-.35.37A36.08%2C36.08%2C0%2C0%2C1%2C44%2C216%2C36%2C36%2C0%2C0%2C1%2C8.56%2C173.75a.68.68%2C0%2C0%2C1%2C0-.14L24.93%2C89.52A59.88%2C59.88%2C0%2C0%2C1%2C83.89%2C40H172a60.08%2C60.08%2C0%2C0%2C1%2C59%2C49.25c0%2C.06%2C0%2C.12%2C0%2C.18l16.37%2C84.17a.68.68%2C0%2C0%2C1%2C0%2C.14A35.74%2C35.74%2C0%2C0%2C1%2C241.48%2C200.65ZM172%2C144a44%2C44%2C0%2C0%2C0%2C0-88H83.89A43.9%2C43.9%2C0%2C0%2C0%2C40.68%2C92.37l0%2C.13L24.3%2C176.59A20%2C20%2C0%2C0%2C0%2C58%2C194.3l41.92-47.59a8%2C8%2C0%2C0%2C1%2C6-2.71Zm59.7%2C32.59-8.74-45A60%2C60%2C0%2C0%2C1%2C172%2C160h-4.2L198%2C194.31a20.09%2C20.09%2C0%2C0%2C0%2C17.46%2C5.39%2C20%2C20%2C0%2C0%2C0%2C16.23-23.11Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-gear-six { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M128%2C80a48%2C48%2C0%2C1%2C0%2C48%2C48A48.05%2C48.05%2C0%2C0%2C0%2C128%2C80Zm0%2C80a32%2C32%2C0%2C1%2C1%2C32-32A32%2C32%2C0%2C0%2C1%2C128%2C160Zm109.94-52.79a8%2C8%2C0%2C0%2C0-3.89-5.4l-29.83-17-.12-33.62a8%2C8%2C0%2C0%2C0-2.83-6.08%2C111.91%2C111.91%2C0%2C0%2C0-36.72-20.67%2C8%2C8%2C0%2C0%2C0-6.46.59L128%2C41.85%2C97.88%2C25a8%2C8%2C0%2C0%2C0-6.47-.6A112.1%2C112.1%2C0%2C0%2C0%2C54.73%2C45.15a8%2C8%2C0%2C0%2C0-2.83%2C6.07l-.15%2C33.65-29.83%2C17a8%2C8%2C0%2C0%2C0-3.89%2C5.4%2C106.47%2C106.47%2C0%2C0%2C0%2C0%2C41.56%2C8%2C8%2C0%2C0%2C0%2C3.89%2C5.4l29.83%2C17%2C.12%2C33.62a8%2C8%2C0%2C0%2C0%2C2.83%2C6.08%2C111.91%2C111.91%2C0%2C0%2C0%2C36.72%2C20.67%2C8%2C8%2C0%2C0%2C0%2C6.46-.59L128%2C214.15%2C158.12%2C231a7.91%2C7.91%2C0%2C0%2C0%2C3.9%2C1%2C8.09%2C8.09%2C0%2C0%2C0%2C2.57-.42%2C112.1%2C112.1%2C0%2C0%2C0%2C36.68-20.73%2C8%2C8%2C0%2C0%2C0%2C2.83-6.07l.15-33.65%2C29.83-17a8%2C8%2C0%2C0%2C0%2C3.89-5.4A106.47%2C106.47%2C0%2C0%2C0%2C237.94%2C107.21Zm-15%2C34.91-28.57%2C16.25a8%2C8%2C0%2C0%2C0-3%2C3c-.58%2C1-1.19%2C2.06-1.81%2C3.06a7.94%2C7.94%2C0%2C0%2C0-1.22%2C4.21l-.15%2C32.25a95.89%2C95.89%2C0%2C0%2C1-25.37%2C14.3L134%2C199.13a8%2C8%2C0%2C0%2C0-3.91-1h-.19c-1.21%2C0-2.43%2C0-3.64%2C0a8.08%2C8.08%2C0%2C0%2C0-4.1%2C1l-28.84%2C16.1A96%2C96%2C0%2C0%2C1%2C67.88%2C201l-.11-32.2a8%2C8%2C0%2C0%2C0-1.22-4.22c-.62-1-1.23-2-1.8-3.06a8.09%2C8.09%2C0%2C0%2C0-3-3.06l-28.6-16.29a90.49%2C90.49%2C0%2C0%2C1%2C0-28.26L61.67%2C97.63a8%2C8%2C0%2C0%2C0%2C3-3c.58-1%2C1.19-2.06%2C1.81-3.06a7.94%2C7.94%2C0%2C0%2C0%2C1.22-4.21l.15-32.25a95.89%2C95.89%2C0%2C0%2C1%2C25.37-14.3L122%2C56.87a8%2C8%2C0%2C0%2C0%2C4.1%2C1c1.21%2C0%2C2.43%2C0%2C3.64%2C0a8.08%2C8.08%2C0%2C0%2C0%2C4.1-1l28.84-16.1A96%2C96%2C0%2C0%2C1%2C188.12%2C55l.11%2C32.2a8%2C8%2C0%2C0%2C0%2C1.22%2C4.22c.62%2C1%2C1.23%2C2%2C1.8%2C3.06a8.09%2C8.09%2C0%2C0%2C0%2C3%2C3.06l28.6%2C16.29A90.49%2C90.49%2C0%2C0%2C1%2C222.9%2C142.12Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-images { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M216%2C40H72A16%2C16%2C0%2C0%2C0%2C56%2C56V72H40A16%2C16%2C0%2C0%2C0%2C24%2C88V200a16%2C16%2C0%2C0%2C0%2C16%2C16H184a16%2C16%2C0%2C0%2C0%2C16-16V184h16a16%2C16%2C0%2C0%2C0%2C16-16V56A16%2C16%2C0%2C0%2C0%2C216%2C40ZM72%2C56H216v62.75l-10.07-10.06a16%2C16%2C0%2C0%2C0-22.63%2C0l-20%2C20-44-44a16%2C16%2C0%2C0%2C0-22.62%2C0L72%2C109.37ZM184%2C200H40V88H56v80a16%2C16%2C0%2C0%2C0%2C16%2C16H184Zm32-32H72V132l36-36%2C49.66%2C49.66a8%2C8%2C0%2C0%2C0%2C11.31%2C0L194.63%2C120%2C216%2C141.38V168ZM160%2C84a12%2C12%2C0%2C1%2C1%2C12%2C12A12%2C12%2C0%2C0%2C1%2C160%2C84Z%22/%3E%3C/svg%3E"); }
+i.ph-fill.ph-infinity { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M216%2C40H40A16%2C16%2C0%2C0%2C0%2C24%2C56V200a16%2C16%2C0%2C0%2C0%2C16%2C16H216a16%2C16%2C0%2C0%2C0%2C16-16V56A16%2C16%2C0%2C0%2C0%2C216%2C40ZM204.28%2C156.28a40%2C40%2C0%2C0%2C1-56.4.17L97.29%2C111.34%2C97%2C111A24%2C24%2C0%2C1%2C0%2C97%2C145c.36-.36.71-.73%2C1-1.1a8%2C8%2C0%2C1%2C1%2C12%2C10.6c-.55.62-1.13%2C1.23-1.71%2C1.81a40%2C40%2C0%2C1%2C1-.17-56.73l50.58%2C45.11.33.31A24%2C24%2C0%2C1%2C0%2C159%2C111c-.36.36-.7.72-1%2C1.1a8%2C8%2C0%2C0%2C1-12-10.59c.54-.62%2C1.12-1.24%2C1.71-1.82a40%2C40%2C0%2C0%2C1%2C56.57%2C56.56Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-info { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M128%2C24A104%2C104%2C0%2C1%2C0%2C232%2C128%2C104.11%2C104.11%2C0%2C0%2C0%2C128%2C24Zm0%2C192a88%2C88%2C0%2C1%2C1%2C88-88A88.1%2C88.1%2C0%2C0%2C1%2C128%2C216Zm16-40a8%2C8%2C0%2C0%2C1-8%2C8%2C16%2C16%2C0%2C0%2C1-16-16V128a8%2C8%2C0%2C0%2C1%2C0-16%2C16%2C16%2C0%2C0%2C1%2C16%2C16v40A8%2C8%2C0%2C0%2C1%2C144%2C176ZM112%2C84a12%2C12%2C0%2C1%2C1%2C12%2C12A12%2C12%2C0%2C0%2C1%2C112%2C84Z%22/%3E%3C/svg%3E"); }
+i.ph-fill.ph-lock-simple { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M208%2C80H176V56a48%2C48%2C0%2C0%2C0-96%2C0V80H48A16%2C16%2C0%2C0%2C0%2C32%2C96V208a16%2C16%2C0%2C0%2C0%2C16%2C16H208a16%2C16%2C0%2C0%2C0%2C16-16V96A16%2C16%2C0%2C0%2C0%2C208%2C80ZM96%2C56a32%2C32%2C0%2C0%2C1%2C64%2C0V80H96Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-map-trifold { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M228.92%2C49.69a8%2C8%2C0%2C0%2C0-6.86-1.45L160.93%2C63.52%2C99.58%2C32.84a8%2C8%2C0%2C0%2C0-5.52-.6l-64%2C16A8%2C8%2C0%2C0%2C0%2C24%2C56V200a8%2C8%2C0%2C0%2C0%2C9.94%2C7.76l61.13-15.28%2C61.35%2C30.68A8.15%2C8.15%2C0%2C0%2C0%2C160%2C224a8%2C8%2C0%2C0%2C0%2C1.94-.24l64-16A8%2C8%2C0%2C0%2C0%2C232%2C200V56A8%2C8%2C0%2C0%2C0%2C228.92%2C49.69ZM104%2C52.94l48%2C24V203.06l-48-24ZM40%2C62.25l48-12v127.5l-48%2C12Zm176%2C131.5-48%2C12V78.25l48-12Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-music-notes { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M212.92%2C17.69a8%2C8%2C0%2C0%2C0-6.86-1.45l-128%2C32A8%2C8%2C0%2C0%2C0%2C72%2C56V166.08A36%2C36%2C0%2C1%2C0%2C88%2C196V110.25l112-28v51.83A36%2C36%2C0%2C1%2C0%2C216%2C164V24A8%2C8%2C0%2C0%2C0%2C212.92%2C17.69ZM52%2C216a20%2C20%2C0%2C1%2C1%2C20-20A20%2C20%2C0%2C0%2C1%2C52%2C216ZM88%2C93.75V62.25l112-28v31.5ZM180%2C184a20%2C20%2C0%2C1%2C1%2C20-20A20%2C20%2C0%2C0%2C1%2C180%2C184Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-note { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M88%2C96a8%2C8%2C0%2C0%2C1%2C8-8h64a8%2C8%2C0%2C0%2C1%2C0%2C16H96A8%2C8%2C0%2C0%2C1%2C88%2C96Zm8%2C40h64a8%2C8%2C0%2C0%2C0%2C0-16H96a8%2C8%2C0%2C0%2C0%2C0%2C16Zm32%2C16H96a8%2C8%2C0%2C0%2C0%2C0%2C16h32a8%2C8%2C0%2C0%2C0%2C0-16ZM224%2C48V156.69A15.86%2C15.86%2C0%2C0%2C1%2C219.31%2C168L168%2C219.31A15.86%2C15.86%2C0%2C0%2C1%2C156.69%2C224H48a16%2C16%2C0%2C0%2C1-16-16V48A16%2C16%2C0%2C0%2C1%2C48%2C32H208A16%2C16%2C0%2C0%2C1%2C224%2C48ZM48%2C208H152V160a8%2C8%2C0%2C0%2C1%2C8-8h48V48H48Zm120-40v28.7L196.69%2C168Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-phone { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M222.37%2C158.46l-47.11-21.11-.13-.06a16%2C16%2C0%2C0%2C0-15.17%2C1.4%2C8.12%2C8.12%2C0%2C0%2C0-.75.56L134.87%2C160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16%2C16%2C0%2C0%2C0%2C1.32-15.06l0-.12L97.54%2C33.64a16%2C16%2C0%2C0%2C0-16.62-9.52A56.26%2C56.26%2C0%2C0%2C0%2C32%2C80c0%2C79.4%2C64.6%2C144%2C144%2C144a56.26%2C56.26%2C0%2C0%2C0%2C55.88-48.92A16%2C16%2C0%2C0%2C0%2C222.37%2C158.46ZM176%2C208A128.14%2C128.14%2C0%2C0%2C1%2C48%2C80%2C40.2%2C40.2%2C0%2C0%2C1%2C82.87%2C40a.61.61%2C0%2C0%2C0%2C0%2C.12l21%2C47L83.2%2C111.86a6.13%2C6.13%2C0%2C0%2C0-.57.77%2C16%2C16%2C0%2C0%2C0-1%2C15.7c9.06%2C18.53%2C27.73%2C37.06%2C46.46%2C46.11a16%2C16%2C0%2C0%2C0%2C15.75-1.14%2C8.44%2C8.44%2C0%2C0%2C0%2C.74-.56L168.89%2C152l47%2C21.05h0s.08%2C0%2C.11%2C0A40.21%2C40.21%2C0%2C0%2C1%2C176%2C208Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-sliders-horizontal { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M40%2C88H73a32%2C32%2C0%2C0%2C0%2C62%2C0h81a8%2C8%2C0%2C0%2C0%2C0-16H135a32%2C32%2C0%2C0%2C0-62%2C0H40a8%2C8%2C0%2C0%2C0%2C0%2C16Zm64-24A16%2C16%2C0%2C1%2C1%2C88%2C80%2C16%2C16%2C0%2C0%2C1%2C104%2C64ZM216%2C168H199a32%2C32%2C0%2C0%2C0-62%2C0H40a8%2C8%2C0%2C0%2C0%2C0%2C16h97a32%2C32%2C0%2C0%2C0%2C62%2C0h17a8%2C8%2C0%2C0%2C0%2C0-16Zm-48%2C24a16%2C16%2C0%2C1%2C1%2C16-16A16%2C16%2C0%2C0%2C1%2C168%2C192Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-stack { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M230.91%2C172A8%2C8%2C0%2C0%2C1%2C228%2C182.91l-96%2C56a8%2C8%2C0%2C0%2C1-8.06%2C0l-96-56A8%2C8%2C0%2C0%2C1%2C36%2C169.09l92%2C53.65%2C92-53.65A8%2C8%2C0%2C0%2C1%2C230.91%2C172ZM220%2C121.09l-92%2C53.65L36%2C121.09A8%2C8%2C0%2C0%2C0%2C28%2C134.91l96%2C56a8%2C8%2C0%2C0%2C0%2C8.06%2C0l96-56A8%2C8%2C0%2C1%2C0%2C220%2C121.09ZM24%2C80a8%2C8%2C0%2C0%2C1%2C4-6.91l96-56a8%2C8%2C0%2C0%2C1%2C8.06%2C0l96%2C56a8%2C8%2C0%2C0%2C1%2C0%2C13.82l-96%2C56a8%2C8%2C0%2C0%2C1-8.06%2C0l-96-56A8%2C8%2C0%2C0%2C1%2C24%2C80Zm23.88%2C0L128%2C126.74%2C208.12%2C80%2C128%2C33.26Z%22/%3E%3C/svg%3E"); }
+i.ph-fill.ph-wallet { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M216%2C64H56a8%2C8%2C0%2C0%2C1%2C0-16H192a8%2C8%2C0%2C0%2C0%2C0-16H56A24%2C24%2C0%2C0%2C0%2C32%2C56V184a24%2C24%2C0%2C0%2C0%2C24%2C24H216a16%2C16%2C0%2C0%2C0%2C16-16V80A16%2C16%2C0%2C0%2C0%2C216%2C64Zm-36%2C80a12%2C12%2C0%2C1%2C1%2C12-12A12%2C12%2C0%2C0%2C1%2C180%2C144Z%22/%3E%3C/svg%3E"); }
+i.ph.ph-wifi-high { --m: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20256%20256%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M140%2C204a12%2C12%2C0%2C1%2C1-12-12A12%2C12%2C0%2C0%2C1%2C140%2C204ZM237.08%2C87A172%2C172%2C0%2C0%2C0%2C18.92%2C87%2C8%2C8%2C0%2C0%2C0%2C29.08%2C99.37a156%2C156%2C0%2C0%2C1%2C197.84%2C0A8%2C8%2C0%2C0%2C0%2C237.08%2C87ZM205%2C122.77a124%2C124%2C0%2C0%2C0-153.94%2C0A8%2C8%2C0%2C0%2C0%2C61%2C135.31a108%2C108%2C0%2C0%2C1%2C134.06%2C0%2C8%2C8%2C0%2C0%2C0%2C11.24-1.3A8%2C8%2C0%2C0%2C0%2C205%2C122.77Zm-32.26%2C35.76a76.05%2C76.05%2C0%2C0%2C0-89.42%2C0%2C8%2C8%2C0%2C0%2C0%2C9.42%2C12.94%2C60%2C60%2C0%2C0%2C1%2C70.58%2C0%2C8%2C8%2C0%2C1%2C0%2C9.42-12.94Z%22/%3E%3C/svg%3E"); }
+/* icons:end */
 </style>
 </head>
 <body id="top">
-<header class="bar">
-  <div class="xstrip"><a href="https://tapswitch.fyi/"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="tsBg2" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#tsBg2)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M35,44 L73,44 M73,44 L65,36 M73,44 L65,52"/><path d="M73,64 L35,64 M35,64 L43,56 M35,64 L43,72"/></g></svg><span data-i18n="strip.text">Also from us: <b>TapSwitch</b>, your access card and Google Wallet on one phone.</span><span class="go" data-i18n="strip.go">See TapSwitch &rsaquo;</span></a><button type="button" class="x" aria-label="Close" data-i18n-attr="aria-label:strip.close">&times;</button></div>
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="FloatAway, back to the top" data-i18n-attr="aria-label:bar.brand">
-      <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="faBg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#faBg)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M41,31 H67 A10,10 0 0 1 77,41 V67 A10,10 0 0 1 67,77 H41 A10,10 0 0 1 31,67 V41 A10,10 0 0 1 41,31 Z" opacity=".55"/><path d="M58,50 L66,42 M58,42 L66,42 L66,50"/><path d="M50,58 L42,66 M50,66 L42,66 L42,58"/></g></svg>
-      FloatAway
-    </a>
-    <span class="spacer"></span>
-    <a class="qlink" href="/floataway/help/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 17v.01"/><path d="M12 13.5a1.5 1.5 0 0 1 1-1.5a2.6 2.6 0 1 0-3-4"/></svg><span data-i18n="bar.help">Questions</span></a>
-    <button type="button" class="sky" id="themeBtn" aria-label="Switch to dark mode">
-      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><g class="rays" stroke="#FFB21E" stroke-width="1.8" stroke-linecap="round"><path d="M12 1.5v2.6M12 19.9v2.6M1.5 12h2.6M19.9 12h2.6M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g><circle cx="12" cy="12" r="5.4" fill="#FFC53D"/><circle cx="12" cy="12" r="5.4" fill="none" stroke="#FF9F0A" stroke-width=".8"/></svg>
-      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.8 3.2a8.6 8.6 0 1 0 5 13.6A7 7 0 0 1 15.8 3.2z" fill="#F2EFD8"/><circle class="star" cx="5.2" cy="5" r=".9" fill="#F2EFD8"/><circle class="star" cx="9.6" cy="2.6" r=".6" fill="#F2EFD8"/></svg>
-    </button>
-  </div>
-</header>
-<script>
-(() => {
-  const s = document.querySelector('.xstrip'); if (!s) return;
-  let closed = false; try { closed = localStorage.getItem('xstrip-closed') === '1'; } catch (e) {}
-  const fit = () => document.documentElement.style.setProperty('--strip-h', (s.isConnected ? s.offsetHeight : 0) + 'px');
-  if (closed) { s.remove(); fit(); return; }
-  fit(); addEventListener('resize', fit);
-  s.querySelector('.x').addEventListener('click', () => { s.remove(); fit(); try { localStorage.setItem('xstrip-closed', '1'); } catch (e) {} });
-})();
-</script>
-<div class="wash" aria-hidden="true"></div>
-
-<main>
-  <div class="wrap">
-    <div class="hero">
-      <div>
-        <p class="tag" data-i18n-text="hero.tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works on ColorOS 17</p>
-        <h1 data-i18n="hero.h1">Smart Sidebar apps open full screen, in one tap.</h1>
-        <p class="lede" data-i18n="hero.lede">On an Oppo phone, an app you open from the Smart Sidebar starts in a small floating window, and you have to expand it. FloatAway opens it full screen straight away, the same as opening it from your home screen. Cloned apps too. Games still run in your phone's game mode.</p>
-        <p class="what">An app for <b>Oppo and ColorOS</b>, Android 16 or newer. Free for 14 days, then US$7.35 once.</p>
-      </div>
-      <video class="clip" src="/assets/floataway-demo.mp4" poster="/assets/floataway-demo-poster.webp" width="720" height="720"
-        muted autoplay loop playsinline preload="metadata"
-        aria-label="A short clip: without FloatAway, a sidebar app opens in a small window; with FloatAway, apps and folders open full screen." data-i18n-attr="aria-label:clip.aria"></video>
-    </div>
-
-    <section id="price">
-      <h2>Free for 14 days, then one price for <span class="lt-green">lifetime access</span></h2>
-      <div class="price">
-        <div>
-          <div class="amount">US$7.35</div>
-          <p class="amount-note">One payment, and no account needed.</p>
-        </div>
-        <div class="price-points">
-          <p data-i18n="price.pp1"><strong>Try it free for 14 days.</strong> The 14 days start once setup is done, not when you install it.</p>
-          <p data-i18n="price.pp2"><strong>No refunds.</strong> The free 14 days are there so you can try it first. Once a code is issued, it cannot be refunded.</p>
-          <p data-i18n="price.pp3"><strong>Buy it inside the app.</strong> Tap "Buy now" to pay in your browser. Your unlock code shows on screen, and a copy is emailed to you.</p>
-        </div>
-      </div>
-      <div class="lifetime" role="group" aria-label="Lifetime access" data-i18n-attr="aria-label:lt.aria">
-          <div class="lt-head"><span class="lt-badge" data-i18n-text="lt.badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18.2 8.5c-2.4 0-3.9 1.7-6.2 3.5-2.3 1.8-3.8 3.5-6.2 3.5a3.5 3.5 0 1 1 0-7c2.4 0 3.9 1.7 6.2 3.5 2.3 1.8 3.8 3.5 6.2 3.5a3.5 3.5 0 1 0 0-7z"/></svg>Lifetime access</span><span class="lt-price">US$7.35<span>once</span></span></div>
-          <ul class="lt-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div data-i18n="lt.li1"><strong>Pay once, never again.</strong>No subscription and no monthly fee, ever.</div></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div data-i18n="lt.li2"><strong>Every future update is free.</strong>New versions and fixes cost you nothing.</div></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="1.6"/><path d="m7.5 12.2 3 3 6-6.2"/></svg><div data-i18n="lt.li3"><strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it.</div></li>
-          </ul>
-        </div>
-        <div class="cta-row">
-        <a class="btn" data-download data-i18n="cta.download" href="https://github.com/jugal1990/floataway-releases/releases/latest/download/FloatAway.apk">Download</a>
-        <a class="btn btn-plain" href="https://github.com/jugal1990/floataway-releases/releases">All versions on GitHub</a>
-      </div>
-      <p class="cta-note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#safe">How to check it is safe</a></p>
-      <div class="whatsnew" id="whats-new">
-        <h3>What's new in 1.1.1 <span translate="no" data-date>18 Nov 2026</span></h3>
-        <p class="lead" data-i18n="wn.lead">Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart.</p>
-        <ul>
-          <li data-i18n="wn.li1">Banking apps like Smart Banka, which open through a hidden starter screen, now open full screen every time.</li>
-          <li data-i18n="wn.li2">Google Calendar opens full screen even when it was already open in the background.</li>
-          <li data-i18n="wn.li3">After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="folders">
-      <h2 data-i18n-text="fo.h2">Sidebar folders <span class="beta" translate="no">BETA</span></h2>
-      <p class="sub" data-i18n="fo.sub">Open any folder on your phone straight from the Smart Sidebar. This feature is new and still being polished.</p>
-      <ol class="setup">
-        <li>
-          <h3 data-i18n="fo.s1.h">Pick a folder</h3>
-          <p data-i18n="fo.s1.p">On FloatAway's home screen, under Sidebar folders, tap Begin setup and give a slot a folder.</p>
-        </li>
-        <li>
-          <h3 data-i18n="fo.s2.h">Its button appears</h3>
-          <p data-i18n="fo.s2.p">FloatAway adds the button to your sidebar with the folder's real name.</p>
-        </li>
-        <li>
-          <h3 data-i18n="fo.s3.h">Tap to open it</h3>
-          <p data-i18n="fo.s3.p">The folder opens full screen.</p>
-        </li>
-      </ol>
-      <p data-i18n="fo.p">Android blocks some folders, like Download and your phone's main storage. If you see "Can't use this folder", pick a folder inside it.</p>
-    </section>
-
-    <!--cmap-start-->
-    <section id="customers" class="cm" hidden aria-labelledby="customers-h">
-      <h2 id="customers-h" data-i18n="cm.h2">Where our customers come from</h2>
-      <!-- Land outlines: Natural Earth (public domain) via the world-atlas package (ISC), simplified. -->
-      <div class="cm-map" translate="no"><canvas aria-hidden="true"></canvas></div>
-      <p class="cm-tap" data-i18n="cm.tap">Tap a dot to see the country</p>
-      <ul class="cm-list" translate="no"></ul>
-    </section>
-<!--cmap-end-->
-
-    <section class="said" aria-label="What a customer said" data-i18n-attr="aria-label:said.aria">
-      <div class="quotes">
-        <figure class="quote" dir="ltr">
-          <blockquote data-i18n="said.quote">A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.</blockquote>
-          <figcaption translate="no"><span class="who">Tom S.</span><span class="model">Oppo Find X9 Pro</span></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="phones">
-      <h2 data-i18n="phones.h2">Which phones it works on</h2>
-      <p class="sub" data-i18n="phones.sub">Oppo or ColorOS phones with the Smart Sidebar.</p>
-      <p data-i18n="phones.p">It is built and tested on an Oppo Find X9. The 14-day free trial is how you find out if it works on yours.</p>
-    </section>
-
-
-    <section id="setup">
-      <h2>Setting it up takes under five minutes</h2>
-      <p class="sub" data-i18n="setup.sub">You set it up once, on the phone itself. You do not need a computer or a cable.</p>
-      <ol class="setup">
-        <li>
-          <h3 data-i18n="setup.s1.h">Install the file</h3>
-          <p data-i18n="setup.s1.p">Your phone asks whether to allow installs from your browser. Say yes, then open FloatAway.</p>
-        </li>
-        <li>
-          <h3 data-i18n="setup.s2.h">Turn on Developer options</h3>
-          <p data-i18n="setup.s2.p">FloatAway guides you through it. You only do this once.</p>
-        </li>
-        <li>
-          <h3 data-i18n="setup.s3.h">Turn on Wireless debugging</h3>
-          <p data-i18n="setup.s3.p">You need Wi-Fi for this step. Your phone shows six digits, and you type them into the FloatAway notification. FloatAway turns Wireless debugging back off when it is done. Your phone may close and reopen FloatAway once. Nothing is lost.</p>
-        </li>
-        <li>
-          <h3 data-i18n="setup.s4.h">Let it run in the background</h3>
-          <p data-i18n="setup.s4.p">This keeps sidebar apps opening full screen. FloatAway shows one quiet notification while it is on.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="safe">
-      <h2 data-i18n="safe.h2">Is it safe?</h2>
-      <p class="sub" data-i18n="safe.sub">FloatAway is not on the Play Store, so you can check it yourself with a free virus scan.</p>
-      <div class="facts-box">
-        <table class="facts">
-          <tr><th>File</th><td>FloatAway.apk</td></tr>
-          <tr><th>Latest version</th><td>1.1.1</td></tr>
-          <tr><th>Size</th><td>7.0 MB</td></tr>
-          <tr><th>Virus scan</th><td><span data-i18n="facts.scanResult">0 of 67 virus checkers flag it</span> <span translate="no">(VirusTotal, <span data-date>18 Nov 2026</span>).</span> <a href="https://www.virustotal.com/gui/file/bb46f2c9aefed2d3fc704ef64cdd23e0fae90bcaef38069ea63290f244500c8e" data-i18n="facts.report">See the full report</a></td></tr>
-        </table>
-        <details class="tech">
-          <summary data-i18n="facts.tech">Show technical details</summary>
-          <table class="facts">
-            <tr><th>SHA-256 of the file</th><td class="hash">bb46f2c9aefed2d3fc704ef64cdd23e0fae90bcaef38069ea63290f244500c8e</td></tr>
-            <tr><th>Signed by</th><td class="hash">ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</td></tr>
-            <tr><td colspan="2" class="sig-note" data-i18n="facts.sigNote">Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it.</td></tr>
-          </table>
-        </details>
-      </div>
-
-      <h3 class="small" data-i18n="perms.h3">What FloatAway can and cannot do</h3>
-      <dl class="perms">
-        <div class="perm"><dt>See which app just opened</dt><dd>So it knows when you tapped an app in the Smart Sidebar, cloned apps included.</dd></div>
-        <div class="perm"><dt>Show over other apps</dt><dd>It places one tiny invisible window, only while the sidebar is open. Your phone needs it before FloatAway can open an app for you.</dd></div>
-        <div class="perm"><dt>Change one phone setting</dt><dd>The one that makes shared files open in a small window. It goes back when you switch FloatAway off or the trial ends.</dd></div>
-        <div class="perm"><dt>Sidebar folders only: use the sidebar for you</dt><dd>When you add a folder, FloatAway opens the sidebar and taps its Edit steps, behind a pop-up. For those seconds it reads where the buttons sit on screen, never any words.</dd></div>
-        <div class="perm"><dt>Never sees what is in your apps</dt><dd>It cannot read your messages or files, or any words on your screen, and there is no account. It checks for updates once a day.</dd></div>
-      </dl>
-
-      <h3 class="small" data-i18n="limits.h3">Important facts</h3>
-      <ul class="limits">
-        <li data-i18n="limits.1">It is built and tested on an <b>Oppo Find X9</b>. It needs an Oppo or ColorOS phone with the Smart Sidebar and Android 16 or newer.</li>
-        <li data-i18n="limits.2">After the trial ends, FloatAway stops and sidebar apps open in the small window again, the way your phone does on its own.</li>
-      </ul>
-      <p class="help-link" data-i18n="safe.help">Apps still opening in the small window? <a href="/floataway/help/">Read the common questions</a></p>
-    </section>
-
-    <section id="clones">
-      <h2 data-i18n="clones.h2">Cloned apps open full screen too</h2>
-      <p class="sub" data-i18n="clones.sub">Some apps can run twice on one phone, for example two WhatsApp accounts. Oppo calls the second copy a cloned app, and its icon has a small badge.</p>
-      <p data-i18n="clones.p">Tap a cloned app in the Smart Sidebar and FloatAway opens it full screen, in the same single motion as any other app. That works when the app is starting fresh and when it is already open in the background, and it keeps working after you restart your phone.</p>
-      <ol class="setup">
-        <li>
-          <h3 data-i18n="clones.s1.h">Find the switch</h3>
-          <p data-i18n="clones.s1.p">On FloatAway's home screen, under "Cloned apps open full screen". It is on once setup is done.</p>
-        </li>
-        <li>
-          <h3 data-i18n="clones.s2.h">Had FloatAway before version 1.0.2?</h3>
-          <p data-i18n="clones.s2.p">The line under the switch says "Needs one more setup step". Turn the switch on and FloatAway takes you through the Wireless debugging step once more. You need Wi-Fi for it, and it takes about a minute.</p>
-        </li>
-      </ol>
-      <h3 class="small" data-i18n="clones.meaning.h3">What the line under the switch means</h3>
-      <dl class="perms">
-        <div class="perm"><dt data-i18n="clones.m.1.t">Working</dt><dd data-i18n="clones.m.1.d">Cloned apps open full screen.</dd></div>
-        <div class="perm"><dt data-i18n="clones.m.2.t">Off</dt><dd data-i18n="clones.m.2.d">You switched it off. Cloned apps open in the small window, the way your phone does on its own.</dd></div>
-        <div class="perm"><dt data-i18n="clones.m.3.t">Needs one more setup step</dt><dd data-i18n="clones.m.3.d">Turn the switch on to do it.</dd></div>
-        <div class="perm"><dt data-i18n="clones.m.4.t">No cloned apps on this phone</dt><dd data-i18n="clones.m.4.d">Clone an app in your phone's settings, and the switch becomes available.</dd></div>
-        <div class="perm"><dt data-i18n="clones.m.5.t">This phone did not allow it</dt><dd data-i18n="clones.m.5.d">Your phone refused the extra step. Other apps still open full screen.</dd></div>
-      </dl>
-    </section>
-
-    <p class="closing">Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href="#price">Back to the download</a></span></p>
-      <section class="tried" aria-labelledby="tried-h">
-        <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="tsBg3" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#tsBg3)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M35,44 L73,44 M73,44 L65,36 M73,44 L65,52"/><path d="M73,64 L35,64 M35,64 L43,56 M35,64 L43,72"/></g></svg>
-        <div>
-          <h2 id="tried-h" data-i18n="tried.h2">Have you tried TapSwitch?</h2>
-          <p class="lead" data-i18n="tried.lead">Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?</p>
-          <p data-i18n="tried.p">TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days.</p>
-          <a class="btn" href="https://tapswitch.fyi/" data-i18n="tried.go">See TapSwitch &rsaquo;</a>
-        </div>
-      </section>
-
-  </div>
-
-  <footer>
-    <div class="wrap">
-      <p data-i18n="foot.made">Made by one person. Contact me: <a href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p>
-      <p data-i18n="foot.help"><a href="/floataway/help/">Common questions: Smart Sidebar apps full screen on Oppo</a></p>
-      <p data-i18n="foot.also">Also from the maker of FloatAway: <a href="https://tapswitch.fyi/">TapSwitch, access card and Google Wallet on one phone</a></p>
-      <p data-i18n="foot.notAffiliated">FloatAway is not affiliated with Oppo.</p>
-    </div>
-  </footer>
-</main>
+<header class="bar" id="bar"><div class="xstrip" id="xstrip"><a href="/"><img src="../assets/logo.svg" alt=""><span data-i18n="strip.text">Also from us: <b>TapSwitch</b>, your access card and Google Wallet on one phone.</span><span class="go" data-i18n="strip.go">See TapSwitch ›</span><span class="sh" data-i18n="n.also-from-us-tapswitch.piefq6">Also from us: <b>TapSwitch</b> ›</span></a><button class="x" type="button" aria-label="Close" data-i18n-attr="aria-label:strip.close">×</button></div><div class="wrap" id="barIn"><a class="brand" href="#top"><img src="../assets/floataway-logo.svg" alt="">FloatAway</a><span class="spacer"></span><a class="qlink" href="/floataway/help/" data-i18n="bar.help">Questions</a><a class="btn" href="https://github.com/jugal1990/floataway-releases/releases/latest/download/FloatAway.apk" data-i18n="n.download-floataway.1qxsp1t">Download FloatAway</a></div></header>
+<main id="main"><div class="hero"><div class="wrap"><div class="htext"><h1 data-i18n="n.smart-sidebar-apps-ope.dlu3kr">Smart Sidebar apps open <span class="b">full screen</span>, in one tap.</h1><div class="cta"><a class="btn btn-lg" id="heroDl" href="https://github.com/jugal1990/floataway-releases/releases/latest/download/FloatAway.apk" data-i18n="n.download-floataway.1qxsp1t">Download FloatAway</a></div></div><div class="vslot" id="vslot"><span id="demo"></span><div class="frame"><video controls src="../assets/floataway-film.mp4" poster="../assets/floataway-film-poster.webp" playsinline="" preload="none" aria-label="A short clip: without FloatAway, a sidebar app opens in a small window; with FloatAway, apps and folders open full screen." data-i18n-attr="aria-label:clip.aria"></video><span class="vlen">0:41</span><button class="vplay" type="button" aria-label="Play video" data-i18n-attr="aria-label:n.play-video.1abrqaw"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"></path></svg></button></div></div></div></div><section id="price"><div class="wrap"><div class="shead rv"><div><h2 data-i18n="n.free-for-14-days-then.1r95hti">Free for 14 days, then one price for lifetime access</h2></div></div><div class="price rv"><div class="l"><p><b data-i18n="n.no-account-needed.19t63jc">No account needed.</b></p><p data-i18n="n.the-14-days-start-once.cwqh7i">The 14 days start once the app works on your phone, not at download. All features work.</p><p data-i18n="n.no-refunds-you-try-it.azqop1"><b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded.</p><p data-i18n="n.in-the-app-tap-get-the.1i6ygo6">In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email.</p><div class="works" id="phones"><h3 data-i18n="phones.h2">Which phones it works on</h3><p class="big" data-i18n="phones.sub">Oppo or ColorOS phones with the Smart Sidebar.</p><p data-i18n="n.needs-android-16-or-ne.1m2vjqk">Needs Android 16 or newer. Built and tested on an Oppo Find X9. The free trial shows if it works on yours.</p><p data-i18n="n.when-the-trial-ends-fl.zumug7">When the trial ends, FloatAway stops and sidebar apps open in the small window again, as they did before.</p></div></div><div class="r"><div class="lt"><b data-i18n-text="lt.aria"><i class="ph-fill ph-infinity"></i>Lifetime access</b><span class="amt">US$7.35<small data-i18n="lt.once">once</small></span></div><ul><li data-i18n="n.pay-once-never-again.1e1dxx"><b>Pay once, never again.</b></li><li data-i18n="n.every-future-update-is.1fjslkb"><b>Every future update is free.</b></li><li data-i18n="n.yours-for-good-on-that.stss27"><b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it.</li></ul><div class="dl"><a class="btn btn-lg" id="priceDl" href="https://github.com/jugal1990/floataway-releases/releases/latest/download/FloatAway.apk" data-i18n="n.download-floataway.1qxsp1t">Download FloatAway</a><a class="tlink" href="https://github.com/jugal1990/floataway-releases/releases" data-i18n="cta.all">All versions on GitHub</a></div><p class="small cta-note" data-i18n="cta.note">Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href="#safe">How to check it is safe</a></p></div></div><div class="new" id="whats-new"><div class="ver"><div><b>1.1.1</b><span data-date="18 Nov 2026">18 Nov 2026</span></div><span data-i18n="n.what-s-new.2j3iur">What’s new</span></div><div class="body"><p data-i18n="wn.lead">Two apps that stayed small now open full screen, and FloatAway starts sooner after a phone restart.</p><ul><li data-i18n="n.smart-banka-now-opens.notf9j">Smart Banka now opens full screen every time.</li><li data-i18n="wn.li2">Google Calendar opens full screen even when it was already open in the background.</li><li data-i18n="wn.li3">After a phone restart, FloatAway starts sooner, so your sidebar apps open full screen earlier.</li></ul></div></div></div></section><section id="features"><div class="wrap"><div class="shead rv"><div><h2 data-i18n="n.sidebar-apps-the-way-y.jqeai4">Sidebar apps, the way you expected</h2></div></div><div class="fx rv"><div class="ftabs" role="tablist" aria-label="Sidebar apps, the way you expected" data-i18n-attr="aria-label:n.sidebar-apps-the-way-y.jqeai4"><button type="button" role="tab" id="ft0" aria-controls="fp0" aria-selected="true" tabindex="0" data-i18n-text="n.full-screen-in-one-tap.htku3m">Full screen in one tap</button><button type="button" role="tab" id="ft1" aria-controls="fp1" aria-selected="false" tabindex="-1" data-i18n-text="n.cloned-apps-too.8ki9c4">Cloned apps too</button><button type="button" role="tab" id="ft2" aria-controls="fp2" aria-selected="false" tabindex="-1" data-i18n-text="fo.h2">Sidebar folders<span class="beta" data-i18n="n.beta.16ce807">BETA</span></button><button type="button" role="tab" id="ft3" aria-controls="fp3" aria-selected="false" tabindex="-1" data-i18n-text="n.games-keep-game-mode.6pve7s">Games keep game mode</button></div><div class="tiles"><article class="tile g1 on" id="fp0" role="tabpanel" aria-labelledby="ft0"><span class="clockdot"></span><p data-i18n="n.a-smart-sidebar-app-op.tfmc8k">A Smart Sidebar app opens full screen at once, not in a small window.</p><div class="tdemo"><div class="mini"><span class="key"></span><div class="screen"><span class="punch"></span><div class="lay home"><div class="sbar"><span>08:52</span><span><i class="ph-fill ph-cell-signal-full"></i><i class="ph ph-wifi-high"></i><i class="ph-fill ph-battery-full"></i></span></div><div class="clock"><b>08:52</b><span data-wd="Tuesday, 29 September">Tuesday, 29 September</span></div><div class="grid"><div class="app"><div class="ic"><i class="ph ph-phone"></i></div></div><div class="app"><div class="ic"><i class="ph ph-chat-circle"></i></div></div><div class="app"><div class="ic"><i class="ph ph-camera"></i></div></div><div class="app"><div class="ic"><i class="ph ph-images"></i></div></div><div class="app"><div class="ic"><i class="ph ph-map-trifold"></i></div></div><div class="app"><div class="ic"><i class="ph ph-clock"></i></div></div><div class="app"><div class="ic"><i class="ph ph-gear-six"></i></div></div></div></div><div class="sidebar"><div class="ic"><i class="ph ph-chat-circle"></i></div><div class="ic hl"><i class="ph ph-calendar-blank"></i><span class="ripple" data-k="tap"></span></div><div class="ic"><i class="ph ph-music-notes"></i></div><div class="ic"><i class="ph ph-camera"></i></div><div class="ic"><i class="ph ph-note"></i></div></div><div class="lay cal app-full" data-k="open"><div class="hd"><span data-month="1">November</span><i class="ph ph-calendar-blank"></i></div><div class="days"><span data-wk="0">M</span><span data-wk="1">T</span><span data-wk="2">W</span><span data-wk="3">T</span><span data-wk="4">F</span><span data-wk="5">S</span><span data-wk="6">S</span><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b><b>8</b><b>9</b><b>10</b><b>11</b><b>12</b><b>13</b><b>14</b><b>15</b><b>16</b><b>17</b><b>18</b><b class="on">19</b><b>20</b><b>21</b><b>22</b><b>23</b><b>24</b><b>25</b><b>26</b><b>27</b><b>28</b></div><div class="ev"><div>&nbsp;</div><div>&nbsp;</div></div></div></div></div></div></article><article class="tile g2 on" id="fp1" role="tabpanel" aria-labelledby="ft1"><span class="clockdot"></span><span id="clones"></span><p data-i18n="n.tap-a-cloned-app-in-th.em4pac">Tap a cloned app in the Smart Sidebar and FloatAway opens it full screen, like any other app.</p><div class="tdemo"><div class="mini"><span class="key"></span><div class="screen"><span class="punch"></span><div class="lay home"><div class="sbar"><span>08:52</span><span><i class="ph-fill ph-cell-signal-full"></i><i class="ph ph-wifi-high"></i><i class="ph-fill ph-battery-full"></i></span></div><div class="clock"><b>08:52</b><span data-wd="Tuesday, 29 September">Tuesday, 29 September</span></div><div class="grid"><div class="app"><div class="ic"><i class="ph ph-phone"></i></div></div><div class="app"><div class="ic"><i class="ph ph-chat-circle"></i></div></div><div class="app"><div class="ic"><i class="ph ph-camera"></i></div></div><div class="app"><div class="ic"><i class="ph ph-images"></i></div></div><div class="app"><div class="ic"><i class="ph ph-map-trifold"></i></div></div><div class="app"><div class="ic"><i class="ph ph-clock"></i></div></div><div class="app"><div class="ic"><i class="ph ph-gear-six"></i></div></div></div></div><div class="sidebar"><div class="ic"><i class="ph ph-chat-circle"></i></div><div class="ic hl"><i class="ph ph-chat-circle"></i><span class="badge"><i class="ph-fill ph-copy"></i></span><span class="ripple" data-k="tap"></span></div><div class="ic"><i class="ph ph-calendar-blank"></i></div><div class="ic"><i class="ph ph-camera"></i></div><div class="ic"><i class="ph ph-note"></i></div></div><div class="lay cal app-full" data-k="open"><div class="hd" data-i18n-text="n.chat.9kdcjv">Chat<i class="ph ph-copy"></i></div><div class="ev"><div>&nbsp;</div><div>&nbsp;</div></div></div></div></div></div></article><article class="tile g3 on" id="fp2" role="tabpanel" aria-labelledby="ft2"><span class="clockdot"></span><span id="folders"></span><p data-i18n="n.open-your-folders-stra.1n9cwp5">Open your folders straight from the Smart Sidebar.</p><div class="tmore"><ol class="steps" style="--n:1"><li style="--i:0"><h3 data-i18n="fo.s1.h">Pick a folder</h3><p data-i18n="fo.s1.p">On FloatAway’s home screen, under Sidebar folders, tap Begin setup and give a slot a folder.</p></li><li style="--i:1"><h3 data-i18n="fo.s2.h">Its button appears</h3><p data-i18n="fo.s2.p">FloatAway adds the button to your sidebar with the folder’s real name.</p></li><li style="--i:2"><h3 data-i18n="fo.s3.h">Tap to open it</h3><p data-i18n="fo.s3.p">The folder opens full screen.</p></li></ol><p class="note" data-i18n-text="n.android-blocks-some-fo.1ib6n8k"><i class="ph ph-info"></i>Android blocks some folders, like Download and your phone’s main storage. If you see “Can’t use this folder”, pick a folder inside one of them.</p></div><div class="tdemo"><div class="mini"><span class="key"></span><div class="screen"><span class="punch"></span><div class="lay home"><div class="sbar"><span>08:52</span><span><i class="ph-fill ph-cell-signal-full"></i><i class="ph ph-wifi-high"></i><i class="ph-fill ph-battery-full"></i></span></div><div class="clock"><b>08:52</b><span data-wd="Tuesday, 29 September">Tuesday, 29 September</span></div><div class="grid"><div class="app"><div class="ic"><i class="ph ph-phone"></i></div></div><div class="app"><div class="ic"><i class="ph ph-chat-circle"></i></div></div><div class="app"><div class="ic"><i class="ph ph-camera"></i></div></div><div class="app"><div class="ic"><i class="ph ph-images"></i></div></div><div class="app"><div class="ic"><i class="ph ph-map-trifold"></i></div></div><div class="app"><div class="ic"><i class="ph ph-clock"></i></div></div><div class="app"><div class="ic"><i class="ph ph-gear-six"></i></div></div></div></div><div class="sidebar"><div class="ic"><i class="ph ph-chat-circle"></i></div><div class="ic hl"><i class="ph-fill ph-folder"></i><span class="ripple" data-k="tap"></span></div><div class="ic"><i class="ph ph-music-notes"></i></div><div class="ic"><i class="ph ph-camera"></i></div><div class="ic"><i class="ph ph-note"></i></div></div><div class="lay files app-full" data-k="open"><div class="hd" data-i18n-text="n.documents.oz47lx"><i class="ph-fill ph-folder"></i>Documents</div><div class="row"><i class="ph ph-file"></i><span></span></div><div class="row"><i class="ph ph-file"></i><span></span></div><div class="row"><i class="ph ph-file"></i><span></span></div><div class="row"><i class="ph ph-file"></i><span></span></div><div class="row"><i class="ph ph-file"></i><span></span></div></div></div></div></div></article><article class="tile g2 on" id="fp3" role="tabpanel" aria-labelledby="ft3"><span class="clockdot"></span><p data-i18n="n.games-still-run-in-you.1ymvxnc">Games still run in your phone’s game mode.</p><div class="tdemo"><div class="mini"><span class="key"></span><div class="screen"><span class="punch"></span><div class="lay home"><div class="sbar"><span>08:52</span><span><i class="ph-fill ph-cell-signal-full"></i><i class="ph ph-wifi-high"></i><i class="ph-fill ph-battery-full"></i></span></div><div class="clock"><b>08:52</b><span data-wd="Tuesday, 29 September">Tuesday, 29 September</span></div><div class="grid"><div class="app"><div class="ic"><i class="ph ph-phone"></i></div></div><div class="app"><div class="ic"><i class="ph ph-chat-circle"></i></div></div><div class="app"><div class="ic"><i class="ph ph-camera"></i></div></div><div class="app"><div class="ic"><i class="ph ph-images"></i></div></div><div class="app"><div class="ic"><i class="ph ph-map-trifold"></i></div></div><div class="app"><div class="ic"><i class="ph ph-clock"></i></div></div><div class="app"><div class="ic"><i class="ph ph-gear-six"></i></div></div></div></div><div class="sidebar"><div class="ic"><i class="ph ph-chat-circle"></i></div><div class="ic hl"><i class="ph ph-game-controller"></i><span class="ripple" data-k="tap"></span></div><div class="ic"><i class="ph ph-music-notes"></i></div><div class="ic"><i class="ph ph-camera"></i></div><div class="ic"><i class="ph ph-note"></i></div></div><div class="lay game app-full" data-k="open"><i class="ph-fill ph-game-controller"></i><div class="gpill"><div data-k="pill" data-i18n-text="n.game-mode.mak5ea"><i class="ph-fill ph-game-controller"></i>Game mode</div></div></div></div></div></div></article></div></div></div></section><section id="customers" class="cm" hidden="" aria-labelledby="customers-h"><div class="wrap"><div class="shead rv"><div><h2 id="customers-h" data-i18n="cm.h2">Where our customers come from</h2></div></div><div class="cm-box rv"><div class="cm-map" translate="no"><canvas aria-hidden="true"></canvas></div><p class="cm-tap" data-i18n="cm.tap">Tap a dot to see the country</p><ul class="cm-list" translate="no"></ul></div></div></section><section id="quotes"><div class="wrap"><div class="quotes"><figure class="quote rv" style="--i:0"><blockquote>“<span data-i18n="said.quote">A simple yet powerful app that allows my Find X9 Pro to act exactly as I wanted it to in the first place: any shortcut from the Sidebar now automatically opens in fullscreen.</span>”</blockquote><figcaption><span class="who">Tom S.</span><span class="model">Oppo Find X9 Pro</span></figcaption></figure></div></div></section><section id="setup"><div class="wrap"><div class="shead rv"><div><h2 data-i18n="n.setting-it-up-takes-ab.12c2hu1">Setting it up takes about five minutes</h2><p data-i18n="n.you-do-everything-on-t.16jjumi">You do everything on the phone, without a computer or cable.</p></div></div><ol class="steps" style="--n:2"><li class="rv" style="--i:0"><h3 data-i18n="setup.s1.h">Install the file</h3><p data-i18n="setup.s1.p">Your phone asks whether to allow installs from your browser. Say yes, then open FloatAway.</p></li><li class="rv" style="--i:1"><h3 data-i18n="n.unlock-a-hidden-menu-o.7ybkhk">Unlock a hidden menu, once</h3><p data-i18n="n.you-tap-your-phone-s-v.z6ezen">You tap your phone’s version number seven times. FloatAway opens the right screen and tells you which row to tap.</p></li><li class="rv" style="--i:2"><h3 data-i18n="n.turn-on-wireless-debug.19d84kj">Turn on Wireless debugging for a minute</h3><p data-i18n="n.you-need-wi-fi-for-thi.ye7164">You need Wi-Fi for this step. Your phone shows six digits.</p> <p class="stepnote" data-i18n="n.type-them-into-the-flo.ana52k">Type them into the FloatAway notification. This gives FloatAway the permissions it needs to open sidebar apps full screen. FloatAway then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost.</p></li><li class="rv" style="--i:3"><h3 data-i18n="setup.s4.h">Let it run in the background</h3><p data-i18n="setup.s4.p">This keeps sidebar apps opening full screen. FloatAway shows one quiet notification while it is on.</p></li></ol></div></section><section id="safe"><span id="careful"></span><div class="wrap"><div class="shead rv"><div><h2 data-i18n="safe.h2">Is it safe?</h2><p data-i18n="safe.sub">FloatAway is not on the Play Store, so you can check it yourself with a free virus scan.</p></div></div><div class="safe"><div class="facts rv"><div class="vt"><span class="zero"><svg viewBox="0 0 256 256" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M208 40H48a16 16 0 0 0-16 16v58.78c0 89.61 75.82 119.34 91 124.39a15.53 15.53 0 0 0 10 0c15.2-5.05 91-34.78 91-124.39V56a16 16 0 0 0-16-16Zm-34.34 77.66-48 48a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32L120 148.69l42.34-42.35a8 8 0 0 1 11.32 11.32Z"></path></svg></span><p><span class="scan" data-i18n="facts.scanResult" data-n="0 of 67"><b>0 of 67</b> virus checkers flag it</span> <span translate="no">(VirusTotal, <span data-date="18 Nov 2026">18 Nov 2026</span>).</span> <a href="https://www.virustotal.com/gui/file/bb46f2c9aefed2d3fc704ef64cdd23e0fae90bcaef38069ea63290f244500c8e" data-i18n="facts.report">See the full report</a></p></div><dl><dt data-i18n="facts.file">File</dt><dd>FloatAway.apk</dd><dt data-i18n="facts.version">Latest version</dt><dd>1.1.1</dd><dt data-i18n="facts.size">Size</dt><dd>7.0 MB</dd><dt data-i18n="facts.scan">Virus scan</dt><dd class="scanv">0 of 67</dd></dl><details><summary data-i18n="facts.tech">Show technical details</summary><div class="hash"><div data-i18n-text="facts.sha">SHA-256 of the file<code>bb46f2c9aefed2d3fc704ef64cdd23e0fae90bcaef38069ea63290f244500c8e</code></div><div data-i18n-text="facts.signed">Signed by<code>ce8967d9b585f5a1f0916233a9edd92673d19e4a3e2eaff453bc20538cc66563</code></div><p data-i18n="facts.sigNote">Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it.</p></div></details></div><div class="can rv" style="--i:1"><h3 data-i18n="perms.h3">What FloatAway can and cannot do</h3><dl><div><dt data-i18n-text="perms.1.t"><i class="ph ph-eye"></i>See which app just opened</dt><dd data-i18n="n.it-knows-when-you-tap.7qhf9o">It knows when you tap a Smart Sidebar app, cloned apps too.</dd></div><div><dt data-i18n-text="n.display-over-other-app.1hf8dj6"><i class="ph ph-stack"></i>Display over other apps, so it can open yours</dt><dd data-i18n="n.a-tiny-invisible-windo.t5idr7">A tiny invisible window, only while the sidebar is open.</dd></div><div><dt data-i18n-text="n.change-two-phone-setti.1y688fc"><i class="ph ph-sliders-horizontal"></i>Change two phone settings</dt><dd data-i18n="n.shared-files-open-full.zjpovm">Shared files open full screen too. To undo this, switch FloatAway off before you remove it. It also turns on “Disable adb authorization timeout” in Developer options, so you do the Wireless debugging step once. That one stays on until you turn it off there.</dd></div><div><dt data-i18n-text="perms.4.t"><i class="ph ph-folder"></i>Sidebar folders only: use the sidebar for you</dt><dd data-i18n="n.when-you-add-a-folder.508tdj">When you add a folder, it taps Edit for you. It sees where buttons are, never any words.</dd></div><div><dt data-i18n-text="n.check-for-updates-once.i0ry66"><i class="ph ph-arrows-clockwise"></i>Check for updates once a day</dt><dd data-i18n="n.there-is-no-account-to.9f0z13">There is no account to sign in to.</dd></div><div><dt data-i18n-text="perms.5.t"><i class="ph ph-eye-slash"></i>Never sees what is in your apps</dt><dd data-i18n="n.it-cannot-read-your-me.7t1drp">It cannot read your messages, your files or any words on screen.</dd></div></dl></div><div class="facts2"><div class="help rv" style="--i:1"><div class="hl"><p data-i18n="n.frequently-asked-quest.kxi6h4">Frequently asked questions about FloatAway</p><a class="tlink" href="/floataway/help/" data-i18n-text="n.read-the-common-questi.1tfirqy">Read the common questions <i class="ph-bold ph-arrow-right"></i></a></div><div class="hr"><p data-i18n="n.try-it-free-on-your-ow.1gacaq5">Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing.</p><a class="btn btn-lg" href="#price" data-i18n="n.back-to-the-download.1f56tps">Back to the download</a></div></div></div></div></div></section><div class="wrap"><div class="cross rv"><img src="../assets/logo.svg" alt=""><div><h2 data-i18n="tried.h2">Have you tried TapSwitch?</h2><p class="q" data-i18n="tried.lead">Did you know that your Oppo or ColorOS phone can hold your access card and Google Wallet, with no switching by hand?</p><p class="p" data-i18n="tried.p">TapSwitch keeps your access card ready for the door. Open Google Wallet and it switches over, so you can pay. Free for 14 days.</p></div><a class="btn btn-lg" href="/" data-i18n="strip.go">See TapSwitch ›</a></div></div></main>
+<footer><div class="wrap" id="foot"><div class="cols"><div><p data-i18n="n.made-by-one-person-con.1231378">Made by one person. Contact me: <a class="mail" href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p><p data-i18n="foot.help"><a href="/floataway/help/">Common questions: Smart Sidebar apps full screen on Oppo</a></p></div><div class="r"><p data-i18n="foot.notAffiliated">FloatAway is not affiliated with Oppo.</p></div></div></div></footer>
 
 <script>
-// Language keys for the lines that other checks read character for character (price heading, amount note,
-// "once", the facts labels, the What's new heading). Set here, before lang.js reads them, so those lines'
-// HTML stays exactly as the checks expect. The version number in What's new stays outside its key.
+/* ALL words live here, one object per app, so the page can be translated later. Every fact comes
+   from the live pages; the section heads and tile titles are site A's. */
+var CONTENT = {"floataway":{"video":{"label":"","aria":"A short clip: without FloatAway, a sidebar app opens in a small window; with FloatAway, apps and folders open full screen.","ar":"16 / 9","len":"0:41","sound":true,"items":[{"src":"../assets/floataway-film.mp4","poster":"../assets/floataway-film-poster.webp","chapters":[]}]}}};
+
+
+/* ---------- build the page from the data ---------- */
 (function () {
-  [[".hero .what", "hero.what"], ["#setup > h2", "setup.h2"], ["#price .cta-row .btn-plain", "cta.all"], ["#price .cta-note", "cta.note"],
-   [".closing", "closing.lead", "x"], [".closing > span", "closing.sub"], ["#price > h2", "price.h2"], ["#price .amount-note", "price.amountNote"], ["#price .lt-price > span", "lt.once"]].forEach(function (p) {
-    var el = document.querySelector(p[0]); if (el) el.setAttribute(p[2] ? "data-i18n-text" : "data-i18n", p[1]);
+  var APP = document.documentElement.getAttribute("data-app"), D = CONTENT[APP], C = CONTENT.common;
+  var $ = function (id) { return document.getElementById(id); };
+  var xs = $("xstrip");
+  
+  // top strip: closed for good on this browser (live), --strip-h keeps sticky things below it
+  var closed = false; try { closed = localStorage.getItem("xstrip-closed") === "1"; } catch (e) {}
+  var fit = function () { document.documentElement.style.setProperty("--strip-h", (xs.isConnected ? xs.offsetHeight : 0) + "px"); };
+  if (closed) xs.remove();
+  else xs.querySelector(".x").onclick = function () { xs.remove(); fit(); try { localStorage.setItem("xstrip-closed", "1"); } catch (e) {} };
+  fit(); addEventListener("resize", fit);
+
+  /* ---------- video slot: chapter buttons jump; a chip on another clip swaps the clip ---------- */
+  var vs = $("vslot");
+  if (vs) {
+    var v = vs.querySelector("video"), chipsEl = vs.querySelectorAll(".chips button"), cur = 0;
+    var mark = function () {
+      var best = null;
+      chipsEl.forEach(function (b) { if (+b.dataset.item === cur && +b.dataset.t <= v.currentTime + .25) best = b; });
+      chipsEl.forEach(function (b) { b.setAttribute("aria-pressed", String(b === best)); });
+    };
+    chipsEl.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var it = +b.dataset.item, t = +b.dataset.t, I = D.video.items[it];
+        var go = function () { try { v.currentTime = t; } catch (e) {} v.play().catch(function () {}); mark(); };
+        if (it !== cur) { cur = it; v.src = I.src; v.poster = I.poster; v.addEventListener("loadedmetadata", go, { once: true }); v.load(); }
+        else if (v.readyState >= 1) go(); else { v.addEventListener("loadedmetadata", go, { once: true }); v.load(); }
+      });
+    });
+    v.addEventListener("timeupdate", mark); v.addEventListener("seeked", mark);
+    var fr = vs.querySelector(".frame"), ln = vs.querySelector(".vlen");
+    var showLen = function () { if (isFinite(v.duration) && v.duration > 0) { var t = Math.floor(v.duration); ln.textContent = Math.floor(t / 60) + ":" + ("0" + t % 60).slice(-2); } };
+    v.addEventListener("loadedmetadata", showLen); v.addEventListener("durationchange", showLen); showLen();
+    // no browser control bar over the poster (it hid the caption and doubled the play button and the length); it shows once the film plays.
+    // The page file keeps "controls" so the film still plays with scripts off.
+    v.controls = false;
+    v.addEventListener("playing", function () { v.controls = true; fr.classList.add("playing", "started"); });
+    v.addEventListener("pause", function () { fr.classList.remove("playing"); });
+    v.addEventListener("ended", function () { fr.classList.remove("playing", "started"); v.controls = false; });
+    /* gv3: a press anywhere on the still picture starts the film, like the round button (which sits inside the frame) */
+    fr.addEventListener("click", function () { if (!fr.classList.contains("started")) v.play().catch(function () {}); });
+    if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); }
+  }
+
+  /* ---------- feature tabs: click or arrow keys show one tile ---------- */
+  var tabs = [].slice.call(document.querySelectorAll(".ftabs button")), panels = [].slice.call(document.querySelectorAll(".tile"));
+  var pick = function (n, focus) {
+    tabs.forEach(function (b, i) { b.setAttribute("aria-selected", String(i === n)); b.tabIndex = i === n ? 0 : -1; panels[i].classList.toggle("on", i === n); });
+    if (focus) tabs[n].focus();
+    var bar = tabs[n].parentNode; if (bar.scrollWidth > bar.clientWidth) { var br = bar.getBoundingClientRect(), tr = tabs[n].getBoundingClientRect(), rtl = getComputedStyle(bar).direction === "rtl", dx = rtl ? tr.right - br.right + 16 : tr.left - br.left - 16; if (Math.abs(dx) > 1) bar.scrollBy({ left: dx, behavior: "smooth" }); }   // a tapped button slides to the start of the row (a snap point): it shows in full and the next one peeks
+  };
+  tabs.forEach(function (b, i) {
+    b.addEventListener("click", function () { pick(i); });
+    b.addEventListener("keydown", function (e) {
+      var k = e.key, n = { ArrowRight: i + 1, ArrowDown: i + 1, ArrowLeft: i - 1, ArrowUp: i - 1, Home: 0, End: tabs.length - 1 }[k];
+      if (n === undefined) return; e.preventDefault(); pick((n + tabs.length) % tabs.length, true);
+    });
   });
-  var perms = document.querySelector("#safe .perms");
-  if (perms) perms.querySelectorAll(".perm").forEach(function (d, i) {
-    var dt = d.querySelector("dt"), dd = d.querySelector("dd");
-    if (dt) dt.setAttribute("data-i18n", "perms." + (i + 1) + ".t"); if (dd) dd.setAttribute("data-i18n", "perms." + (i + 1) + ".d");
-  });
-  var TH = { "File": "facts.file", "Latest version": "facts.version", "Size": "facts.size", "Virus scan": "facts.scan", "SHA-256 of the file": "facts.sha", "Signed by": "facts.signed" };
-  document.querySelectorAll(".facts th").forEach(function (el) { var k = TH[el.textContent]; if (k) el.setAttribute("data-i18n", k); });
-  var h = document.querySelector("#whats-new h3"), n = h && h.firstChild;
-  var m = n && n.nodeType === 3 && /^(.*?)\s+(\d[\d.]*)\s*$/.exec(n.textContent);
-  if (!m) return;
-  var words = document.createElement("span"), ver = document.createElement("span");
-  words.setAttribute("data-i18n", "wn.h3"); words.textContent = m[1];
-  ver.setAttribute("translate", "no"); ver.textContent = m[2];
-  // the h3's own span style is for the date only
-  words.style.cssText = ver.style.cssText = "margin:0;font:inherit;color:inherit";
-  h.replaceChild(ver, n); h.insertBefore(document.createTextNode(" "), ver); h.insertBefore(words, h.firstChild);
-  ver.after(" ");
+
+  // the page file shows every panel (no scripts needed); with scripts, only the first shows until a tab is picked
+  if (tabs.length) pick(0);
+  // an old address like /floataway/#folders opens that tab
+  var openHash = function () { var el = location.hash.length > 1 && document.getElementById(location.hash.slice(1)), t = el && el.closest && el.closest(".tile"), n = t ? panels.indexOf(t) : -1; if (n > -1) { pick(n); var up = t.getBoundingClientRect().top - tabs[n].parentNode.getBoundingClientRect().top; el.style.scrollMarginTop = Math.max(up, 0) + 'px'; el.scrollIntoView(); } };   // the tab row can sit above the tile (tablet, phone): land on the row, not the tile
+  addEventListener("hashchange", openHash); openHash();
+  // jv2: the first jump happens while the words are still English and the features block is still easing in; jump again once both are done, unless the visitor has already scrolled
+  var moved = false; ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (e) { addEventListener(e, function () { moved = true; }, { once: true, passive: true }); });
+  if (location.hash.length > 1) addEventListener("load", function () { setTimeout(function () { if (!moved) openHash(); }, 900); });
+
+  /* ---------- scroll: blocks ease in once, tiles only loop while seen (A) ---------- */
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    document.querySelectorAll(".rv").forEach(function (el) { io.observe(el); });
+    var play = new IntersectionObserver(function (es) { es.forEach(function (e) { e.target.classList.toggle("paused", !e.isIntersecting); }); }, { threshold: 0 });
+    document.querySelectorAll(".tile").forEach(function (el) { play.observe(el); });
+  }
+
 })();
 </script>
 <script src="../assets/lang/lang.js"></script>
 <script src="../assets/lang/floataway.js"></script>
 <script>
-// The light or dark switch, as on the home page: a click flips the theme for the rest of this visit.
+/* After lang.js (language button, picks, remembers) and the translation files: things lang.js cannot do on its own.
+   They run once now and again on every language switch. No language counter here: these are private drafts. */
 (function () {
-  var btn = document.getElementById("themeBtn");
-  var root = document.documentElement;
-  var sys = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-  function current() {
-    var t = root.getAttribute("data-theme");
-    if (t === "light" || t === "dark") return t;
-    return sys && sys.matches ? "dark" : "light";
-  }
-  // English here; lang.js gives the visitor's language. Without lang.js this English is used.
-  var EN = { "theme.dark": "Switch to dark mode", "theme.light": "Switch to light mode" };
-  if (window.TSLang) TSLang.def(EN);
-  var T = window.TSLang ? TSLang.t : function (k) { return EN[k]; };
-  function label() { btn.setAttribute("aria-label", T(current() === "dark" ? "theme.light" : "theme.dark")); }
-  var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var timer = null;
-  btn.addEventListener("click", function () {
-    var next = current() === "dark" ? "light" : "dark";
-    function apply() {
-      root.setAttribute("data-theme", next);
-      try { sessionStorage.setItem("ts-theme", next); } catch (e) { /* storage blocked: the choice lasts this page view */ }
-      label();
-    }
-    if (still) { apply(); return; }
-    clearTimeout(timer);
-    root.classList.remove("dusk", "dawn");
-    void root.offsetWidth;
-    root.classList.add(next === "dark" ? "dusk" : "dawn");
-    timer = setTimeout(function () { root.classList.remove("dusk", "dawn", "fading"); }, 1400);
-    if (document.startViewTransition) { document.startViewTransition(apply); return; }
-    root.classList.add("fading");
-    apply();
-  });
-  if (sys && sys.addEventListener) sys.addEventListener("change", label);
-  if (window.TSLang) TSLang.onChange(label);
-  label();
-})();
-
-// Dates written "9 Nov 2026" (What's new, the virus scan) are shown the way the visitor's language writes them.
-(function () {
-  if (!window.TSLang || !window.Intl) return;
+  document.documentElement.classList.remove("langwait");   // the language words are in
+  if (!window.TSLang) return;
+  var xs0 = document.getElementById("xstrip"), fit0 = function () { document.documentElement.style.setProperty("--strip-h", (xs0 && xs0.isConnected ? xs0.offsetHeight : 0) + "px"); };
+  TSLang.onChange(fit0); fit0();   // jv1: a new language can change the strip height; in-page jumps clear the bar and strip
+  var $$ = function (s) { return [].slice.call(document.querySelectorAll(s)); };
+  // the live bar order is Questions, language, then the last button; here the last one is Download
+  var wrap = document.querySelector(".langwrap"), dl = document.querySelector(".bar .wrap > a.btn");
+  if (wrap && dl) dl.before(wrap);
+  function intl(lang, opt, d) { try { return new Intl.DateTimeFormat(lang === "zh" ? "zh-Hans" : lang, opt).format(d); } catch (e) { return null; } }
   var MON = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
-  var els = Array.prototype.slice.call(document.querySelectorAll("[data-date]"));
-  els.forEach(function (el) { el.dataset.date = el.textContent; });
-  function show(lang) {
-    els.forEach(function (el) {
-      var m = /^(\d{1,2}) ([A-Z][a-z]{2}) (\d{4})$/.exec(el.dataset.date);
-      if (lang === "en" || !m || !(m[2] in MON)) { el.textContent = el.dataset.date; return; }
-      try { el.textContent = new Intl.DateTimeFormat(lang, { day: "numeric", month: "short", year: "numeric" }).format(new Date(+m[3], MON[m[2]], +m[1])); }
-      catch (e) { el.textContent = el.dataset.date; }
+  function fix(lang) {
+    // translations arrive with <strong>: keep the draft's <b>
+    $$("[data-i18n] strong").forEach(function (s) { var b = document.createElement("b"); b.innerHTML = s.innerHTML; s.replaceWith(b); });
+    // Lines with no Arabic version stay English. A block whose words ALL stay English is kept left to right as a whole (bold first line, button,
+    // arrow and the quote's blue line included); a single English line among Arabic ones keeps its place and its words run left to right.
+    $$("[data-ltr]").forEach(function (el) { el.removeAttribute("dir"); el.removeAttribute("data-ltr"); });
+    if (lang === "ar") {
+      var eng = function (el) { var t = el.textContent; return /[A-Za-z]{3}/.test(t) && !/[\u0600-\u06FF]/.test(t); };
+      $$(".hero .htext, .price .l, .help .hl, .help .hr, figure.quote, .cross").forEach(function (el) { if (eng(el)) { el.setAttribute("dir", "ltr"); el.setAttribute("data-ltr", "1"); } });
+      $$("[data-i18n], blockquote").forEach(function (el) { if (!el.closest("[data-ltr]") && eng(el)) el.setAttribute("data-ltr", "w"); });
+    }
+    // dates written "14 Nov 2026" appear the way the language writes them (the live rule)
+    $$("[data-date]").forEach(function (el) {
+      var m = /^(\d{1,2}) ([A-Z][a-z]{2}) (\d{4})$/.exec(el.dataset.date), t = null;
+      if (lang !== "en" && m && m[2] in MON) t = intl(lang, { day: "numeric", month: "short", year: "numeric" }, new Date(+m[3], MON[m[2]], +m[1]));
+      el.textContent = t || el.dataset.date;
     });
+    // the phone mockups: the lock-screen date, the month and the weekday letters
+    $$("[data-wd]").forEach(function (el) { el.textContent = (lang !== "en" && intl(lang, { weekday: "long", day: "numeric", month: "long" }, new Date(2026, 8, 29))) || el.dataset.wd; });
+    $$("[data-month]").forEach(function (el) { el.textContent = (lang !== "en" && intl(lang, { month: "long" }, new Date(2026, 10, 1))) || "November"; });
+    $$("[data-wk]").forEach(function (el) { el.textContent = (lang !== "en" && intl(lang, { weekday: "narrow" }, new Date(2026, 10, 2 + +el.dataset.wk))) || "MTWTFSS"[+el.dataset.wk]; });
+    // "0 of 68 virus checkers flag it": the live translation carries the live count, so put this page's count in and keep the first part bold
+    var sc = document.querySelector(".scan"), sv = document.querySelector(".scanv");
+    if (sc && lang !== "en") {
+      var tr = sc.textContent, re = /[\d\u0660-\u0669]+/g, a = re.exec(tr), c = a && re.exec(tr), head = "";
+      if (c) {
+        head = tr.slice(0, c.index) + /\d+$/.exec(sc.dataset.n)[0];
+        sc.innerHTML = "<b></b>"; sc.firstChild.textContent = head; sc.appendChild(document.createTextNode(tr.slice(c.index + c[0].length)));
+      }
+      if (sv) sv.textContent = head || sv.dataset.en;
+    } else if (sv && sv.dataset.en) sv.textContent = sv.dataset.en;
   }
-  TSLang.onChange(show);
-  show(TSLang.lang);
-})();
-
-// A visitor who asks for less motion gets the clip paused, with controls to play it.
-(function () {
-  var v = document.querySelector(".clip");
-  if (v && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    v.removeAttribute("autoplay"); v.pause(); v.controls = true;
-  }
+  var sv0 = document.querySelector(".scanv"); if (sv0) sv0.dataset.en = sv0.textContent;
+  TSLang.onChange(fix); fix(TSLang.lang);
 })();
 </script>
 <script>
-// Owner's private count: one visit per browser per day, and each Download click. Shows nothing.
+// His rule (14 Nov 2026): the headline is never more than 4 lines, in any language and with the
+// two card names either way round. Where a language runs longer, its letters step down until it fits.
 (function () {
-  // Not counted: the owner's own browsers (open tapswitch.fyi/#me once in each; #count-me undoes it)
-  // and script-driven browsers, which is how Claude checks the site.
-  if (navigator.webdriver) return;
-  try {
-    if (location.hash === '#me') localStorage.setItem('ts-owner', '1');
-    if (location.hash === '#count-me') localStorage.removeItem('ts-owner');
-    if (/^#(me|count-me)$/.test(location.hash)) history.replaceState(null, '', location.pathname + location.search);
-    if (localStorage.getItem('ts-owner')) return;
-  } catch (e) {}
-  var url = 'https://floataway-codes.tapswitch-pay.workers.dev/site';
-  function send(stage) { try { navigator.sendBeacon(url, JSON.stringify({ stage: stage })); } catch (e) {} }
-  var day = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
-  try { if (localStorage.getItem('fa-day') !== day) { localStorage.setItem('fa-day', day); send('visit'); } } catch (e) { /* storage blocked: send nothing rather than a visit on every page load */ }
-  // lang-view-start
-  // One language view per browser per day per language; no storage means once per page load.
-  function langView(code, day, store, send, seen, prefix) {
-    try {
-      if (store.getItem('ts-owner')) return;
-      if (store.getItem(prefix + code) === day) return;
-      store.setItem(prefix + code, day);
-    } catch (e) {
-      if (seen[code]) return;
-      seen[code] = 1;
-    }
-    send(code);
+  var h = document.querySelector(".hero h1");
+  if (!h) return;
+  function lines() { return h.getBoundingClientRect().height / parseFloat(getComputedStyle(h).lineHeight); }
+  function worst() {
+    var g = h.querySelector(".g"), b = h.querySelector(".b"), a = lines();
+    if (!g || !b || h.classList.contains("typing")) return a;
+    var gt = g.textContent, bt = b.textContent;
+    g.textContent = bt; b.textContent = gt;
+    var s = lines();
+    g.textContent = gt; b.textContent = bt;
+    return Math.max(a, s);
   }
-  // lang-view-end
-  var langSeen = {}, langStore = null;
-  try { langStore = localStorage; } catch (e) {}
-  function sendLang(code) { try { navigator.sendBeacon(url, JSON.stringify({ stage: 'lang', lang: code })); } catch (e) {} }
-  function langViewed(code) { langView(code, day, langStore, sendLang, langSeen, 'fa-lang-'); }
-  langViewed((window.TSLang && window.TSLang.lang) || 'en');
-  if (window.TSLang && window.TSLang.onChange) window.TSLang.onChange(langViewed);
-  // only a real link counts, so the only the Download link, which has an href, is counted
-  document.addEventListener('click', function (e) {
-    if (e.target.closest && e.target.closest('a[data-download][href]')) send('click');
-  }, true);
+  // .fitting turns off fades while measuring, or a size change would not show yet when it is read
+  function fit() {
+    h.classList.add("fitting");
+    h.style.fontSize = "";
+    var size = parseFloat(getComputedStyle(h).fontSize), min = size * 0.6;
+    while (worst() > 4.5 && size > min) { size -= 1; h.style.fontSize = size + "px"; }
+    h.classList.remove("fitting");
+  }
+  fit();
+  if (window.TSLang) TSLang.onChange(fit);
+  var t; addEventListener("resize", function () { clearTimeout(t); t = setTimeout(fit, 150); });
+})();
+
+// The headline types itself in, letter by letter, then "Access Card" and "Google Wallet"
+// roll into each other's places and back. The finished headline is the original markup,
+// so readers and search engines always get the real words.
+(function () {
+  var h = document.querySelector(".hero h1");
+  if (!h || !h.querySelector(".g") || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  var original = h.innerHTML, chars = [];
+  (function wrap(node) {
+    Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) {
+        var frag = document.createDocumentFragment();
+        n.textContent.split("").forEach(function (c) {
+          var sp = document.createElement("span"); sp.className = "ch"; sp.textContent = c;
+          frag.appendChild(sp); chars.push(sp);
+        });
+        n.parentNode.replaceChild(frag, n);
+      } else if (n.nodeType === 1) wrap(n);
+    });
+  })(h);
+  var caret = document.createElement("span"); caret.className = "caret"; caret.setAttribute("aria-hidden", "true");
+  h.setAttribute("aria-label", h.textContent);
+  h.classList.add("typing");
+  // the demo beside it starts its tour once the green card name is typed (halfway if there is none)
+  var green = chars.filter(function (c) { return c.parentNode.classList.contains("g"); });
+  var cue = green.length ? chars.indexOf(green[green.length - 1]) : Math.floor(chars.length / 2);
+  var i = 0, timer = null, typed = false, cued = false;
+  (function next() {
+    if (i < chars.length) {
+      chars[i].classList.add("on");
+      var hr = h.getBoundingClientRect(), cr = chars[i].getBoundingClientRect();
+      caret.style.left = (cr.right - hr.left) + "px";
+      caret.style.top = (cr.top - hr.top + cr.height * .12) + "px";
+      caret.style.height = (cr.height * .76) + "px";
+      caret.style.color = getComputedStyle(chars[i]).color;
+      if (!caret.parentNode) h.appendChild(caret);
+      if (i === cue) { cued = true; document.dispatchEvent(new Event("ts:cue")); }
+      var c = chars[i++].textContent;
+      timer = setTimeout(next, c === " " ? 90 : c === "." ? 320 : c === "," ? 260 : 50 + Math.random() * 40);
+      return;
+    }
+    timer = setTimeout(function () {
+      typed = true;
+      h.innerHTML = original; h.classList.remove("typing"); h.removeAttribute("aria-label");
+      document.dispatchEvent(new Event("ts:typed"));
+      timer = setTimeout(function () { swap(function () { timer = setTimeout(swap, 1600); }); }, 500);
+    }, 700);
+  })();
+  // A language switch: lang.js has already put the new headline in. Typing (or the swap still to come)
+  // stops there, so the headline is always whole and in one language, never half typed.
+  if (window.TSLang) TSLang.onChange(function () {
+    clearTimeout(timer);
+    h.getAnimations && h.querySelectorAll(".g, .b").forEach(function (n) { n.getAnimations().forEach(function (a) { a.cancel(); }); });
+    if (typed) return;
+    typed = true;
+    h.classList.remove("typing"); h.removeAttribute("aria-label");
+    if (!cued) { cued = true; document.dispatchEvent(new Event("ts:cue")); }
+    document.dispatchEvent(new Event("ts:typed"));
+  });
+  function swap(done) {
+    var g = h.querySelector(".g"), b = h.querySelector(".b");
+    if (!g.animate) { if (done) done(); return; }
+    var out = { duration: 220, easing: "ease-in", fill: "forwards" };
+    var inn = { duration: 320, easing: "cubic-bezier(.2,.8,.2,1)" };
+    g.animate([{ transform: "none", opacity: 1 }, { transform: "translateY(45%)", opacity: 0 }], out);
+    b.animate([{ transform: "none", opacity: 1 }, { transform: "translateY(-45%)", opacity: 0 }], out).onfinish = function () {
+      var gt = g.textContent; g.textContent = b.textContent; b.textContent = gt;
+      g.className = g.className === "g" ? "b" : "g"; b.className = b.className === "b" ? "g" : "b";
+      g.getAnimations().forEach(function (a) { a.cancel(); }); b.getAnimations().forEach(function (a) { a.cancel(); });
+      g.animate([{ transform: "translateY(-45%)", opacity: 0 }, { transform: "none", opacity: 1 }], inn);
+      b.animate([{ transform: "translateY(45%)", opacity: 0 }, { transform: "none", opacity: 1 }], inn).onfinish = done || null;
+    };
+  }
 })();
 </script>
-<!--cmap-js-start-->
 <script>
 // Where our customers come from: country names only, A to Z, never counts or shares. Any failure leaves the section hidden.
 (function () {
@@ -754,10 +892,11 @@ section.said { margin-top: 0; border-top: 0; padding-block: 36px 0; }
   }
 
   // tapOnly: names did not fit side by side at this width, so the map works the phone way (one name per tapped dot).
-  function build(tapOnly) {
+  function build(tapOnly, hard) {
+    box.classList.toggle('cm-xs', hard === 2);   // second retry: the smallest names
     var map = box.querySelector('.cm-map'), cv = map.querySelector('canvas'), w = map.clientWidth;
     if (!w) return;
-    var phone = w < 600, tap = phone || !!tapOnly, v = view(phone ? 1.4 : 2.1);
+    var phone = w < 600, tap = phone || !!tapOnly, v = view(phone ? 1.7 : w < 900 ? 2.7 : 3);   // a tablet map is a little taller, so the names get more room
     box.classList.toggle('cm-phone', tap);
     var k = w / v.w, h = v.h * k, dpr = window.devicePixelRatio || 1;
     cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); cv.style.height = h + 'px';
@@ -793,9 +932,8 @@ section.said { margin-top: 0; border-top: 0; padding-block: 36px 0; }
     map.querySelectorAll('.mk,.lab').forEach(function (n) { n.remove(); });
     map.classList.remove('focus');
     var ul = box.querySelector('.cm-list'); ul.textContent = '';
-    var crowded = false, items = [], prev;
+    var crowded = false, items = [], labs = [], prev;
     var taken = ptsDraw.map(function (p) { return { x: p[0] - 8, y: p[1] - 8, w: 16, h: 16 }; });
-    function hits(a) { return taken.some(function (b) { return a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h; }); }
     rows.forEach(function (row, n) {
       var px = ptsDraw[n][0], py = ptsDraw[n][1];
       var btn = document.createElement('button'); btn.className = 'mk'; btn.style.setProperty('--n', n);
@@ -806,22 +944,7 @@ section.said { margin-top: 0; border-top: 0; padding-block: 36px 0; }
       var lab = document.createElement('div'); lab.className = 'lab'; lab.style.setProperty('--n', n); lab.textContent = row.name;
       lab.setAttribute('aria-hidden', 'true');
       map.appendChild(lab);
-      // A tag sits right beside its city with a small pointer, trying above, right, left, then below.
-      var lw = lab.offsetWidth, lh = lab.offsetHeight, g = 16, spot = null;
-      [['up', -lw / 2, -g - lh], ['right', g, -lh / 2], ['left', -g - lw, -lh / 2], ['down', -lw / 2, g]].some(function (o) {
-        var c = { x: px + o[1], y: py + o[2], w: lw, h: lh, side: o[0] };
-        if (c.x < 4 || c.y < 4 || c.x + lw > w - 4 || c.y + lh > h - 4 || hits({ x: c.x - 3, y: c.y - 3, w: lw + 6, h: lh + 6 })) return false;
-        spot = c; return true;
-      });
-      if (!spot) {
-        spot = { x: Math.min(Math.max(px - lw / 2, 4), w - lw - 4), y: py + g, w: lw, h: lh, side: 'down' };
-        if (hits(spot)) crowded = true;
-      }
-      // On phones only one name shows at a time, so names may sit over each other; dots still keep them clear.
-      if (!tap) taken.push(spot);
-      lab.classList.add(spot.side);
-      lab.style.left = spot.x + 'px'; lab.style.top = spot.y + 'px';
-      lab.style.transformOrigin = { up: '50% 100%', down: '50% 0', right: '0 50%', left: '100% 50%' }[spot.side];
+      labs[n] = lab;
       var li = document.createElement('li'); li.textContent = row.name; ul.appendChild(li);
       function hot(on) { [btn, lab].forEach(function (el) { el.classList.toggle('hot', on); }); map.classList.toggle('focus', on); }
       btn.addEventListener('mouseenter', function () { hot(true); });
@@ -845,7 +968,42 @@ section.said { margin-top: 0; border-top: 0; padding-block: 36px 0; }
         if (!on) t.hot(true);
       });
     });
-    if (!tap && crowded) return build(true);
+    // gv2: placement. Names go beside their dot (above, right, left, below). If the first try leaves two names touching (a tablet), build again
+    // and search: the extra spots let a name above or below slide sideways (its pointer stays on its dot), and many orders are tried
+    // (most crowded cities first, then fixed shuffles) until every name has its own room. Still no room: smaller names, then tap a dot.
+    function layout(order) {
+      var tk = taken.slice(), sp = [], miss = false;
+      var free = function (a) { return !tk.some(function (b) { return a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h; }); };
+      order.forEach(function (n) {
+        var lab = labs[n], px = ptsDraw[n][0], py = ptsDraw[n][1], lw = lab.offsetWidth, lh = lab.offsetHeight, g = 16, spot = null, sh = lw / 2 - 8;
+        var cand = [['up', -lw / 2, -g - lh], ['right', g, -lh / 2], ['left', -g - lw, -lh / 2], ['down', -lw / 2, g]];
+        if (hard) cand.push(['up', -lw / 2 - sh, -g - lh], ['up', -lw / 2 + sh, -g - lh], ['down', -lw / 2 - sh, g], ['down', -lw / 2 + sh, g]);
+        cand.some(function (o) {
+          var c = { x: px + o[1], y: py + o[2], w: lw, h: lh, side: o[0], ax: -o[1] };
+          if (c.x < 4 || c.y < 4 || c.x + lw > w - 4 || c.y + lh > h - 4 || !free({ x: c.x - 3, y: c.y - 3, w: lw + 6, h: lh + 6 })) return false;
+          spot = c; return true;
+        });
+        if (!spot) { spot = { x: Math.min(Math.max(px - lw / 2, 4), w - lw - 4), y: py + g, w: lw, h: lh, side: 'down', ax: lw / 2 }; if (!free(spot)) miss = true; }
+        if (!tap) tk.push(spot);   // on phones only one name shows at a time, so names may sit over each other; dots still keep them clear
+        sp[n] = spot;
+      });
+      return { sp: sp, miss: miss };
+    }
+    var base = rows.map(function (r, i) { return i; }), best = layout(base);
+    if (hard && best.miss) {
+      var near = function (i) { return pts.filter(function (q, j) { return j !== i && Math.hypot(q[0] - pts[i][0], q[1] - pts[i][1]) < 70; }).length; };
+      var tries = [base.slice().sort(function (a2, b2) { return near(b2) - near(a2) || a2 - b2; })], seed = 7;
+      for (var t = 0; t < 400; t++) { var o2 = base.slice(); for (var q = o2.length - 1; q > 0; q--) { seed = (seed * 1103515245 + 12345) % 2147483648; var r2 = seed % (q + 1), tmp = o2[q]; o2[q] = o2[r2]; o2[r2] = tmp; } tries.push(o2); }
+      for (var u = 0; u < tries.length && best.miss; u++) best = layout(tries[u]);
+    }
+    crowded = best.miss;
+    best.sp.forEach(function (spot, n) {
+      var lab = labs[n]; if (!spot) return;
+      if (!tap) taken.push(spot);
+      lab.classList.add(spot.side); lab.style.left = spot.x + 'px'; lab.style.top = spot.y + 'px'; lab.style.setProperty('--ax', spot.ax + 'px');
+      lab.style.transformOrigin = { up: '50% 100%', down: '50% 0', right: '0 50%', left: '100% 50%' }[spot.side];
+    });
+    if (!tap && crowded) return hard === 2 ? build(true) : build(false, (hard || 0) + 1);
     box._paint(box._played || still ? 1 : 0);
   }
 
@@ -914,34 +1072,46 @@ section.said { margin-top: 0; border-top: 0; padding-block: 36px 0; }
   }).catch(function () { /* stays hidden */ });
 })();
 </script>
-<!--cmap-js-end-->
 <script>
-/* the endless decorations (sun, moon stars, reader glow, "try it" shine) finish their loop and rest once
-   30 seconds pass with no tap or key press, so the page stops redrawing itself (his call, 14 Nov 2026).
-   A scroll does not wake them; a tap or key press does. One that starts later still gets its own 30 seconds. */
-(() => {
-  if (!document.getAnimations) return;
-  const NAMES = ['rays', 'twinkle', 'beckon', 'shine'], REST_MS = 30000, resting = new Set();
-  let woke = performance.now();
-  const loops = () => document.getAnimations().filter(a => NAMES.includes(a.animationName));
-  setInterval(() => {
-    const now = performance.now();
-    for (const a of loops()) {
-      const t = a.effect.getComputedTiming();
-      if (t.iterations !== Infinity || resting.has(a)) continue;
-      if (now - Math.max(woke, now - (a.currentTime || 0)) < REST_MS) continue;
-      // the sun takes 24 seconds a turn, so it simply stops where it is; the short loops finish first
-      if (a.animationName === 'rays') a.pause(); else a.effect.updateTiming({ iterations: (t.currentIteration || 0) + 1 });
-      resting.add(a);
+// Owner's private count: one visit per browser per day, and each Download click. Shows nothing.
+(function () {
+  // Not counted: the owner's own browsers (open tapswitch.fyi/#me once in each; #count-me undoes it)
+  // and script-driven browsers, which is how Claude checks the site.
+  if (navigator.webdriver) return;
+  try {
+    if (location.hash === '#me') localStorage.setItem('ts-owner', '1');
+    if (location.hash === '#count-me') localStorage.removeItem('ts-owner');
+    if (/^#(me|count-me)$/.test(location.hash)) history.replaceState(null, '', location.pathname + location.search);
+    if (localStorage.getItem('ts-owner')) return;
+  } catch (e) {}
+  var url = 'https://floataway-codes.tapswitch-pay.workers.dev/site';
+  function send(stage) { try { navigator.sendBeacon(url, JSON.stringify({ stage: stage })); } catch (e) {} }
+  var day = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
+  try { if (localStorage.getItem('fa-day') !== day) { localStorage.setItem('fa-day', day); send('visit'); } } catch (e) { /* storage blocked: send nothing rather than a visit on every page load */ }
+  // lang-view-start
+  // One language view per browser per day per language; no storage means once per page load.
+  function langView(code, day, store, send, seen, prefix) {
+    try {
+      if (store.getItem('ts-owner')) return;
+      if (store.getItem(prefix + code) === day) return;
+      store.setItem(prefix + code, day);
+    } catch (e) {
+      if (seen[code]) return;
+      seen[code] = 1;
     }
-  }, 2000);
-  const wake = () => {
-    woke = performance.now();
-    for (const a of resting) { a.effect.updateTiming({ iterations: Infinity }); if (a.playState === 'paused') a.play(); }
-    resting.clear();
-  };
-  addEventListener('click', wake);
-  addEventListener('keydown', wake);
+    send(code);
+  }
+  // lang-view-end
+  var langSeen = {}, langStore = null;
+  try { langStore = localStorage; } catch (e) {}
+  function sendLang(code) { try { navigator.sendBeacon(url, JSON.stringify({ stage: 'lang', lang: code })); } catch (e) {} }
+  function langViewed(code) { langView(code, day, langStore, sendLang, langSeen, 'fa-lang-'); }
+  langViewed((window.TSLang && window.TSLang.lang) || 'en');
+  if (window.TSLang && window.TSLang.onChange) window.TSLang.onChange(langViewed);
+  // only a real link counts: the Download link to the FloatAway.apk file (the new buttons carry no data-download mark)
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('a[href$="/FloatAway.apk"]')) send('click');
+  }, true);
 })();
 </script>
 </body>

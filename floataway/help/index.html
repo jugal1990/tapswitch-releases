@@ -1,19 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-app="floataway">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <script>
-/* same light or dark choice as the home page: the visitor's pick for this visit, else the clock */
+/* light by day (07:00 to 18:59 on the visitor's clock), dark at night, set before anything paints (the home page's rule) */
 (function () {
-  var t = null;
-  try { t = sessionStorage.getItem("ts-theme"); } catch (e) { /* storage blocked: use the clock */ }
-  if (t !== "light" && t !== "dark") { var h = new Date().getHours(); t = h >= 7 && h < 19 ? "light" : "dark"; }
+  var h = new Date().getHours(), t = h >= 7 && h < 19 ? "light" : "dark";
+  var q = location.search.match(/[?&]theme=(light|dark)\b/); if (q) t = q[1];
   document.documentElement.setAttribute("data-theme", t);
+  // gv5: a visitor who closed the Also from us strip before never sees it; gv6: Arabic (saved, a #ar address or the phone language) is right to left before anything draws
+  try { if (localStorage.getItem("xstrip-closed") === "1") document.documentElement.classList.add("xclosed"); } catch (e) {}
+  var L = ["en", "ms", "id", "th", "vi", "fil", "zh", "es", "pl", "cs", "ru", "ar"], g = location.hash.slice(1), s = null, a = { tl: "fil", "in": "id" };
+  try { s = localStorage.getItem("site-lang"); } catch (e) {}
+  if (L.indexOf(g) < 0) g = L.indexOf(s) >= 0 ? s : (function () { for (var i = 0, l = navigator.languages || [navigator.language || "en"]; i < l.length; i++) { var b = String(l[i]).toLowerCase().split("-")[0]; b = a[b] || b; if (L.indexOf(b) >= 0) return b; } return "en"; })();
+  if (g === "ar") document.documentElement.dir = "rtl";
+  if (g !== "en") { document.documentElement.classList.add("langwait"); setTimeout(function () { document.documentElement.classList.remove("langwait"); }, 1000); }   // kv1: no English first frame, then a jump; 1 s limit
 })();
 </script>
 <title>Oppo Sidebar apps full screen: questions</title>
-<meta name="description" content="On Oppo ColorOS phones, Smart Sidebar apps open in a small floating window. Every way to open them full screen, compared, plus answers about FloatAway: shared files, folders, the 14 day trial and undoing it.">
+<meta name="description" content="On Oppo ColorOS phones, Smart Sidebar apps open in a small floating window. Every way to open them full screen, compared, plus answers about FloatAway: shared files, folders, the 14-day trial and undoing it.">
 <link rel="canonical" href="https://tapswitch.fyi/floataway/help/">
 <meta property="og:url" content="https://tapswitch.fyi/floataway/help/">
 <meta property="og:type" content="article">
@@ -26,35 +32,103 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "What about files I share from one app to another?",
-      "acceptedAnswer": { "@type": "Answer", "text": "They open full screen too. If you would rather they did not, turn it off with the switch on FloatAway's home screen." } },
-    { "@type": "Question", "name": "What happens to apps I already have open?",
-      "acceptedAnswer": { "@type": "Answer", "text": "They stay where they are. FloatAway only changes how an app opens." } },
-    { "@type": "Question", "name": "What happens when the 14 days end?",
-      "acceptedAnswer": { "@type": "Answer", "text": "FloatAway stops, and sidebar apps open in the small window again, the way your phone did before. Shared files go back too. Your sidebar folders are removed, and if you buy, you set them up again. It asks you to buy it, and if you do not, you owe nothing." } },
-    { "@type": "Question", "name": "I uninstalled FloatAway and shared files still open full screen. How do I undo it?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The sharing switch is a phone setting, so it stays after FloatAway is gone. Reinstall FloatAway, run the setup again, and switch it off on FloatAway's home screen. Then you can uninstall it." } },
-    { "@type": "Question", "name": "What are Sidebar folders?",
-      "acceptedAnswer": { "@type": "Answer", "text": "They put up to three folders from your phone on the Smart Sidebar as buttons. Tap a button and the folder opens full screen. The feature has a BETA tag because it is new and still being polished." } },
-    { "@type": "Question", "name": "Why does it say \"Can't use this folder\"?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Android blocks some folders, like Download and your phone's main storage. Pick a folder inside it instead." } },
-    { "@type": "Question", "name": "Why does it say \"Connect to Wi-Fi first\"?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Adding or clearing a folder needs Wi-Fi. Connect, then try again." } },
-    { "@type": "Question", "name": "Why does FloatAway ask me to add a folder myself?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sometimes an add does not finish. FloatAway then shows the steps: open the sidebar, tap Edit, find the folder, tap its plus sign, then tap Done. It also sends me a short report, without the folder's name, so I can fix it." } },
-    { "@type": "Question", "name": "How do I remove a folder?",
-      "acceptedAnswer": { "@type": "Answer", "text": "On FloatAway's home screen, tap its slot, then tap Clear this slot. Its button leaves the sidebar." } },
-    { "@type": "Question", "name": "What if I delete or rename a folder?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Its button tells you the folder is gone and opens Sidebar folders, so you can pick a new one." } },
-    { "@type": "Question", "name": "What are all the ways to open Smart Sidebar apps full screen?",
-      "acceptedAnswer": { "@type": "Answer", "text": "There are three. Expand the floating window by hand: free, but you do it every time. Open the app from your home screen instead: free, but you leave the sidebar. Or use FloatAway: US$7.35 paid once after a 14 day free trial, and you do nothing at all: tap it in the sidebar and it opens full screen." } }
+    {
+      "@type": "Question",
+      "name": "What about files I share from one app to another?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They open full screen too. If you do not want that, turn it off with the switch on FloatAway’s home screen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to apps I already have open?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They stay where they are. FloatAway only changes how an app opens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when the 14 days end?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FloatAway stops. FloatAway asks you to buy it. Sidebar apps open in the small window again, as before. Shared files go back too. Your sidebar folders are removed. If you buy, you set your folders up again. If you do not, you owe nothing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I uninstalled FloatAway and shared files still open full screen. How do I undo it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The sharing switch is a phone setting, so it stays after FloatAway is gone. Reinstall FloatAway, run the setup again, and switch it off on FloatAway’s home screen. Then you can uninstall it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Sidebar folders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They put up to three folders from your phone on the Smart Sidebar as buttons. Tap a button and the folder opens full screen. The feature has a BETA tag because it is new and still being polished."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does it say “Can’t use this folder”?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Android blocks some folders, like Download and your phone’s main storage. Pick a folder inside one of them instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does it say “Connect to Wi-Fi first”?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adding or clearing a folder needs Wi-Fi. Connect, then try again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does FloatAway ask me to add a folder myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes adding a folder does not finish. FloatAway then shows the steps. Open the sidebar, tap Edit, find the folder, tap its plus sign, then tap Done. It also sends me a short report, without the folder’s name, so I can fix it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I remove a folder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On FloatAway’s home screen, tap its slot, then tap Clear this slot. Its button leaves the sidebar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I delete or rename a folder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Its button tells you the folder is gone and opens Sidebar folders, so you can pick a new one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are all the ways to open Smart Sidebar apps full screen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are three. Expand the floating window by hand: free, but you do it every time. Open the app from your home screen instead: free, but you leave the sidebar. Or use FloatAway: US$7.35 paid once after a 14-day free trial, and you do nothing at all: tap it in the sidebar and it opens full screen."
+      }
+    }
   ]
 }
 </script>
 <link rel="icon" href="/assets/floataway-logo.svg" type="image/svg+xml">
 <link rel="icon" href="/assets/floataway-logo-256.png" type="image/png" sizes="256x256">
 <link rel="apple-touch-icon" href="/assets/floataway-logo-256.png">
+
 <style>
+
 /* the same look as the home page, cut down to a single reading column */
 :root {
   --bg: #FBFBFD; --panel: #FFFFFF; --ink: #1D1D1F; --muted: #6E6E73; --line: #D2D2D7; --quiet: #F5F5F7;
@@ -117,22 +191,60 @@ ol.steps li { margin: 6px 0; }
 footer { padding-block: 16px 32px; color: var(--muted); font-size: .8rem; line-height: 1.55; background: var(--quiet); }
 footer .wrap::before { content: ""; display: block; border-top: 1px solid var(--line); margin-bottom: 22px; }
 footer p { margin: 0 0 8px; }
+
+/* ---- the new look on this page: the home page's top strip and bar (Questions link, language button), tap sizes, tighter spacing ---- */
+html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
+.bar .wrap { gap: 10px; }
+.bar .brand { flex-shrink: 0; min-height: 44px; }
+.spacer { flex: 1; }
+.qlink { flex-shrink: 0; display: inline-flex; align-items: center; height: 44px; padding: 0 10px; border-radius: 999px; color: var(--ink); font: 500 .88rem var(--body); text-decoration: none !important; white-space: nowrap; }
+.qlink:hover { background: var(--quiet); }
+.bar .langwrap { margin-inline-start: 0; }
+.bar #langBtn { height: 44px; }
+@media (max-width: 520px) { .bar #langBtn .now { display: none; } }
+:root { --fill: #E8E8ED; --seg-on: #FFFFFF; }
+:root[data-theme="dark"] { --fill: #1D1D1F; --seg-on: #3A3A3C; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fill: #1D1D1F; --seg-on: #3A3A3C; } }
+.xstrip { display: flex; align-items: center; background: color-mix(in srgb, var(--blue) 12%, var(--bg)); border-bottom: 1px solid color-mix(in srgb, var(--blue) 18%, transparent); }
+.xstrip a { flex: 1; min-width: 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4px 10px; padding: 8px 0 8px 44px; min-height: 44px; color: inherit; font-size: 14.5px; text-align: center; text-decoration: none !important; }
+.xstrip a img { width: 22px; height: 22px; flex: none; }
+.xstrip b { font-weight: 600; }
+.xstrip .sh { display: none; }
+@media (max-width: 1023px) { .xstrip a > span:not(.sh) { display: none; } .xstrip .sh { display: inline; } .xstrip a { flex-wrap: nowrap; } }
+.xstrip .go { color: var(--blue-text); font-weight: 500; white-space: nowrap; }
+:root { --blue-text: #2160CB; } /* the darker blue for text on the pale strip (4.5 to 1 and up) */
+:root[data-theme="dark"] { --blue-text: #6FA8FF; }
+/* 44 px tap areas that look the same: padding that the matching negative margin takes back */
+td > a:only-child, main p > a[href="/#careful"] { display: inline-block; padding-block: 14px; margin-block: -14px; }
+footer p:has(> a) { display: flex; flex-wrap: wrap; align-items: center; column-gap: .3em; margin: 0; } footer p > a { display: inline-block; padding-block: 14px; } /* gv8 */
+.toc { margin-top: 20px; padding-block: 4px; } html.langwait main, html.langwait .bar .qlink { visibility: hidden; }
+.toc li { margin: 0; } .toc a { display: block; box-sizing: border-box; min-height: 44px; padding-block: 10px; } /* hv2: each question is one 44 px band, no overlap with its neighbours, the number beside the first line */
+@media (max-width: 380px) { .bar .wrap { gap: 6px; } .qlink { padding: 0 6px; } .bar #langBtn > svg { display: none; } } /* kv2: the bar fits a 320 px phone in every language (the flag stays) */
+#langMenu button { min-height: 44px; }
+#langMenu { max-height: calc(100vh - 120px); } /* gv1: all 12 rows of 44 px show on a laptop and a normal phone; a very short screen scrolls */
+.xclosed .xstrip { display: none; } /* gv5 */
+/* Arabic page: a line that stays English among Arabic ones keeps its place at the right and its words run left to right */
+[data-ltr="w"] { unicode-bidi: plaintext; text-align: right; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --blue-text: #6FA8FF; } }
+.xstrip a:hover .go { text-decoration: underline; text-underline-offset: 3px; }
+.xstrip .x { flex: none; width: 44px; align-self: stretch; border: 0; background: none; color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; }
+main { padding-block: 24px 40px; }
+h2 { margin: 36px 0 8px; }
+.cta { margin: 40px 0 0; }
+.cta a.btn { min-height: 44px; display: inline-flex; align-items: center; }
+html[dir="rtl"] .toc ol, html[dir="rtl"] ol.steps { padding-left: 0; padding-right: 1.3em; }
+html[dir="rtl"] .ways th, html[dir="rtl"] .ways td { text-align: right; }
 </style>
 </head>
-<body>
-<header class="bar">
-  <div class="wrap">
-    <a class="brand" href="/floataway/" aria-label="FloatAway home page" data-i18n-attr="aria-label:bar.brand">
+<body id="top">
+<header class="bar" id="bar"><div class="xstrip" id="xstrip"><a href="/"><img src="../../assets/logo.svg" alt=""><span data-i18n="strip.text">Also from us: <b>TapSwitch</b>, your access card and Google Wallet on one phone.</span><span class="go" data-i18n="strip.go">See TapSwitch ›</span><span class="sh" data-i18n="n.also-from-us-tapswitch.piefq6">Also from us: <b>TapSwitch</b> ›</span></a><button class="x" type="button" aria-label="Close" data-i18n-attr="aria-label:strip.close">×</button></div><div class="wrap" id="barIn"><a class="brand" href="/floataway/" aria-label="FloatAway home page" data-i18n-attr="aria-label:bar.brand">
       <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="faBg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#faBg)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M41,31 H67 A10,10 0 0 1 77,41 V67 A10,10 0 0 1 67,77 H41 A10,10 0 0 1 31,67 V41 A10,10 0 0 1 41,31 Z" opacity=".55"/><path d="M58,50 L66,42 M58,42 L66,42 L66,50"/><path d="M50,58 L42,66 M50,66 L42,66 L42,58"/></g></svg>
       FloatAway
-    </a>
-  </div>
-</header>
-
+    </a><span class="spacer"></span><a class="qlink" href="/floataway/help/" aria-current="page" data-i18n="bar.help">Questions</a></div></header>
 <main>
   <div class="wrap">
     <h1 data-i18n="h1">FloatAway common questions</h1>
-    <p class="lede" data-i18n="lede">FloatAway opens apps from Oppo's Smart Sidebar full screen, in one tap. Here are the questions people ask most.</p>
+    <p class="lede" data-i18n="lede">FloatAway opens apps from Oppo’s Smart Sidebar full screen, in one tap. Here are the questions people ask most.</p>
 
     <nav class="toc" aria-label="Questions on this page" data-i18n-attr="aria-label:toc.aria">
       <ol>
@@ -141,8 +253,8 @@ footer p { margin: 0 0 8px; }
         <li><a data-i18n="q3" href="#trial">What happens when the 14 days end?</a></li>
         <li><a data-i18n="q4" href="#uninstall">I uninstalled FloatAway and shared files still open full screen. How do I undo it?</a></li>
         <li><a data-i18n="q5" href="#folders">What are Sidebar folders?</a></li>
-        <li><a data-i18n="q6" href="#blocked">Why does it say "Can't use this folder"?</a></li>
-        <li><a data-i18n="q7" href="#wifi">Why does it say "Connect to Wi-Fi first"?</a></li>
+        <li><a data-i18n="q6" href="#blocked">Why does it say “Can’t use this folder”?</a></li>
+        <li><a data-i18n="q7" href="#wifi">Why does it say “Connect to Wi-Fi first”?</a></li>
         <li><a data-i18n="q8" href="#add-yourself">Why does FloatAway ask me to add a folder myself?</a></li>
         <li><a data-i18n="q9" href="#remove-folder">How do I remove a folder?</a></li>
         <li><a data-i18n="q10" href="#gone">What if I delete or rename a folder?</a></li>
@@ -150,67 +262,79 @@ footer p { margin: 0 0 8px; }
       </ol>
     </nav>
 
-    <h2 id="shared">What about files I share from one app to another?</h2>
-    <p data-i18n="a1.1">They open full screen too. If you would rather they did not, turn it off with the switch on FloatAway's home screen.</p>
+    <h2 id="shared" data-i18n="q1">What about files I share from one app to another?</h2>
+    <p data-i18n="n.they-open-full-screen.z70kf3">They open full screen too. If you do not want that, turn it off with the switch on FloatAway’s home screen.</p>
 
-    <h2 id="open-apps">What happens to apps I already have open?</h2>
+    <h2 id="open-apps" data-i18n="q2">What happens to apps I already have open?</h2>
     <p data-i18n="a2.1">They stay where they are. FloatAway only changes how an app opens.</p>
 
-    <h2 id="trial">What happens when the 14 days end?</h2>
-    <p data-i18n="a3.1">FloatAway stops, and sidebar apps open in the small window again, the way your phone did before. Shared files go back too. Your sidebar folders are removed, and if you buy, you set them up again. It asks you to buy it, and if you do not, you owe nothing.</p>
+    <h2 id="trial" data-i18n="q3">What happens when the 14 days end?</h2>
+    <p data-i18n="n.floataway-stops-floata.zhr6db">FloatAway stops. FloatAway asks you to buy it. Sidebar apps open in the small window again, as before. Shared files go back too. Your sidebar folders are removed. If you buy, you set your folders up again. If you do not, you owe nothing.</p>
 
-    <h2 id="uninstall">I uninstalled FloatAway and shared files still open full screen. How do I undo it?</h2>
-    <p data-i18n="a4.1">The sharing switch is a phone setting, so it stays after FloatAway is gone. Reinstall FloatAway, run the setup again, and switch it off on FloatAway's home screen. Then you can uninstall it.</p>
+    <h2 id="uninstall" data-i18n="q4">I uninstalled FloatAway and shared files still open full screen. How do I undo it?</h2>
+    <p data-i18n="a4.1">The sharing switch is a phone setting, so it stays after FloatAway is gone. Reinstall FloatAway, run the setup again, and switch it off on FloatAway’s home screen. Then you can uninstall it.</p>
 
-    <h2 id="folders">What are Sidebar folders?</h2>
+    <h2 id="folders" data-i18n="q5">What are Sidebar folders?</h2>
     <p data-i18n="a5.1">They put up to three folders from your phone on the Smart Sidebar as buttons. Tap a button and the folder opens full screen. The feature has a BETA tag because it is new and still being polished.</p>
 
-    <h2 id="blocked">Why does it say "Can't use this folder"?</h2>
-    <p data-i18n="a6.1">Android blocks some folders, like Download and your phone's main storage. Pick a folder inside it instead.</p>
+    <h2 id="blocked" data-i18n="q6">Why does it say “Can’t use this folder”?</h2>
+    <p data-i18n="n.android-blocks-some-fo.fv7qnp">Android blocks some folders, like Download and your phone’s main storage. Pick a folder inside one of them instead.</p>
 
-    <h2 id="wifi">Why does it say "Connect to Wi-Fi first"?</h2>
+    <h2 id="wifi" data-i18n="q7">Why does it say “Connect to Wi-Fi first”?</h2>
     <p data-i18n="a7.1">Adding or clearing a folder needs Wi-Fi. Connect, then try again.</p>
 
-    <h2 id="add-yourself">Why does FloatAway ask me to add a folder myself?</h2>
-    <p data-i18n="a8.1">Sometimes an add does not finish. FloatAway then shows the steps: open the sidebar, tap Edit, find the folder, tap its plus sign, then tap Done. It also sends me a short report, without the folder's name, so I can fix it.</p>
+    <h2 id="add-yourself" data-i18n="q8">Why does FloatAway ask me to add a folder myself?</h2>
+    <p data-i18n="n.sometimes-adding-a-fol.b7664i">Sometimes adding a folder does not finish. FloatAway then shows the steps. Open the sidebar, tap Edit, find the folder, tap its plus sign, then tap Done. It also sends me a short report, without the folder’s name, so I can fix it.</p>
 
-    <h2 id="remove-folder">How do I remove a folder?</h2>
-    <p data-i18n="a9.1">On FloatAway's home screen, tap its slot, then tap Clear this slot. Its button leaves the sidebar.</p>
+    <h2 id="remove-folder" data-i18n="q9">How do I remove a folder?</h2>
+    <p data-i18n="a9.1">On FloatAway’s home screen, tap its slot, then tap Clear this slot. Its button leaves the sidebar.</p>
 
-    <h2 id="gone">What if I delete or rename a folder?</h2>
+    <h2 id="gone" data-i18n="q10">What if I delete or rename a folder?</h2>
     <p data-i18n="a10.1">Its button tells you the folder is gone and opens Sidebar folders, so you can pick a new one.</p>
 
-    <h2 id="every-way">What are all the ways to open Smart Sidebar apps full screen?</h2>
+    <h2 id="every-way" data-i18n="q11">What are all the ways to open Smart Sidebar apps full screen?</h2>
     <p data-i18n="a11.1">There are three. Pick the one that fits your day.</p>
     <div class="ways"><table>
       <tr><th data-i18n="ways.r0.c1">Way</th><th data-i18n="ways.r0.c2">Cost</th><th data-i18n="ways.r0.c3">What you do every day</th></tr>
       <tr><td data-i18n="ways.r1.c1">Expand the floating window by hand</td><td data-i18n="ways.r1.c2">Free</td><td data-i18n="ways.r1.c3">Expand it every time you open an app from the sidebar</td></tr>
       <tr><td data-i18n="ways.r2.c1">Open the app from your home screen instead</td><td data-i18n="ways.r2.c2">Free</td><td data-i18n="ways.r2.c3">Leave the sidebar and find the app on your home screen</td></tr>
-      <tr><td data-i18n="ways.r3.c1"><a href="/floataway/">FloatAway</a></td><td data-i18n="ways.r3.c2"><span style="white-space: nowrap">US$7.35</span> once, after 14 days free</td><td data-i18n="ways.r3.c3"><b>Nothing at all.</b> Tap it in the sidebar and it opens full screen, so you never expand a window again</td></tr>
+      <tr><td data-i18n="ways.r3.c1"><a href="/floataway/">FloatAway</a></td><td data-i18n="ways.r3.c2"><span style="white-space: nowrap">US$7.35</span> once, after 14 days free</td><td data-i18n="n.nothing-tap-it-in-the.1846uvx"><b>Nothing.</b> Tap it in the sidebar and it opens full screen, so you never expand a window.</td></tr>
     </table></div>
 
     <div class="cta">
-      <p data-i18n="cta.p">Try it on your own phone for 14 days, free. Setting it up takes under five minutes.</p>
+      <p data-i18n="n.try-it-free-on-your-ow.13aj9oz">Try it free on your own phone for 14 days. Setup takes about five minutes.</p>
       <a class="btn" data-i18n="cta.btn" href="/floataway/#price">Get FloatAway</a>
     </div>
   </div>
 </main>
-
 <footer>
   <div class="wrap">
     <p data-i18n="foot.1">Made by one person. Contact me: <a href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p>
     <p data-i18n="foot.2">FloatAway is not affiliated with Oppo.</p>
   </div>
 </footer>
-<script>
-/* keys the question headings at run time: the search checks read these lines exactly as they are */
-(function () {
-  var h = document.querySelectorAll("main h2");
-  for (var i = 0; i < h.length; i++) h[i].setAttribute("data-i18n", "q" + (i + 1));
-})();
-</script>
 <script src="../../assets/lang/lang.js"></script>
 <script src="../../assets/lang/floataway-help.js"></script>
+<script>
+/* The top strip closes for good on this browser (live behaviour). No language counter in the drafts. */
+(function () {
+  document.documentElement.classList.remove("langwait");   // the language words are in
+  if (window.TSLang) {
+    var dirs = function (lang) {
+      [].slice.call(document.querySelectorAll("[data-ltr]")).forEach(function (el) { el.removeAttribute("data-ltr"); });
+      if (lang === "ar") [].slice.call(document.querySelectorAll("[data-i18n]")).forEach(function (el) { var t = el.textContent; if (/[A-Za-z]{3}/.test(t) && !/[\u0600-\u06FF]/.test(t)) el.setAttribute("data-ltr", "w"); });
+    };
+    TSLang.onChange(dirs); dirs(TSLang.lang);
+  }
+  var xs = document.getElementById("xstrip");
+  var fit = function () { document.documentElement.style.setProperty("--strip-h", (xs.isConnected ? xs.offsetHeight : 0) + "px"); };
+  var closed = false; try { closed = localStorage.getItem("xstrip-closed") === "1"; } catch (e) {}
+  if (closed) xs.remove();
+  else xs.querySelector(".x").onclick = function () { xs.remove(); fit(); try { localStorage.setItem("xstrip-closed", "1"); } catch (e) {} };
+  fit(); addEventListener("resize", fit);
+  if (window.TSLang) TSLang.onChange(fit);   // jv1: a new language can change the strip height
+})();
+</script>
 <script>
 // Owner's private count: one visit per browser per day, and each Download click. Shows nothing.
 (function () {
@@ -247,9 +371,9 @@ footer p { margin: 0 0 8px; }
   function langViewed(code) { langView(code, day, langStore, sendLang, langSeen, 'fa-lang-'); }
   langViewed((window.TSLang && window.TSLang.lang) || 'en');
   if (window.TSLang && window.TSLang.onChange) window.TSLang.onChange(langViewed);
-  // only a real link counts, so the only the Download link, which has an href, is counted
+  // only a real link counts: the Download link to the FloatAway.apk file (the new buttons carry no data-download mark)
   document.addEventListener('click', function (e) {
-    if (e.target.closest && e.target.closest('a[data-download][href]')) send('click');
+    if (e.target.closest && e.target.closest('a[href$="/FloatAway.apk"]')) send('click');
   }, true);
 })();
 </script>

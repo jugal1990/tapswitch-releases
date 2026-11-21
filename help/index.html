@@ -1,15 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-app="tapswitch">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <script>
-/* same light or dark choice as the home page: the visitor's pick for this visit, else the clock */
+/* light by day (07:00 to 18:59 on the visitor's clock), dark at night, set before anything paints (the home page's rule) */
 (function () {
-  var t = null;
-  try { t = sessionStorage.getItem("ts-theme"); } catch (e) { /* storage blocked: use the clock */ }
-  if (t !== "light" && t !== "dark") { var h = new Date().getHours(); t = h >= 7 && h < 19 ? "light" : "dark"; }
+  var h = new Date().getHours(), t = h >= 7 && h < 19 ? "light" : "dark";
+  var q = location.search.match(/[?&]theme=(light|dark)\b/); if (q) t = q[1];
   document.documentElement.setAttribute("data-theme", t);
+  // gv5: a visitor who closed the Also from us strip before never sees it; gv6: Arabic (saved, a #ar address or the phone language) is right to left before anything draws
+  try { if (localStorage.getItem("xstrip-closed") === "1") document.documentElement.classList.add("xclosed"); } catch (e) {}
+  var L = ["en", "ms", "id", "th", "vi", "fil", "zh", "es", "pl", "cs", "ru", "ar"], g = location.hash.slice(1), s = null, a = { tl: "fil", "in": "id" };
+  try { s = localStorage.getItem("site-lang"); } catch (e) {}
+  if (L.indexOf(g) < 0) g = L.indexOf(s) >= 0 ? s : (function () { for (var i = 0, l = navigator.languages || [navigator.language || "en"]; i < l.length; i++) { var b = String(l[i]).toLowerCase().split("-")[0]; b = a[b] || b; if (L.indexOf(b) >= 0) return b; } return "en"; })();
+  if (g === "ar") document.documentElement.dir = "rtl";
+  if (g !== "en") { document.documentElement.classList.add("langwait"); setTimeout(function () { document.documentElement.classList.remove("langwait"); }, 1000); }   // kv1: no English first frame, then a jump; 1 s limit
 })();
 </script>
 <title>Oppo access card and Google Wallet: questions</title>
@@ -26,26 +32,86 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Why does my access card stop working when Google Wallet is set up?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An Android phone offers only one tap card at a time, called the default. When Google Wallet becomes the default, door readers get Google Wallet instead of your access card, so the door stays shut. Make the access card the default and the card machine at the shop stops seeing Google Wallet instead." } },
-    { "@type": "Question", "name": "How do I switch the default tap card by hand?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Open Settings and search for contactless. Open Contactless payments (some phones call it Tap and pay) and pick the default. Choose your access card before you reach the office door, and Google Wallet before you pay. If your phone offers a setting to use the default unless another payment app is open, turn it on and try that first." } },
-    { "@type": "Question", "name": "What does TapSwitch actually do?",
-      "acceptedAnswer": { "@type": "Answer", "text": "TapSwitch does the switching for you. Your access card stays the default all day. When you open Google Wallet, TapSwitch hands the tap over to it, and when you close Google Wallet, the access card comes back." } },
-    { "@type": "Question", "name": "Can Google Wallet be the default instead?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Turn on Reverse mode in the app. Google Wallet then stays the default, and your access card takes over only while its app is open." } },
-    { "@type": "Question", "name": "Why does the Oppo Access Card app ask to be the default?",
-      "acceptedAnswer": { "@type": "Answer", "text": "In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it. Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens." } },
-    { "@type": "Question", "name": "Does TapSwitch work on Samsung, Xiaomi or Pixel phones?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It is built and tested on Oppo phones running ColorOS. It may work on other Android phones with Android 16 or newer, but none have been tested yet. The 14 day free trial lets you find out on your own phone before you pay." } },
-    { "@type": "Question", "name": "Is TapSwitch safe, and can it see my cards?",
-      "acceptedAnswer": { "@type": "Answer", "text": "TapSwitch cannot read card numbers, payments or door logs. It only picks which app answers the reader. It goes online once a day to check for updates, and there is no account to sign in to. You can scan the file for free on VirusTotal before you install it." } },
-    { "@type": "Question", "name": "Why is TapSwitch not on the Play Store?",
-      "acceptedAnswer": { "@type": "Answer", "text": "TapSwitch is made and sold by one person, straight from tapswitch.fyi. You download the file from this site and your phone asks once whether to allow it. Because it does not come from the Play Store, your phone shows a warning, which is normal." } },
-    { "@type": "Question", "name": "What happens after the 14 day free trial?",
-      "acceptedAnswer": { "@type": "Answer", "text": "TapSwitch costs US$7.35, paid once. If you do not buy it, TapSwitch stops switching when the trial ends and your phone goes back to how it was. You owe nothing." } },
-    { "@type": "Question", "name": "What are all the ways to use an access card and Google Wallet together?",
-      "acceptedAnswer": { "@type": "Answer", "text": "There are three. Switch the default by hand in Settings: free, but you do it before every door and every payment. Carry the plastic access card, if your office gave you one: free, and your phone stays on Google Wallet. Or use TapSwitch: US$7.35 paid once after a 14 day free trial, and you do nothing at all: tap at the door to open, use Google Wallet to pay, and you never open Settings again." } }
+    {
+      "@type": "Question",
+      "name": "Why does my access card stop working when Google Wallet is set up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An Android phone offers one tap card at a time: the default. If Google Wallet is the default, door readers get Google Wallet, not your access card, so the door stays shut. If you make the access card the default, the shop card machine stops seeing Google Wallet. Without help, you switch back and forth by hand every day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I switch the default tap card by hand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can do it for free in your phone’s settings: Open Settings and search for contactless. Open Contactless payments. Some phones call it Tap and pay. Pick your access card before you reach the office door. Pick Google Wallet again before you pay. If your phone has a setting to use the default unless another payment app is open, turn it on first. Some phones, including the Oppo Find X9, do not have it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does TapSwitch actually do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TapSwitch does the switching for you. Your access card stays the default all day. When you open Google Wallet, TapSwitch hands the tap over to it. When you close Google Wallet, the access card comes back. You never open Settings again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Google Wallet be the default instead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Turn on Reverse mode in the app. Google Wallet then stays the default, and your access card takes over only while its app is open."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the Oppo Access Card app ask to be the default?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Reverse mode, Google Wallet is the default. Since 3.3.0, Oppo’s Access Card app shows no pop-up when you open it from a dark screen. Tap “Set it up” on the home screen once, and the pop-up stays away when your phone is awake too. If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TapSwitch work on Samsung, Xiaomi or Pixel phones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The 14-day free trial lets you find out on your own phone before you pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TapSwitch safe, and can it see my cards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TapSwitch cannot read card numbers, payments or door logs. It only picks which app answers the reader. It goes online once a day to check for updates, and there is no account to sign in to. You can scan the file for free on VirusTotal before you install it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is TapSwitch not on the Play Store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One person makes and sells TapSwitch, straight from this site. You download the file here. Your phone asks once whether to allow it. Because it does not come from the Play Store, your phone shows a warning, which is normal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after the 14-day free trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TapSwitch costs US$7.35, paid once. If you do not buy it, TapSwitch stops switching when the trial ends and your phone goes back to how it was. You owe nothing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are all the ways to use an access card and Google Wallet together?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are three. Switch the default by hand in Settings: free, but you do it before every door and every payment. Carry the plastic access card, if your office gave you one: free, and your phone stays on Google Wallet. Or use TapSwitch: US$7.35 paid once after a 14-day free trial, and you do nothing at all: tap at the door to open, use Google Wallet to pay, and you never open Settings again."
+      }
+    }
   ]
 }
 </script>
@@ -53,7 +119,9 @@
 <link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
 <style>
+
 /* the same look as the home page, cut down to a single reading column */
 :root {
   --bg: #FBFBFD; --panel: #FFFFFF; --ink: #1D1D1F; --muted: #6E6E73; --line: #D2D2D7; --quiet: #F5F5F7;
@@ -116,18 +184,56 @@ ol.steps li { margin: 6px 0; }
 footer { padding-block: 16px 32px; color: var(--muted); font-size: .8rem; line-height: 1.55; background: var(--quiet); }
 footer .wrap::before { content: ""; display: block; border-top: 1px solid var(--line); margin-bottom: 22px; }
 footer p { margin: 0 0 8px; }
+
+/* ---- the new look on this page: the home page's top strip and bar (Questions link, language button), tap sizes, tighter spacing ---- */
+html { scroll-padding-top: calc(64px + var(--strip-h, 0px)); }
+.bar .wrap { gap: 10px; }
+.bar .brand { flex-shrink: 0; min-height: 44px; }
+.spacer { flex: 1; }
+.qlink { flex-shrink: 0; display: inline-flex; align-items: center; height: 44px; padding: 0 10px; border-radius: 999px; color: var(--ink); font: 500 .88rem var(--body); text-decoration: none !important; white-space: nowrap; }
+.qlink:hover { background: var(--quiet); }
+.bar .langwrap { margin-inline-start: 0; }
+.bar #langBtn { height: 44px; }
+@media (max-width: 520px) { .bar #langBtn .now { display: none; } }
+:root { --fill: #E8E8ED; --seg-on: #FFFFFF; }
+:root[data-theme="dark"] { --fill: #1D1D1F; --seg-on: #3A3A3C; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fill: #1D1D1F; --seg-on: #3A3A3C; } }
+.xstrip { display: flex; align-items: center; background: color-mix(in srgb, var(--blue) 12%, var(--bg)); border-bottom: 1px solid color-mix(in srgb, var(--blue) 18%, transparent); }
+.xstrip a { flex: 1; min-width: 0; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 4px 10px; padding: 8px 0 8px 44px; min-height: 44px; color: inherit; font-size: 14.5px; text-align: center; text-decoration: none !important; }
+.xstrip a img { width: 22px; height: 22px; flex: none; }
+.xstrip b { font-weight: 600; }
+.xstrip .sh { display: none; }
+@media (max-width: 1023px) { .xstrip a > span:not(.sh) { display: none; } .xstrip .sh { display: inline; } .xstrip a { flex-wrap: nowrap; } }
+.xstrip .go { color: var(--blue-text); font-weight: 500; white-space: nowrap; }
+:root { --blue-text: #2160CB; } /* the darker blue for text on the pale strip (4.5 to 1 and up) */
+:root[data-theme="dark"] { --blue-text: #6FA8FF; }
+/* 44 px tap areas that look the same: padding that the matching negative margin takes back */
+td > a:only-child, main p > a[href="/#careful"] { display: inline-block; padding-block: 14px; margin-block: -14px; }
+footer p:has(> a) { display: flex; flex-wrap: wrap; align-items: center; column-gap: .3em; margin: 0; } footer p > a { display: inline-block; padding-block: 14px; } /* gv8 */
+.toc { margin-top: 20px; padding-block: 4px; } html.langwait main, html.langwait .bar .qlink { visibility: hidden; }
+.toc li { margin: 0; } .toc a { display: block; box-sizing: border-box; min-height: 44px; padding-block: 10px; } /* hv2: each question is one 44 px band, no overlap with its neighbours, the number beside the first line */
+@media (max-width: 380px) { .bar .wrap { gap: 6px; } .qlink { padding: 0 6px; } .bar #langBtn > svg { display: none; } } /* kv2: the bar fits a 320 px phone in every language (the flag stays) */
+#langMenu button { min-height: 44px; }
+#langMenu { max-height: calc(100vh - 120px); } /* gv1: all 12 rows of 44 px show on a laptop and a normal phone; a very short screen scrolls */
+.xclosed .xstrip { display: none; } /* gv5 */
+/* Arabic page: a line that stays English among Arabic ones keeps its place at the right and its words run left to right */
+[data-ltr="w"] { unicode-bidi: plaintext; text-align: right; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --blue-text: #6FA8FF; } }
+.xstrip a:hover .go { text-decoration: underline; text-underline-offset: 3px; }
+.xstrip .x { flex: none; width: 44px; align-self: stretch; border: 0; background: none; color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; }
+main { padding-block: 24px 40px; }
+h2 { margin: 36px 0 8px; }
+.cta { margin: 40px 0 0; }
+.cta a.btn { min-height: 44px; display: inline-flex; align-items: center; }
+html[dir="rtl"] .toc ol, html[dir="rtl"] ol.steps { padding-left: 0; padding-right: 1.3em; }
+html[dir="rtl"] .ways th, html[dir="rtl"] .ways td { text-align: right; }
 </style>
 </head>
-<body>
-<header class="bar">
-  <div class="wrap">
-    <a class="brand" href="/" aria-label="TapSwitch home page" data-i18n-attr="aria-label:bar.brand">
+<body id="top">
+<header class="bar" id="bar"><div class="xstrip" id="xstrip"><a href="/floataway/"><img src="../assets/floataway-logo.svg" alt=""><span data-i18n="strip.text">Also from us: <b>FloatAway</b>, Smart Sidebar apps open full screen on Oppo.</span><span class="go" data-i18n="strip.go">See FloatAway ›</span><span class="sh" data-i18n="n.also-from-us-floataway.5keiwv">Also from us: <b>FloatAway</b> ›</span></a><button class="x" type="button" aria-label="Close" data-i18n-attr="aria-label:strip.close">×</button></div><div class="wrap" id="barIn"><a class="brand" href="/" aria-label="TapSwitch home page" data-i18n-attr="aria-label:bar.brand">
       <svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="tsBg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6FB0FF"/><stop offset=".5" stop-color="#4C86EC"/><stop offset="1" stop-color="#2E5DC0"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#tsBg)"/><g fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"><path d="M35,44 L73,44 M73,44 L65,36 M73,44 L65,52"/><path d="M73,64 L35,64 M35,64 L43,56 M35,64 L43,72"/></g></svg>
       TapSwitch
-    </a>
-  </div>
-</header>
-
+    </a><span class="spacer"></span><a class="qlink" href="/help/" aria-current="page" data-i18n="bar.help">Questions</a></div></header>
 <main>
   <div class="wrap">
     <h1 data-i18n="h1">Access card and Google Wallet not working together on Oppo and other Android phones</h1>
@@ -143,82 +249,94 @@ footer p { margin: 0 0 8px; }
         <li><a data-i18n="q6" href="#phones">Does it work on Samsung, Xiaomi or Pixel phones?</a></li>
         <li><a data-i18n="q7" href="#safe">Is it safe, and can it see my cards?</a></li>
         <li><a data-i18n="q8" href="#play-store">Why is it not on the Play Store?</a></li>
-        <li><a data-i18n="q9" href="#trial">What happens after the 14 day free trial?</a></li>
+        <li><a data-i18n="n.what-happens-after-the.1e7yxg0" href="#trial">What happens after the 14-day free trial?</a></li>
         <li><a data-i18n="q10" href="#every-way">What are all the ways to use an access card and Google Wallet together?</a></li>
       </ol>
     </nav>
 
-    <h2 id="why">Why does my access card stop working when Google Wallet is set up?</h2>
-    <p data-i18n="a1.1">An Android phone offers only one tap card at a time, called the default. When Google Wallet becomes the default, door readers get Google Wallet instead of your access card, so the door stays shut.</p>
-    <p data-i18n="a1.2">Make the access card the default and the card machine at the shop stops seeing Google Wallet instead. Without help, you end up switching back and forth by hand every day.</p>
+    <h2 id="why" data-i18n="q1">Why does my access card stop working when Google Wallet is set up?</h2>
+    <p data-i18n="n.an-android-phone-offer.r1zhis">An Android phone offers one tap card at a time: the default. If Google Wallet is the default, door readers get Google Wallet, not your access card, so the door stays shut.</p>
+    <p data-i18n="n.if-you-make-the-access.1mlyu36">If you make the access card the default, the shop card machine stops seeing Google Wallet. Without help, you switch back and forth by hand every day.</p>
 
-    <h2 id="by-hand">How do I switch the default tap card by hand?</h2>
-    <p data-i18n="a2.1">You can do it for free in your phone's settings:</p>
+    <h2 id="by-hand" data-i18n="q2">How do I switch the default tap card by hand?</h2>
+    <p data-i18n="a2.1">You can do it for free in your phone’s settings:</p>
     <ol class="steps">
       <li data-i18n="a2.2">Open <b>Settings</b> and search for <b>contactless</b>.</li>
       <li data-i18n="a2.3">Open <b>Contactless payments</b>. Some phones call it <b>Tap and pay</b>.</li>
       <li data-i18n="a2.4">Pick your access card before you reach the office door.</li>
       <li data-i18n="a2.5">Pick Google Wallet again before you pay.</li>
     </ol>
-    <p data-i18n="a2.6">If your phone offers a setting to use the default unless another payment app is open, turn it on and try that first. Some phones, including the Oppo Find X9, do not have it.</p>
+    <p data-i18n="n.if-your-phone-has-a-se.kii7nn">If your phone has a setting to use the default unless another payment app is open, turn it on first. Some phones, including the Oppo Find X9, do not have it.</p>
 
-    <h2 id="what-it-does">What does TapSwitch actually do?</h2>
+    <h2 id="what-it-does" data-i18n="q3">What does TapSwitch actually do?</h2>
     <p data-i18n="a3.1">TapSwitch does the switching for you. Your access card stays the default all day. When you open Google Wallet, TapSwitch hands the tap over to it. When you close Google Wallet, the access card comes back.</p>
-    <p data-i18n="a3.2">You never open Settings again. <a href="/#demo">Try it on the home page</a>.</p>
+    <p data-i18n="n.you-never-open-setting.56h87b">You never open Settings again.</p>
 
-    <h2 id="wallet-default">Can Google Wallet be the default instead?</h2>
+    <h2 id="wallet-default" data-i18n="q4">Can Google Wallet be the default instead?</h2>
     <p data-i18n="a4.1">Yes. Turn on <b>Reverse mode</b> in the app. Google Wallet then stays the default, and your access card takes over only while its app is open.</p>
 
-    <h2 id="oppo-popup">Why does the Oppo Access Card app ask to be the default?</h2>
-    <p data-i18n="a10.1">In Reverse mode, Google Wallet is the default. When you open the Oppo Access Card app, it shows a pop-up asking to become the default. Oppo's app does this on its own, and TapSwitch cannot stop it.</p>
-    <p data-i18n="a10.2">Leave the pop-up on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens.</p>
+    <h2 id="oppo-popup" data-i18n="q5">Why does the Oppo Access Card app ask to be the default?</h2>
+    <p data-i18n="n.in-reverse-mode-google.1go0cx7">In Reverse mode, Google Wallet is the default. Since 3.3.0, Oppo’s Access Card app shows no pop-up when you open it from a dark screen. Tap “Set it up” on the home screen once, and the pop-up stays away when your phone is awake too.</p>
+    <p data-i18n="n.if-a-pop-up-still-show.xnu5bf">If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens.</p>
 
-    <h2 id="phones">Does it work on Samsung, Xiaomi or Pixel phones?</h2>
-    <p data-i18n="a5.1">TapSwitch is built and tested on Oppo phones running ColorOS. It may work on other Android phones with Android 16 or newer, but none have been tested yet.</p>
-    <p data-i18n="a5.2">The 14 day free trial lets you find out on your own phone before you pay.</p>
+    <h2 id="phones" data-i18n="q6">Does it work on Samsung, Xiaomi or Pixel phones?</h2>
+    <p data-i18n="n.tapswitch-works-on-opp.o1ga9k">TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested.</p>
+    <p data-i18n="n.the-14-day-free-trial.dq7qks">The 14-day free trial lets you find out on your own phone before you pay.</p>
 
-    <h2 id="safe">Is it safe, and can it see my cards?</h2>
+    <h2 id="safe" data-i18n="q7">Is it safe, and can it see my cards?</h2>
     <p data-i18n="a6.1">TapSwitch cannot read card numbers, payments or door logs. It only picks which app answers the reader.</p>
     <p data-i18n="a6.2">It goes online once a day to check for updates, and there is no account to sign in to. You can scan the file for free on VirusTotal before you install it. <a href="/#careful">How to check it</a></p>
 
-    <h2 id="play-store">Why is it not on the Play Store?</h2>
-    <p data-i18n="a7.1">TapSwitch is made and sold by one person, straight from this site. You download the file here and your phone asks once whether to allow it.</p>
+    <h2 id="play-store" data-i18n="q8">Why is it not on the Play Store?</h2>
+    <p data-i18n="n.one-person-makes-and-s.1nyrm85">One person makes and sells TapSwitch, straight from this site. You download the file here. Your phone asks once whether to allow it.</p>
     <p data-i18n="a7.2">Because it does not come from the Play Store, your phone shows a warning, which is normal.</p>
 
-    <h2 id="trial">What happens after the 14 day free trial?</h2>
+    <h2 id="trial" data-i18n="n.what-happens-after-the.1e7yxg0">What happens after the 14-day free trial?</h2>
     <p data-i18n="a8.1">TapSwitch costs US$7.35, paid once. If you do not buy it, TapSwitch stops switching when the trial ends and your phone goes back to how it was. You owe nothing.</p>
 
-    <h2 id="every-way">What are all the ways to use an access card and Google Wallet together?</h2>
+    <h2 id="every-way" data-i18n="q10">What are all the ways to use an access card and Google Wallet together?</h2>
     <p data-i18n="a9.1">There are three. Pick the one that fits your day.</p>
     <div class="ways"><table>
       <tr><th data-i18n="ways.r0.c1">Way</th><th data-i18n="ways.r0.c2">Cost</th><th data-i18n="ways.r0.c3">What you do every day</th></tr>
       <tr><td data-i18n="ways.r1.c1"><a href="#by-hand">Switch by hand in Settings</a></td><td data-i18n="ways.r1.c2">Free</td><td data-i18n="ways.r1.c3">Change the default before every door, and again before you pay</td></tr>
       <tr><td data-i18n="ways.r2.c1">Carry the plastic access card, if your office gave you one</td><td data-i18n="ways.r2.c2">Free</td><td data-i18n="ways.r2.c3">Keep the card with you. Your phone stays on Google Wallet</td></tr>
-      <tr><td data-i18n="ways.r3.c1"><a href="/">TapSwitch</a></td><td data-i18n="ways.r3.c2"><span style="white-space: nowrap">US$7.35</span> once, after 14 days free</td><td data-i18n="ways.r3.c3"><b>Nothing at all.</b> Tap at the door to open, use Google Wallet to pay. TapSwitch switches for you, so you never open Settings again</td></tr>
+      <tr><td data-i18n="ways.r3.c1"><a href="/">TapSwitch</a></td><td data-i18n="ways.r3.c2"><span style="white-space: nowrap">US$7.35</span> once, after 14 days free</td><td data-i18n="n.nothing-tap-at-the-doo.4d0c31"><b>Nothing.</b> Tap at the door, pay with Google Wallet. TapSwitch switches for you, so you never open Settings.</td></tr>
     </table></div>
 
     <div class="cta">
-      <p data-i18n="cta.p">Try it on your own phone for 14 days, free. Setting it up takes about five minutes.</p>
+      <p data-i18n="n.try-it-free-on-your-ow.13aj9oz">Try it free on your own phone for 14 days. Setup takes about five minutes.</p>
       <a class="btn" data-i18n="cta.btn" href="/#price">Get TapSwitch</a>
     </div>
   </div>
 </main>
-
 <footer>
   <div class="wrap">
     <p data-i18n="foot.1">Made by one person, for one annoying problem. Contact me: <a href="mailto:hello@tapswitch.fyi">hello@tapswitch.fyi</a></p>
     <p data-i18n="foot.2">TapSwitch is not affiliated with Google or Oppo.</p>
   </div>
 </footer>
-<script>
-/* keys the question headings at run time: the search checks read these lines exactly as they are */
-(function () {
-  var h = document.querySelectorAll("main h2");
-  for (var i = 0; i < h.length; i++) h[i].setAttribute("data-i18n", "q" + (i + 1));
-})();
-</script>
 <script src="../assets/lang/lang.js"></script>
 <script src="../assets/lang/help.js"></script>
+<script>
+/* The top strip closes for good on this browser (live behaviour). No language counter in the drafts. */
+(function () {
+  document.documentElement.classList.remove("langwait");   // the language words are in
+  if (window.TSLang) {
+    var dirs = function (lang) {
+      [].slice.call(document.querySelectorAll("[data-ltr]")).forEach(function (el) { el.removeAttribute("data-ltr"); });
+      if (lang === "ar") [].slice.call(document.querySelectorAll("[data-i18n]")).forEach(function (el) { var t = el.textContent; if (/[A-Za-z]{3}/.test(t) && !/[\u0600-\u06FF]/.test(t)) el.setAttribute("data-ltr", "w"); });
+    };
+    TSLang.onChange(dirs); dirs(TSLang.lang);
+  }
+  var xs = document.getElementById("xstrip");
+  var fit = function () { document.documentElement.style.setProperty("--strip-h", (xs.isConnected ? xs.offsetHeight : 0) + "px"); };
+  var closed = false; try { closed = localStorage.getItem("xstrip-closed") === "1"; } catch (e) {}
+  if (closed) xs.remove();
+  else xs.querySelector(".x").onclick = function () { xs.remove(); fit(); try { localStorage.setItem("xstrip-closed", "1"); } catch (e) {} };
+  fit(); addEventListener("resize", fit);
+  if (window.TSLang) TSLang.onChange(fit);   // jv1: a new language can change the strip height
+})();
+</script>
 <script>
 // Owner's private count: one visit per browser per day, and each Download click. Shows nothing.
 (function () {

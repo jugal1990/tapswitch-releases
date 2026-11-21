@@ -9,105 +9,97 @@ if (window.TSLang) TSLang.add({
    "t": "Lihat FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "Juga daripada kami: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "Soalan Lazim",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "Guna <span class=\"g\">Kad Akses Oppo</span> dan <span class=\"b\">Google Wallet</span> ikut keperluan. <br><span class=\"m\">Tak perlu lagi buka Tetapan.</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "Muat turun TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "Mod biasa",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "Guna <span class=\"g\">Kad Akses</span> dan <span class=\"b\">Google Wallet</span> ikut keperluan.",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "Mod terbalik",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "Percuma 14 hari, lepas itu satu harga untuk akses seumur hidup",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "Pembaca Kad Akses",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "Tak perlu akaun.",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "Seret telefon untuk mencubanya",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "14 hari itu bermula apabila aplikasi berfungsi pada telefon anda, bukan ketika dimuat turun. Semua ciri boleh digunakan.",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "Dekatkan pada pembaca",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>Tiada bayaran balik.</b> Anda boleh cuba percuma selama 14 hari dahulu, jadi kod tidak layak untuk bayaran balik.",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "Terminal Pembayaran",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "Dalam aplikasi, ketik “Get the full version”, kemudian “Buy now”. Bayar melalui pelayar. Kod anda terus keluar di skrin dan dihantar ke e-mel anda.",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "Seret telefon ke kiri atau kanan, ke arah pembaca kad.",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "Telefon yang disokong",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "Percuma 14 hari, lepas itu satu harga untuk <span class=\"lt-green\">akses seumur hidup</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "Telefon Oppo dan OnePlus ColorOS dengan Android 16 dan ke atas.",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "Bayar sekali sahaja, tak perlu akaun.",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "Dibina dan digunakan setiap hari pada ColorOS. Telefon lain dengan Android 16 dan ke atas sepatutnya berfungsi, tetapi belum diuji. Percubaan percuma akan menunjukkan sama ada ia berfungsi pada telefon anda.",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>Cuba percuma selama 14 hari.</strong> Tempoh ini bermula apabila aplikasi mula berfungsi pada telefon anda, bukan ketika anda memuat turunnya. Semua ciri boleh digunakan sepanjang tempoh percubaan.",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>Tiada bayaran balik.</strong> 14 hari percuma itu supaya anda dapat lihat sendiri ia berfungsi pada telefon anda sebelum membayar. Sebab itu, kod yang sudah dikeluarkan tidak layak untuk bayaran balik.",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>Beli terus dalam aplikasi.</strong> Ketik \"Get the full version\", kemudian \"Buy now\" untuk membayar melalui pelayar. Kod buka kunci anda terus keluar di skrin, dan satu salinan dihantar ke e-mel anda.",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "Apabila tempoh percubaan tamat, pertukaran kad berhenti dan telefon anda kembali seperti asal.",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "sekali bayar",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>Bayar sekali sahaja, tak perlu bayar lagi.</strong>Tiada langganan, tiada yuran bulanan, selamanya.",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>Bayar sekali sahaja, tak perlu bayar lagi.</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>Semua kemas kini akan datang percuma.</strong>Versi baharu dan pembetulan tidak dikenakan sebarang bayaran.",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>Semua kemas kini akan datang percuma.</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>Kekal milik anda pada telefon itu.</strong>Satu bayaran meliputi telefon tempat anda membelinya, selagi anda terus menggunakannya.",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "Muat turun TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>Kekal milik anda pada telefon itu.</b>Ia meliputi telefon tempat anda membelinya, selagi anda terus menggunakannya.",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "Semua versi di GitHub",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "Perlukan Android 16 dan ke atas. Telefon anda akan memaparkan amaran kerana fail ini bukan daripada Play Store, dan itu perkara biasa. <a href=\"#careful\">Cara memastikan ia selamat</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "Perlukan Android 16 dan ke atas. Telefon anda akan memaparkan amaran kerana fail ini bukan daripada Play Store, dan itu perkara biasa. <a href=\"#safe\">Cara memastikan ia selamat</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "Baharu dalam versi",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "Apa yang baharu",
+   "en": "What’s new"
   },
   "wn.lead": {
-   "t": "Tiada lagi pop-up \"Tetapkan sebagai lalai\" daripada aplikasi Access Card Oppo.",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "t": "Tiada lagi pop-up “Tetapkan sebagai lalai” daripada aplikasi Access Card Oppo.",
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "Dalam Mod terbalik, buka kad akses anda dari skrin gelap dan ia terus sedia, tanpa pop-up.",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "Ketik \"Set it up\" pada kad baharu di skrin utama, kemudian buat langkah gandingan sekali sahaja. Selepas itu pop-up tidak muncul lagi, walaupun semasa telefon anda sedang digunakan.",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "Ketik “Set it up” pada kad baharu di skrin utama, kemudian ulang langkah enam digit Penyahpepijatan wayarles sekali sahaja. Selepas itu pop-up tidak muncul lagi, walaupun semasa telefon anda sedang digunakan.",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "Mod biasa berfungsi seperti dahulu.",
@@ -116,6 +108,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "Sudah guna? Tetapan dan kod buka kunci anda kekal. Hanya Mod terbalik pada Oppo perlukan satu langkah tambahan itu.",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "Dua mod",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "Mod biasa",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "Kad akses anda ialah pilihan utama. Google Wallet hanya mengambil alih semasa ia dibuka.",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "Kad akses",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "Dekatkan pada pembaca",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "Mod terbalik",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Google Wallet ialah pilihan utama. Kad akses anda hanya mengambil alih semasa aplikasinya dibuka.",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "Dari mana pelanggan kami datang",
@@ -132,18 +156,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "Telefon yang disokong",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "Telefon Oppo ColorOS dengan Android 16 dan ke atas.",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "Aplikasi ini dibina dan digunakan setiap hari pada Oppo ColorOS. Ia sepatutnya berfungsi pada mana-mana telefon Android 16 dan ke atas, tetapi telefon lain belum diuji lagi. Percubaan percuma 14 hari ialah cara untuk anda tahu sama ada ia berfungsi pada telefon anda.",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "Persediaan hanya ambil kira-kira lima minit",
@@ -167,15 +179,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "Ketik nombor versi telefon anda tujuh kali. TapSwitch akan membuka skrin yang betul dan beritahu baris mana yang perlu diketik.",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "Hidupkan Penyahpepijatan wayarles selama seminit",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "Langkah ini perlukan Wi-Fi. Hidupkan Penyahpepijatan wayarles, kemudian taip enam digit yang TapSwitch tunjukkan dalam pemberitahuan. Dengan cara ini, TapSwitch boleh mendapatkan satu kebenaran yang diperlukannya untuk menukar kad ketik utama anda. Selepas siap, ia akan mematikan semula Penyahpepijatan wayarles. Pada sesetengah telefon, aplikasi ini akan memasang semula dirinya sekali; tiada apa yang hilang.",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "Langkah ini perlukan Wi-Fi. Telefon anda akan menunjukkan enam digit.",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "Taipkannya dalam pemberitahuan TapSwitch. Ini memberi TapSwitch satu kebenaran yang diperlukannya untuk menukar kad ketik anda. Kemudian TapSwitch mematikan Penyahpepijatan wayarles. Pada sesetengah telefon, aplikasi ini memasang semula dirinya sekali. Tiada apa yang hilang.",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "Pilih dua kad anda",
@@ -193,6 +209,14 @@ if (window.TSLang) TSLang.add({
    "t": "TapSwitch tiada di Play Store, jadi anda boleh semak sendiri dengan imbasan virus percuma.",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>0 daripada 65</b> pengimbas virus menandakannya",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "Lihat laporan penuh",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "Fail",
    "en": "File"
@@ -209,93 +233,49 @@ if (window.TSLang) TSLang.add({
    "t": "Imbasan virus",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "0 daripada 65 pengimbas virus menandakannya",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "Lihat laporan penuh",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "Tunjuk butiran teknikal",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "SHA-256 fail ini",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "Ditandatangani oleh",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
    "t": "Ditandatangani oleh ialah tandatangan digital pembuat. Setiap kemas kini mesti membawa tandatangan yang sama, jika tidak telefon anda akan menolak untuk memasangnya.",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "Apa yang TapSwitch boleh dan tidak boleh buat",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "Tukar kad ketik utama anda",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "Inilah satu-satunya tetapan telefon yang diubahnya, supaya kad yang betul menjawab pembaca.",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "Lihat aplikasi mana yang sedang dibuka",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "Ia hanya mengubah tetapan ini, supaya kad yang betul menjawab pembaca.",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "Supaya ia tahu bila Google Wallet atau aplikasi kad akses anda dibuka.",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "Papar di atas aplikasi lain",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "Untuk Mod terbalik pada Oppo sahaja. Satu tetingkap kecil yang tidak kelihatan, supaya telefon anda tidak menjeda TapSwitch semasa aplikasi kad akses dibuka. Tetingkap yang sama memberitahu TapSwitch bila jari menyentuh skrin, tetapi tidak di mana. Dengan itu ia boleh bertukar ke kad akses anda sejurus sebelum aplikasinya dibuka dari senarai aplikasi terkini. Jika anda tidak pernah ketik \"Set it up\", TapSwitch tidak akan memintanya.",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "Semak kemas kini sekali sehari",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "Satu tetingkap kecil yang tidak kelihatan, supaya telefon anda tidak menjeda TapSwitch semasa aplikasi kad akses dibuka. Tetingkap yang sama memberitahu TapSwitch bila jari menyentuh skrin, tetapi tidak di mana. Dengan itu ia boleh bertukar ke kad akses anda sejurus sebelum aplikasinya dibuka dari senarai aplikasi terkini. Pada Oppo, persediaan mungkin menghidupkannya. TapSwitch hanya menggunakannya dalam Mod terbalik.",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "Tiada akaun untuk log masuk.",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "Tidak pernah melihat kad anda",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "Ia tidak boleh membaca nombor kad, pembayaran atau rekod pintu. Ia hanya memilih aplikasi mana yang menjawab.",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "Perkara penting",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "Soalan lazim tentang TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "Aplikasi ini dibina dan digunakan setiap hari pada <b>Oppo ColorOS</b>. Ia sepatutnya berfungsi pada mana-mana telefon Android 16 dan ke atas, tetapi telefon lain belum diuji lagi.",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "Cuba percuma pada telefon anda sendiri selama 14 hari. Kalau tak sesuai, padam sahaja. Anda tak berhutang apa-apa.",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "Selepas tempoh percubaan tamat, TapSwitch berhenti bertukar kad dan telefon anda kembali seperti asal.",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "Kad akses tak berfungsi selepas anda menetapkan Google Wallet? <a href=\"/help/\">Baca soalan lazim</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "Cuba pada telefon anda sendiri selama 14 hari, percuma.<span>Kalau tak sesuai, padam sahaja dan anda tak berhutang apa-apa. <a href=\"#price\">Kembali ke muat turun</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "Kembali ke muat turun",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "Sudah cuba FloatAway?",
@@ -305,13 +285,9 @@ if (window.TSLang) TSLang.add({
    "t": "Tahukah anda, aplikasi dari Smart Sidebar boleh dibuka dalam skrin penuh pada Oppo?",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "Biasanya aplikasi bermula dalam tetingkap terapung yang kecil, dan anda perlu membesarkannya sendiri. FloatAway terus membukanya dalam skrin penuh, aplikasi klon pun sama. Ia juga boleh menambah folder pada sidebar anda, sesuatu yang tidak boleh dibuat oleh telefon secara lalai. Percuma 14 hari.",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "Lihat FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "Aplikasi sidebar biasanya bermula dalam tetingkap kecil. FloatAway terus membukanya dalam skrin penuh, aplikasi klon pun sama. Ia juga menambah folder pada sidebar anda, sesuatu yang tidak dibuat oleh telefon anda. Percuma 14 hari.",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "Dibuat oleh seorang, untuk satu masalah yang menjengkelkan. Hubungi saya: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -321,10 +297,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">Soalan lazim: kad akses dan Google Wallet pada Android</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "Juga daripada pembuat TapSwitch: <a href=\"/floataway/\">FloatAway, aplikasi Smart Sidebar dibuka dalam skrin penuh</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch tidak bergabung dengan Google atau Oppo.",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -333,121 +305,53 @@ if (window.TSLang) TSLang.add({
    "t": "Tutup",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch, kembali ke atas",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "Video demo TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "Kad mana yang menjadi pilihan utama",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "Pintu terbuka",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "Telefon. Tekan anak panah kiri untuk ketik pada pembaca pintu, anak panah kanan untuk ketik pada terminal pembayaran.",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "Kembali ke skrin utama",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "Dibayar",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "Mainkan video",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "Akses seumur hidup",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "Kata pelanggan",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "Boleh guna di Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "Akses",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "Akses seumur hidup",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "SHA-256 fail ini",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "Kad akses anda ialah pilihan utama. Google Wallet hanya mengambil alih semasa ia dibuka.",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "Ditandatangani oleh",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Google Wallet ialah pilihan utama. Kad akses anda hanya mengambil alih semasa aplikasinya dibuka.",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "Tukar kad ketik utama anda",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "Buka Google Wallet dahulu",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "Lihat aplikasi mana yang sedang dibuka",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "Tutup Google Wallet dahulu",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "Mod terbalik pada Oppo sahaja: Papar di atas aplikasi lain",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "Buka aplikasi kad akses anda dahulu",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "Semak kemas kini sekali sehari",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "Tutup aplikasi kad akses anda dahulu",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "Tidak pernah melihat kad anda",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "Nak buka pintu? Ketik sahaja telefon anda.",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "Nak bayar sesuatu? Buka aplikasi Wallet dan ketik telefon anda.",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "Nak bayar sesuatu? Ketik sahaja telefon anda.",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "Nak buka pintu? Buka aplikasi Akses dan ketik telefon anda.",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "Kad akses",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "Pejabat",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "Ketik telefon pada Pembaca Kad Akses",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "Ketik telefon pada Terminal Pembayaran",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "Tukar ke mod gelap",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "Tukar ke mod cerah",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "Baca soalan lazim ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "Aplikasi ini sendiri dalam bahasa Inggeris.",
@@ -463,105 +367,97 @@ if (window.TSLang) TSLang.add({
    "t": "Lihat FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "Juga dari kami: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "Tanya Jawab",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "Pakai <span class=\"g\">Kartu Akses Oppo</span> dan <span class=\"b\">Google Wallet</span> sesuai kebutuhan. <br><span class=\"m\">Tak perlu lagi buka Setelan.</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "Unduh TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "Mode normal",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "Pakai <span class=\"g\">Kartu Akses</span> dan <span class=\"b\">Google Wallet</span> sesuai kebutuhan.",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "Mode terbalik",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "Gratis 14 hari, setelah itu satu harga untuk akses seumur hidup",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "Pembaca Kartu Akses",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "Tidak perlu akun.",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "Geser ponselnya untuk mencoba",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "Hitungan 14 hari dimulai saat aplikasi sudah berjalan di ponsel Anda, bukan saat diunduh. Semua fitur bisa dipakai.",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "Dekatkan ke pembaca",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>Tidak ada pengembalian dana.</b> Anda bisa coba gratis 14 hari dulu, jadi dana untuk kode tidak bisa dikembalikan.",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "Mesin Pembayaran",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "Di aplikasi, ketuk “Get the full version”, lalu “Buy now”. Bayar lewat browser. Kode Anda langsung tampil di layar dan dikirim ke email Anda.",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "Geser ponsel ke kiri atau kanan, ke arah mesin pembaca.",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "Ponsel yang didukung",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "Gratis 14 hari, setelah itu satu harga untuk <span class=\"lt-green\">akses seumur hidup</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "Ponsel Oppo dan OnePlus ColorOS dengan Android 16 ke atas.",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "Bayar sekali saja, tanpa perlu akun.",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "Dibuat dan dipakai setiap hari di ColorOS. Ponsel lain dengan Android 16 ke atas seharusnya bisa, tapi belum diuji. Masa percobaan gratis akan menunjukkan apakah aplikasinya berjalan di ponsel Anda.",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>Coba gratis 14 hari.</strong> Hitungan dimulai saat aplikasi pertama kali berjalan di ponsel Anda, bukan saat Anda mengunduhnya. Semua fitur bisa dipakai selama masa percobaan.",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>Tidak ada pengembalian dana.</strong> Gratis 14 hari itu supaya Anda bisa melihat sendiri aplikasinya berjalan di ponsel Anda sebelum membayar. Karena itu, dana untuk kode yang sudah diterbitkan tidak bisa dikembalikan.",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>Beli langsung di aplikasi.</strong> Ketuk \"Get the full version\", lalu \"Buy now\" untuk membayar lewat browser. Kode buka kunci Anda langsung tampil di layar, dan salinannya dikirim ke email Anda.",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "Setelah masa percobaan habis, perpindahan kartu berhenti dan ponsel Anda kembali seperti semula.",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "sekali bayar",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>Bayar sekali, selesai.</strong>Tanpa langganan, tanpa biaya bulanan, selamanya.",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>Bayar sekali, selesai.</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>Semua update berikutnya gratis.</strong>Versi baru dan perbaikan bug tidak dipungut biaya.",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>Semua update berikutnya gratis.</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>Tetap milik Anda di ponsel itu.</strong>Satu kali bayar berlaku untuk ponsel tempat Anda membelinya, selama Anda masih memakainya.",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "Unduh TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>Tetap milik Anda di ponsel itu.</b>Berlaku untuk ponsel tempat Anda membelinya, selama Anda masih memakainya.",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "Semua versi di GitHub",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "Butuh Android 16 ke atas. Ponsel Anda akan menampilkan peringatan karena file ini bukan dari Play Store, dan itu wajar. <a href=\"#careful\">Cara memastikan aplikasinya aman</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "Butuh Android 16 ke atas. Ponsel Anda akan menampilkan peringatan karena file ini bukan dari Play Store, dan itu wajar. <a href=\"#safe\">Cara memastikan aplikasinya aman</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "Yang baru di versi",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "Yang baru",
+   "en": "What’s new"
   },
   "wn.lead": {
-   "t": "Tidak ada lagi pop-up \"Setel sebagai default\" dari aplikasi Access Card Oppo.",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "t": "Tidak ada lagi pop-up “Setel sebagai default” dari aplikasi Access Card Oppo.",
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "Di Mode terbalik, buka kartu akses dari layar yang padam dan kartunya langsung siap, tanpa pop-up.",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "Ketuk \"Set it up\" di kartu baru pada layar utama, lalu lakukan langkah penyandingan sekali saja. Setelah itu pop-up tidak muncul lagi, juga saat ponsel sedang Anda pakai.",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "Ketuk “Set it up” di kartu baru pada layar utama, lalu ulangi langkah enam digit Debugging nirkabel sekali saja. Setelah itu pop-up tidak muncul lagi, juga saat ponsel sedang Anda pakai.",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "Mode normal tetap berjalan seperti biasa.",
@@ -570,6 +466,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "Sudah memakainya? Pengaturan dan kode buka kunci Anda tetap aman. Hanya Mode terbalik di Oppo yang perlu satu langkah tambahan itu.",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "Dua mode",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "Mode normal",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "Kartu akses Anda jadi pilihan utama. Google Wallet hanya mengambil alih selama aplikasinya terbuka.",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "Kartu akses",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "Dekatkan ke pembaca",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "Mode terbalik",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Google Wallet jadi pilihan utama. Kartu akses Anda hanya mengambil alih selama aplikasinya terbuka.",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "Dari mana saja pelanggan kami",
@@ -586,18 +514,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "Ponsel yang didukung",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "Ponsel Oppo ColorOS dengan Android 16 ke atas.",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "Aplikasi ini dibuat dan dipakai setiap hari di Oppo ColorOS. Seharusnya bisa berjalan di ponsel apa pun dengan Android 16 ke atas, tapi ponsel lain belum pernah diuji. Gratis 14 hari itulah cara Anda mengetahui apakah aplikasinya cocok di ponsel Anda.",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "Pengaturannya cuma sekitar lima menit",
@@ -621,15 +537,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "Ketuk nomor versi ponsel Anda tujuh kali. TapSwitch akan membuka layar yang tepat dan memberi tahu baris mana yang perlu diketuk.",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "Aktifkan Debugging nirkabel selama semenit",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "Langkah ini butuh Wi-Fi. Aktifkan Debugging nirkabel, lalu ketik enam digit yang ditampilkan TapSwitch di notifikasi. Dengan begitu TapSwitch bisa mendapatkan satu izin yang dibutuhkannya untuk mengganti kartu tap utama Anda. Setelah selesai, Debugging nirkabel dimatikan lagi secara otomatis. Di beberapa ponsel, aplikasinya akan terinstal ulang sekali; tidak ada yang hilang.",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "Langkah ini butuh Wi-Fi. Ponsel Anda menampilkan enam digit.",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "Ketik angka itu di notifikasi TapSwitch. Dengan begitu TapSwitch mendapat satu izin yang dibutuhkannya untuk mengganti kartu tap Anda. Setelah itu TapSwitch mematikan Debugging nirkabel. Di beberapa ponsel, aplikasinya terinstal ulang sekali. Tidak ada yang hilang.",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "Pilih dua kartu Anda",
@@ -647,6 +567,14 @@ if (window.TSLang) TSLang.add({
    "t": "TapSwitch tidak ada di Play Store, jadi Anda bisa memeriksanya sendiri dengan pemindaian virus gratis.",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>0 dari 65</b> pemindai virus menandainya",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "Lihat laporan lengkap",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "File",
    "en": "File"
@@ -663,93 +591,49 @@ if (window.TSLang) TSLang.add({
    "t": "Pindai virus",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "0 dari 65 pemindai virus menandainya",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "Lihat laporan lengkap",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "Tampilkan detail teknis",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "SHA-256 file ini",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "Ditandatangani oleh",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
    "t": "Ditandatangani oleh adalah tanda tangan digital pembuatnya. Setiap update wajib membawa tanda tangan yang sama, kalau tidak ponsel Anda akan menolak menginstalnya.",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "Apa yang bisa dan tidak bisa dilakukan TapSwitch",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "Mengganti kartu tap utama Anda",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "Hanya setelan ini yang diubahnya di ponsel, supaya kartu yang tepatlah yang merespons mesin pembaca.",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "Melihat aplikasi yang sedang terbuka",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "Hanya setelan ini yang diubahnya, supaya kartu yang tepat merespons mesin pembaca.",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "Supaya tahu kapan Google Wallet atau aplikasi kartu akses Anda dibuka.",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "Tampil di atas aplikasi lain",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "Khusus Mode terbalik di Oppo. Sebuah jendela kecil yang tidak terlihat, agar ponsel tidak menjeda TapSwitch saat aplikasi kartu akses dibuka. Jendela yang sama memberi tahu TapSwitch saat jari menyentuh layar, tetapi tidak di bagian mana. Dengan begitu TapSwitch bisa beralih ke kartu akses sesaat sebelum aplikasinya terbuka dari daftar aplikasi terbaru. Jika Anda tidak pernah mengetuk \"Set it up\", TapSwitch tidak akan memintanya.",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "Mengecek update sekali sehari",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "Sebuah jendela kecil yang tidak terlihat, agar ponsel tidak menjeda TapSwitch saat aplikasi kartu akses dibuka. Jendela yang sama memberi tahu TapSwitch saat jari menyentuh layar, tetapi tidak di bagian mana. Dengan begitu TapSwitch bisa beralih ke kartu akses sesaat sebelum aplikasinya terbuka dari daftar aplikasi terbaru. Di Oppo, proses pengaturan mungkin langsung mengaktifkannya. TapSwitch hanya memakainya di Mode terbalik.",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "Tidak ada akun yang perlu login.",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "Tidak pernah melihat kartu Anda",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "Aplikasi ini tidak bisa membaca nomor kartu, pembayaran, atau riwayat pintu. Ia hanya memilih aplikasi mana yang merespons.",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "Hal penting",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "Pertanyaan umum seputar TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "Aplikasi ini dibuat dan dipakai setiap hari di <b>Oppo ColorOS</b>. Seharusnya bisa berjalan di ponsel apa pun dengan Android 16 ke atas, tapi ponsel lain belum pernah diuji.",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "Coba gratis di ponsel Anda sendiri selama 14 hari. Kalau tidak cocok, hapus saja. Anda tidak berutang apa pun.",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "Setelah masa percobaan habis, TapSwitch berhenti memindahkan kartu dan ponsel Anda kembali seperti semula.",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "Kartu akses tidak berfungsi setelah Anda mengatur Google Wallet? <a href=\"/help/\">Baca pertanyaan umum</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "Coba di ponsel Anda sendiri selama 14 hari, gratis.<span>Kalau tidak cocok, hapus saja, Anda tidak berutang apa pun. <a href=\"#price\">Kembali ke unduhan</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "Kembali ke unduhan",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "Sudah coba FloatAway?",
@@ -759,13 +643,9 @@ if (window.TSLang) TSLang.add({
    "t": "Tahukah Anda, aplikasi dari Smart Sidebar bisa langsung terbuka di layar penuh di Oppo?",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "Biasanya aplikasi muncul di jendela mengambang yang kecil, dan Anda harus memperbesarnya sendiri. FloatAway langsung membukanya di layar penuh, aplikasi kloningan juga. FloatAway juga bisa menambahkan folder ke sidebar Anda, hal yang tidak bisa dilakukan ponsel secara bawaan. Gratis 14 hari.",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "Lihat FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "Aplikasi sidebar biasanya muncul di jendela kecil. FloatAway langsung membukanya di layar penuh, aplikasi kloningan juga. FloatAway juga menambahkan folder ke sidebar Anda, hal yang tidak bisa dilakukan ponsel Anda. Gratis 14 hari.",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "Dibuat oleh satu orang, untuk satu masalah yang menjengkelkan. Hubungi saya: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -775,10 +655,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">Pertanyaan umum: kartu akses dan Google Wallet di Android</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "Juga dari pembuat TapSwitch: <a href=\"/floataway/\">FloatAway, aplikasi Smart Sidebar terbuka di layar penuh</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch tidak berafiliasi dengan Google atau Oppo.",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -787,121 +663,53 @@ if (window.TSLang) TSLang.add({
    "t": "Tutup",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch, kembali ke atas",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "Video demo TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "Kartu mana yang jadi pilihan utama",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "Pintu terbuka",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "Ponsel. Tekan panah kiri untuk tap ke pembaca pintu, panah kanan untuk tap ke mesin pembayaran.",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "Kembali ke layar utama",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "Lunas",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "Putar video",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "Akses seumur hidup",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "Kata pelanggan",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "Berfungsi di Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "Akses",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "Akses seumur hidup",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "SHA-256 file ini",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "Kartu akses Anda jadi pilihan utama. Google Wallet hanya mengambil alih selama aplikasinya terbuka.",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "Ditandatangani oleh",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Google Wallet jadi pilihan utama. Kartu akses Anda hanya mengambil alih selama aplikasinya terbuka.",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "Mengganti kartu tap utama Anda",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "Buka Google Wallet dulu",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "Melihat aplikasi yang sedang terbuka",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "Tutup Google Wallet dulu",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "Khusus Mode terbalik di Oppo: Tampil di atas aplikasi lain",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "Buka aplikasi kartu akses Anda dulu",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "Mengecek update sekali sehari",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "Tutup aplikasi kartu akses Anda dulu",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "Tidak pernah melihat kartu Anda",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "Mau buka pintu? Tinggal tap ponsel Anda.",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "Mau bayar sesuatu? Buka aplikasi Wallet, lalu tap ponsel Anda.",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "Mau bayar sesuatu? Tinggal tap ponsel Anda.",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "Mau buka pintu? Buka aplikasi Akses, lalu tap ponsel Anda.",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "Kartu akses",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "Kantor",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "Tap ponsel ke Pembaca Kartu Akses",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "Tap ponsel ke Mesin Pembayaran",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "Ganti ke mode gelap",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "Ganti ke mode terang",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "Baca pertanyaan umum ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "Aplikasinya sendiri berbahasa Inggris.",
@@ -917,105 +725,97 @@ if (window.TSLang) TSLang.add({
    "t": "ดู FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "อีกแอปจากเรา: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "ถามตอบ",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "ใช้<span class=\"g\">คีย์การ์ดใน Oppo</span> และ <span class=\"b\">Google Wallet</span> ได้ตามต้องการ <br><span class=\"m\">ไม่ต้องเข้าการตั้งค่าอีกแล้ว</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "ดาวน์โหลด TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "โหมดปกติ",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "ใช้<span class=\"g\">คีย์การ์ด</span> และ <span class=\"b\">Google Wallet</span> ได้ตามต้องการ",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "โหมดกลับด้าน",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "ใช้ฟรี 14 วัน แล้วจ่ายราคาเดียว ใช้ได้ตลอดชีพ",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "เครื่องอ่านคีย์การ์ด",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "ไม่ต้องสมัครบัญชี",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "ลากโทรศัพท์เพื่อลองดู",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "เริ่มนับ 14 วันตอนที่แอปเริ่มทำงานบนเครื่องของคุณ ไม่ใช่ตอนดาวน์โหลด ใช้ได้ครบทุกฟีเจอร์",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "ถือไว้ใกล้เครื่องอ่าน",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>ไม่มีการคืนเงิน</b> คุณได้ลองใช้ฟรี 14 วันก่อนแล้ว รหัสที่ซื้อไปจึงคืนเงินไม่ได้",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "เครื่องรับชำระเงิน",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "ในแอป แตะ “Get the full version” แล้วแตะ “Buy now” จ่ายเงินผ่านเบราว์เซอร์ รหัสจะขึ้นบนหน้าจอ และส่งไปทางอีเมลด้วย",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "ลากโทรศัพท์ไปทางซ้ายหรือขวา เพื่อแตะเครื่องอ่าน",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "ใช้ได้กับโทรศัพท์รุ่นไหนบ้าง",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "ใช้ฟรี 14 วัน แล้วจ่ายราคาเดียว <span class=\"lt-green\">ใช้ได้ตลอดชีพ</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "โทรศัพท์ Oppo และ OnePlus ที่ใช้ ColorOS และเป็น Android 16 ขึ้นไป",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "จ่ายครั้งเดียวจบ ไม่ต้องสมัครบัญชี",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "สร้างและใช้งานจริงทุกวันบน ColorOS โทรศัพท์รุ่นอื่นที่เป็น Android 16 ขึ้นไปน่าจะใช้ได้ แต่ยังไม่ได้ทดสอบ ช่วงทดลองใช้ฟรีจะบอกได้ว่าใช้กับเครื่องของคุณได้ไหม",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>ลองใช้ฟรี 14 วัน</strong> นับจากวันที่แอปเริ่มทำงานบนเครื่องของคุณครั้งแรก ไม่ใช่วันที่ดาวน์โหลด และใช้ได้ครบทุกฟีเจอร์ตลอดช่วงทดลอง",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>ไม่มีการคืนเงิน</strong> เพราะมีช่วงทดลองฟรี 14 วันให้ลองบนเครื่องของคุณเองก่อนจ่าย เมื่อออกรหัสแล้วจึงคืนเงินไม่ได้",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>ซื้อในแอปได้เลย</strong> แตะ \"Get the full version\" แล้วแตะ \"Buy now\" เพื่อจ่ายเงินผ่านเบราว์เซอร์ รหัสปลดล็อกจะขึ้นบนหน้าจอทันที พร้อมส่งสำเนาไปทางอีเมล",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "เมื่อหมดช่วงทดลอง แอปจะหยุดสลับการ์ด และโทรศัพท์จะกลับไปเป็นแบบเดิม",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "ครั้งเดียว",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>จ่ายครั้งเดียว จบ</strong>ไม่มีค่าสมาชิก ไม่มีค่ารายเดือน ตลอดไป",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>จ่ายครั้งเดียว จบ</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>อัปเดตครั้งต่อไปฟรีทั้งหมด</strong>เวอร์ชันใหม่และการแก้บั๊กไม่ต้องจ่ายเพิ่ม",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>อัปเดตครั้งต่อไปฟรีทั้งหมด</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>เป็นของคุณตลอด บนเครื่องที่ซื้อ</strong>จ่ายครั้งเดียวครอบคลุมเครื่องที่ซื้อ ใช้ได้นานเท่าที่ยังใช้เครื่องนั้นอยู่",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "ดาวน์โหลด TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>เป็นของคุณตลอด บนเครื่องที่ซื้อ</b>ใช้ได้บนเครื่องที่คุณซื้อ นานเท่าที่คุณยังใช้เครื่องนั้นอยู่",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "ดูทุกเวอร์ชันบน GitHub",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "ต้องใช้ Android 16 ขึ้นไป โทรศัพท์จะขึ้นคำเตือนเพราะไฟล์ไม่ได้มาจาก Play Store ซึ่งเป็นเรื่องปกติ <a href=\"#careful\">ดูวิธีเช็กว่าปลอดภัย</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "ต้องใช้ Android 16 ขึ้นไป โทรศัพท์จะขึ้นคำเตือนเพราะไฟล์ไม่ได้มาจาก Play Store ซึ่งเป็นเรื่องปกติ <a href=\"#safe\">ดูวิธีเช็กว่าปลอดภัย</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "มีอะไรใหม่ใน",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "มีอะไรใหม่",
+   "en": "What’s new"
   },
   "wn.lead": {
-   "t": "ไม่มีป๊อปอัป \"ตั้งเป็นค่าเริ่มต้น\" จากแอป Access Card ของ Oppo อีกแล้ว",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "t": "ไม่มีป๊อปอัป “ตั้งเป็นค่าเริ่มต้น” จากแอป Access Card ของ Oppo อีกแล้ว",
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "ในโหมดกลับด้าน เปิดคีย์การ์ดจากหน้าจอที่ดับอยู่ การ์ดก็พร้อมใช้ทันที ไม่มีป๊อปอัป",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "แตะ \"Set it up\" บนการ์ดใหม่ที่หน้าแรก แล้วทำขั้นตอนจับคู่เพียงครั้งเดียว หลังจากนั้นป๊อปอัปจะไม่ขึ้นอีก แม้ตอนที่กำลังใช้โทรศัพท์อยู่",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "แตะ “Set it up” บนการ์ดใหม่ที่หน้าแรกของแอป แล้วทำขั้นตอนใส่ตัวเลขหกหลักของการแก้ไขข้อบกพร่องแบบไร้สายอีกครั้ง หลังจากนั้นป๊อปอัปจะไม่ขึ้นอีก แม้ตอนที่กำลังใช้โทรศัพท์อยู่",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "โหมดปกติใช้งานได้เหมือนเดิม",
@@ -1024,6 +824,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "ใช้อยู่แล้วใช่ไหม? การตั้งค่าและรหัสปลดล็อกยังอยู่ครบ มีแค่โหมดกลับด้านบน Oppo ที่ต้องทำเพิ่มอีกหนึ่งขั้นตอน",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "สองโหมด",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "โหมดปกติ",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "คีย์การ์ดเป็นการ์ดหลัก Google Wallet จะทำงานแทนเฉพาะตอนที่เปิดแอปอยู่",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "คีย์การ์ด",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "ถือไว้ใกล้เครื่องอ่าน",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "โหมดกลับด้าน",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Google Wallet เป็นการ์ดหลัก คีย์การ์ดจะทำงานแทนเฉพาะตอนที่เปิดแอปอยู่",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "ลูกค้าของเรามาจากที่ไหนบ้าง",
@@ -1040,18 +872,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "ใช้ได้กับโทรศัพท์รุ่นไหนบ้าง",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "โทรศัพท์ Oppo ที่ใช้ ColorOS และเป็น Android 16 ขึ้นไป",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "แอปนี้สร้างและใช้งานจริงทุกวันบน Oppo ColorOS น่าจะใช้ได้กับโทรศัพท์ทุกเครื่องที่เป็น Android 16 ขึ้นไป แต่ยังไม่ได้ทดสอบกับรุ่นอื่นเลย ช่วงทดลองใช้ฟรี 14 วันคือวิธีเช็กว่าใช้กับเครื่องของคุณได้หรือไม่",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "ตั้งค่าใช้เวลาประมาณห้านาที",
@@ -1075,15 +895,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "แตะหมายเลขเวอร์ชันของโทรศัพท์เจ็ดครั้ง TapSwitch จะเปิดหน้าที่ถูกต้องให้ และบอกว่าต้องแตะแถวไหน",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "เปิดการแก้ไขข้อบกพร่องแบบไร้สาย (Wireless debugging) สักครู่",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "ขั้นตอนนี้ต้องต่อ Wi-Fi เปิดการแก้ไขข้อบกพร่องแบบไร้สาย แล้วพิมพ์ตัวเลขหกหลักที่ TapSwitch แสดงในการแจ้งเตือน ขั้นตอนนี้ทำให้ TapSwitch ให้สิทธิ์ตัวเองได้ ซึ่งเป็นสิทธิ์เดียวที่ต้องใช้ในการเปลี่ยนการ์ดสำหรับแตะ เสร็จแล้วแอปจะปิดการแก้ไขข้อบกพร่องแบบไร้สายให้เอง บางเครื่องแอปอาจติดตั้งตัวเองใหม่หนึ่งครั้ง แต่ไม่มีอะไรหายไป",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "ขั้นตอนนี้ต้องต่อ Wi-Fi โทรศัพท์จะแสดงตัวเลขหกหลัก",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "พิมพ์ตัวเลขลงในการแจ้งเตือนของ TapSwitch ขั้นตอนนี้ให้สิทธิ์เดียวที่ TapSwitch ต้องใช้ในการเปลี่ยนการ์ดสำหรับแตะ จากนั้น TapSwitch จะปิดการแก้ไขข้อบกพร่องแบบไร้สายให้เอง บางเครื่องแอปอาจติดตั้งตัวเองใหม่หนึ่งครั้ง แต่ไม่มีอะไรหายไป",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "เลือกการ์ดสองใบ",
@@ -1101,6 +925,14 @@ if (window.TSLang) TSLang.add({
    "t": "TapSwitch ไม่ได้อยู่บน Play Store คุณจึงเช็กเองได้ด้วยการสแกนไวรัสฟรี",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "โปรแกรมสแกนไวรัส <b>0 จาก 65</b> ตัวที่ตรวจพบปัญหา",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "ดูรายงานฉบับเต็ม",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "ไฟล์",
    "en": "File"
@@ -1117,93 +949,49 @@ if (window.TSLang) TSLang.add({
    "t": "สแกนไวรัส",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "โปรแกรมสแกนไวรัส 0 จาก 65 ตัวที่ตรวจพบปัญหา",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "ดูรายงานฉบับเต็ม",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "แสดงรายละเอียดทางเทคนิค",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "SHA-256 ของไฟล์",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "ลงนามโดย",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
-   "t": "\"ลงนามโดย\" คือลายเซ็นดิจิทัลของผู้พัฒนา ทุกอัปเดตต้องมีลายเซ็นเดียวกันนี้ ไม่อย่างนั้นโทรศัพท์จะไม่ยอมติดตั้ง",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "t": "“ลงนามโดย” คือลายเซ็นดิจิทัลของผู้พัฒนา ทุกอัปเดตต้องมีลายเซ็นเดียวกันนี้ ไม่อย่างนั้นโทรศัพท์จะไม่ยอมติดตั้ง",
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "สิ่งที่ TapSwitch ทำได้และทำไม่ได้",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "เปลี่ยนการ์ดหลักสำหรับแตะ",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "นี่คือการตั้งค่าเดียวในเครื่องที่แอปเปลี่ยน เพื่อให้การ์ดที่ถูกใบตอบเครื่องอ่าน",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "ดูว่าแอปไหนเปิดอยู่บนหน้าจอ",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "แอปเปลี่ยนแค่การตั้งค่านี้ เพื่อให้การ์ดที่ถูกใบตอบเครื่องอ่าน",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "เพื่อให้รู้ว่าตอนไหนที่ Google Wallet หรือแอปคีย์การ์ดเปิดอยู่",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "แสดงทับแอปอื่น",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "เฉพาะโหมดกลับด้านบน Oppo เท่านั้น เป็นหน้าต่างเล็กๆ ที่มองไม่เห็น เพื่อไม่ให้โทรศัพท์หยุด TapSwitch ไว้ตอนที่แอปคีย์การ์ดกำลังเปิด หน้าต่างเดียวกันนี้บอก TapSwitch ว่ามีนิ้วแตะหน้าจอ แต่ไม่บอกว่าแตะตรงไหน จึงสลับไปใช้คีย์การ์ดได้ก่อนที่แอปจะเปิดขึ้นจากรายการแอปล่าสุดเล็กน้อย ถ้าคุณไม่เคยแตะ \"Set it up\" TapSwitch ก็จะไม่ขอสิทธิ์นี้เลย",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "เช็กอัปเดตวันละครั้ง",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "หน้าต่างเล็ก ๆ ที่มองไม่เห็น เพื่อไม่ให้โทรศัพท์หยุด TapSwitch ไว้ตอนที่แอปคีย์การ์ดกำลังเปิด หน้าต่างเดียวกันนี้บอก TapSwitch ว่ามีนิ้วแตะหน้าจอ แต่ไม่บอกว่าแตะตรงไหน จึงสลับไปใช้คีย์การ์ดได้ล่วงหน้าเล็กน้อย ก่อนที่แอปคีย์การ์ดจะเปิดขึ้นจากรายการแอปล่าสุด บน Oppo ขั้นตอนตั้งค่าอาจเปิดสิทธิ์นี้ไว้ แต่ TapSwitch ใช้สิทธิ์นี้เฉพาะในโหมดกลับด้านเท่านั้น",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "ไม่มีบัญชีให้ต้องล็อกอิน",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "ไม่เห็นข้อมูลการ์ดของคุณ",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "อ่านเลขบัตร การจ่ายเงิน หรือบันทึกการเข้าออกประตูไม่ได้ แค่เลือกว่าแอปไหนจะตอบเครื่องอ่าน",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "ข้อมูลสำคัญ",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "คำถามที่พบบ่อยเกี่ยวกับ TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "แอปนี้สร้างและใช้งานจริงทุกวันบน <b>Oppo ColorOS</b> น่าจะใช้ได้กับโทรศัพท์ทุกเครื่องที่เป็น Android 16 ขึ้นไป แต่ยังไม่ได้ทดสอบกับรุ่นอื่นเลย",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "ลองใช้บนเครื่องของคุณเองฟรี 14 วัน ถ้าไม่ถูกใจ ก็ลบทิ้งได้เลย ไม่ต้องจ่ายอะไร",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "เมื่อหมดช่วงทดลอง TapSwitch จะหยุดสลับการ์ด และโทรศัพท์จะกลับไปเป็นแบบเดิม",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "ตั้งค่า Google Wallet แล้วคีย์การ์ดใช้ไม่ได้? <a href=\"/help/\">อ่านคำถามที่พบบ่อย</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "ลองใช้บนเครื่องของคุณเองฟรี 14 วัน<span>ถ้าไม่ถูกใจ ก็ลบทิ้งได้เลย ไม่ต้องจ่ายอะไร <a href=\"#price\">กลับไปที่ดาวน์โหลด</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "กลับไปที่ดาวน์โหลด",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "ลอง FloatAway หรือยัง?",
@@ -1213,13 +1001,9 @@ if (window.TSLang) TSLang.add({
    "t": "รู้ไหมว่าแอปจาก Smart Sidebar เปิดแบบเต็มจอบน Oppo ได้?",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "ปกติแอปจะขึ้นมาเป็นหน้าต่างลอยเล็ก ๆ แล้วคุณต้องกดขยายเอง FloatAway เปิดแบบเต็มจอให้ทันที แอปโคลนก็ได้ด้วย แถมยังเพิ่มโฟลเดอร์ลงในแถบด้านข้างได้ ซึ่งปกติโทรศัพท์ทำเองไม่ได้ ใช้ฟรี 14 วัน",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "ดู FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "ปกติแอปจากแถบด้านข้างจะเปิดในหน้าต่างเล็ก FloatAway เปิดแบบเต็มจอให้ทันที แอปโคลนก็ได้ด้วย แถมยังเพิ่มโฟลเดอร์ลงในแถบด้านข้างได้ ซึ่งโทรศัพท์ทำเองไม่ได้ ใช้ฟรี 14 วัน",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "ทำโดยคนคนเดียว เพื่อแก้ปัญหาน่ารำคาญเรื่องเดียว ติดต่อผมได้ที่ <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -1229,10 +1013,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">คำถามที่พบบ่อย: คีย์การ์ดกับ Google Wallet บน Android</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "อีกแอปจากผู้พัฒนา TapSwitch: <a href=\"/floataway/\">FloatAway เปิดแอปจาก Smart Sidebar แบบเต็มจอ</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch ไม่มีส่วนเกี่ยวข้องกับ Google หรือ Oppo",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -1241,121 +1021,53 @@ if (window.TSLang) TSLang.add({
    "t": "ปิด",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch กลับขึ้นด้านบน",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "วิดีโอสาธิต TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "ตอนนี้การ์ดไหนเป็นการ์ดหลัก",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "ประตูเปิดแล้ว",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "โทรศัพท์ กดลูกศรซ้ายเพื่อแตะเครื่องอ่านที่ประตู กดลูกศรขวาเพื่อแตะเครื่องรับชำระเงิน",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "กลับไปหน้าจอหลัก",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "ชำระแล้ว",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "เล่นวิดีโอ",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "ใช้ได้ตลอดชีพ",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "เสียงจากลูกค้า",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "รองรับ Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "คีย์การ์ด",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "ใช้ได้ตลอดชีพ",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "SHA-256 ของไฟล์",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "คีย์การ์ดเป็นการ์ดหลัก Google Wallet จะทำงานแทนเฉพาะตอนที่เปิดแอปอยู่",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "ลงนามโดย",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Google Wallet เป็นการ์ดหลัก คีย์การ์ดจะทำงานแทนเฉพาะตอนที่เปิดแอปอยู่",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "เปลี่ยนการ์ดหลักสำหรับแตะ",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "เปิด Google Wallet ก่อน",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "ดูว่าแอปไหนเปิดอยู่บนหน้าจอ",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "ปิด Google Wallet ก่อน",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "เฉพาะโหมดกลับด้านบน Oppo: แสดงทับแอปอื่น",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "เปิดแอปคีย์การ์ดก่อน",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "เช็กอัปเดตวันละครั้ง",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "ปิดแอปคีย์การ์ดก่อน",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "ไม่เห็นข้อมูลการ์ดของคุณ",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "จะเปิดประตูใช่ไหม? แค่แตะโทรศัพท์",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "จะจ่ายเงินใช่ไหม? แค่เปิดแอป Wallet แล้วแตะโทรศัพท์",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "จะจ่ายเงินใช่ไหม? แค่แตะโทรศัพท์",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "จะเปิดประตูใช่ไหม? แค่เปิดแอปคีย์การ์ดแล้วแตะโทรศัพท์",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "คีย์การ์ด",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "ออฟฟิศ",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "แตะโทรศัพท์ที่เครื่องอ่านคีย์การ์ด",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "แตะโทรศัพท์ที่เครื่องรับชำระเงิน",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "เปลี่ยนเป็นโหมดมืด",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "เปลี่ยนเป็นโหมดสว่าง",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "อ่านคำถามที่พบบ่อย ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "ตัวแอปเป็นภาษาอังกฤษ",
@@ -1371,105 +1083,97 @@ if (window.TSLang) TSLang.add({
    "t": "Xem FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "Ứng dụng khác: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "Hỏi đáp",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "Dùng <span class=\"g\">thẻ ra vào trên Oppo</span> và <span class=\"b\">Google Wallet</span> khi bạn cần. <br><span class=\"m\">Không phải vào Cài đặt nữa.</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "Tải TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "Chế độ thường",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "Dùng <span class=\"g\">thẻ ra vào</span> và <span class=\"b\">Google Wallet</span> khi bạn cần.",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "Chế độ đảo ngược",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "Miễn phí 14 ngày, sau đó chỉ một mức giá để dùng trọn đời",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "Đầu đọc thẻ ra vào",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "Không cần tài khoản.",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "Kéo điện thoại để thử",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "14 ngày được tính từ khi ứng dụng chạy được trên điện thoại của bạn, không phải từ lúc tải về. Mọi tính năng đều dùng được.",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "Giữ gần đầu đọc",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>Không hoàn tiền.</b> Bạn được dùng thử miễn phí 14 ngày trước, nên mã đã cấp thì không hoàn lại được.",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "Máy thanh toán",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "Trong ứng dụng, chạm “Get the full version”, rồi chạm “Buy now”. Thanh toán trên trình duyệt. Mã hiện ngay trên màn hình và được gửi qua email.",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "Kéo điện thoại sang trái hoặc phải để chạm vào đầu đọc.",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "Dùng được trên điện thoại nào",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "Miễn phí 14 ngày, sau đó chỉ một mức giá để <span class=\"lt-green\">dùng trọn đời</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "Điện thoại Oppo và OnePlus chạy ColorOS, Android 16 trở lên.",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "Trả một lần, không cần tạo tài khoản.",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "Được làm ra và dùng hằng ngày trên ColorOS. Các điện thoại khác từ Android 16 trở lên có lẽ vẫn chạy được, nhưng chưa được thử. Bản dùng thử miễn phí sẽ cho bạn biết nó có chạy trên máy mình không.",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>Dùng thử miễn phí 14 ngày.</strong> Thời gian dùng thử tính từ lần đầu ứng dụng chạy trên điện thoại của bạn, không phải từ lúc tải về. Trong thời gian này, tính năng nào cũng dùng được.",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>Không hoàn tiền.</strong> 14 ngày miễn phí là để bạn thấy ứng dụng chạy trên chính điện thoại của mình trước khi trả tiền, nên mã đã cấp thì không hoàn lại được.",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>Mua ngay trong ứng dụng.</strong> Chạm \"Get the full version\", rồi chạm \"Buy now\" để thanh toán trên trình duyệt. Mã mở khóa hiện ngay trên màn hình, kèm một bản gửi qua email.",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "Khi hết thời gian dùng thử, việc chuyển thẻ dừng lại và điện thoại trở lại như cũ.",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "một lần",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>Trả một lần là xong.</strong>Không thuê bao, không phí hằng tháng, mãi mãi.",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>Trả một lần là xong.</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>Cập nhật sau này đều miễn phí.</strong>Dù là bản mới hay bản vá lỗi, bạn cũng không phải trả thêm đồng nào.",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>Cập nhật sau này đều miễn phí.</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>Dùng mãi trên chiếc điện thoại đó.</strong>Một lần thanh toán áp dụng cho chiếc điện thoại bạn mua, bạn dùng bao lâu cũng được.",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "Tải TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>Dùng mãi trên chiếc điện thoại đó.</b>Áp dụng cho điện thoại mà bạn mua ứng dụng trên đó, bạn dùng bao lâu cũng được.",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "Xem mọi phiên bản trên GitHub",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "Cần Android 16 trở lên. Điện thoại sẽ hiện cảnh báo vì tệp không tải từ Play Store, điều này hoàn toàn bình thường. <a href=\"#careful\">Cách kiểm tra độ an toàn</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "Cần Android 16 trở lên. Điện thoại sẽ hiện cảnh báo vì tệp không tải từ Play Store, điều này hoàn toàn bình thường. <a href=\"#safe\">Cách kiểm tra độ an toàn</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "Có gì mới trong bản",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "Có gì mới",
+   "en": "What’s new"
   },
   "wn.lead": {
-   "t": "Không còn cửa sổ \"Đặt làm mặc định\" bật lên từ ứng dụng Access Card của Oppo.",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "t": "Không còn cửa sổ “Đặt làm mặc định” bật lên từ ứng dụng Access Card của Oppo.",
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "Ở Chế độ đảo ngược, mở thẻ ra vào từ màn hình đang tắt là thẻ sẵn sàng ngay, không có cửa sổ bật lên.",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "Chạm \"Set it up\" trên thẻ mới ở màn hình chính và làm bước ghép nối một lần. Sau đó cửa sổ bật lên không xuất hiện nữa, kể cả khi bạn đang dùng điện thoại.",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "Chạm “Set it up” trên thẻ mới ở màn hình chính và làm lại bước nhập sáu chữ số của Gỡ lỗi không dây một lần. Sau đó cửa sổ bật lên không xuất hiện nữa, kể cả khi bạn đang dùng điện thoại.",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "Chế độ thường vẫn hoạt động như trước.",
@@ -1478,6 +1182,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "Bạn đã dùng rồi? Cài đặt và mã mở khóa vẫn còn nguyên. Chỉ Chế độ đảo ngược trên Oppo cần thêm một bước đó.",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "Hai chế độ",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "Chế độ thường",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "Thẻ ra vào là mặc định. Google Wallet chỉ thay thế khi bạn đang mở nó.",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "Thẻ ra vào",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "Giữ gần đầu đọc",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "Chế độ đảo ngược",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Google Wallet là mặc định. Thẻ ra vào chỉ thay thế khi bạn đang mở ứng dụng của nó.",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "Khách hàng của chúng tôi đến từ đâu",
@@ -1494,18 +1230,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "Dùng được trên điện thoại nào",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "Điện thoại Oppo chạy ColorOS với Android 16 trở lên.",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "Ứng dụng được làm ra và dùng hằng ngày trên Oppo ColorOS. Về lý thuyết, nó chạy được trên mọi điện thoại Android 16 trở lên, nhưng chưa thử trên máy nào khác. 14 ngày dùng thử miễn phí là cách để bạn biết nó có chạy trên máy mình không.",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "Cài đặt chỉ mất khoảng năm phút",
@@ -1529,15 +1253,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "Bạn chạm vào số phiên bản của điện thoại bảy lần. TapSwitch sẽ mở đúng màn hình và chỉ cho bạn dòng cần chạm.",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "Bật Gỡ lỗi không dây trong một phút",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "Bước này cần Wi-Fi. Bật Gỡ lỗi không dây, rồi nhập sáu chữ số TapSwitch hiện trong thông báo. Nhờ vậy TapSwitch tự cấp cho mình quyền duy nhất nó cần để đổi thẻ chạm của bạn. Xong việc, ứng dụng sẽ tự tắt Gỡ lỗi không dây. Trên một số máy, ứng dụng sẽ tự cài lại một lần, không mất gì cả.",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "Bước này cần Wi-Fi. Điện thoại sẽ hiện sáu chữ số.",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "Nhập các số đó vào thông báo của TapSwitch. Nhờ vậy TapSwitch có được quyền duy nhất nó cần để đổi thẻ chạm của bạn. Sau đó TapSwitch tự tắt Gỡ lỗi không dây. Trên một số máy, ứng dụng sẽ tự cài lại một lần. Không mất gì cả.",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "Chọn hai thẻ của bạn",
@@ -1555,6 +1283,14 @@ if (window.TSLang) TSLang.add({
    "t": "TapSwitch không có trên Play Store, nên bạn có thể tự kiểm tra bằng một lần quét virus miễn phí.",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>0 trên 65</b> trình quét virus báo có vấn đề",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "Xem báo cáo đầy đủ",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "Tệp",
    "en": "File"
@@ -1571,93 +1307,49 @@ if (window.TSLang) TSLang.add({
    "t": "Quét virus",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "0 trên 65 trình quét virus báo có vấn đề",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "Xem báo cáo đầy đủ",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "Xem chi tiết kỹ thuật",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "Mã SHA-256 của tệp",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "Ký bởi",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
-   "t": "\"Ký bởi\" là chữ ký số của nhà phát triển. Mọi bản cập nhật đều phải mang đúng chữ ký này, nếu không điện thoại sẽ từ chối cài.",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "t": "“Ký bởi” là chữ ký số của nhà phát triển. Mọi bản cập nhật đều phải mang đúng chữ ký này, nếu không điện thoại sẽ từ chối cài.",
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "TapSwitch làm được gì và không làm được gì",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "Đổi thẻ chạm mặc định",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "Đây là cài đặt duy nhất trên điện thoại mà nó thay đổi, để đúng thẻ trả lời đầu đọc.",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "Biết ứng dụng nào đang mở trên màn hình",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "Nó chỉ thay đổi cài đặt này, để đúng thẻ trả lời đầu đọc.",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "Để biết khi nào Google Wallet hoặc ứng dụng thẻ ra vào đang mở.",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "Hiển thị trên ứng dụng khác",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "Chỉ dùng cho Chế độ đảo ngược trên Oppo. Một cửa sổ nhỏ vô hình, để điện thoại không tạm dừng TapSwitch khi ứng dụng thẻ ra vào đang mở. Cũng cửa sổ này cho TapSwitch biết khi có ngón tay chạm vào màn hình, nhưng không biết chạm ở đâu. Nhờ vậy ứng dụng chuyển sang thẻ ra vào ngay trước khi bạn mở lại ứng dụng thẻ từ danh sách ứng dụng gần đây. Nếu bạn không bao giờ chạm \"Set it up\", TapSwitch sẽ không xin quyền này.",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "Kiểm tra cập nhật mỗi ngày một lần",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "Một cửa sổ nhỏ vô hình, để điện thoại không tạm dừng TapSwitch khi ứng dụng thẻ ra vào đang mở. Cũng cửa sổ này cho TapSwitch biết khi có ngón tay chạm vào màn hình, nhưng không biết chạm ở đâu. Nhờ vậy ứng dụng chuyển sang thẻ ra vào ngay trước khi bạn mở lại ứng dụng thẻ từ danh sách ứng dụng gần đây. Trên Oppo, bước cài đặt có thể tự bật quyền này. TapSwitch chỉ dùng nó ở Chế độ đảo ngược.",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "Không có tài khoản nào phải đăng nhập.",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "Không bao giờ thấy thẻ của bạn",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "Nó không đọc được số thẻ, giao dịch thanh toán hay lịch sử ra vào cửa. Nó chỉ chọn ứng dụng nào sẽ trả lời.",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "Những điều cần biết",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "Câu hỏi thường gặp về TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "Ứng dụng được làm ra và dùng hằng ngày trên <b>Oppo ColorOS</b>. Về lý thuyết, nó chạy được trên mọi điện thoại Android 16 trở lên, nhưng chưa thử trên máy nào khác.",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "Dùng thử miễn phí 14 ngày trên chính điện thoại của bạn. Không hợp thì cứ xóa đi. Bạn không mất đồng nào.",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "Khi hết thời gian dùng thử, TapSwitch ngừng chuyển thẻ và điện thoại trở lại như cũ.",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "Thẻ ra vào không dùng được sau khi cài Google Wallet? <a href=\"/help/\">Xem các câu hỏi thường gặp</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "Dùng thử miễn phí 14 ngày trên chính điện thoại của bạn.<span>Không hợp thì cứ xóa đi, bạn không mất đồng nào. <a href=\"#price\">Quay lại phần tải về</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "Quay lại phần tải về",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "Bạn đã thử FloatAway chưa?",
@@ -1667,13 +1359,9 @@ if (window.TSLang) TSLang.add({
    "t": "Bạn có biết ứng dụng từ Smart Sidebar có thể mở toàn màn hình trên Oppo?",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "Thường thì ứng dụng sẽ hiện trong một cửa sổ nổi nhỏ, và bạn phải tự phóng to. FloatAway mở thẳng toàn màn hình, cả ứng dụng nhân bản. FloatAway còn thêm được thư mục vào thanh bên, điều mà điện thoại không làm được theo mặc định. Miễn phí 14 ngày.",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "Xem FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "Ứng dụng trên thanh bên thường mở trong một cửa sổ nhỏ. FloatAway mở thẳng toàn màn hình, cả ứng dụng nhân bản. Nó còn thêm thư mục vào thanh bên, điều mà điện thoại của bạn không làm được. Miễn phí 14 ngày.",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "Do một người làm ra, để giải quyết một chuyện phiền phức. Liên hệ với tôi: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -1683,10 +1371,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">Câu hỏi thường gặp: thẻ ra vào và Google Wallet trên Android</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "Cũng từ người làm ra TapSwitch: <a href=\"/floataway/\">FloatAway, mở ứng dụng Smart Sidebar toàn màn hình</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch không liên kết với Google hay Oppo.",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -1695,121 +1379,53 @@ if (window.TSLang) TSLang.add({
    "t": "Đóng",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch, về đầu trang",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "Video giới thiệu TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "Thẻ nào là mặc định",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "Cửa đã mở",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "Điện thoại. Bấm phím mũi tên trái để chạm vào đầu đọc ở cửa, mũi tên phải để chạm vào máy thanh toán.",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "Về màn hình chính",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "Đã thanh toán",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "Phát video",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "Dùng trọn đời",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "Khách hàng nói gì",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "Chạy được trên Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "Ra vào",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "Dùng trọn đời",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "Mã SHA-256 của tệp",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "Thẻ ra vào là mặc định. Google Wallet chỉ thay thế khi bạn đang mở nó.",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "Ký bởi",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Google Wallet là mặc định. Thẻ ra vào chỉ thay thế khi bạn đang mở ứng dụng của nó.",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "Đổi thẻ chạm mặc định",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "Mở Google Wallet trước",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "Biết ứng dụng nào đang mở trên màn hình",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "Đóng Google Wallet trước",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "Chỉ Chế độ đảo ngược trên Oppo: Hiển thị trên ứng dụng khác",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "Mở ứng dụng thẻ ra vào trước",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "Kiểm tra cập nhật mỗi ngày một lần",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "Đóng ứng dụng thẻ ra vào trước",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "Không bao giờ thấy thẻ của bạn",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "Muốn mở cửa? Chỉ cần chạm điện thoại.",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "Cần thanh toán? Chỉ cần mở ứng dụng Wallet rồi chạm điện thoại.",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "Cần thanh toán? Chỉ cần chạm điện thoại.",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "Muốn mở cửa? Chỉ cần mở ứng dụng Ra vào rồi chạm điện thoại.",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "Thẻ ra vào",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "Văn phòng",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "Chạm điện thoại vào đầu đọc thẻ ra vào",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "Chạm điện thoại vào máy thanh toán",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "Chuyển sang chế độ tối",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "Chuyển sang chế độ sáng",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "Xem các câu hỏi thường gặp ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "Bản thân ứng dụng dùng tiếng Anh.",
@@ -1825,105 +1441,97 @@ if (window.TSLang) TSLang.add({
    "t": "Tingnan ang FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "Mula rin sa amin: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "FAQ",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "Gamitin ang <span class=\"g\">Oppo Access Card</span> at <span class=\"b\">Google Wallet</span> ayon sa kailangan. <br><span class=\"m\">Wala nang pagpunta sa Settings.</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "I-download ang TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "Normal mode",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "Gamitin ang <span class=\"g\">Access Card</span> at <span class=\"b\">Google Wallet</span> ayon sa kailangan mo.",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "Reverse mode",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "Libre sa loob ng 14 na araw, tapos isang presyo para sa panghabambuhay na access",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "Access Card Reader",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "Hindi kailangan ng account.",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "I-drag ang phone para subukan",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "Magsisimula ang 14 na araw kapag gumana na ang app sa phone mo, hindi kapag dinownload mo ito. Gumagana ang lahat ng feature.",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "Ilapit sa reader",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>Walang refund.</b> Masusubukan mo muna ito nang libre sa loob ng 14 na araw, kaya hindi na mare-refund ang code.",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "Payment Terminal",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "Sa app, i-tap ang “Get the full version”, tapos ang “Buy now”. Magbayad sa browser. Lalabas sa screen ang code mo at ipapadala rin ito sa email mo.",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "I-drag ang phone pakaliwa o pakanan papunta sa reader.",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "Saang mga phone ito gumagana",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "Libre sa loob ng 14 na araw, tapos isang presyo para sa <span class=\"lt-green\">panghabambuhay na access</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "Mga Oppo at OnePlus ColorOS phone na Android 16 pataas.",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "Isang bayaran lang, hindi kailangan ng account.",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "Ginawa at araw-araw na ginagamit sa ColorOS. Dapat gumana ito sa ibang phone na Android 16 pataas, pero hindi pa nasusubukan. Sa free trial mo malalaman kung gagana ito sa phone mo.",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>Subukan nang libre sa loob ng 14 na araw.</strong> Magsisimula ang bilang kapag unang gumana ang app sa phone mo, hindi kapag dinownload mo ito. Magagamit mo ang lahat ng feature habang trial.",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>Walang refund.</strong> Ang libreng 14 na araw ay para makita mo muna kung gumagana ito sa sarili mong phone bago ka magbayad. Kaya kapag naibigay na ang code, hindi na ito mare-refund.",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>Bumili mismo sa app.</strong> I-tap ang \"Get the full version\", tapos ang \"Buy now\" para magbayad sa browser. Lalabas agad sa screen ang unlock code mo, at may kopya ring ipapadala sa email mo.",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "Pagkatapos ng trial, titigil na ang pag-switch at babalik sa dati ang phone mo.",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "isang beses lang",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>Minsan lang magbabayad.</strong>Walang subscription at walang buwanang bayad, kahit kailan.",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>Minsan lang magbabayad.</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>Libre ang lahat ng susunod na update.</strong>Wala kang dagdag na babayaran para sa mga bagong bersyon at bug fix.",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>Libre ang lahat ng susunod na update.</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>Sa iyo na habambuhay sa phone na iyon.</strong>Sakop ng isang bayad ang phone na pinagbilhan mo, hangga't ginagamit mo ito.",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "I-download ang TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>Sa iyo na habambuhay sa phone na iyon.</b>Sakop nito ang phone na pinagbilhan mo, hangga't ginagamit mo ito.",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "Lahat ng bersyon sa GitHub",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "Kailangan ng Android 16 pataas. Magpapakita ng babala ang phone mo dahil hindi galing sa Play Store ang file, at normal lang iyon. <a href=\"#careful\">Paano matitiyak na ligtas ito</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "Kailangan ng Android 16 pataas. Magpapakita ng babala ang phone mo dahil hindi galing sa Play Store ang file, at normal lang iyon. <a href=\"#safe\">Paano matitiyak na ligtas ito</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "Ano'ng bago sa",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "Ano'ng bago",
+   "en": "What’s new"
   },
   "wn.lead": {
-   "t": "Wala nang \"Set as default\" na pop-up mula sa Access Card app ng Oppo.",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "t": "Wala nang “Set as default” na pop-up mula sa Access Card app ng Oppo.",
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "Sa Reverse mode, buksan ang access card mo mula sa madilim na screen at handa na ito agad, walang pop-up.",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "I-tap ang \"Set it up\" sa bagong card sa home screen at gawin ang pairing step nang isang beses. Pagkatapos nito, hindi na lalabas ang pop-up kahit gising at gamit mo ang phone.",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "I-tap ang “Set it up” sa bagong card sa home screen at ulitin nang isang beses ang hakbang sa Wireless debugging na may anim na digit. Pagkatapos nito, hindi na lalabas ang pop-up kahit gising at gamit mo ang phone.",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "Gumagana pa rin ang Normal mode gaya ng dati.",
@@ -1932,6 +1540,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "Gamit mo na ito? Mananatili ang setup at unlock code mo. Ang Reverse mode lang sa Oppo ang may isang dagdag na hakbang.",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "Dalawang mode",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "Normal mode",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "Ang access card mo ang default. Papalit lang ang Google Wallet habang bukas ito.",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "Access card",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "Ilapit sa reader",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "Reverse mode",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Ang Google Wallet ang default. Papalit lang ang access card mo habang bukas ito.",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "Saan galing ang mga customer namin",
@@ -1948,18 +1588,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "Saang mga phone ito gumagana",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "Mga Oppo ColorOS phone na Android 16 pataas.",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "Ginawa ito at araw-araw na ginagamit sa Oppo ColorOS. Dapat gumana ito sa kahit anong phone na Android 16 pataas, pero wala pang ibang phone na nasubukan. Sa 14-day free trial mo malalaman kung gagana ito sa phone mo.",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "Mga limang minuto lang ang setup",
@@ -1983,15 +1611,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "I-tap mo nang pitong beses ang version number ng phone mo. Bubuksan ng TapSwitch ang tamang screen at sasabihin kung aling row ang ita-tap.",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "I-on ang Wireless debugging nang isang minuto",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "Kailangan mo ng Wi-Fi sa hakbang na ito. I-on ang Wireless debugging, tapos i-type ang anim na digit na ipapakita ng TapSwitch sa isang notification. Dahil dito, maibibigay ng TapSwitch sa sarili nito ang nag-iisang permission na kailangan para mapalitan ang tap card mo. Kusa nitong ia-off ulit ang Wireless debugging kapag tapos na. Sa ilang phone, magre-reinstall nang isang beses ang app; walang mawawala.",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "Kailangan mo ng Wi-Fi sa hakbang na ito. Magpapakita ang phone mo ng anim na digit.",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "I-type ang mga ito sa notification ng TapSwitch. Dahil dito, makukuha ng TapSwitch ang nag-iisang permission na kailangan nito para mapalitan ang tap card mo. Pagkatapos, ia-off ng TapSwitch ang Wireless debugging. Sa ilang phone, magre-reinstall nang isang beses ang app. Walang mawawala.",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "Piliin ang dalawa mong card",
@@ -2009,6 +1641,14 @@ if (window.TSLang) TSLang.add({
    "t": "Wala sa Play Store ang TapSwitch, kaya puwede mo itong i-check mismo gamit ang libreng virus scan.",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>0 sa 65</b> virus checker ang nag-flag dito",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "Tingnan ang buong report",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "File",
    "en": "File"
@@ -2025,93 +1665,49 @@ if (window.TSLang) TSLang.add({
    "t": "Virus scan",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "0 sa 65 virus checker ang nag-flag dito",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "Tingnan ang buong report",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "Ipakita ang mga technical detail",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "SHA-256 ng file",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "Pumirma",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
    "t": "Ang Pumirma ay ang digital signature ng gumawa. Dapat pareho ito sa bawat update, kung hindi ay tatanggi ang phone mo na i-install ito.",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "Ang kaya at hindi kayang gawin ng TapSwitch",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "Pinapalitan ang default tap card mo",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "Ito lang ang setting ng phone na binabago nito, para tamang card ang sumagot sa reader.",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "Nakikita kung aling app ang nasa screen",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "Ito lang ang setting na binabago nito, para tamang card ang sumagot sa reader.",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "Para malaman nito kung bukas ang Google Wallet o ang access card app mo.",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "Display over other apps",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "Para lang sa Reverse mode sa Oppo. Isang maliit at hindi nakikitang window, para hindi i-pause ng phone ang TapSwitch habang bumubukas ang access card app mo. Sinasabi rin ng window na ito sa TapSwitch kapag may daliring dumampi sa screen, pero hindi kung saan. Dahil dito, nakakalipat ito sa access card mo bago pa bumukas ang app mula sa Recent Apps. Kung hindi mo kailanman i-tap ang \"Set it up\", hindi ito hihingin ng TapSwitch.",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "Nagche-check ng update isang beses sa isang araw",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "Isang maliit at hindi nakikitang window, para hindi i-pause ng phone ang TapSwitch habang bumubukas ang access card app mo. Sinasabi rin ng window na ito sa TapSwitch kapag may daliring dumampi sa screen, pero hindi kung saan. Dahil dito, nakakalipat ito sa access card mo bago pa bumukas ang app mula sa Recent Apps. Sa Oppo, baka i-on ito ng setup. Sa Reverse mode lang ito ginagamit ng TapSwitch.",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "Walang account na kailangang i-sign in.",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "Hindi kailanman nakikita ang mga card mo",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "Hindi nito nababasa ang card number, mga bayad, o mga log ng pinto. Pinipili lang nito kung aling app ang sasagot.",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "Mahahalagang paalala",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "Mga madalas itanong tungkol sa TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "Ginawa ito at araw-araw na ginagamit sa <b>Oppo ColorOS</b>. Dapat gumana ito sa kahit anong phone na Android 16 pataas, pero wala pang ibang phone na nasubukan.",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "Subukan nang libre sa sarili mong phone nang 14 na araw. Kung hindi bagay sa iyo, i-delete mo lang. Wala kang babayaran.",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "Pagkatapos ng trial, titigil na sa pag-switch ang TapSwitch at babalik sa dati ang phone mo.",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "Ayaw nang gumana ng access card mo mula nang i-set up mo ang Google Wallet? <a href=\"/help/\">Basahin ang mga karaniwang tanong</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "Subukan sa sarili mong phone nang 14 na araw, libre.<span>Kung hindi bagay sa iyo, i-delete mo lang at wala kang babayaran. <a href=\"#price\">Bumalik sa download</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "Bumalik sa download",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "Nasubukan mo na ba ang FloatAway?",
@@ -2121,13 +1717,9 @@ if (window.TSLang) TSLang.add({
    "t": "Alam mo bang puwedeng mag-full screen agad ang mga app mula sa Smart Sidebar sa Oppo?",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "Kadalasan, nagsisimula ang mga app sa maliit na floating window, at kailangan mo pang i-expand. Binubuksan agad ng FloatAway nang full screen, pati mga cloned app. Kaya rin nitong maglagay ng mga folder sa sidebar mo, na hindi magagawa ng phone nang mag-isa. Libre sa loob ng 14 na araw.",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "Tingnan ang FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "Kadalasan, nagsisimula ang mga app sa sidebar sa maliit na window. Binubuksan agad ng FloatAway nang full screen, pati mga cloned app. Naglalagay rin ito ng mga folder sa sidebar mo, na hindi ginagawa ng phone mo. Libre sa loob ng 14 na araw.",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "Gawa ng isang tao, para sa isang nakakainis na problema. Kontakin ako: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -2137,10 +1729,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">Mga karaniwang tanong: access card at Google Wallet sa Android</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "Mula rin sa gumawa ng TapSwitch: <a href=\"/floataway/\">FloatAway, full screen ang mga app sa Smart Sidebar</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "Walang kaugnayan ang TapSwitch sa Google o Oppo.",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -2149,121 +1737,53 @@ if (window.TSLang) TSLang.add({
    "t": "Isara",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch, bumalik sa itaas",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "Demo video ng TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "Aling card ang default",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "Bukas na ang pinto",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "Phone. Pindutin ang left arrow para i-tap sa door reader, at ang right arrow para i-tap sa payment terminal.",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "Bumalik sa home screen",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "Bayad na",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "I-play ang video",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "Panghabambuhay na access",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "Sabi ng isang customer",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "Gumagana sa Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "Access",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "Panghabambuhay na access",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "SHA-256 ng file",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "Ang access card mo ang default. Papalit lang ang Google Wallet habang bukas ito.",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "Pumirma",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Ang Google Wallet ang default. Papalit lang ang access card mo habang bukas ito.",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "Pinapalitan ang default tap card mo",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "Buksan muna ang Google Wallet",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "Nakikita kung aling app ang nasa screen",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "Isara muna ang Google Wallet",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "Para lang sa Reverse mode sa Oppo: Display over other apps",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "Buksan muna ang access card app mo",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "Nagche-check ng update isang beses sa isang araw",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "Isara muna ang access card app mo",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "Hindi kailanman nakikita ang mga card mo",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "Bubuksan ang pinto? I-tap lang ang phone mo.",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "May babayaran? Buksan lang ang Wallet app at i-tap ang phone mo.",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "May babayaran? I-tap lang ang phone mo.",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "Bubuksan ang pinto? Buksan lang ang Access app at i-tap ang phone mo.",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "Access card",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "Opisina",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "I-tap ang phone sa Access Card Reader",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "I-tap ang phone sa Payment Terminal",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "Lumipat sa dark mode",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "Lumipat sa light mode",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "Basahin ang mga karaniwang tanong ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "Nasa English ang mismong app.",
@@ -2279,105 +1799,97 @@ if (window.TSLang) TSLang.add({
    "t": "看看 FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "我们的另一款应用：<b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "常见问题",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "按需使用<span class=\"g\">Oppo 门禁卡</span>和<span class=\"b\">Google Wallet</span>。<br><span class=\"m\">不用再跑去设置里切换。</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "下载 TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "普通模式",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "按需使用<span class=\"g\">门禁卡</span>和<span class=\"b\">Google Wallet</span>。",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "反向模式",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "免费试用 14 天，之后一个价格，终身使用",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "门禁读卡器",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "无需注册账号。",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "拖动手机试试看",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "14 天从应用在你手机上正常运行时开始算，不是从下载那天算。所有功能都能用。",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "靠近读卡器",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>不支持退款。</b>你可以先免费试用 14 天，所以解锁码不能退款。",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "收款终端",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "在应用里点“Get the full version”，再点“Buy now”，在浏览器里付款。解锁码会显示在屏幕上，也会发到你的邮箱。",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "把手机向左或向右拖，贴近读卡器。",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "支持哪些手机",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "免费试用 14 天，之后一个价格，<span class=\"lt-green\">终身使用</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "运行 Android 16 及以上的 Oppo 和 OnePlus ColorOS 手机。",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "一次付清，无需注册账号。",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "在 ColorOS 上开发，我每天都在用。其他 Android 16 及以上的手机应该也能用，但还没测试过。能不能在你的手机上用，免费试用一下就知道了。",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>免费试用 14 天。</strong>从应用第一次在你手机上正常运行起开始计算，不是从下载那天算。试用期间，所有功能都能用。",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>不支持退款。</strong>免费的 14 天，就是让你先在自己的手机上亲自试过再付款，所以解锁码一旦发出，就无法退款。",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>直接在应用内购买。</strong>点“Get the full version”，再点“Buy now”，在浏览器里付款。解锁码会马上显示在屏幕上，同时也会发一份到你的邮箱。",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "试用期结束后，切换功能停止，手机恢复原来的样子。",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "一次付清",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>一次付费，不再续费。</strong>没有订阅，也没有月费，永远如此。",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>一次付费，不再续费。</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>以后的更新全部免费。</strong>新版本和修复都不用另外付钱。",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>以后的更新全部免费。</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>这部手机上永久有效。</strong>一次付款对你购买时用的那部手机有效，只要你还在用。",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "下载 TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>这部手机上永久有效。</b>对你购买时用的那部手机有效，只要你还在用。",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "GitHub 上的全部版本",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "需要 Android 16 及以上。因为安装文件不是来自 Play Store，手机会弹出警告，这很正常。<a href=\"#careful\">如何确认它是安全的</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "需要 Android 16 及以上。因为安装文件不是来自 Play Store，手机会弹出警告，这很正常。<a href=\"#safe\">如何确认它是安全的</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "更新内容：",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "更新内容",
+   "en": "What’s new"
   },
   "wn.lead": {
    "t": "Oppo 门禁卡应用不会再弹出“设为默认”的提示了。",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "在反向模式下，熄屏时打开门禁卡，卡立刻就能用，不会弹窗。",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "在主屏幕的新卡片上点“Set it up”，做一次配对就好。之后即使手机亮着、正在使用，也不会再弹窗。",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "在 TapSwitch 主页的新卡片上点“Set it up”，再做一次输入六位数字的无线调试步骤。之后即使手机亮着、正在使用，也不会再弹窗。",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "普通模式和以前一样。",
@@ -2386,6 +1898,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "已经在用了？设置和解锁码都会保留。只有 Oppo 上的反向模式需要多做这一步。",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "两种模式",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "普通模式",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "门禁卡是默认卡。只有打开 Google Wallet 时，才由它接手。",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "门禁卡",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "靠近读卡器",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "反向模式",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Google Wallet 是默认卡。只有打开门禁卡应用时，才由门禁卡接手。",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "我们的用户来自哪里",
@@ -2402,18 +1946,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "支持哪些手机",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "运行 Android 16 及以上的 Oppo ColorOS 手机。",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "它在 Oppo ColorOS 上开发，我每天都在用。理论上任何 Android 16 及以上的手机都能用，但其他机型还没测试过。想知道你的手机能不能用，14 天免费试用一下就知道了。",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "设置大约只要五分钟",
@@ -2437,15 +1969,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "连续点击手机的版本号七次。TapSwitch 会帮你打开正确的页面，并告诉你该点哪一行。",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "临时打开一分钟无线调试",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "这一步需要连接 Wi-Fi。打开无线调试，然后输入 TapSwitch 在通知里显示的六位数字。这样 TapSwitch 就能给自己开通它唯一需要的权限，用来更改你的默认卡。完成后它会自动关闭无线调试。在部分手机上，应用随后会自动重装一次，不会丢失任何东西。",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "这一步需要连接 Wi-Fi。手机会显示六位数字。",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "把数字输入到 TapSwitch 的通知里。这样 TapSwitch 就能获得它唯一需要的权限，用来更改你的默认卡。之后 TapSwitch 会关闭无线调试。在部分手机上，应用会自动重装一次，不会丢失任何东西。",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "选好你的两张卡",
@@ -2463,6 +1999,14 @@ if (window.TSLang) TSLang.add({
    "t": "TapSwitch 不在 Play Store 上架，所以你可以自己用免费的病毒扫描检查一下。",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>65 款杀毒引擎中 0</b> 款报毒",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "查看完整报告",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "文件",
    "en": "File"
@@ -2479,93 +2023,49 @@ if (window.TSLang) TSLang.add({
    "t": "病毒扫描",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "65 款杀毒引擎中 0 款报毒",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "查看完整报告",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "显示技术细节",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "文件的 SHA-256",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "签名者",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
    "t": "“签名者”是开发者的数字签名。每次更新都必须带有同一个签名，否则手机会拒绝安装。",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "TapSwitch 能做什么，不能做什么",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "更改默认卡",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "这是它唯一会改动的手机设置，让正确的卡去回应读卡器。",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "知道屏幕上开着哪个应用",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "它只改这一项设置，让正确的卡去回应读卡器。",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "这样它才知道 Google Wallet 或门禁卡应用什么时候打开。",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "显示在其他应用上层",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "仅限 Oppo 上的反向模式。一个看不见的小窗口，让手机在门禁卡应用打开时不会暂停 TapSwitch。这个窗口还会告诉 TapSwitch 有手指碰了屏幕，但不会知道碰在哪里。这样，从最近任务里打开门禁卡应用时，它能提前一点切到门禁卡。如果你从没点过“Set it up”，TapSwitch 就不会申请这个权限。",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "每天检查一次更新",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "一个看不见的小窗口，让手机在门禁卡应用打开时不会暂停 TapSwitch。这个窗口还会告诉 TapSwitch 有手指碰了屏幕，但不会知道碰在哪里。这样，从最近任务里打开门禁卡应用时，它能提前一点切到门禁卡。在 Oppo 上，设置过程可能会开启它。TapSwitch 只在反向模式下使用它。",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "不需要登录任何账号。",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "看不到你的卡片信息",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "它读不到卡号、付款记录或门禁记录，只负责决定由哪个应用来回应。",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "重要说明",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "关于 TapSwitch 的常见问题",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "它在 <b>Oppo ColorOS</b> 上开发，我每天都在用。理论上任何 Android 16 及以上的手机都能用，但其他机型还没测试过。",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "在你自己的手机上免费试用 14 天。不合适就直接删掉，一分钱都不用付。",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "试用期结束后，TapSwitch 会停止切换，手机恢复原来的样子。",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "设置 Google Wallet 后门禁卡刷不了了？<a href=\"/help/\">看看常见问题</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "在你自己的手机上免费试用 14 天。<span>不合适就直接删掉，一分钱都不用付。<a href=\"#price\">返回下载</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "返回下载",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "试过 FloatAway 吗？",
@@ -2575,13 +2075,9 @@ if (window.TSLang) TSLang.add({
    "t": "你知道吗？在 Oppo 上，Smart Sidebar 里的应用可以直接全屏打开。",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "平时这些应用会先变成一个小浮窗，还得你自己放大。FloatAway 直接全屏打开，分身应用也可以。它还能把文件夹放进侧边栏，这是手机本身做不到的。免费试用 14 天。",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "看看 FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "侧边栏应用平时会先以小窗打开。FloatAway 直接全屏打开，分身应用也可以。它还能把文件夹放进侧边栏，这是手机本身做不到的。免费试用 14 天。",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "一个人做的，只为解决一个烦人的问题。联系我：<a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -2591,10 +2087,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">常见问题：Android 上的门禁卡和 Google Wallet</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "TapSwitch 开发者的另一款应用：<a href=\"/floataway/\">FloatAway，让 Smart Sidebar 应用全屏打开</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch 与 Google 和 Oppo 均无关联。",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -2603,121 +2095,53 @@ if (window.TSLang) TSLang.add({
    "t": "关闭",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch，回到顶部",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "TapSwitch 演示视频",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "哪张卡是默认卡",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "门开了",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "手机。按左方向键在门禁读卡器上刷，按右方向键在收款终端上刷。",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "返回主屏幕",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "已付款",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "播放视频",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "终身使用",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "用户评价",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "适配 Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "门禁",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "终身使用",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "文件的 SHA-256",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "门禁卡是默认卡。只有打开 Google Wallet 时，才由它接手。",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "签名者",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Google Wallet 是默认卡。只有打开门禁卡应用时，才由门禁卡接手。",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "更改默认卡",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "先打开 Google Wallet",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "知道屏幕上开着哪个应用",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "先关闭 Google Wallet",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "仅限 Oppo 上的反向模式：显示在其他应用上层",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "先打开门禁卡应用",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "每天检查一次更新",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "先关闭门禁卡应用",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "看不到你的卡片信息",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "要开门？直接用手机刷一下就行。",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "要付款？打开 Wallet 应用，再用手机刷一下。",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "要付款？直接用手机刷一下就行。",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "要开门？打开门禁应用，再用手机刷一下。",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "门禁卡",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "办公室",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "用手机在门禁读卡器上刷一下",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "用手机在收款终端上刷一下",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "切换到深色模式",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "切换到浅色模式",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "看看常见问题 ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "应用本身是英文界面。",
@@ -2733,105 +2157,97 @@ if (window.TSLang) TSLang.add({
    "t": "Ver FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "También de nosotros: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "FAQ",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "Usa tu <span class=\"g\">tarjeta de acceso de Oppo</span> y <span class=\"b\">Google Wallet</span> cuando quieras. <br><span class=\"m\">Olvídate de Ajustes.</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "Descargar TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "Modo normal",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "Usa tu <span class=\"g\">tarjeta de acceso</span> y <span class=\"b\">Google Wallet</span> cuando las necesites.",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "Modo inverso",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "Gratis por 14 días, después un solo precio por acceso de por vida",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "Lector de tarjeta de acceso",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "No necesitas cuenta.",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "Arrastra el celular para probarlo",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "Los 14 días empiezan a contar cuando la app funciona en tu celular, no al descargarla. Todas las funciones están disponibles.",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "Acércalo al lector",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>No hay reembolsos.</b> Primero la pruebas gratis 14 días, así que un código no se puede reembolsar.",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "Terminal de pago",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "En la app, toca “Get the full version” y luego “Buy now”. Pagas en tu navegador. Tu código aparece en pantalla y te llega por correo.",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "Arrastra el celular a la izquierda o a la derecha hacia un lector.",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "En qué celulares funciona",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "Gratis por 14 días, después un solo precio por <span class=\"lt-green\">acceso de por vida</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "Celulares Oppo y OnePlus con ColorOS y Android 16 o superior.",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "Un solo pago, sin necesidad de cuenta.",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "Hecha y usada a diario en ColorOS. Otros celulares con Android 16 o superior deberían funcionar, pero no se han probado. La prueba gratis te muestra si funciona en el tuyo.",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>Pruébala gratis por 14 días.</strong> Los días empiezan a contar cuando la app funciona por primera vez en tu celular, no cuando la descargas. Todas las funciones están disponibles durante la prueba.",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>No hay reembolsos.</strong> Los 14 días gratis son para que veas cómo funciona en tu propio celular antes de pagar, así que un código ya emitido no se puede reembolsar.",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>Cómprala dentro de la app.</strong> Toca \"Get the full version\" y luego \"Buy now\" para pagar en tu navegador. Tu código de desbloqueo aparece en pantalla de inmediato y te enviamos una copia por correo.",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "Cuando termina la prueba, deja de cambiar de tarjeta y tu celular vuelve a funcionar como antes.",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "un solo pago",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>Pagas una vez y ya.</strong>Sin suscripción ni mensualidades, nunca.",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>Pagas una vez y ya.</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>Todas las actualizaciones futuras son gratis.</strong>Las nuevas versiones y correcciones no te cuestan nada.",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>Todas las actualizaciones futuras son gratis.</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>Tuya para siempre en ese celular.</strong>Un solo pago cubre el celular donde la compras, mientras lo sigas usando.",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "Descargar TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>Tuya para siempre en ese celular.</b>Cubre el celular donde la compras, mientras lo sigas usando.",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "Todas las versiones en GitHub",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "Requiere Android 16 o superior. Tu celular mostrará una advertencia porque el archivo no viene de Play Store; es normal. <a href=\"#careful\">Cómo comprobar que es seguro</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "Requiere Android 16 o superior. Tu celular mostrará una advertencia porque el archivo no viene de Play Store; es normal. <a href=\"#safe\">Cómo comprobar que es seguro</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "Novedades de la versión",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "Novedades",
+   "en": "What’s new"
   },
   "wn.lead": {
-   "t": "Se acabó el aviso \"Establecer como predeterminada\" de la app Access Card de Oppo.",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "t": "Se acabó el aviso “Establecer como predeterminada” de la app Access Card de Oppo.",
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "En modo inverso, abre tu tarjeta de acceso con la pantalla apagada y estará lista al instante, sin aviso.",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "Toca \"Set it up\" en la nueva tarjeta de la pantalla de inicio y haz el paso de vinculación una sola vez. Después, el aviso no vuelve a salir, ni siquiera con el teléfono en uso.",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "Toca “Set it up” en la nueva tarjeta de la pantalla de inicio y vuelve a hacer una vez el paso de Depuración inalámbrica con los seis dígitos. Después, el aviso no vuelve a salir, ni siquiera con el celular en uso.",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "El modo normal funciona como siempre.",
@@ -2840,6 +2256,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "¿Ya la usas? Tu configuración y tu código de desbloqueo se conservan. Solo el modo inverso en Oppo pide ese paso extra.",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "Dos modos",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "Modo normal",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "Tu tarjeta de acceso es la predeterminada. Google Wallet toma el control solo mientras está abierta.",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "Tarjeta de acceso",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "Acércalo al lector",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "Modo inverso",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Google Wallet es la predeterminada. Tu tarjeta de acceso toma el control solo mientras su app está abierta.",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "De dónde son nuestros clientes",
@@ -2856,18 +2304,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "En qué celulares funciona",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "Celulares Oppo con ColorOS y Android 16 o superior.",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "Está hecha y se usa a diario en Oppo con ColorOS. Debería funcionar en cualquier celular con Android 16 o superior, pero todavía no se ha probado en otros. La prueba gratis de 14 días te permite saber si funciona en el tuyo.",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "Configurarla toma unos cinco minutos",
@@ -2891,15 +2327,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "Toca siete veces el número de versión de tu celular. TapSwitch abre la pantalla correcta y te dice qué opción tocar.",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "Activa la Depuración inalámbrica por un minuto",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "Para este paso necesitas Wi-Fi. Activa la Depuración inalámbrica y escribe los seis dígitos que TapSwitch te muestra en una notificación. Así TapSwitch puede darse el único permiso que necesita para cambiar tu tarjeta NFC predeterminada. Al terminar, la propia app vuelve a desactivar la Depuración inalámbrica. En algunos celulares la app se reinstala sola una vez; no se pierde nada.",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "Para este paso necesitas Wi-Fi. Tu celular muestra seis dígitos.",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "Escríbelos en la notificación de TapSwitch. Así TapSwitch obtiene el único permiso que necesita para cambiar tu tarjeta NFC predeterminada. Después, TapSwitch desactiva la Depuración inalámbrica. En algunos celulares la app se reinstala sola una vez. No se pierde nada.",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "Elige tus dos tarjetas",
@@ -2917,6 +2357,14 @@ if (window.TSLang) TSLang.add({
    "t": "TapSwitch no está en Play Store, así que puedes revisarla por tu cuenta con un análisis antivirus gratis.",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>0 de 65</b> antivirus lo marcan",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "Ver el informe completo",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "Archivo",
    "en": "File"
@@ -2933,93 +2381,49 @@ if (window.TSLang) TSLang.add({
    "t": "Análisis antivirus",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "0 de 65 antivirus lo marcan",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "Ver el informe completo",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "Mostrar detalles técnicos",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "SHA-256 del archivo",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "Firmado por",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
-   "t": "\"Firmado por\" es la firma digital del desarrollador. Cada actualización debe llevar la misma, o tu celular no la instala.",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "t": "“Firmado por” es la firma digital del desarrollador. Cada actualización debe llevar la misma, o tu celular no la instala.",
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "Lo que TapSwitch puede y no puede hacer",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "Cambiar tu tarjeta NFC predeterminada",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "Es el único ajuste del celular que cambia, para que responda la tarjeta correcta en el lector.",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "Ver qué app está en pantalla",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "Es el único ajuste que cambia, para que responda la tarjeta correcta en el lector.",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "Así sabe cuándo está abierta Google Wallet o la app de tu tarjeta de acceso.",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "Mostrar sobre otras apps",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "Solo en modo inverso en Oppo. Una ventana diminuta e invisible, para que el teléfono no pause TapSwitch mientras se abre la app de tu tarjeta de acceso. Esa misma ventana avisa a TapSwitch cuando un dedo toca la pantalla, nunca dónde. Así puede pasar a tu tarjeta de acceso justo antes de que la app se abra desde Apps recientes. Si nunca tocas \"Set it up\", TapSwitch nunca lo pide.",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "Buscar actualizaciones una vez al día",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "Una ventana diminuta e invisible, para que tu celular no pause TapSwitch mientras se abre la app de tu tarjeta de acceso. Esa misma ventana avisa a TapSwitch cuando un dedo toca la pantalla, nunca dónde. Así puede pasar a tu tarjeta de acceso justo antes de que esa app se abra desde Apps recientes. En Oppo, este permiso puede activarse durante la configuración. TapSwitch solo lo usa en modo inverso.",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "No hay ninguna cuenta en la que iniciar sesión.",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "Nunca ve tus tarjetas",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "No puede leer números de tarjeta, pagos ni registros de acceso. Solo elige qué app responde.",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "Datos importantes",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "Preguntas frecuentes sobre TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "Está hecha y se usa a diario en <b>Oppo con ColorOS</b>. Debería funcionar en cualquier celular con Android 16 o superior, pero todavía no se ha probado en otros.",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "Pruébala gratis en tu propio celular durante 14 días. Si no te convence, bórrala. No debes nada.",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "Cuando termina la prueba, TapSwitch deja de cambiar de tarjeta y tu celular vuelve a funcionar como antes.",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "¿Tu tarjeta de acceso dejó de funcionar después de configurar Google Wallet? <a href=\"/help/\">Lee las preguntas frecuentes</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "Pruébala gratis en tu propio celular durante 14 días.<span>Si no te convence, la borras y no debes nada. <a href=\"#price\">Volver a la descarga</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "Volver a la descarga",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "¿Ya probaste FloatAway?",
@@ -3029,13 +2433,9 @@ if (window.TSLang) TSLang.add({
    "t": "¿Sabías que en un Oppo las apps de la Smart Sidebar pueden abrirse en pantalla completa?",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "Normalmente las apps empiezan en una ventanita flotante y tienes que agrandarlas. FloatAway las abre en pantalla completa desde el principio, también las apps clonadas. Además, puede agregar carpetas a tu barra lateral, algo que el celular no hace por sí solo. Gratis por 14 días.",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "Ver FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "Normalmente las apps de la barra lateral empiezan en una ventanita. FloatAway las abre en pantalla completa desde el principio, también las apps clonadas. Además, agrega carpetas a tu barra lateral, algo que tu celular no hace. Gratis por 14 días.",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "Hecha por una sola persona, para un problema muy molesto. Escríbeme: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -3045,10 +2445,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">Preguntas frecuentes: tarjeta de acceso y Google Wallet en Android</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "También del creador de TapSwitch: <a href=\"/floataway/\">FloatAway, apps de la Smart Sidebar en pantalla completa</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch no está afiliada a Google ni a Oppo.",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -3057,121 +2453,53 @@ if (window.TSLang) TSLang.add({
    "t": "Cerrar",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch, volver arriba",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "Video de demostración de TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "Qué tarjeta es la predeterminada",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "Se abre la puerta",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "Celular. Presiona la flecha izquierda para acercarlo al lector de la puerta y la flecha derecha para acercarlo a la terminal de pago.",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "Volver a la pantalla de inicio",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "Pagado",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "Reproducir video",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "Acceso de por vida",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "Lo que dijo un cliente",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "Compatible con Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "Acceso",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "Acceso de por vida",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "SHA-256 del archivo",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "Tu tarjeta de acceso es la predeterminada. Google Wallet toma el control solo mientras está abierta.",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "Firmado por",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Google Wallet es la predeterminada. Tu tarjeta de acceso toma el control solo mientras su app está abierta.",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "Cambiar tu tarjeta NFC predeterminada",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "Primero abre Google Wallet",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "Ver qué app está en pantalla",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "Primero cierra Google Wallet",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "Solo en modo inverso en Oppo: Mostrar sobre otras apps",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "Primero abre la app de tu tarjeta de acceso",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "Buscar actualizaciones una vez al día",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "Primero cierra la app de tu tarjeta de acceso",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "Nunca ve tus tarjetas",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "¿Quieres abrir la puerta? Solo acerca tu celular.",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "¿Vas a pagar algo? Solo abre la app Wallet y acerca tu celular.",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "¿Vas a pagar algo? Solo acerca tu celular.",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "¿Quieres abrir la puerta? Solo abre la app Acceso y acerca tu celular.",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "Tarjeta de acceso",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "Oficina",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "Acerca el celular al lector de tarjeta de acceso",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "Acerca el celular a la terminal de pago",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "Cambiar a modo oscuro",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "Cambiar a modo claro",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "Ver todas las preguntas ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "La app está en inglés.",
@@ -3187,105 +2515,97 @@ if (window.TSLang) TSLang.add({
    "t": "Zobacz FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "Od nas także: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "FAQ",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "Używaj <span class=\"g\">karty dostępu w Oppo</span> i <span class=\"b\">Google Wallet</span>, kiedy chcesz. <br><span class=\"m\">Bez grzebania w Ustawieniach.</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "Pobierz TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "Tryb normalny",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "Używaj <span class=\"g\">karty dostępu</span> i <span class=\"b\">Google Wallet</span>, kiedy ich potrzebujesz.",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "Tryb odwrócony",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "14 dni za darmo, potem jedna cena za dostęp na zawsze",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "Czytnik kart dostępu",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "Konto niepotrzebne.",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "Przeciągnij telefon, żeby spróbować",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "14 dni liczy się od chwili, gdy aplikacja zadziała na Twoim telefonie, a nie od pobrania. Dostępne są wszystkie funkcje.",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "Przyłóż do czytnika",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>Nie oferujemy zwrotów.</b> Najpierw testujesz za darmo przez 14 dni, dlatego kodu nie można zwrócić.",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "Terminal płatniczy",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "W aplikacji stuknij „Get the full version”, a potem „Buy now”. Płacisz w przeglądarce. Kod pojawi się na ekranie i przyjdzie e-mailem.",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "Przeciągnij telefon w lewo lub w prawo do czytnika.",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "Na jakich telefonach działa",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "14 dni za darmo, potem jedna cena za <span class=\"lt-green\">dostęp na zawsze</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "Telefony Oppo i OnePlus z ColorOS i Androidem 16 lub nowszym.",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "Jedna płatność, konto niepotrzebne.",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "Powstała i jest na co dzień używana na ColorOS. Inne telefony z Androidem 16 lub nowszym powinny działać, ale nie były testowane. Darmowy okres próbny pokaże, czy działa na Twoim.",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>Przetestuj za darmo przez 14 dni.</strong> Odliczanie rusza, gdy aplikacja pierwszy raz zadziała na Twoim telefonie, a nie w chwili pobrania. W czasie testów dostępne są wszystkie funkcje.",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>Nie oferujemy zwrotów.</strong> Dzięki 14 darmowym dniom sprawdzisz na własnym telefonie, jak to działa, zanim zapłacisz, dlatego wydanego kodu nie można zwrócić.",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>Kup w aplikacji.</strong> Stuknij \"Get the full version\", a następnie \"Buy now\", żeby zapłacić w przeglądarce. Kod odblokowujący od razu pojawi się na ekranie, a jego kopię dostaniesz e-mailem.",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "Gdy okres próbny się skończy, przełączanie ustaje, a telefon wraca do poprzednich ustawień.",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "jednorazowo",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>Płacisz raz i masz spokój.</strong>Bez subskrypcji i miesięcznych opłat, nigdy.",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>Płacisz raz i masz spokój.</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>Wszystkie przyszłe aktualizacje za darmo.</strong>Nowe wersje i poprawki nic Cię nie kosztują.",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>Wszystkie przyszłe aktualizacje za darmo.</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>Na zawsze Twoja na tym telefonie.</strong>Jedna płatność obejmuje telefon, na którym ją kupisz, dopóki z niego korzystasz.",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "Pobierz TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>Na zawsze Twoja na tym telefonie.</b>Obejmuje telefon, na którym ją kupisz, dopóki z niego korzystasz.",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "Wszystkie wersje na GitHubie",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "Wymaga Androida 16 lub nowszego. Telefon wyświetli ostrzeżenie, bo plik nie pochodzi z Play Store. To normalne. <a href=\"#careful\">Jak sprawdzić, że jest bezpieczna</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "Wymaga Androida 16 lub nowszego. Telefon wyświetli ostrzeżenie, bo plik nie pochodzi z Play Store. To normalne. <a href=\"#safe\">Jak sprawdzić, że jest bezpieczna</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "Nowości w wersji",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "Nowości",
+   "en": "What’s new"
   },
   "wn.lead": {
-   "t": "Koniec z okienkiem \"Ustaw jako domyślną\" z aplikacji Access Card od Oppo.",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "t": "Koniec z okienkiem “Ustaw jako domyślną” z aplikacji Access Card od Oppo.",
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "W trybie odwróconym otwórz kartę dostępu przy wygaszonym ekranie, a będzie od razu gotowa, bez okienka.",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "Stuknij \"Set it up\" na nowej karcie na ekranie głównym i raz przejdź parowanie. Potem okienko już się nie pojawia, także gdy korzystasz z telefonu.",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "Stuknij „Set it up” na nowej karcie na ekranie głównym i jeszcze raz przejdź krok Debugowania bezprzewodowego z sześcioma cyframi. Potem okienko nie pojawia się także wtedy, gdy korzystasz z telefonu.",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "Tryb normalny działa jak dotąd.",
@@ -3294,6 +2614,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "Korzystasz już z aplikacji? Konfiguracja i kod odblokowujący zostają. Tylko tryb odwrócony na Oppo wymaga tego jednego dodatkowego kroku.",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "Dwa tryby",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "Tryb normalny",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "Domyślna jest karta dostępu. Google Wallet przejmuje płatności tylko wtedy, gdy jest otwarty.",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "Karta dostępu",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "Przyłóż do czytnika",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "Tryb odwrócony",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Domyślny jest Google Wallet. Karta dostępu przejmuje NFC tylko wtedy, gdy otwarta jest jej aplikacja.",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "Skąd są nasi klienci",
@@ -3310,18 +2662,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "Na jakich telefonach działa",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "Telefony Oppo z ColorOS i Androidem 16 lub nowszym.",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "Powstała i jest na co dzień używana na Oppo z ColorOS. Powinna działać na każdym telefonie z Androidem 16 lub nowszym, ale na innych nie była jeszcze testowana. 14-dniowy darmowy okres próbny pozwoli Ci sprawdzić, czy działa na Twoim.",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "Konfiguracja zajmuje około pięciu minut",
@@ -3345,15 +2685,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "Stukasz siedem razy w numer wersji telefonu. TapSwitch otwiera właściwy ekran i podpowiada, którą pozycję stuknąć.",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "Włącz na minutę Debugowanie bezprzewodowe",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "Do tego kroku potrzebujesz Wi-Fi. Włącz Debugowanie bezprzewodowe i wpisz sześć cyfr, które TapSwitch pokaże Ci w powiadomieniu. Dzięki temu TapSwitch nada sobie jedyne uprawnienie, którego potrzebuje, żeby zmieniać Twoją domyślną kartę zbliżeniową. Gdy skończy, sam wyłączy Debugowanie bezprzewodowe. Na niektórych telefonach aplikacja raz przeinstaluje się sama, nic nie przepada.",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "Do tego kroku potrzebujesz Wi-Fi. Telefon pokaże sześć cyfr.",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "Wpisz je w powiadomieniu TapSwitch. Dzięki temu TapSwitch dostaje jedyne uprawnienie, którego potrzebuje, żeby zmieniać Twoją domyślną kartę zbliżeniową. Potem TapSwitch sam wyłącza Debugowanie bezprzewodowe. Na niektórych telefonach aplikacja raz przeinstaluje się sama. Nic nie przepada.",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "Wybierz swoje dwie karty",
@@ -3371,6 +2715,14 @@ if (window.TSLang) TSLang.add({
    "t": "Aplikacji TapSwitch nie ma w Play Store, więc możesz ją samodzielnie sprawdzić darmowym skanerem antywirusowym.",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>0 z 65</b> antywirusów zgłasza zagrożenie",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "Zobacz pełny raport",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "Plik",
    "en": "File"
@@ -3387,93 +2739,49 @@ if (window.TSLang) TSLang.add({
    "t": "Skan antywirusowy",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "0 z 65 antywirusów zgłasza zagrożenie",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "Zobacz pełny raport",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "Pokaż szczegóły techniczne",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "SHA-256 pliku",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "Podpisano przez",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
-   "t": "\"Podpisano przez\" to cyfrowy podpis twórcy. Każda aktualizacja musi mieć ten sam, inaczej telefon odmówi instalacji.",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "t": "“Podpisano przez” to cyfrowy podpis twórcy. Każda aktualizacja musi mieć ten sam, inaczej telefon odmówi instalacji.",
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "Co TapSwitch może, a czego nie może",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "Zmieniać domyślną kartę zbliżeniową",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "To jedyne ustawienie telefonu, które zmienia, żeby czytnikowi odpowiadała właściwa karta.",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "Widzieć, która aplikacja jest na ekranie",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "Zmienia tylko to ustawienie, żeby czytnikowi odpowiadała właściwa karta.",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "Dzięki temu wie, kiedy otwarty jest Google Wallet albo aplikacja karty dostępu.",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "Wyświetlanie nad innymi aplikacjami",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "Tylko w trybie odwróconym na Oppo. Malutkie, niewidoczne okno, dzięki któremu telefon nie wstrzymuje TapSwitch, gdy otwiera się aplikacja karty dostępu. To samo okno mówi TapSwitch, kiedy palec dotyka ekranu, ale nigdy gdzie. Dzięki temu może przełączyć się na kartę dostępu chwilę przed otwarciem aplikacji z ostatnich aplikacji. Jeśli nigdy nie stukniesz \"Set it up\", TapSwitch nigdy o to nie poprosi.",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "Raz dziennie sprawdzać aktualizacje",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "Malutkie, niewidoczne okno, dzięki któremu telefon nie wstrzymuje TapSwitch, gdy otwiera się aplikacja karty dostępu. To samo okno mówi TapSwitch, kiedy palec dotyka ekranu, ale nigdy gdzie. Dzięki temu może przełączyć się na kartę dostępu chwilę przed tym, jak ta aplikacja otworzy się z listy ostatnich aplikacji. Na Oppo konfiguracja może włączyć to uprawnienie. TapSwitch używa go tylko w trybie odwróconym.",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "Nie ma żadnego konta, do którego trzeba się logować.",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "Nigdy nie widzi Twoich kart",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "Nie może odczytać numerów kart, płatności ani historii wejść. Wybiera tylko, która aplikacja odpowiada.",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "Ważne informacje",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "Najczęstsze pytania o TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "Powstała i jest na co dzień używana na <b>Oppo z ColorOS</b>. Powinna działać na każdym telefonie z Androidem 16 lub nowszym, ale na innych nie była jeszcze testowana.",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "Wypróbuj ją za darmo na własnym telefonie przez 14 dni. Jeśli Ci nie podejdzie, usuń ją. Nic nie płacisz.",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "Po zakończeniu okresu próbnego TapSwitch przestaje przełączać karty, a telefon wraca do poprzednich ustawień.",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "Karta dostępu przestała działać po skonfigurowaniu Google Wallet? <a href=\"/help/\">Przeczytaj najczęstsze pytania</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "Wypróbuj ją za darmo na własnym telefonie przez 14 dni.<span>Jeśli Ci nie podejdzie, usuń ją i nic nie płacisz. <a href=\"#price\">Wróć do pobierania</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "Wróć do pobierania",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "Znasz już FloatAway?",
@@ -3483,13 +2791,9 @@ if (window.TSLang) TSLang.add({
    "t": "Czy wiesz, że na Oppo aplikacje ze Smart Sidebar mogą otwierać się od razu na pełnym ekranie?",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "Zwykle aplikacje startują w małym pływającym oknie i trzeba je powiększać. FloatAway od razu otwiera je na pełnym ekranie, także sklonowane aplikacje. Potrafi też dodać foldery do paska bocznego, czego telefon sam z siebie nie umożliwia. 14 dni za darmo.",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "Zobacz FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "Aplikacje z paska bocznego zwykle startują w małym oknie. FloatAway od razu otwiera je na pełnym ekranie, także sklonowane aplikacje. Dodaje też foldery do paska bocznego, czego telefon sam nie robi. 14 dni za darmo.",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "Stworzona przez jedną osobę, na jeden irytujący problem. Napisz do mnie: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -3499,10 +2803,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">Najczęstsze pytania: karta dostępu i Google Wallet na Androidzie</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "Od twórcy TapSwitch także: <a href=\"/floataway/\">FloatAway, aplikacje ze Smart Sidebar na pełnym ekranie</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch nie jest powiązany z Google ani Oppo.",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -3511,121 +2811,53 @@ if (window.TSLang) TSLang.add({
    "t": "Zamknij",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch, powrót na górę",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "Film demonstracyjny TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "Która karta jest domyślna",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "Drzwi otwarte",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "Telefon. Naciśnij strzałkę w lewo, żeby przyłożyć go do czytnika przy drzwiach, albo strzałkę w prawo, żeby przyłożyć go do terminala płatniczego.",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "Wróć do ekranu głównego",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "Zapłacono",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "Odtwórz film",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "Dostęp na zawsze",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "Co powiedział klient",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "Działa na Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "Dostęp",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "Dostęp na zawsze",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "SHA-256 pliku",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "Domyślna jest karta dostępu. Google Wallet przejmuje płatności tylko wtedy, gdy jest otwarty.",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "Podpisano przez",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Domyślny jest Google Wallet. Karta dostępu przejmuje NFC tylko wtedy, gdy otwarta jest jej aplikacja.",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "Zmieniać domyślną kartę zbliżeniową",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "Najpierw otwórz Google Wallet",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "Widzieć, która aplikacja jest na ekranie",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "Najpierw zamknij Google Wallet",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "Tylko tryb odwrócony na Oppo: Wyświetlanie nad innymi aplikacjami",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "Najpierw otwórz aplikację karty dostępu",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "Raz dziennie sprawdzać aktualizacje",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "Najpierw zamknij aplikację karty dostępu",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "Nigdy nie widzi Twoich kart",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "Chcesz otworzyć drzwi? Po prostu przyłóż telefon.",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "Chcesz za coś zapłacić? Po prostu otwórz aplikację Wallet i przyłóż telefon.",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "Chcesz za coś zapłacić? Po prostu przyłóż telefon.",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "Chcesz otworzyć drzwi? Po prostu otwórz aplikację Dostęp i przyłóż telefon.",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "Karta dostępu",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "Biuro",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "Przyłóż telefon do czytnika kart dostępu",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "Przyłóż telefon do terminala płatniczego",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "Włącz tryb ciemny",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "Włącz tryb jasny",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "Zobacz wszystkie pytania ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "Sama aplikacja jest po angielsku.",
@@ -3641,105 +2873,97 @@ if (window.TSLang) TSLang.add({
    "t": "Prohlédnout FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "Od nás také: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "Časté dotazy",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "Používejte <span class=\"g\">přístupovou kartu v Oppo</span> a <span class=\"b\">Google Wallet</span> podle potřeby. <br><span class=\"m\">Bez chození do Nastavení.</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "Stáhnout TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "Normální režim",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "Používejte <span class=\"g\">přístupovou kartu</span> a <span class=\"b\">Google Wallet</span> podle potřeby.",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "Obrácený režim",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "14 dní zdarma, pak jedna cena za přístup na doživotí",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "Čtečka přístupových karet",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "Účet nepotřebujete.",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "Vyzkoušejte to přetažením telefonu",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "Těch 14 dní se počítá od chvíle, kdy aplikace začne fungovat ve vašem telefonu, ne od stažení. K dispozici jsou všechny funkce.",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "Přiložte ke čtečce",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>Vrácení peněz není možné.</b> Nejdřív ji 14 dní zkoušíte zdarma, proto kód vrátit nelze.",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "Platební terminál",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "V aplikaci klepněte na „Get the full version“ a potom na „Buy now“. Zaplatíte v prohlížeči. Kód se zobrazí na obrazovce a přijde vám e-mailem.",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "Přetáhněte telefon doleva nebo doprava ke čtečce.",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "Na kterých telefonech funguje",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "14 dní zdarma, pak jedna cena za <span class=\"lt-green\">přístup na doživotí</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "Telefony Oppo a OnePlus s ColorOS a Androidem 16 a novějším.",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "Jedna platba, účet nepotřebujete.",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "Vyvíjená a denně používaná na ColorOS. Jiné telefony s Androidem 16 a novějším by měly fungovat, ale vyzkoušené nejsou. Ve zkušební době zdarma zjistíte, jestli funguje i na tom vašem.",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>Vyzkoušejte ji 14 dní zdarma.</strong> Zkušební doba se počítá od chvíle, kdy aplikace poprvé funguje ve vašem telefonu, ne od stažení. Po celou dobu zkoušení jsou dostupné všechny funkce.",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>Vrácení peněz není možné.</strong> Díky 14 dnům zdarma si na vlastním telefonu ověříte, jak aplikace funguje, ještě než zaplatíte, proto už vydaný kód vrátit nelze.",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>Kupte ji přímo v aplikaci.</strong> Klepněte na \"Get the full version\" a potom na \"Buy now\" a zaplaťte v prohlížeči. Odemykací kód se hned zobrazí na obrazovce a jeho kopii vám pošleme e-mailem.",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "Po skončení zkušební doby se přepínání zastaví a telefon se vrátí do původního stavu.",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "jednorázově",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>Zaplatíte jednou a máte klid.</strong>Žádné předplatné ani měsíční poplatky, nikdy.",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>Zaplatíte jednou a máte klid.</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>Každá další aktualizace zdarma.</strong>Nové verze i opravy vás nic nestojí.",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>Každá další aktualizace zdarma.</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>Ve vašem telefonu navždy.</strong>Jedna platba platí pro telefon, na kterém aplikaci koupíte, dokud ho používáte.",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "Stáhnout TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>Ve vašem telefonu navždy.</b>Platí pro telefon, na kterém aplikaci koupíte, dokud ho používáte.",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "Všechny verze na GitHubu",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "Vyžaduje Android 16 a novější. Telefon zobrazí varování, protože soubor nepochází z Play Store. To je v pořádku. <a href=\"#careful\">Jak ověřit, že je bezpečná</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "Vyžaduje Android 16 a novější. Telefon zobrazí varování, protože soubor nepochází z Play Store. To je v pořádku. <a href=\"#safe\">Jak ověřit, že je bezpečná</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "Novinky ve verzi",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "Novinky",
+   "en": "What’s new"
   },
   "wn.lead": {
-   "t": "Žádné další okno \"Nastavit jako výchozí\" z aplikace Access Card od Oppa.",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "t": "Žádné další okno “Nastavit jako výchozí” z aplikace Access Card od Oppa.",
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "V obráceném režimu otevřete přístupovou kartu ze zhasnutého displeje a je hned připravená, bez okna.",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "Klepněte na \"Set it up\" na nové kartě na domovské obrazovce a jednou projděte párování. Pak se okno už neobjeví, ani když telefon právě používáte.",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "Klepněte na „Set it up“ na nové kartě na domovské obrazovce a jednou zopakujte krok Bezdrátového ladění se šesti číslicemi. Pak se okno už neobjeví, ani když telefon právě používáte.",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "Normální režim funguje jako dřív.",
@@ -3748,6 +2972,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "Už aplikaci používáte? Nastavení i odemykací kód se zachovají. Jen obrácený režim na Oppu chce ten jeden krok navíc.",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "Dva režimy",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "Normální režim",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "Výchozí je vaše přístupová karta. Google Wallet převezme jen tehdy, když je otevřená.",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "Přístupová karta",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "Přiložte ke čtečce",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "Obrácený režim",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Výchozí je Google Wallet. Přístupová karta převezme jen tehdy, když je otevřená její aplikace.",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "Odkud jsou naši zákazníci",
@@ -3764,18 +3020,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "Na kterých telefonech funguje",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "Telefony Oppo s ColorOS a Androidem 16 a novějším.",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "Je vyvíjená a denně používaná na Oppo s ColorOS. Měla by fungovat na každém telefonu s Androidem 16 a novějším, jiné ale zatím vyzkoušené nejsou. Během 14denní zkušební doby zdarma zjistíte, jestli funguje i na tom vašem.",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "Nastavení zabere asi pět minut",
@@ -3799,15 +3043,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "Sedmkrát klepnete na číslo verze telefonu. TapSwitch otevře správnou obrazovku a řekne vám, na kterou položku klepnout.",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "Na minutu zapněte Bezdrátové ladění",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "K tomuto kroku potřebujete Wi-Fi. Zapněte Bezdrátové ladění a zadejte šest číslic, které vám TapSwitch ukáže v oznámení. Díky tomu si TapSwitch udělí jediné oprávnění, které potřebuje ke změně vaší výchozí bezkontaktní karty. Až bude hotovo, Bezdrátové ladění zase sám vypne. Na některých telefonech se aplikace potom jednou sama přeinstaluje, nic se neztratí.",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "K tomuto kroku potřebujete Wi-Fi. Telefon ukáže šest číslic.",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "Zadejte je do oznámení TapSwitch. Tím TapSwitch získá jediné oprávnění, které potřebuje ke změně vaší výchozí bezkontaktní karty. Potom TapSwitch Bezdrátové ladění zase vypne. Na některých telefonech se aplikace jednou sama přeinstaluje. Nic se neztratí.",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "Vyberte své dvě karty",
@@ -3825,6 +3073,14 @@ if (window.TSLang) TSLang.add({
    "t": "TapSwitch není v Play Store, takže si ji můžete sami ověřit bezplatnou antivirovou kontrolou.",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>0 z 65</b> antivirů hlásí hrozbu",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "Zobrazit celou zprávu",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "Soubor",
    "en": "File"
@@ -3841,93 +3097,49 @@ if (window.TSLang) TSLang.add({
    "t": "Antivirová kontrola",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "0 z 65 antivirů hlásí hrozbu",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "Zobrazit celou zprávu",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "Zobrazit technické podrobnosti",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "SHA-256 souboru",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "Podepsáno",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
-   "t": "\"Podepsáno\" je digitální podpis autora. Každá aktualizace musí nést stejný, jinak ji telefon odmítne nainstalovat.",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "t": "“Podepsáno” je digitální podpis autora. Každá aktualizace musí nést stejný, jinak ji telefon odmítne nainstalovat.",
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "Co TapSwitch může a co ne",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "Měnit výchozí bezkontaktní kartu",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "Je to jediné nastavení telefonu, které mění, aby čtečce odpověděla správná karta.",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "Vidět, která aplikace je na obrazovce",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "Mění jen toto nastavení, aby čtečce odpověděla správná karta.",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "Díky tomu ví, kdy je otevřená Google Wallet nebo aplikace přístupové karty.",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "Zobrazení přes jiné aplikace",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "Jen pro obrácený režim na Oppu. Malé neviditelné okno, aby telefon nepozastavil TapSwitch, zatímco se otevírá aplikace přístupové karty. Stejné okno dává TapSwitch vědět, když se prst dotkne displeje, nikdy kde. Díky tomu přepne na přístupovou kartu chvilku předtím, než se aplikace otevře z nedávných aplikací. Pokud na \"Set it up\" nikdy neklepnete, TapSwitch o to nikdy nepožádá.",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "Jednou denně hledat aktualizace",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "Malé neviditelné okno, aby telefon nepozastavil TapSwitch, zatímco se otevírá aplikace přístupové karty. Stejné okno dává TapSwitch vědět, když se prst dotkne displeje, nikdy kde. Díky tomu přepne na přístupovou kartu chvilku předtím, než se tato aplikace otevře z nedávných aplikací. Na Oppu se toto oprávnění může zapnout už při nastavení. TapSwitch ho používá jen v obráceném režimu.",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "Nemá žádný účet, do kterého byste se přihlašovali.",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "Nikdy nevidí vaše karty",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "Nemůže číst čísla karet, platby ani záznamy o vstupech. Jen vybírá, která aplikace odpoví.",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "Důležité informace",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "Časté dotazy k TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "Je vyvíjená a denně používaná na <b>Oppo s ColorOS</b>. Měla by fungovat na každém telefonu s Androidem 16 a novějším, jiné ale zatím vyzkoušené nejsou.",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "Vyzkoušejte ji 14 dní zdarma na vlastním telefonu. Když vám nebude vyhovovat, smažte ji. Nic nedlužíte.",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "Po skončení zkušební doby TapSwitch přestane přepínat a telefon se vrátí do původního stavu.",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "Přestala vám po nastavení Google Wallet fungovat přístupová karta? <a href=\"/help/\">Přečtěte si časté dotazy</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "Vyzkoušejte ji 14 dní zdarma na vlastním telefonu.<span>Když vám nebude vyhovovat, smažte ji a nic nedlužíte. <a href=\"#price\">Zpět ke stažení</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "Zpět ke stažení",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "Už jste zkusili FloatAway?",
@@ -3937,13 +3149,9 @@ if (window.TSLang) TSLang.add({
    "t": "Víte, že na Oppo se aplikace ze Smart Sidebar mohou otevírat rovnou přes celou obrazovku?",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "Normálně se aplikace spustí v malém plovoucím okně a vy je musíte zvětšit. FloatAway je rovnou otevře přes celou obrazovku, i klonované aplikace. Umí také přidat složky do postranního panelu, což telefon sám od sebe neumí. 14 dní zdarma.",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "Prohlédnout FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "Aplikace z postranního panelu se normálně spouštějí v malém okně. FloatAway je rovnou otevře přes celou obrazovku, i klonované aplikace. Přidá také složky do postranního panelu, což telefon sám neumí. 14 dní zdarma.",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "Vytvořil jeden člověk kvůli jednomu otravnému problému. Napište mi: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -3953,10 +3161,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">Časté dotazy: přístupová karta a Google Wallet na Androidu</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "Od autora TapSwitch také: <a href=\"/floataway/\">FloatAway, aplikace ze Smart Sidebar přes celou obrazovku</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch není nijak spojena se společnostmi Google ani Oppo.",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -3965,121 +3169,53 @@ if (window.TSLang) TSLang.add({
    "t": "Zavřít",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch, zpět nahoru",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "Ukázkové video TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "Která karta je výchozí",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "Dveře se otevírají",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "Telefon. Šipkou vlevo ho přiložíte ke čtečce u dveří, šipkou vpravo k platebnímu terminálu.",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "Zpět na domovskou obrazovku",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "Zaplaceno",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "Přehrát video",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "Přístup na doživotí",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "Co řekl zákazník",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "Funguje na Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "Přístup",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "Přístup na doživotí",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "SHA-256 souboru",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "Výchozí je vaše přístupová karta. Google Wallet převezme jen tehdy, když je otevřená.",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "Podepsáno",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Výchozí je Google Wallet. Přístupová karta převezme jen tehdy, když je otevřená její aplikace.",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "Měnit výchozí bezkontaktní kartu",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "Nejdřív otevřete Google Wallet",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "Vidět, která aplikace je na obrazovce",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "Nejdřív zavřete Google Wallet",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "Jen obrácený režim na Oppu: Zobrazení přes jiné aplikace",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "Nejdřív otevřete aplikaci přístupové karty",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "Jednou denně hledat aktualizace",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "Nejdřív zavřete aplikaci přístupové karty",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "Nikdy nevidí vaše karty",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "Chcete otevřít dveře? Stačí přiložit telefon.",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "Chcete něco zaplatit? Stačí otevřít aplikaci Wallet a přiložit telefon.",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "Chcete něco zaplatit? Stačí přiložit telefon.",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "Chcete otevřít dveře? Stačí otevřít aplikaci Přístup a přiložit telefon.",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "Přístupová karta",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "Kancelář",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "Přiložte telefon ke čtečce přístupových karet",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "Přiložte telefon k platebnímu terminálu",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "Přepnout na tmavý režim",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "Přepnout na světlý režim",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "Zobrazit všechny dotazy ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "Samotná aplikace je anglicky.",
@@ -4095,105 +3231,97 @@ if (window.TSLang) TSLang.add({
    "t": "Подробнее о FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "Ещё от нас: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "Частые вопросы",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "Пользуйтесь <span class=\"g\">пропуском на Oppo</span> и <span class=\"b\">Google Wallet</span>, когда нужно. <br><span class=\"m\">Без походов в Настройки.</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "Скачать TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "Обычный режим",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "Пользуйтесь <span class=\"g\">пропуском</span> и <span class=\"b\">Google Wallet</span>, когда нужно.",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "Обратный режим",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "14 дней бесплатно, потом одна цена за доступ навсегда",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "Считыватель пропусков",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "Регистрация не нужна.",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "Потяните телефон, чтобы попробовать",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "Отсчёт 14 дней начинается, когда приложение заработает на вашем телефоне, а не с момента скачивания. Работают все функции.",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "Поднесите к считывателю",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>Возвратов нет.</b> Сначала вы 14 дней пробуете бесплатно, поэтому код вернуть нельзя.",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "Платёжный терминал",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "В приложении нажмите «Get the full version», затем «Buy now». Оплатите в браузере. Код появится на экране и придёт вам на почту.",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "Потяните телефон влево или вправо к считывателю.",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "На каких телефонах работает",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "14 дней бесплатно, потом одна цена за <span class=\"lt-green\">доступ навсегда</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "Телефоны Oppo и OnePlus с ColorOS на Android 16 и новее.",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "Один платёж, регистрация не нужна.",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "Приложение создано на ColorOS, и я пользуюсь им каждый день. На других телефонах с Android 16 и новее оно должно работать, но их пока не проверяли. Бесплатный пробный период покажет, работает ли оно на вашем телефоне.",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>Попробуйте бесплатно 14 дней.</strong> Отсчёт идёт не с момента скачивания, а с первого запуска, когда приложение заработает на вашем телефоне. В пробный период доступны все функции.",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>Возвратов нет.</strong> За 14 бесплатных дней вы успеете убедиться, что всё работает на вашем телефоне, ещё до оплаты. Поэтому выданный код вернуть нельзя.",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>Покупка прямо в приложении.</strong> Нажмите «Get the full version», затем «Buy now» и оплатите в браузере. Код разблокировки сразу появится на экране, а копия придёт вам на почту.",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "Когда пробный период закончится, переключение прекратится, и телефон вернётся к прежним настройкам.",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "один раз",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>Платите один раз, и всё.</strong>Ни подписки, ни ежемесячных платежей, никогда.",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>Платите один раз, и всё.</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>Все обновления бесплатны.</strong>Новые версии и исправления ничего вам не стоят.",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>Все обновления бесплатны.</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>Навсегда на этом телефоне.</strong>Один платёж покрывает телефон, на котором вы купили приложение, пока вы им пользуетесь.",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "Скачать TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>Навсегда на этом телефоне.</b>Покупка действует на телефоне, на котором вы её сделали, пока вы им пользуетесь.",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "Все версии на GitHub",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "Нужен Android 16 или новее. Телефон покажет предупреждение: файл скачан не из Play Store, это нормально. <a href=\"#careful\">Как убедиться, что он безопасен</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "Нужен Android 16 или новее. Телефон покажет предупреждение: файл скачан не из Play Store, это нормально. <a href=\"#safe\">Как убедиться, что он безопасен</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "Что нового в версии",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "Что нового",
+   "en": "What’s new"
   },
   "wn.lead": {
    "t": "Больше никаких окон «Сделать картой по умолчанию» от приложения Access Card на Oppo.",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "В обратном режиме откройте пропуск при погасшем экране, и он сразу готов, без всплывающего окна.",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "Нажмите «Set it up» на новой карточке на главном экране и один раз пройдите сопряжение. После этого окно больше не появляется, даже когда вы пользуетесь телефоном.",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "Нажмите «Set it up» на новой карточке на главном экране приложения и ещё раз пройдите шаг с отладкой по Wi-Fi и шестью цифрами. После этого всплывающее окно не появляется, даже когда вы пользуетесь телефоном.",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "Обычный режим работает как раньше.",
@@ -4202,6 +3330,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "Уже пользуетесь? Настройки и код разблокировки сохранятся. Лишний шаг нужен только в обратном режиме на Oppo.",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "Два режима",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "Обычный режим",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "Пропуск работает по умолчанию. Google Wallet включается, только пока он открыт.",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "Пропуск",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "Поднесите к считывателю",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "Обратный режим",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Google Wallet работает по умолчанию. Пропуск включается, только пока открыто его приложение.",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "Откуда наши покупатели",
@@ -4218,18 +3378,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "На каких телефонах работает",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "Телефоны Oppo с ColorOS на Android 16 и новее.",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "Приложение создано на Oppo с ColorOS, и я пользуюсь им каждый день. Оно должно работать на любом телефоне с Android 16 и новее, но на других моделях его пока не проверяли. 14 бесплатных дней как раз и нужны, чтобы узнать, работает ли оно на вашем.",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "Настройка занимает около пяти минут",
@@ -4253,15 +3401,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "Нажмите на номер версии телефона семь раз. TapSwitch откроет нужный экран и подскажет, какую строку нажать.",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "Включите отладку по Wi-Fi на минуту",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "Для этого шага нужен Wi-Fi. Включите отладку по Wi-Fi и введите шесть цифр, которые TapSwitch покажет в уведомлении. Так TapSwitch получит единственное разрешение, которое ему нужно, чтобы менять карту по умолчанию для NFC. Когда всё готово, он сам выключит отладку по Wi-Fi. На некоторых телефонах приложение после этого один раз переустановится, при этом ничего не пропадёт.",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "Для этого шага нужен Wi-Fi. Телефон покажет шесть цифр.",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "Введите их в уведомлении TapSwitch. Так TapSwitch получит единственное разрешение, которое ему нужно, чтобы менять карту по умолчанию для NFC. Затем TapSwitch сам выключит отладку по Wi-Fi. На некоторых телефонах приложение один раз переустановится. Ничего не пропадёт.",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "Выберите две карты",
@@ -4279,6 +3431,14 @@ if (window.TSLang) TSLang.add({
    "t": "TapSwitch нет в Play Store, поэтому вы можете сами проверить его бесплатной проверкой на вирусы.",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>0 из 65</b> антивирусов нашли угрозу",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "Открыть полный отчёт",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "Файл",
    "en": "File"
@@ -4295,93 +3455,49 @@ if (window.TSLang) TSLang.add({
    "t": "Проверка на вирусы",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "0 из 65 антивирусов нашли угрозу",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "Открыть полный отчёт",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "Показать технические данные",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "SHA-256 файла",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "Подписано",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
    "t": "«Подписано» означает цифровую подпись разработчика. У каждого обновления она должна быть той же самой, иначе телефон откажется его устанавливать.",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "Что TapSwitch может и чего не может",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "Менять карту по умолчанию для NFC",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "Это единственная настройка телефона, которую он меняет, чтобы считывателю отвечала нужная карта.",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "Видеть, какое приложение на экране",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "Он меняет только эту настройку, чтобы считывателю отвечала нужная карта.",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "Чтобы знать, когда открыт Google Wallet или приложение пропуска.",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "Поверх других приложений",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "Только для обратного режима на Oppo. Крошечное невидимое окно, чтобы телефон не приостанавливал TapSwitch, пока открывается приложение пропуска. Это же окно сообщает TapSwitch, что палец коснулся экрана, но никогда не сообщает где. Так приложение успевает переключиться на пропуск за мгновение до того, как он откроется из списка недавних приложений. Если вы никогда не нажмёте «Set it up», TapSwitch никогда не попросит это разрешение.",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "Раз в день проверять обновления",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "Крошечное невидимое окно, чтобы телефон не приостанавливал TapSwitch, пока открывается приложение пропуска. Это же окно сообщает TapSwitch, что палец коснулся экрана, но никогда не сообщает где. Так TapSwitch успевает переключиться на пропуск за мгновение до того, как приложение пропуска откроется из недавних приложений. На Oppo это разрешение может включиться при настройке. TapSwitch использует его только в обратном режиме.",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "Учётной записи нет, входить никуда не нужно.",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "Никогда не видит ваших карт",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "Он не может читать номера карт, платежи или историю открытия дверей. Он только выбирает, какое приложение ответит.",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "Важно знать",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "Частые вопросы о TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "Приложение создано на <b>Oppo ColorOS</b>, и я пользуюсь им каждый день. Оно должно работать на любом телефоне с Android 16 и новее, но на других моделях его пока не проверяли.",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "Попробуйте 14 дней бесплатно на своём телефоне. Не подойдёт, просто удалите. Вы ничего не должны.",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "Когда пробный период закончится, TapSwitch перестанет переключать карты, и телефон вернётся к прежним настройкам.",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "Пропуск перестал работать после настройки Google Wallet? <a href=\"/help/\">Ответы на частые вопросы</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "Попробуйте 14 дней бесплатно на своём телефоне.<span>Не подойдёт, просто удалите, и вы ничего не должны. <a href=\"#price\">Назад к скачиванию</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "Назад к скачиванию",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "Уже пробовали FloatAway?",
@@ -4391,13 +3507,9 @@ if (window.TSLang) TSLang.add({
    "t": "А вы знали, что на Oppo приложения из Smart Sidebar могут открываться сразу на весь экран?",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "Обычно приложения запускаются в маленьком плавающем окне, и их приходится разворачивать. FloatAway сразу открывает их на весь экран, клоны приложений тоже. А ещё FloatAway умеет добавлять папки на боковую панель, чего телефон сам по себе не умеет. 14 дней бесплатно.",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "Подробнее о FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "Обычно приложения с боковой панели запускаются в маленьком окне. FloatAway сразу открывает их на весь экран, клоны приложений тоже. А ещё он добавляет папки на боковую панель, чего телефон сам не умеет. 14 дней бесплатно.",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "Сделано одним человеком ради одной надоедливой проблемы. Пишите мне: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -4407,10 +3519,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">Частые вопросы: пропуск и Google Wallet на Android</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "Ещё от создателя TapSwitch: <a href=\"/floataway/\">FloatAway, приложения из Smart Sidebar на весь экран</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch не связан с Google или Oppo.",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -4419,121 +3527,53 @@ if (window.TSLang) TSLang.add({
    "t": "Закрыть",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch, наверх",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "Демо-видео TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "Какая карта по умолчанию",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "Дверь открыта",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "Телефон. Нажмите стрелку влево, чтобы приложить его к считывателю пропусков, или стрелку вправо, чтобы приложить к платёжному терминалу.",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "На главный экран",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "Оплачено",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "Воспроизвести видео",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "Доступ навсегда",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "Отзыв покупателя",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "Работает на Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "Пропуск",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "Доступ навсегда",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "SHA-256 файла",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "Пропуск работает по умолчанию. Google Wallet включается, только пока он открыт.",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "Подписано",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Google Wallet работает по умолчанию. Пропуск включается, только пока открыто его приложение.",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "Менять карту по умолчанию для NFC",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "Сначала откройте Google Wallet",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "Видеть, какое приложение на экране",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "Сначала закройте Google Wallet",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "Только для обратного режима на Oppo: поверх других приложений",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "Сначала откройте приложение пропуска",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "Раз в день проверять обновления",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "Сначала закройте приложение пропуска",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "Никогда не видит ваших карт",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "Нужно открыть дверь? Просто приложите телефон.",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "Нужно заплатить? Откройте Wallet и приложите телефон.",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "Нужно заплатить? Просто приложите телефон.",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "Нужно открыть дверь? Откройте приложение «Пропуск» и приложите телефон.",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "Пропуск",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "Офис",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "Приложите телефон к считывателю пропусков",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "Приложите телефон к платёжному терминалу",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "Включить тёмную тему",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "Включить светлую тему",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "Ответы на частые вопросы ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "Само приложение работает на английском.",
@@ -4549,105 +3589,97 @@ if (window.TSLang) TSLang.add({
    "t": "تعرّف على FloatAway ›",
    "en": "See FloatAway ›"
   },
+  "n.also-from-us-floataway.5keiwv": {
+   "t": "ومن تطبيقاتنا أيضًا: <b>FloatAway</b> ›",
+   "en": "Also from us: <b>FloatAway</b> ›"
+  },
   "bar.help": {
    "t": "الأسئلة الشائعة",
    "en": "Questions"
   },
-  "hero.h1": {
-   "t": "استخدم <span class=\"g\">بطاقة الدخول على Oppo</span> و<span class=\"b\">Google Wallet</span> حسب حاجتك. <br><span class=\"m\">دون الرجوع إلى الإعدادات.</span>",
-   "en": "Use your <span class=\"g\">Oppo Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them. <br><span class=\"m\">No more trips to Settings.</span>"
+  "cta.download": {
+   "t": "تنزيل TapSwitch",
+   "en": "Download TapSwitch"
   },
-  "demo.normal": {
-   "t": "الوضع العادي",
-   "en": "Normal mode"
+  "n.use-your-access-card-a.18grjp0": {
+   "t": "استخدم <span class=\"g\">بطاقة الدخول</span> و<span class=\"b\">Google Wallet</span> حسب حاجتك.",
+   "en": "Use your <span class=\"g\">Access Card</span> and <span class=\"b\">Google Wallet</span> as you need them."
   },
-  "demo.reverse": {
-   "t": "الوضع العكسي",
-   "en": "Reverse mode"
+  "n.free-for-14-days-then.1r95hti": {
+   "t": "مجاني لمدة 14 يومًا، وبعدها سعر واحد مقابل استخدام مدى الحياة",
+   "en": "Free for 14 days, then one price for lifetime access"
   },
-  "demo.door.label": {
-   "t": "قارئ بطاقة الدخول",
-   "en": "Access Card Reader"
+  "n.no-account-needed.19t63jc": {
+   "t": "لا تحتاج إلى حساب.",
+   "en": "No account needed."
   },
-  "demo.invite": {
-   "t": "اسحب الهاتف لتجربه",
-   "en": "Drag the phone to try it"
+  "n.the-14-days-start-once.cwqh7i": {
+   "t": "تبدأ الأيام الـ14 عندما يعمل التطبيق على هاتفك، وليس من لحظة التنزيل. وكل الميزات متاحة.",
+   "en": "The 14 days start once the app works on your phone, not at download. All features work."
   },
-  "demo.hold": {
-   "t": "قرّبه من القارئ",
-   "en": "Hold near reader"
+  "n.no-refunds-you-try-it.azqop1": {
+   "t": "<b>لا يوجد استرداد للمبلغ.</b> تجرّبه مجانًا لمدة 14 يومًا أولًا، ولهذا لا يمكن استرداد ثمن الرمز.",
+   "en": "<b>No refunds.</b> You try it free for 14 days first, so a code cannot be refunded."
   },
-  "demo.till.label": {
-   "t": "جهاز الدفع",
-   "en": "Payment Terminal"
+  "n.in-the-app-tap-get-the.1i6ygo6": {
+   "t": "في التطبيق، اضغط «Get the full version» ثم «Buy now». ادفع من المتصفح. يظهر الرمز على شاشتك، ويصلك أيضًا على بريدك الإلكتروني.",
+   "en": "In the app, tap “Get the full version”, then “Buy now”. Pay in your browser. Your code shows on screen and comes by email."
   },
-  "demo.hint": {
-   "t": "اسحب الهاتف يمينًا أو يسارًا باتجاه القارئ.",
-   "en": "Drag the phone left or right onto a reader."
+  "phones.h2": {
+   "t": "على أي هواتف يعمل",
+   "en": "Which phones it works on"
   },
-  "price.h2": {
-   "t": "مجاني لمدة 14 يومًا، وبعدها سعر واحد مقابل <span class=\"lt-green\">استخدام مدى الحياة</span>",
-   "en": "Free for 14 days, then one price for <span class=\"lt-green\">lifetime access</span>"
+  "n.oppo-and-oneplus-color.kjw2pg": {
+   "t": "هواتف Oppo وOnePlus بنظام ColorOS مع Android 16 أو أحدث.",
+   "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "price.amountNote": {
-   "t": "دفعة واحدة، ولا تحتاج إلى حساب.",
-   "en": "One payment, and no account needed."
+  "n.built-and-used-daily-o.1j5jel8": {
+   "t": "تم تطويره على ColorOS ويُستخدم عليه يوميًا. من المفترض أن يعمل على الهواتف الأخرى بنظام Android 16 أو أحدث، لكنها لم تُجرَّب بعد. والتجربة المجانية تُظهر لك إن كان يعمل على هاتفك.",
+   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
-  "price.pp1": {
-   "t": "<strong>جرّبه مجانًا لمدة 14 يومًا.</strong> تبدأ المدة من أول مرة يعمل فيها التطبيق على هاتفك، وليس من لحظة التنزيل. وكل الميزات متاحة خلال التجربة.",
-   "en": "<strong>Try it free for 14 days.</strong> The clock starts when the app first works\n              on your phone, not when you download it. Every feature works during the trial."
-  },
-  "price.pp2": {
-   "t": "<strong>لا يوجد استرداد للمبلغ.</strong> الأيام الـ14 المجانية تتيح لك أن ترى التطبيق يعمل على هاتفك قبل أن تدفع، ولهذا لا يمكن استرداد ثمن الرمز بعد إصداره.",
-   "en": "<strong>There are no refunds.</strong> The free 14 days let you see it work\n              on your own phone before you pay, so a code cannot be refunded once it is issued."
-  },
-  "price.pp3": {
-   "t": "<strong>اشترِ من داخل التطبيق.</strong> اضغط على \"Get the full version\" ثم \"Buy now\" وأكمل الدفع من المتصفح. يظهر رمز التفعيل على شاشتك فورًا، ونرسل لك نسخة منه على بريدك الإلكتروني.",
-   "en": "<strong>Buy it inside the app.</strong> Tap \"Get the full version\", then \"Buy now\" to pay in your browser.\n              Your unlock code appears on screen straight away, and a copy is emailed to you."
+  "n.when-the-trial-ends-sw.1qi25gv": {
+   "t": "عند انتهاء فترة التجربة، يتوقف التبديل ويعود هاتفك كما كان.",
+   "en": "When the trial ends, switching stops and your phone goes back to how it was."
   },
   "lt.once": {
    "t": "مرة واحدة",
    "en": "once"
   },
-  "lt.li1": {
-   "t": "<strong>تدفع مرة واحدة فقط.</strong>بلا اشتراك وبلا رسوم شهرية، أبدًا.",
-   "en": "<strong>Pay once, never again.</strong>No subscription and no monthly fee, ever."
+  "n.pay-once-never-again.1e1dxx": {
+   "t": "<b>تدفع مرة واحدة فقط.</b>",
+   "en": "<b>Pay once, never again.</b>"
   },
-  "lt.li2": {
-   "t": "<strong>كل التحديثات القادمة مجانية.</strong>الإصدارات الجديدة والإصلاحات بدون أي تكلفة عليك.",
-   "en": "<strong>Every future update is free.</strong>New versions and fixes cost you nothing."
+  "n.every-future-update-is.1fjslkb": {
+   "t": "<b>كل التحديثات القادمة مجانية.</b>",
+   "en": "<b>Every future update is free.</b>"
   },
-  "lt.li3": {
-   "t": "<strong>يبقى لك على هذا الهاتف.</strong>الدفعة الواحدة تغطي الهاتف الذي اشتريته عليه، طالما بقيت تستخدمه.",
-   "en": "<strong>Yours for good on that phone.</strong>One payment covers the phone you buy it on, for as long as you use it."
-  },
-  "cta.download": {
-   "t": "تنزيل TapSwitch",
-   "en": "Download TapSwitch"
+  "n.yours-for-good-on-that.stss27": {
+   "t": "<b>يبقى لك على هذا الهاتف.</b>يغطي الهاتف الذي اشتريته عليه، طالما بقيت تستخدمه.",
+   "en": "<b>Yours for good on that phone.</b>It covers the phone you buy it on, for as long as you use it."
   },
   "cta.all": {
    "t": "كل الإصدارات على GitHub",
    "en": "All versions on GitHub"
   },
   "cta.note": {
-   "t": "يتطلب Android 16 أو أحدث. سيعرض الهاتف تحذيرًا لأن الملف ليس من Play Store، وهذا أمر عادي. <a href=\"#careful\">كيف تتأكد أنه آمن</a>",
-   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#careful\">How to check it is safe</a>"
+   "t": "يتطلب Android 16 أو أحدث. سيعرض الهاتف تحذيرًا لأن الملف ليس من Play Store، وهذا أمر عادي. <a href=\"#safe\">كيف تتأكد أنه آمن</a>",
+   "en": "Needs Android 16 or newer. Your phone will show a warning because the file is not from the Play Store, which is normal. <a href=\"#safe\">How to check it is safe</a>"
   },
-  "wn.h3": {
-   "t": "الجديد في الإصدار",
-   "en": "What's new in"
+  "n.what-s-new.2j3iur": {
+   "t": "ما الجديد",
+   "en": "What’s new"
   },
   "wn.lead": {
-   "t": "لا مزيد من نافذة \"تعيين كافتراضي\" من تطبيق Access Card في Oppo.",
-   "en": "No more \"Set as default\" pop-up from Oppo's Access Card app."
+   "t": "لا مزيد من نافذة “تعيين كافتراضي” من تطبيق Access Card في Oppo.",
+   "en": "No more “Set as default” pop-up from Oppo’s Access Card app."
   },
   "wn.li1": {
    "t": "في الوضع العكسي، افتح بطاقة الدخول والشاشة مطفأة وستكون جاهزة فورًا، بلا نافذة منبثقة.",
    "en": "In Reverse mode, open your access card from a dark screen and it is ready, with no pop-up."
   },
-  "wn.li2": {
-   "t": "اضغط \"Set it up\" على البطاقة الجديدة في الشاشة الرئيسية وأكمل خطوة الاقتران مرة واحدة. بعدها لن تظهر النافذة مجددًا، حتى وأنت تستخدم الهاتف.",
-   "en": "Tap \"Set it up\" on the new home screen card and do the pairing step once. The pop-up then stays away when your phone is awake too."
+  "n.tap-set-it-up-on-the-n.150hugd": {
+   "t": "اضغط «Set it up» على البطاقة الجديدة في الشاشة الرئيسية للتطبيق، وأعد خطوة تصحيح الأخطاء اللاسلكي ذات الأرقام الستة مرة واحدة. بعدها لن تظهر النافذة المنبثقة، حتى وأنت تستخدم الهاتف.",
+   "en": "Tap “Set it up” on the new home screen card and redo the six-digit Wireless debugging step once. The pop-up then stays away when your phone is awake too."
   },
   "wn.li3": {
    "t": "الوضع العادي يعمل كما كان.",
@@ -4656,6 +3688,38 @@ if (window.TSLang) TSLang.add({
   "wn.carry": {
    "t": "هل تستخدمه بالفعل؟ إعداداتك ورمز التفعيل يبقيان كما هما. الوضع العكسي على Oppo وحده يحتاج هذه الخطوة الإضافية.",
    "en": "Already using it? Your setup and unlock code carry over. Only Reverse mode on Oppo asks for the one extra step."
+  },
+  "n.two-modes.1kor0cl": {
+   "t": "وضعان",
+   "en": "Two modes"
+  },
+  "demo.normal": {
+   "t": "الوضع العادي",
+   "en": "Normal mode"
+  },
+  "mode.normal": {
+   "t": "بطاقة الدخول هي الافتراضية، ويحلّ Google Wallet محلّها فقط أثناء فتحه.",
+   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  },
+  "app.access.title": {
+   "t": "بطاقة الدخول",
+   "en": "Access card"
+  },
+  "demo.hold": {
+   "t": "قرّبه من القارئ",
+   "en": "Hold near reader"
+  },
+  "demo.reverse": {
+   "t": "الوضع العكسي",
+   "en": "Reverse mode"
+  },
+  "mode.reverse": {
+   "t": "Google Wallet هو الافتراضي، وتحلّ بطاقة الدخول محلّه فقط أثناء فتح تطبيقها.",
+   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  },
+  "app.wallet.title": {
+   "t": "Google Wallet",
+   "en": "Google Wallet"
   },
   "cm.h2": {
    "t": "من أين يأتي عملاؤنا",
@@ -4672,18 +3736,6 @@ if (window.TSLang) TSLang.add({
   "said.quote2": {
    "t": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access.",
    "en": "With TapSwitch, it really feels like we can use a single app to manage both payment and door access."
-  },
-  "phones.h2": {
-   "t": "على أي هواتف يعمل",
-   "en": "Which phones it works on"
-  },
-  "phones.sub": {
-   "t": "هواتف Oppo بنظام ColorOS مع Android 16 أو أحدث.",
-   "en": "Oppo ColorOS phones with Android 16 or newer."
-  },
-  "phones.p": {
-   "t": "تم تطويره على ColorOS من Oppo ويُستخدم عليه يوميًا. من المفترض أن يعمل على أي هاتف بنظام Android 16 أو أحدث، لكن لم تتم تجربته على هواتف أخرى حتى الآن. وفترة التجربة المجانية لمدة 14 يومًا هي طريقتك لتعرف إن كان يعمل على هاتفك.",
-   "en": "It is built and used daily on Oppo ColorOS. It should work on any phone with Android 16 or newer, but no others have been tested yet. The 14-day free trial is how you find out if it works on yours."
   },
   "setup.h2": {
    "t": "الإعداد يستغرق نحو خمس دقائق",
@@ -4707,15 +3759,19 @@ if (window.TSLang) TSLang.add({
   },
   "setup.s2.p": {
    "t": "اضغط على رقم إصدار هاتفك سبع مرات. يفتح TapSwitch الشاشة الصحيحة ويخبرك بالسطر الذي تضغط عليه.",
-   "en": "You tap your phone's version number seven times. TapSwitch opens the right screen and tells you which row to tap."
+   "en": "You tap your phone’s version number seven times. TapSwitch opens the right screen and tells you which row to tap."
   },
   "setup.s3.h": {
    "t": "شغّل تصحيح الأخطاء اللاسلكي لدقيقة",
    "en": "Turn on Wireless debugging for a minute"
   },
-  "setup.s3.p": {
-   "t": "تحتاج إلى Wi-Fi في هذه الخطوة. شغّل تصحيح الأخطاء اللاسلكي، ثم اكتب الأرقام الستة التي يعرضها لك TapSwitch في إشعار. بهذا يمنح TapSwitch نفسه الإذن الوحيد الذي يحتاجه لتغيير بطاقة NFC الافتراضية. وعندما ينتهي، يطفئ تصحيح الأخطاء اللاسلكي بنفسه. في بعض الهواتف يعيد التطبيق تثبيت نفسه مرة واحدة بعد ذلك، ولا يضيع أي شيء.",
-   "en": "You need Wi-Fi for this step. Turn on Wireless debugging, then type the six digits TapSwitch shows you in a notification. This lets TapSwitch give itself the one permission it needs to change your tap card. It switches Wireless debugging back off when it is done. On some phones the app then reinstalls itself once; nothing is lost."
+  "n.you-need-wi-fi-for-thi.ye7164": {
+   "t": "تحتاج إلى Wi-Fi في هذه الخطوة. يعرض هاتفك ستة أرقام.",
+   "en": "You need Wi-Fi for this step. Your phone shows six digits."
+  },
+  "n.type-them-into-the-tap.ktzygd": {
+   "t": "اكتبها في إشعار TapSwitch. بهذا يحصل TapSwitch على الإذن الوحيد الذي يحتاجه لتغيير بطاقة NFC الافتراضية. ثم يطفئ TapSwitch تصحيح الأخطاء اللاسلكي. في بعض الهواتف يعيد التطبيق تثبيت نفسه مرة واحدة، ولا يضيع أي شيء.",
+   "en": "Type them into the TapSwitch notification. This gives TapSwitch the one permission it needs to change your tap card. TapSwitch then turns Wireless debugging off. On some phones the app reinstalls itself once. Nothing is lost."
   },
   "setup.s4.h": {
    "t": "اختر بطاقتيك",
@@ -4733,6 +3789,14 @@ if (window.TSLang) TSLang.add({
    "t": "TapSwitch غير موجود على Play Store، لذلك يمكنك أن تفحصه بنفسك بفحص فيروسات مجاني.",
    "en": "TapSwitch is not on the Play Store, so you can check it yourself with a free virus scan."
   },
+  "facts.scanResult": {
+   "t": "<b>0 من 65</b> برنامج مكافحة فيروسات يعتبره خطرًا",
+   "en": "<b>0 of 65</b> virus checkers flag it"
+  },
+  "facts.report": {
+   "t": "اطّلع على التقرير الكامل",
+   "en": "See the full report"
+  },
   "facts.file": {
    "t": "الملف",
    "en": "File"
@@ -4749,93 +3813,49 @@ if (window.TSLang) TSLang.add({
    "t": "فحص الفيروسات",
    "en": "Virus scan"
   },
-  "facts.scanResult": {
-   "t": "0 من 65 برنامج مكافحة فيروسات يعتبره خطرًا",
-   "en": "0 of 65 virus checkers flag it"
-  },
-  "facts.report": {
-   "t": "اطّلع على التقرير الكامل",
-   "en": "See the full report"
-  },
   "facts.tech": {
    "t": "عرض التفاصيل التقنية",
    "en": "Show technical details"
   },
-  "facts.sha": {
-   "t": "بصمة SHA-256 للملف",
-   "en": "SHA-256 of the file"
-  },
-  "facts.signed": {
-   "t": "موقّع من",
-   "en": "Signed by"
-  },
   "facts.sigNote": {
-   "t": "\"موقّع من\" هو التوقيع الرقمي للمطوّر. يجب أن يحمل كل تحديث التوقيع نفسه، وإلا يرفض هاتفك تثبيته.",
-   "en": "Signed by is the maker's digital signature. Every update must carry the same one, or your phone refuses to install it."
+   "t": "“موقّع من” هو التوقيع الرقمي للمطوّر. يجب أن يحمل كل تحديث التوقيع نفسه، وإلا يرفض هاتفك تثبيته.",
+   "en": "Signed by is the maker’s digital signature. Every update must carry the same one, or your phone refuses to install it."
   },
   "perms.h3": {
    "t": "ما يستطيع TapSwitch فعله وما لا يستطيع",
    "en": "What TapSwitch can and cannot do"
   },
-  "perms.1.t": {
-   "t": "تغيير بطاقة NFC الافتراضية",
-   "en": "Change your default tap card"
-  },
-  "perms.1.d": {
-   "t": "هذا هو الإعداد الوحيد الذي يغيّره في الهاتف، حتى تستجيب البطاقة الصحيحة للقارئ.",
-   "en": "This is the only phone setting it changes, so the right card answers the reader."
-  },
-  "perms.2.t": {
-   "t": "معرفة التطبيق الظاهر على الشاشة",
-   "en": "See which app is on screen"
+  "n.it-changes-only-this-s.52hflx": {
+   "t": "لا يغيّر سوى هذا الإعداد، حتى تستجيب البطاقة الصحيحة للقارئ.",
+   "en": "It changes only this setting, so the right card answers the reader."
   },
   "perms.2.d": {
    "t": "حتى يعرف متى يكون Google Wallet أو تطبيق بطاقة الدخول مفتوحًا.",
    "en": "So it knows when Google Wallet or your access card app is open."
   },
-  "perms.5.t": {
-   "t": "الظهور فوق التطبيقات الأخرى",
-   "en": "Display over other apps"
-  },
-  "perms.5.d": {
-   "t": "للوضع العكسي على Oppo فقط. نافذة صغيرة غير مرئية، حتى لا يوقف الهاتف TapSwitch مؤقتًا بينما يُفتح تطبيق بطاقة الدخول. وتخبر النافذة نفسها TapSwitch عندما يلمس إصبع الشاشة، دون أن تخبره أين. بهذا يتحول إلى بطاقة الدخول قبل لحظة من فتح التطبيق من قائمة التطبيقات الأخيرة. إذا لم تضغط \"Set it up\" أبدًا، فلن يطلب TapSwitch هذا الإذن.",
-   "en": "Reverse mode on Oppo only. A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. If you never tap \"Set it up\", TapSwitch never asks for it."
-  },
-  "perms.3.t": {
-   "t": "البحث عن تحديثات مرة واحدة يوميًا",
-   "en": "Check for updates once a day"
+  "n.a-tiny-invisible-windo.1iggqu3": {
+   "t": "نافذة صغيرة غير مرئية، حتى لا يوقف الهاتف TapSwitch مؤقتًا بينما يُفتح تطبيق بطاقة الدخول. وتخبر النافذة نفسها TapSwitch عندما يلمس إصبع الشاشة، دون أن تخبره أين. بهذا يتحول إلى بطاقة الدخول قبل لحظة من فتح تطبيقها من قائمة التطبيقات الأخيرة. على هواتف Oppo، قد تفعّلها خطوات الإعداد. ولا يستخدمها TapSwitch إلا في الوضع العكسي.",
+   "en": "A tiny invisible window, so your phone does not pause TapSwitch while your door app opens. The same window tells TapSwitch when a finger touches the screen, never where. That lets it switch to your door card a moment before your door app opens from Recent Apps. On Oppo, setup may switch it on. TapSwitch uses it only in Reverse mode."
   },
   "perms.3.d": {
    "t": "لا يوجد حساب لتسجيل الدخول إليه.",
    "en": "There is no account to sign in to."
   },
-  "perms.4.t": {
-   "t": "لا يرى بطاقاتك أبدًا",
-   "en": "Never sees your cards"
-  },
   "perms.4.d": {
    "t": "لا يستطيع قراءة أرقام البطاقات أو المدفوعات أو سجلات فتح الأبواب. كل ما يفعله هو اختيار التطبيق الذي يستجيب.",
    "en": "It cannot read card numbers, payments or door logs. It only picks which app answers."
   },
-  "limits.h3": {
-   "t": "معلومات مهمة",
-   "en": "Important facts"
+  "n.frequently-asked-quest.196di7t": {
+   "t": "الأسئلة الشائعة عن TapSwitch",
+   "en": "Frequently asked questions about TapSwitch"
   },
-  "limits.1": {
-   "t": "تم تطويره على <b>Oppo ColorOS</b> ويُستخدم عليه يوميًا. من المفترض أن يعمل على أي هاتف بنظام Android 16 أو أحدث، لكن لم تتم تجربته على هواتف أخرى حتى الآن.",
-   "en": "It is built and used daily on <b>Oppo ColorOS</b>. It should work on any phone with Android 16 or newer, but no others have been tested yet."
+  "n.try-it-free-on-your-ow.1gacaq5": {
+   "t": "جرّبه على هاتفك مجانًا لمدة 14 يومًا. إن لم يناسبك، احذفه. لن تدفع شيئًا.",
+   "en": "Try it free on your own phone for 14 days. If it does not suit you, delete it. You owe nothing."
   },
-  "limits.2": {
-   "t": "بعد انتهاء فترة التجربة، يتوقف TapSwitch عن التبديل ويعود هاتفك كما كان.",
-   "en": "After the trial ends, TapSwitch stops switching and your phone goes back to how it was."
-  },
-  "safe.help": {
-   "t": "توقفت بطاقة الدخول عن العمل بعد إعداد Google Wallet؟ <a href=\"/help/\">اقرأ الأسئلة الشائعة</a>",
-   "en": "Access card stopped working after you set up Google Wallet? <a href=\"/help/\">Read the common questions</a>"
-  },
-  "safe.closing": {
-   "t": "جرّبه على هاتفك مجانًا لمدة 14 يومًا.<span>إن لم يناسبك، احذفه ولن تدفع شيئًا. <a href=\"#price\">العودة إلى التنزيل</a></span>",
-   "en": "Try it on your own phone for 14 days, free.<span>If it does not suit you, delete it and you owe nothing. <a href=\"#price\">Back to the download</a></span>"
+  "n.back-to-the-download.1f56tps": {
+   "t": "العودة إلى التنزيل",
+   "en": "Back to the download"
   },
   "tried.h2": {
    "t": "هل جرّبت FloatAway؟",
@@ -4845,13 +3865,9 @@ if (window.TSLang) TSLang.add({
    "t": "هل تعلم أن التطبيقات في Smart Sidebar يمكن أن تُفتح بملء الشاشة مباشرة على هواتف Oppo؟",
    "en": "Did you know apps from the Smart Sidebar can open full screen on Oppo?"
   },
-  "tried.p": {
-   "t": "عادةً تبدأ التطبيقات في نافذة عائمة صغيرة، وعليك أن تكبّرها بنفسك. FloatAway يفتحها بملء الشاشة مباشرة، والتطبيقات المستنسخة أيضًا. كما يمكنه إضافة مجلدات إلى الشريط الجانبي، وهو أمر لا يتيحه الهاتف من تلقاء نفسه. مجاني لمدة 14 يومًا.",
-   "en": "Normally applications start in a small floating window that you have to expand. FloatAway opens them full screen straight away, cloned apps too. It can also add folders to your sidebar, something the phone does not do by default. Free for 14 days."
-  },
-  "tried.go": {
-   "t": "تعرّف على FloatAway ›",
-   "en": "See FloatAway ›"
+  "n.sidebar-apps-normally.r2bppk": {
+   "t": "تبدأ تطبيقات الشريط الجانبي عادةً في نافذة صغيرة. FloatAway يفتحها بملء الشاشة فورًا، والتطبيقات المستنسخة أيضًا. ويضيف كذلك مجلدات إلى الشريط الجانبي، وهو ما لا يفعله هاتفك. مجاني لمدة 14 يومًا.",
+   "en": "Sidebar apps normally start in a small window. FloatAway opens them full screen at once, cloned apps too. It also adds folders to your sidebar, which your phone does not do. Free for 14 days."
   },
   "foot.made": {
    "t": "صنعه شخص واحد، لحل مشكلة واحدة مزعجة. تواصل معي: <a class=\"mail\" href=\"mailto:hello@tapswitch.fyi\">hello@tapswitch.fyi</a>",
@@ -4861,10 +3877,6 @@ if (window.TSLang) TSLang.add({
    "t": "<a href=\"/help/\">أسئلة شائعة: بطاقة الدخول وGoogle Wallet على Android</a>",
    "en": "<a href=\"/help/\">Common questions: access card and Google Wallet on Android</a>"
   },
-  "foot.also": {
-   "t": "ومن صانع TapSwitch أيضًا: <a href=\"/floataway/\">FloatAway، تطبيقات Smart Sidebar بملء الشاشة</a>",
-   "en": "Also from the maker of TapSwitch: <a href=\"/floataway/\">FloatAway, Smart Sidebar apps full screen</a>"
-  },
   "foot.notAffiliated": {
    "t": "TapSwitch غير تابع لشركة Google أو Oppo.",
    "en": "TapSwitch is not affiliated with Google or Oppo."
@@ -4873,121 +3885,53 @@ if (window.TSLang) TSLang.add({
    "t": "إغلاق",
    "en": "Close"
   },
-  "bar.brand": {
-   "t": "TapSwitch، العودة إلى الأعلى",
-   "en": "TapSwitch, back to the top"
+  "n.tapswitch-demo-video.ojm24u": {
+   "t": "فيديو توضيحي لـ TapSwitch",
+   "en": "TapSwitch demo video"
   },
-  "demo.switch": {
-   "t": "أي بطاقة هي الافتراضية",
-   "en": "Which card is the default"
-  },
-  "demo.door.ok": {
-   "t": "فُتح الباب",
-   "en": "Door opens"
-  },
-  "demo.phone": {
-   "t": "الهاتف. اضغط السهم الأيسر لتقرّبه من قارئ الباب، والسهم الأيمن لتقرّبه من جهاز الدفع.",
-   "en": "Phone. Press the left arrow to tap the door reader, the right arrow to tap the payment terminal."
-  },
-  "demo.back": {
-   "t": "العودة إلى الشاشة الرئيسية",
-   "en": "Back to the home screen"
-  },
-  "demo.till.ok": {
-   "t": "تم الدفع",
-   "en": "Paid"
+  "n.play-video.1abrqaw": {
+   "t": "تشغيل الفيديو",
+   "en": "Play video"
   },
   "lt.aria": {
    "t": "مدى الحياة",
    "en": "Lifetime access"
   },
-  "said.aria": {
-   "t": "رأي أحد العملاء",
-   "en": "What a customer said"
-  },
-  "hero.tag": {
-   "t": "يعمل على Oppo ColorOS 17",
-   "en": "Works on Oppo ColorOS 17"
-  },
-  "demo.app.access": {
-   "t": "الدخول",
-   "en": "Access"
-  },
   "demo.app.wallet": {
    "t": "Wallet",
    "en": "Wallet"
   },
-  "lt.badge": {
-   "t": "مدى الحياة",
-   "en": "Lifetime access"
+  "facts.sha": {
+   "t": "بصمة SHA-256 للملف",
+   "en": "SHA-256 of the file"
   },
-  "mode.normal": {
-   "t": "بطاقة الدخول هي الافتراضية، ويحلّ Google Wallet محلّها فقط أثناء فتحه.",
-   "en": "Your access card is the default. Google Wallet takes over only while it is open."
+  "facts.signed": {
+   "t": "موقّع من",
+   "en": "Signed by"
   },
-  "mode.reverse": {
-   "t": "Google Wallet هو الافتراضي، وتحلّ بطاقة الدخول محلّه فقط أثناء فتح تطبيقها.",
-   "en": "Google Wallet is the default. Your access card takes over only while it is open."
+  "perms.1.t": {
+   "t": "تغيير بطاقة NFC الافتراضية",
+   "en": "Change your default tap card"
   },
-  "fix.open.normal": {
-   "t": "افتح Google Wallet أولًا",
-   "en": "Open Google Wallet first"
+  "perms.2.t": {
+   "t": "معرفة التطبيق الظاهر على الشاشة",
+   "en": "See which app is on screen"
   },
-  "fix.close.normal": {
-   "t": "أغلق Google Wallet أولًا",
-   "en": "Close Google Wallet first"
+  "n.reverse-mode-on-oppo-o.1jtz7wj": {
+   "t": "للوضع العكسي على Oppo فقط: الظهور فوق التطبيقات الأخرى",
+   "en": "Reverse mode on Oppo only: Display over other apps"
   },
-  "fix.open.reverse": {
-   "t": "افتح تطبيق بطاقة الدخول أولًا",
-   "en": "Open your access card app first"
+  "perms.3.t": {
+   "t": "البحث عن تحديثات مرة واحدة يوميًا",
+   "en": "Check for updates once a day"
   },
-  "fix.close.reverse": {
-   "t": "أغلق تطبيق بطاقة الدخول أولًا",
-   "en": "Close your access card app first"
+  "perms.4.t": {
+   "t": "لا يرى بطاقاتك أبدًا",
+   "en": "Never sees your cards"
   },
-  "tour.normal.first": {
-   "t": "تريد فتح الباب؟ فقط قرّب الهاتف من القارئ.",
-   "en": "Trying to open the door? Just tap your phone."
-  },
-  "tour.normal.second": {
-   "t": "تريد أن تدفع؟ افتح تطبيق Wallet وقرّب الهاتف من جهاز الدفع.",
-   "en": "Paying for something? Just open the Wallet app and tap your phone."
-  },
-  "tour.reverse.first": {
-   "t": "تريد أن تدفع؟ فقط قرّب الهاتف من جهاز الدفع.",
-   "en": "Paying for something? Just tap your phone."
-  },
-  "tour.reverse.second": {
-   "t": "تريد فتح الباب؟ افتح تطبيق الدخول وقرّب الهاتف من القارئ.",
-   "en": "Trying to open the door? Just open the Access app and tap your phone."
-  },
-  "app.wallet.title": {
-   "t": "Google Wallet",
-   "en": "Google Wallet"
-  },
-  "app.access.title": {
-   "t": "بطاقة الدخول",
-   "en": "Access card"
-  },
-  "app.access.card": {
-   "t": "المكتب",
-   "en": "Office"
-  },
-  "demo.tap.door": {
-   "t": "قرّب الهاتف من قارئ بطاقة الدخول",
-   "en": "Tap the phone on the Access Card Reader"
-  },
-  "demo.tap.till": {
-   "t": "قرّب الهاتف من جهاز الدفع",
-   "en": "Tap the phone on the Payment Terminal"
-  },
-  "theme.dark": {
-   "t": "التبديل إلى الوضع الداكن",
-   "en": "Switch to dark mode"
-  },
-  "theme.light": {
-   "t": "التبديل إلى الوضع الفاتح",
-   "en": "Switch to light mode"
+  "n.read-the-common-questi.1tfirqy": {
+   "t": "اقرأ الأسئلة الشائعة ",
+   "en": "Read the common questions "
   },
   "english": {
    "t": "التطبيق نفسه بالإنجليزية.",
