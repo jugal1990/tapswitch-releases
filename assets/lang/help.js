@@ -117,9 +117,9 @@ if (window.TSLang) TSLang.add({
    "t": "Jika pop-up masih muncul, biarkan ia pada skrin dan dekatkan telefon ke pembaca. TapSwitch sudah bertukar ke kad akses anda, jadi pintu akan terbuka.",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "TapSwitch berfungsi pada telefon Oppo dan OnePlus ColorOS dengan Android 16 dan ke atas. Ia dibina dan digunakan setiap hari pada ColorOS. Telefon lain dengan Android 16 dan ke atas sepatutnya berfungsi, tetapi belum diuji.",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "TapSwitch berfungsi pada telefon Oppo dan OnePlus ColorOS dengan Android 16 dan ke atas. Ia dibina dan digunakan setiap hari pada ColorOS. Telefon ColorOS lain yang ada ciri Kad Akses dengan Android 16 dan ke atas sepatutnya berfungsi, tetapi belum diuji.",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "Percubaan percuma 14 hari membolehkan anda menguji pada telefon sendiri sebelum membayar.",
@@ -343,9 +343,9 @@ if (window.TSLang) TSLang.add({
    "t": "Kalau pop-up masih muncul, biarkan tetap di layar lalu tempelkan ponsel ke pembaca. TapSwitch sudah beralih ke kartu akses Anda, jadi pintunya terbuka.",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "TapSwitch berjalan di ponsel Oppo dan OnePlus ColorOS dengan Android 16 ke atas. Aplikasi ini dibuat dan dipakai setiap hari di ColorOS. Ponsel lain dengan Android 16 ke atas seharusnya bisa, tapi belum diuji.",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "TapSwitch berjalan di ponsel Oppo dan OnePlus ColorOS dengan Android 16 ke atas. Aplikasi ini dibuat dan dipakai setiap hari di ColorOS. Ponsel ColorOS lain yang punya fitur Kartu Akses dengan Android 16 ke atas seharusnya bisa, tapi belum diuji.",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "Gratis 14 hari memberi Anda kesempatan mencobanya di ponsel sendiri sebelum membayar.",
@@ -569,9 +569,9 @@ if (window.TSLang) TSLang.add({
    "t": "ถ้ายังมีป๊อปอัปขึ้นมา ปล่อยไว้บนจอ แล้วแตะโทรศัพท์ที่เครื่องอ่านได้เลย TapSwitch สลับไปใช้คีย์การ์ดให้แล้ว ประตูจึงเปิด",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "TapSwitch ใช้ได้กับโทรศัพท์ Oppo และ OnePlus ที่ใช้ ColorOS และเป็น Android 16 ขึ้นไป แอปนี้สร้างและใช้งานจริงทุกวันบน ColorOS โทรศัพท์รุ่นอื่นที่เป็น Android 16 ขึ้นไปน่าจะใช้ได้ แต่ยังไม่ได้ทดสอบ",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "TapSwitch ใช้ได้กับโทรศัพท์ Oppo และ OnePlus ที่ใช้ ColorOS และเป็น Android 16 ขึ้นไป แอปนี้สร้างและใช้งานจริงทุกวันบน ColorOS โทรศัพท์ ColorOS รุ่นอื่นที่มีฟีเจอร์คีย์การ์ดและเป็น Android 16 ขึ้นไปน่าจะใช้ได้ แต่ยังไม่ได้ทดสอบ",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "ช่วงทดลองใช้ฟรี 14 วันให้คุณเช็กบนเครื่องของคุณเองก่อนจ่าย",
@@ -795,9 +795,9 @@ if (window.TSLang) TSLang.add({
    "t": "Nếu cửa sổ bật lên vẫn hiện, cứ để nó trên màn hình và chạm điện thoại vào đầu đọc. TapSwitch đã chuyển sang thẻ ra vào của bạn rồi, nên cửa sẽ mở.",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "TapSwitch chạy trên điện thoại Oppo và OnePlus dùng ColorOS, Android 16 trở lên. Ứng dụng được làm ra và dùng hằng ngày trên ColorOS. Các điện thoại khác từ Android 16 trở lên có lẽ vẫn chạy được, nhưng chưa được thử.",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "TapSwitch chạy trên điện thoại Oppo và OnePlus dùng ColorOS, Android 16 trở lên. Ứng dụng được làm ra và dùng hằng ngày trên ColorOS. Các điện thoại ColorOS khác có tính năng thẻ ra vào, từ Android 16 trở lên, có lẽ vẫn chạy được, nhưng chưa được thử.",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "14 ngày dùng thử miễn phí giúp bạn kiểm tra trên chính điện thoại của mình trước khi trả tiền.",
@@ -1021,9 +1021,9 @@ if (window.TSLang) TSLang.add({
    "t": "Kung may lumabas pa ring pop-up, hayaan lang ito sa screen at i-tap ang phone sa reader. Nakalipat na ang TapSwitch sa access card mo, kaya bubukas ang pinto.",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "Gumagana ang TapSwitch sa mga Oppo at OnePlus ColorOS phone na Android 16 pataas. Ginawa ito at araw-araw na ginagamit sa ColorOS. Dapat gumana ito sa ibang phone na Android 16 pataas, pero hindi pa nasusubukan.",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "Gumagana ang TapSwitch sa mga Oppo at OnePlus ColorOS phone na Android 16 pataas. Ginawa ito at araw-araw na ginagamit sa ColorOS. Dapat gumana ito sa ibang ColorOS phone na may Access Card feature at Android 16 pataas, pero hindi pa nasusubukan.",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "Sa 14-day free trial, malalaman mo muna sa sarili mong phone bago ka magbayad.",
@@ -1247,9 +1247,9 @@ if (window.TSLang) TSLang.add({
    "t": "如果还是弹窗了，不用管它，让它留在屏幕上，直接把手机靠近读卡器。TapSwitch 已经切换到你的门禁卡，门会打开。",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "TapSwitch 适用于运行 Android 16 及以上的 Oppo 和 OnePlus ColorOS 手机。它在 ColorOS 上开发，我每天都在用。其他 Android 16 及以上的手机应该也能用，但还没测试过。",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "TapSwitch 适用于运行 Android 16 及以上的 Oppo 和 OnePlus ColorOS 手机。它在 ColorOS 上开发，我每天都在用。其他有门禁卡功能、Android 16 及以上的 ColorOS 手机应该也能用，但还没测试过。",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "14 天免费试用，让你付款前先在自己的手机上确认。",
@@ -1473,9 +1473,9 @@ if (window.TSLang) TSLang.add({
    "t": "Si aún aparece un aviso, déjalo en pantalla y acerca el celular al lector. TapSwitch ya cambió a tu tarjeta de acceso, así que la puerta se abre.",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "TapSwitch funciona en celulares Oppo y OnePlus con ColorOS y Android 16 o superior. Está hecha y se usa a diario en ColorOS. Otros celulares con Android 16 o superior deberían funcionar, pero no se han probado.",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "TapSwitch funciona en celulares Oppo y OnePlus con ColorOS y Android 16 o superior. Está hecha y se usa a diario en ColorOS. Otros celulares ColorOS con la función de tarjeta de acceso y Android 16 o superior deberían funcionar, pero no se han probado.",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "La prueba gratis de 14 días te permite comprobarlo en tu propio celular antes de pagar.",
@@ -1699,9 +1699,9 @@ if (window.TSLang) TSLang.add({
    "t": "Jeśli okienko nadal się pojawia, zostaw je na ekranie i przyłóż telefon do czytnika. TapSwitch już przełączył się na kartę dostępu, więc drzwi się otworzą.",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "TapSwitch działa na telefonach Oppo i OnePlus z ColorOS i Androidem 16 lub nowszym. Powstał i jest na co dzień używany na ColorOS. Inne telefony z Androidem 16 lub nowszym powinny działać, ale nie były testowane.",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "TapSwitch działa na telefonach Oppo i OnePlus z ColorOS i Androidem 16 lub nowszym. Powstał i jest na co dzień używany na ColorOS. Inne telefony z ColorOS, funkcją karty dostępu i Androidem 16 lub nowszym powinny działać, ale nie były testowane.",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "14-dniowy darmowy okres próbny pozwala sprawdzić to na własnym telefonie, zanim zapłacisz.",
@@ -1925,9 +1925,9 @@ if (window.TSLang) TSLang.add({
    "t": "Pokud se okno přesto objeví, nechte ho na obrazovce a přiložte telefon ke čtečce. TapSwitch už přepnul na vaši přístupovou kartu, takže se dveře otevřou.",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "TapSwitch funguje na telefonech Oppo a OnePlus s ColorOS a Androidem 16 a novějším. Je vyvíjená a denně používaná na ColorOS. Jiné telefony s Androidem 16 a novějším by měly fungovat, ale vyzkoušené nejsou.",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "TapSwitch funguje na telefonech Oppo a OnePlus s ColorOS a Androidem 16 a novějším. Je vyvíjená a denně používaná na ColorOS. Jiné telefony s ColorOS, funkcí přístupové karty a Androidem 16 a novějším by měly fungovat, ale vyzkoušené nejsou.",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "Během 14denní zkušební doby zdarma si to ověříte na vlastním telefonu, ještě než zaplatíte.",
@@ -2151,9 +2151,9 @@ if (window.TSLang) TSLang.add({
    "t": "Если окно всё же появилось, оставьте его на экране и приложите телефон к считывателю. TapSwitch уже переключился на ваш пропуск, поэтому дверь откроется.",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "TapSwitch работает на телефонах Oppo и OnePlus с ColorOS на Android 16 и новее. Он создан на ColorOS, и я пользуюсь им каждый день. На других телефонах с Android 16 и новее он должен работать, но их пока не проверяли.",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "TapSwitch работает на телефонах Oppo и OnePlus с ColorOS на Android 16 и новее. Он создан на ColorOS, и я пользуюсь им каждый день. На других телефонах с ColorOS, функцией пропуска и Android 16 и новее он должен работать, но их пока не проверяли.",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "14 бесплатных дней позволяют проверить всё на своём телефоне до оплаты.",
@@ -2377,9 +2377,9 @@ if (window.TSLang) TSLang.add({
    "t": "إذا ظهرت نافذة منبثقة رغم ذلك، فاتركها على الشاشة وقرّب هاتفك من القارئ. انتقل TapSwitch بالفعل إلى بطاقة الدخول، لذا سيُفتح الباب.",
    "en": "If a pop-up still shows, leave it on screen and tap the reader. TapSwitch has already switched to your access card, so the door opens."
   },
-  "n.tapswitch-works-on-opp.o1ga9k": {
-   "t": "يعمل TapSwitch على هواتف Oppo وOnePlus بنظام ColorOS مع Android 16 أو أحدث. تم تطويره على ColorOS ويُستخدم عليه يوميًا. من المفترض أن يعمل على الهواتف الأخرى بنظام Android 16 أو أحدث، لكنها لم تُجرَّب بعد.",
-   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested."
+  "n.tapswitch-works-on-opp.1xtd0ff": {
+   "t": "يعمل TapSwitch على هواتف Oppo وOnePlus بنظام ColorOS مع Android 16 أو أحدث. تم تطويره على ColorOS ويُستخدم عليه يوميًا. من المفترض أن يعمل على هواتف ColorOS الأخرى التي فيها ميزة بطاقة الدخول بنظام Android 16 أو أحدث، لكنها لم تُجرَّب بعد.",
+   "en": "TapSwitch works on Oppo and OnePlus ColorOS phones with Android 16 or newer. It is built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested."
   },
   "n.the-14-day-free-trial.dq7qks": {
    "t": "التجربة المجانية لمدة 14 يومًا تتيح لك أن تتأكد على هاتفك قبل أن تدفع.",

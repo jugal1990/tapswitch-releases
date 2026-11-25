@@ -53,9 +53,9 @@ if (window.TSLang) TSLang.add({
    "t": "Telefon Oppo dan OnePlus ColorOS dengan Android 16 dan ke atas.",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "Dibina dan digunakan setiap hari pada ColorOS. Telefon lain dengan Android 16 dan ke atas sepatutnya berfungsi, tetapi belum diuji. Percubaan percuma akan menunjukkan sama ada ia berfungsi pada telefon anda.",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "Dibina dan digunakan setiap hari pada ColorOS. Telefon ColorOS lain yang ada ciri Kad Akses dengan Android 16 dan ke atas sepatutnya berfungsi, tetapi belum diuji. Percubaan percuma akan menunjukkan sama ada ia berfungsi pada telefon anda.",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "Apabila tempoh percubaan tamat, pertukaran kad berhenti dan telefon anda kembali seperti asal.",
@@ -411,9 +411,9 @@ if (window.TSLang) TSLang.add({
    "t": "Ponsel Oppo dan OnePlus ColorOS dengan Android 16 ke atas.",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "Dibuat dan dipakai setiap hari di ColorOS. Ponsel lain dengan Android 16 ke atas seharusnya bisa, tapi belum diuji. Masa percobaan gratis akan menunjukkan apakah aplikasinya berjalan di ponsel Anda.",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "Dibuat dan dipakai setiap hari di ColorOS. Ponsel ColorOS lain yang punya fitur Kartu Akses dengan Android 16 ke atas seharusnya bisa, tapi belum diuji. Masa percobaan gratis akan menunjukkan apakah aplikasinya berjalan di ponsel Anda.",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "Setelah masa percobaan habis, perpindahan kartu berhenti dan ponsel Anda kembali seperti semula.",
@@ -769,9 +769,9 @@ if (window.TSLang) TSLang.add({
    "t": "โทรศัพท์ Oppo และ OnePlus ที่ใช้ ColorOS และเป็น Android 16 ขึ้นไป",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "สร้างและใช้งานจริงทุกวันบน ColorOS โทรศัพท์รุ่นอื่นที่เป็น Android 16 ขึ้นไปน่าจะใช้ได้ แต่ยังไม่ได้ทดสอบ ช่วงทดลองใช้ฟรีจะบอกได้ว่าใช้กับเครื่องของคุณได้ไหม",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "สร้างและใช้งานจริงทุกวันบน ColorOS โทรศัพท์ ColorOS รุ่นอื่นที่มีฟีเจอร์คีย์การ์ดและเป็น Android 16 ขึ้นไปน่าจะใช้ได้ แต่ยังไม่ได้ทดสอบ ช่วงทดลองใช้ฟรีจะบอกได้ว่าใช้กับเครื่องของคุณได้ไหม",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "เมื่อหมดช่วงทดลอง แอปจะหยุดสลับการ์ด และโทรศัพท์จะกลับไปเป็นแบบเดิม",
@@ -1127,9 +1127,9 @@ if (window.TSLang) TSLang.add({
    "t": "Điện thoại Oppo và OnePlus chạy ColorOS, Android 16 trở lên.",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "Được làm ra và dùng hằng ngày trên ColorOS. Các điện thoại khác từ Android 16 trở lên có lẽ vẫn chạy được, nhưng chưa được thử. Bản dùng thử miễn phí sẽ cho bạn biết nó có chạy trên máy mình không.",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "Được làm ra và dùng hằng ngày trên ColorOS. Các điện thoại ColorOS khác có tính năng thẻ ra vào, từ Android 16 trở lên, có lẽ vẫn chạy được, nhưng chưa được thử. Bản dùng thử miễn phí sẽ cho bạn biết nó có chạy trên máy mình không.",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "Khi hết thời gian dùng thử, việc chuyển thẻ dừng lại và điện thoại trở lại như cũ.",
@@ -1485,9 +1485,9 @@ if (window.TSLang) TSLang.add({
    "t": "Mga Oppo at OnePlus ColorOS phone na Android 16 pataas.",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "Ginawa at araw-araw na ginagamit sa ColorOS. Dapat gumana ito sa ibang phone na Android 16 pataas, pero hindi pa nasusubukan. Sa free trial mo malalaman kung gagana ito sa phone mo.",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "Ginawa at araw-araw na ginagamit sa ColorOS. Dapat gumana ito sa ibang ColorOS phone na may Access Card feature at Android 16 pataas, pero hindi pa nasusubukan. Sa free trial mo malalaman kung gagana ito sa phone mo.",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "Pagkatapos ng trial, titigil na ang pag-switch at babalik sa dati ang phone mo.",
@@ -1843,9 +1843,9 @@ if (window.TSLang) TSLang.add({
    "t": "运行 Android 16 及以上的 Oppo 和 OnePlus ColorOS 手机。",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "在 ColorOS 上开发，我每天都在用。其他 Android 16 及以上的手机应该也能用，但还没测试过。能不能在你的手机上用，免费试用一下就知道了。",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "在 ColorOS 上开发，我每天都在用。其他有门禁卡功能、Android 16 及以上的 ColorOS 手机应该也能用，但还没测试过。能不能在你的手机上用，免费试用一下就知道了。",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "试用期结束后，切换功能停止，手机恢复原来的样子。",
@@ -2201,9 +2201,9 @@ if (window.TSLang) TSLang.add({
    "t": "Celulares Oppo y OnePlus con ColorOS y Android 16 o superior.",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "Hecha y usada a diario en ColorOS. Otros celulares con Android 16 o superior deberían funcionar, pero no se han probado. La prueba gratis te muestra si funciona en el tuyo.",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "Hecha y usada a diario en ColorOS. Otros celulares ColorOS con la función de tarjeta de acceso y Android 16 o superior deberían funcionar, pero no se han probado. La prueba gratis te muestra si funciona en el tuyo.",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "Cuando termina la prueba, deja de cambiar de tarjeta y tu celular vuelve a funcionar como antes.",
@@ -2559,9 +2559,9 @@ if (window.TSLang) TSLang.add({
    "t": "Telefony Oppo i OnePlus z ColorOS i Androidem 16 lub nowszym.",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "Powstała i jest na co dzień używana na ColorOS. Inne telefony z Androidem 16 lub nowszym powinny działać, ale nie były testowane. Darmowy okres próbny pokaże, czy działa na Twoim.",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "Powstała i jest na co dzień używana na ColorOS. Inne telefony z ColorOS, funkcją karty dostępu i Androidem 16 lub nowszym powinny działać, ale nie były testowane. Darmowy okres próbny pokaże, czy działa na Twoim.",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "Gdy okres próbny się skończy, przełączanie ustaje, a telefon wraca do poprzednich ustawień.",
@@ -2917,9 +2917,9 @@ if (window.TSLang) TSLang.add({
    "t": "Telefony Oppo a OnePlus s ColorOS a Androidem 16 a novějším.",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "Vyvíjená a denně používaná na ColorOS. Jiné telefony s Androidem 16 a novějším by měly fungovat, ale vyzkoušené nejsou. Ve zkušební době zdarma zjistíte, jestli funguje i na tom vašem.",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "Vyvíjená a denně používaná na ColorOS. Jiné telefony s ColorOS, funkcí přístupové karty a Androidem 16 a novějším by měly fungovat, ale vyzkoušené nejsou. Ve zkušební době zdarma zjistíte, jestli funguje i na tom vašem.",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "Po skončení zkušební doby se přepínání zastaví a telefon se vrátí do původního stavu.",
@@ -3275,9 +3275,9 @@ if (window.TSLang) TSLang.add({
    "t": "Телефоны Oppo и OnePlus с ColorOS на Android 16 и новее.",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "Приложение создано на ColorOS, и я пользуюсь им каждый день. На других телефонах с Android 16 и новее оно должно работать, но их пока не проверяли. Бесплатный пробный период покажет, работает ли оно на вашем телефоне.",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "Приложение создано на ColorOS, и я пользуюсь им каждый день. На других телефонах с ColorOS, функцией пропуска и Android 16 и новее оно должно работать, но их пока не проверяли. Бесплатный пробный период покажет, работает ли оно на вашем телефоне.",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "Когда пробный период закончится, переключение прекратится, и телефон вернётся к прежним настройкам.",
@@ -3633,9 +3633,9 @@ if (window.TSLang) TSLang.add({
    "t": "هواتف Oppo وOnePlus بنظام ColorOS مع Android 16 أو أحدث.",
    "en": "Oppo and OnePlus ColorOS phones with Android 16 or newer."
   },
-  "n.built-and-used-daily-o.1j5jel8": {
-   "t": "تم تطويره على ColorOS ويُستخدم عليه يوميًا. من المفترض أن يعمل على الهواتف الأخرى بنظام Android 16 أو أحدث، لكنها لم تُجرَّب بعد. والتجربة المجانية تُظهر لك إن كان يعمل على هاتفك.",
-   "en": "Built and used daily on ColorOS. Other phones with Android 16 or newer should work but are untested. The free trial shows if it works on yours."
+  "n.built-and-used-daily-o.1bf6pp": {
+   "t": "تم تطويره على ColorOS ويُستخدم عليه يوميًا. من المفترض أن يعمل على هواتف ColorOS الأخرى التي فيها ميزة بطاقة الدخول بنظام Android 16 أو أحدث، لكنها لم تُجرَّب بعد. والتجربة المجانية تُظهر لك إن كان يعمل على هاتفك.",
+   "en": "Built and used daily on ColorOS. Other ColorOS phones with the Access Card feature on Android 16 or newer should work but are untested. The free trial shows if it works on yours."
   },
   "n.when-the-trial-ends-sw.1qi25gv": {
    "t": "عند انتهاء فترة التجربة، يتوقف التبديل ويعود هاتفك كما كان.",
